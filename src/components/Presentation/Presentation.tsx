@@ -5,7 +5,7 @@ import { motion as m, type Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Button from "../Button/Button";
 
 const containerVariants: Variants = {
@@ -56,15 +56,13 @@ const Presentation = () => {
       whileInView="visible"
       className={cx(
         "h-screen-header bg-white flex flex-col overflow-hidden rounded-md relative md:flex-row "
-      )}
-    >
+      )}>
       <div className="w-full h-full bg-banner-soft">
         <div className="absolute h-[100%] w-[100%] flex items-center flex-1 flex-col justify-center gap-5">
           <m.div
             variants={animationVariantsImage}
             ref={imageRef}
-            className="h-[25%] md:h-[35%] aspect-video relative"
-          >
+            className="h-[25%] md:h-[35%] aspect-video relative">
             <Image
               src="/images/logos/logo-letters.svg"
               alt="product"

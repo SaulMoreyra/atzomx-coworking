@@ -1,11 +1,12 @@
-import { PlanType } from "@/common/types/planTypes";
+import React from "react";
+import { type PlanType } from "@/common/types/planTypes";
 import { FeaturesByCategory } from "@/mocks/products";
 import cx from "classnames";
 import { CheckSquare, Square } from "react-feather";
 
-type PlanCardProps = {
+interface PlanCardProps {
   plan: PlanType;
-};
+}
 
 const PlanCard = ({ plan }: PlanCardProps) => {
   const featuresSet = new Set(plan.features);
@@ -25,8 +26,7 @@ const PlanCard = ({ plan }: PlanCardProps) => {
               className={cx(
                 "text-xl text-left",
                 featuresSet.has(feature) ? "text-theme-mint" : "text-gray-400"
-              )}
-            >
+              )}>
               {feature}
             </p>
           </li>

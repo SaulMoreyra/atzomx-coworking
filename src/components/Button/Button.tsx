@@ -1,8 +1,7 @@
 "use client";
 
 import cx from "classnames";
-import React, { type FC, type ReactNode, useState } from "react";
-import { TailSpin } from "react-loader-spinner";
+import React, { type FC, type ReactNode } from "react";
 
 interface ButtonProps {
   children: ReactNode;
@@ -32,8 +31,7 @@ const Button: FC<ButtonProps> = ({
       )}
       onClick={onClick}
       disabled={disabled === true || isLoading}
-      type={type}
-    >
+      type={type}>
       {children}
     </button>
   );

@@ -1,7 +1,6 @@
-import { ReviewType } from "@/common/types/planTypes";
+import { type ReviewType } from "@/common/types/planTypes";
 import Image from "next/image";
-import Link from "next/link";
-import { type FC } from "react";
+import React, { type FC } from "react";
 
 interface ReviewCardProps {
   review: ReviewType;
@@ -23,10 +22,14 @@ const ReviewCard: FC<ReviewCardProps> = ({
         <h1 className="text-lg font-bold">{name}</h1>
         <div className="flex text-yellow-500">
           {Array.from({ length: rating }, (_, i) => (
-            <p key={i}>&#9733;</p>
+            <p className="text-2xl" key={i}>
+              &#9733;
+            </p>
           ))}
         </div>
-        <p>{review}</p>
+        <p className="line-clamp-3 overflow-hidden text-gray-500 text-ellipsis">
+          {review}
+        </p>
       </div>
     </div>
   );

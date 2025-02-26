@@ -1,5 +1,7 @@
-import { ReviewType } from "@/common/types/planTypes";
-import { ProductType } from "@/common/types/productTypes";
+import React from "react";
+
+import { type ReviewType } from "@/common/types/planTypes";
+import { type ProductType } from "@/common/types/productTypes";
 
 import Heading from "@/components/Heading/Heading";
 import ImagesCarousel from "@/components/ImagesCarousel/ImagesCarousel";

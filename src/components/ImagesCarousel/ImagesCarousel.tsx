@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { type FC } from "react";
 import Category from "../Category/Category";
-import { ImageType } from "@/common/types/categoryTypes";
+import { type ImageType } from "@/common/types/categoryTypes";
 
-type ImagesCarouselProps = {
+interface ImagesCarouselProps {
   images: ImageType[];
-};
+}
 
 const ImagesCarousel: FC<ImagesCarouselProps> = ({ images }) => {
   return (

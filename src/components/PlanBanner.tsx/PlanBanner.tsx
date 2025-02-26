@@ -1,12 +1,12 @@
 "use client";
 
-import { PlanType } from "@/common/types/planTypes";
+import { type PlanType } from "@/common/types/planTypes";
 import Button from "@/components/Button/Button";
 import cx from "classnames";
 import { motion as m, type Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { type FC, useLayoutEffect, useRef } from "react";
+import React, { type FC, useLayoutEffect, useRef } from "react";
 import PlanCard from "../PlanCard/PlanCard";
 
 interface PlanBannerProps {
@@ -32,7 +32,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColour }) => {
     });
 
     timeline.to(imageRef.current, {
-      yPercent: -100,
+      yPercent: -30,
     });
   }, []);
 

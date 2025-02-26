@@ -1,16 +1,14 @@
 "use client";
 
-import React, { FC, useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Heading from "../Heading/Heading";
-import { ReviewType } from "@/common/types/planTypes";
-import ReviewCard from "../ReviewCard/ReviewCard";
+import { type ReviewType } from "@/common/types/planTypes";
 import { motion as m, type Variants } from "framer-motion";
+import React, { type FC } from "react";
+import Heading from "../Heading/Heading";
+import ReviewCard from "../ReviewCard/ReviewCard";
 
-type ReviewContainerProps = {
+interface ReviewContainerProps {
   reviews: ReviewType[];
-};
+}
 
 const container: Variants = {
   hidden: {},
@@ -38,8 +36,7 @@ const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        className="grid grid-cols-1 gap-5 my-20 md:grid-cols-3 md:gap-10"
-      >
+        className="grid grid-cols-1 gap-5 my-20 md:grid-cols-3 md:gap-10">
         {reviews.map((review, index) => (
           <m.li variants={item} key={index}>
             <ReviewCard review={review} />

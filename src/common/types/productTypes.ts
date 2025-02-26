@@ -1,16 +1,16 @@
-type Category = {
+interface Category {
   id: number;
   name: string;
   image: string;
-};
+}
 
-type Subcategory = {
+interface Subcategory {
   id: number;
   name: string;
   categoryId: number;
-};
+}
 
-type Product = {
+interface Product {
   id: number;
   createdAt: Date;
   createdBy: string;
@@ -22,7 +22,7 @@ type Product = {
   stock: number;
   categoryId: number;
   subcategoryId: number;
-};
+}
 
 export type ProductType = Omit<Product, "price"> & {
   category: Category;

@@ -6,19 +6,19 @@ export enum CategoryPlan {
 
 export type CategoryPlanType = "cafeteria" | "coworking" | "meeting room";
 
-export type PlanType = {
+export interface PlanType {
   name: string;
   startPrice: number;
   features: string[];
   description: string;
   category: CategoryPlanType;
-};
+}
 
-export type ReviewType = {
+export interface ReviewType {
   client: {
     name: string;
     image: string;
   };
   rating: number;
   review: string;
-};
+}

@@ -1,6 +1,6 @@
-import { ImageType } from "@/common/types/categoryTypes";
-import { CategoryPlan, PlanType, ReviewType } from "@/common/types/planTypes";
-import { ProductType } from "@/common/types/productTypes";
+import { type ImageType } from "@/common/types/categoryTypes";
+import { CategoryPlan, type PlanType, type ReviewType } from "@/common/types/planTypes";
+import { type ProductType } from "@/common/types/productTypes";
 
 export const ALL_IMAGES: ImageType[] = [
   {

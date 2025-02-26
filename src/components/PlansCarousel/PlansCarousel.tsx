@@ -1,7 +1,7 @@
 "use client";
 
-import { PlanType } from "@/common/types/planTypes";
-import { type FC } from "react";
+import { type PlanType } from "@/common/types/planTypes";
+import React, { type FC } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import PlanBanner from "../PlanBanner.tsx/PlanBanner";

@@ -1,5 +1,5 @@
-export type ImageType = {
+export interface ImageType {
   id: number;
   name: string;
   image: string;
-};
+}
