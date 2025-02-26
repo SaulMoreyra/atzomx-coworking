@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Mabry';
+    src: url('/fonts/Mabry.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Druk';
+    src: url('/fonts/Druk-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer utilities {
+    .transition-zoom {
+        transition-property: transform;
+        transition-duration: 1000ms;
+    }
+    .transition-zoom:hover {
+        transform: scale(1.2);
+    }
+}
+
+html {
+    @apply bg-theme-white;
+}
