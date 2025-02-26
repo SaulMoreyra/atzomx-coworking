@@ -1,6 +1,6 @@
 "use client";
 
-import { type CategoryType } from "@/common/types/categoryTypes";
+import { type ImageType } from "@/common/types/categoryTypes";
 import { type ProductType } from "@/common/types/productTypes";
 import ShopView from "@/components/Header/components/ShopView/ShopView";
 import TrendingView from "@/components/Header/components/TrendingView/TrendingView";
@@ -35,7 +35,7 @@ const menuItems = [
 ];
 
 interface HeaderProps {
-  categories: CategoryType[];
+  categories: ImageType[];
   trendingProducts: ProductType[];
 }
 

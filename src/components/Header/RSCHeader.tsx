@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "./Header";
-import { CategoryType } from "@/common/types/categoryTypes";
+import { ImageType } from "@/common/types/categoryTypes";
 import { ProductType } from "@/common/types/productTypes";
-import { ALL_CATEGORIES, ALL_PRODUCTS } from "@/mocks/products";
+import { ALL_IMAGES, ALL_PRODUCTS } from "@/mocks/products";
 
-const categories: CategoryType[] = ALL_CATEGORIES;
+const categories: ImageType[] = ALL_IMAGES;
 const trendingProducts: ProductType[] = ALL_PRODUCTS;
 
 export default async function RSCHeader() {
