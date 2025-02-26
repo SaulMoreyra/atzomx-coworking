@@ -1,8 +1,9 @@
 import { CategoryType } from "@/common/types/categoryTypes";
 import { ReviewType } from "@/common/types/planTypes";
 import { ProductType } from "@/common/types/productTypes";
-import Category from "@/components/Category/Category";
+
 import Heading from "@/components/Heading/Heading";
+import ImagesCarousel from "@/components/ImagesCarousel/ImagesCarousel";
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import PlansCarousel from "@/components/PlansCarousel/PlansCarousel";
 import Presentation from "@/components/Presentation/Presentation";
@@ -25,7 +26,10 @@ export default async function Home() {
   return (
     <PageWrapper>
       <Presentation />
-      <ServiceBenefits />
+      <div className="h-screen-header flex flex-col gap-20">
+        <ServiceBenefits />
+        <ImagesCarousel categories={categories} />
+      </div>
       <PlansCarousel plans={ALL_PLANS} />
       <div className="flex flex-col gap-20">
         <div className="flex flex-col gap-10">
@@ -33,22 +37,6 @@ export default async function Home() {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
             {trendingProducts.splice(0, 4).map((product, index) => (
               <ProductCard product={product} key={index} />
-            ))}
-          </div>
-        </div>
-        <div className="flex flex-col gap-10">
-          <div className="flex flex-col items-center">
-            <p className="text-xl text-gray-400">Shop by category</p>
-          </div>
-          <div
-            className={`grid grid-cols-1 gap-5 md:grid-cols-${categories.length} min-h-[50vh] items-center`}
-          >
-            {categories.map((category, index) => (
-              <Category
-                key={index}
-                category={category}
-                className="h-[30vh] md:odd:h-full md:even:h-[80%]"
-              />
             ))}
           </div>
         </div>
