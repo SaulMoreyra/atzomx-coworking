@@ -37,7 +37,7 @@ export const metadata = {
     description:
       "Disfruta de un coworking con café ilimitado y un espacio cómodo en el centro de Oaxaca.",
     url: "https://atzomx.com",
-    images: ["/images/logo.ico"],
+    images: ["/favicon.ico"],
     type: "website",
     locale: "es_MX",
   },
@@ -47,7 +47,7 @@ export const metadata = {
     title: "Atzomx | Coworking & Café en Oaxaca",
     description:
       "Un coworking con café ilimitado, WiFi rápido y un ambiente ideal para trabajar en Oaxaca.",
-    images: ["/images/logo.ico"],
+    images: ["/favicon.ico"],
   },
   facebook: {
     card: "summary_large_image",
@@ -55,7 +55,7 @@ export const metadata = {
     title: "Atzomx | Coworking & Café en Oaxaca",
     description:
       "Un coworking con café ilimitado, WiFi rápido y un ambiente ideal para trabajar en Oaxaca.",
-    images: ["/images/logo.ico"],
+    images: ["/favicon.ico"],
   },
   robots: "index, follow",
   canonical: "https://atzomx.com",
