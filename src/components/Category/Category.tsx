@@ -1,13 +1,12 @@
 "use client";
 
-import { type CategoryType } from "@/common/types/categoryTypes";
+import { type ImageType } from "@/common/types/categoryTypes";
 import cx from "classnames";
 import Image from "next/image";
-import Link from "next/link";
 import React, { type FC } from "react";
 
 interface CategoryProps {
-  category: CategoryType;
+  category: ImageType;
   className?: string;
 }
 
@@ -16,8 +15,7 @@ const Category: FC<CategoryProps> = ({
   className,
 }) => {
   return (
-    <Link
-      href={`/search?category=${category}`}
+    <div
       className={cx(
         "relative rounded-md p-10 flex flex-col items-center justify-center overflow-hidden",
         className
@@ -29,7 +27,7 @@ const Category: FC<CategoryProps> = ({
         fill={true}
         className="absolute object-cover z-0 rounded-md transition-zoom"
       />
-    </Link>
+    </div>
   );
 };
 

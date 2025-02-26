@@ -1,4 +1,3 @@
-import { CategoryType } from "@/common/types/categoryTypes";
 import { ReviewType } from "@/common/types/planTypes";
 import { ProductType } from "@/common/types/productTypes";
 
@@ -11,7 +10,7 @@ import ProductCard from "@/components/ProductCard/ProductCard";
 import ReviewContainer from "@/components/ReviewContainer/ReviewContainer";
 import ServiceBenefits from "@/components/ServiceBenefits/ServiceBenefits";
 import {
-  ALL_CATEGORIES,
+  ALL_IMAGES,
   ALL_PLANS,
   ALL_PRODUCTS,
   ALL_REVIEWS,
@@ -20,15 +19,14 @@ import {
 export default async function Home() {
   const trendingProducts: ProductType[] = [...ALL_PRODUCTS];
   const latestProducts: ProductType[] = [...ALL_PRODUCTS];
-  const categories: CategoryType[] = [...ALL_CATEGORIES];
   const testimonials: ReviewType[] = [...ALL_REVIEWS];
 
   return (
     <PageWrapper>
       <Presentation />
-      <div className="h-screen-header flex flex-col gap-20">
+      <div className="min-h-screen-header flex flex-col gap-20 mb-40">
         <ServiceBenefits />
-        <ImagesCarousel categories={categories} />
+        <ImagesCarousel images={ALL_IMAGES} />
       </div>
       <PlansCarousel plans={ALL_PLANS} />
       <div className="flex flex-col gap-20">

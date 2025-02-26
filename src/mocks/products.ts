@@ -1,68 +1,32 @@
-import { CategoryType } from "@/common/types/categoryTypes";
+import { ImageType } from "@/common/types/categoryTypes";
 import { CategoryPlan, PlanType, ReviewType } from "@/common/types/planTypes";
 import { ProductType } from "@/common/types/productTypes";
 
-export const ALL_CATEGORIES: CategoryType[] = [
+export const ALL_IMAGES: ImageType[] = [
   {
     id: 1,
     name: "Category 1",
-    image: "https://picsum.photos/600/800",
-    subcategories: [
-      {
-        categoryId: 1,
-        id: 1,
-        name: "Subcategory 1",
-      },
-    ],
+    image: "/images/coworking/meeting-room.jpeg",
   },
   {
     id: 1,
     name: "Category 1",
-    image: "https://picsum.photos/600/800",
-    subcategories: [
-      {
-        categoryId: 1,
-        id: 1,
-        name: "Subcategory 1",
-      },
-    ],
+    image: "/images/coworking/art-latte.jpeg",
   },
   {
     id: 1,
     name: "Category 1",
-    image: "https://picsum.photos/600/800",
-    subcategories: [
-      {
-        categoryId: 1,
-        id: 1,
-        name: "Subcategory 1",
-      },
-    ],
+    image: "/images/coworking/atzomx.jpg",
   },
   {
     id: 1,
     name: "Category 1",
-    image: "https://picsum.photos/600/800",
-    subcategories: [
-      {
-        categoryId: 1,
-        id: 1,
-        name: "Subcategory 1",
-      },
-    ],
+    image: "/images/coworking/lunch.jpg",
   },
-
   {
     id: 1,
     name: "Category 1",
-    image: "https://picsum.photos/600/800",
-    subcategories: [
-      {
-        categoryId: 1,
-        id: 1,
-        name: "Subcategory 1",
-      },
-    ],
+    image: "/images/coworking/monitor.jpeg",
   },
 ];
 
@@ -72,9 +36,9 @@ export const ALL_PRODUCTS: ProductType[] = [
     name: "Product 1",
     description: "Description for product 1",
     price: 100,
-    category: ALL_CATEGORIES[0],
+    category: ALL_IMAGES[0],
     image: "/images/chair.png",
-    categoryId: ALL_CATEGORIES[0].id,
+    categoryId: ALL_IMAGES[0].id,
     createdAt: new Date(),
     updatedAt: new Date(),
     createdBy: "Admin",
@@ -83,7 +47,7 @@ export const ALL_PRODUCTS: ProductType[] = [
     subcategory: {
       id: 1,
       name: "Subcategory 1",
-      categoryId: ALL_CATEGORIES[0].id,
+      categoryId: ALL_IMAGES[0].id,
     },
     subcategoryId: 1,
   },
@@ -92,9 +56,9 @@ export const ALL_PRODUCTS: ProductType[] = [
     name: "Product 1",
     description: "Description for product 1",
     price: 100,
-    category: ALL_CATEGORIES[0],
+    category: ALL_IMAGES[0],
     image: "/images/comfort_chair.png",
-    categoryId: ALL_CATEGORIES[0].id,
+    categoryId: ALL_IMAGES[0].id,
     createdAt: new Date(),
     updatedAt: new Date(),
     createdBy: "Admin",
@@ -103,7 +67,7 @@ export const ALL_PRODUCTS: ProductType[] = [
     subcategory: {
       id: 1,
       name: "Subcategory 1",
-      categoryId: ALL_CATEGORIES[0].id,
+      categoryId: ALL_IMAGES[0].id,
     },
     subcategoryId: 1,
   },
@@ -112,9 +76,9 @@ export const ALL_PRODUCTS: ProductType[] = [
     name: "Product 1",
     description: "Description for product 1",
     price: 100,
-    category: ALL_CATEGORIES[0],
+    category: ALL_IMAGES[0],
     image: "/images/comfort_chair.png",
-    categoryId: ALL_CATEGORIES[0].id,
+    categoryId: ALL_IMAGES[0].id,
     createdAt: new Date(),
     updatedAt: new Date(),
     createdBy: "Admin",
@@ -123,7 +87,7 @@ export const ALL_PRODUCTS: ProductType[] = [
     subcategory: {
       id: 1,
       name: "Subcategory 1",
-      categoryId: ALL_CATEGORIES[0].id,
+      categoryId: ALL_IMAGES[0].id,
     },
     subcategoryId: 1,
   },

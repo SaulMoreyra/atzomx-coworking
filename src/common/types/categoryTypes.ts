@@ -1,11 +1,5 @@
-type Subcategory = {
-  id: number;
-  name: string;
-  categoryId: number;
-};
-
-export type CategoryType = {
+export type ImageType = {
   id: number;
   name: string;
   image: string;
-} & { subcategories: Subcategory[] };
+};
