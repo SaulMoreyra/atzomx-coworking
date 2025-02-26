@@ -1,118 +1,101 @@
 "use client";
 
-import { type ImageType } from "@/common/types/categoryTypes";
-import { type ProductType } from "@/common/types/productTypes";
-import ShopView from "@/components/Header/components/ShopView/ShopView";
-import TrendingView from "@/components/Header/components/TrendingView/TrendingView";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { type FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import cx from "classnames";
+import { Menu, X } from "react-feather";
+import Image from "next/image";
 
 enum MenuItems {
-  SHOP = "Shop",
-  TRENDING = "Trending",
   ABOUT = "About",
+  PLANS = "Plans",
+  MENU = "Menu",
+  REVIEWS = "Reviews",
   CONTACT = "Contact",
 }
 
 const menuItems = [
-  {
-    label: MenuItems.SHOP,
-    route: "/search",
-  },
-  {
-    label: MenuItems.TRENDING,
-    route: "/search",
-  },
-  {
-    label: MenuItems.ABOUT,
-    route: "/",
-  },
-  {
-    label: MenuItems.CONTACT,
-    route: "/",
-  },
+  { label: MenuItems.ABOUT, route: "/" },
+  { label: MenuItems.PLANS, route: "/" },
+  { label: MenuItems.MENU, route: "/" },
+  { label: MenuItems.REVIEWS, route: "/" },
+  { label: MenuItems.CONTACT, route: "/" },
 ];
 
-interface HeaderProps {
-  categories: ImageType[];
-  trendingProducts: ProductType[];
-}
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-const Header: FC<HeaderProps> = ({ categories, trendingProducts }) => {
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const [activeView, setActiveView] = useState<MenuItems | null>(null);
-
-  function closeView() {
-    setActiveView(null);
-  }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   useEffect(() => {
-    closeView();
-  }, [pathname]);
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
 
   return (
     <div className="w-full">
-      <div className="flex items-center justify-between py-7 relative md:px-20">
+      <div className="relative bg-gray-50 items-center justify-between py-7 px-4 md:px-20 z-30">
         <div className="flex gap-20 items-center pr-5 md:pr-0 h-full">
           <div className="absolute left-[50%] -translate-x-[50%] h-full">
             <Link
               href="/"
-              className="flex flex-col items-center h-full justify-center"
-            >
-              <h1 className="font-druk text-4xl">ATZOMX</h1>
+              className="flex flex-col items-center h-full justify-center">
+              <div className="font-druk text-4xl">
+                <Image
+                  src="/images/logos/logo-symbol.svg"
+                  width={42}
+                  height={42}
+                  alt="Logo"
+                  className="invert"
+                />
+              </div>
             </Link>
           </div>
-
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ul className="flex gap-10 items-center h-full text-xl">
-              {menuItems.map(({ label, route }, index) => {
-                return (
-                  <li key={index}>
-                    <Link
-                      href={route}
-                      onMouseEnter={() => {
-                        setActiveView(label);
-                      }}
-                      onClick={() => {
-                        router.push(route);
-                        setActiveView(null);
-                      }}
-                      aria-haspopup="menu"
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                );
-              })}
+              {menuItems.map(({ label, route }, index) => (
+                <li key={index}>
+                  <Link href={route} aria-haspopup="menu">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+          <div className="block lg:hidden transition-all duration-300">
+            <X
+              onClick={toggleMenu}
+              size={20}
+              className={cx("min-w-[40px]", isMenuOpen ? "block" : "hidden")}
+            />
+            <Menu
+              onClick={toggleMenu}
+              size={20}
+              className={cx("min-w-[40px]", isMenuOpen ? "hidden" : "block")}
+            />
+          </div>
         </div>
-
-        <div className="justify-end items-center gap-5 h-full hidden md:block md:flex"></div>
       </div>
-
-      {activeView && (
-        <div className="absolute bg-gradient-to-b from-theme-white to-white text-black w-[100vw] z-50 px-40">
-          {
-            {
-              [MenuItems.SHOP]: (
-                <ShopView closeView={closeView} categories={categories} />
-              ),
-              [MenuItems.TRENDING]: (
-                <TrendingView
-                  closeView={closeView}
-                  trendingProducts={trendingProducts}
-                />
-              ),
-              [MenuItems.ABOUT]: <></>,
-              [MenuItems.CONTACT]: <></>,
-            }[activeView]
-          }
-        </div>
-      )}
+      <div
+        className={cx(
+          "block lg:hidden",
+          "absolute min-h-screen bg-gray-50 left-0 w-full py-10 px-10 transition-all duration-300 z-10",
+          isMenuOpen ? "translate-y-0" : "-translate-y-full"
+        )}>
+        <ul className="flex flex-col items-center gap-10 h-full text-xl">
+          {menuItems.map(({ label, route }, index) => (
+            <li key={index}>
+              <Link onClick={toggleMenu} href={route} aria-haspopup="menu">
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

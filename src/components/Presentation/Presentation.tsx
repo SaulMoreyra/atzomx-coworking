@@ -63,16 +63,16 @@ const Presentation = () => {
           <m.div
             variants={animationVariantsImage}
             ref={imageRef}
-            className="h-[25%] md:h-[35%] aspect-video relative invert"
+            className="h-[25%] md:h-[35%] aspect-video relative"
           >
             <Image
-              src="/images/logos/logo-full.svg"
+              src="/images/logos/logo-letters.svg"
               alt="product"
               fill={true}
-              className="object-contain"
+              className="object-contain invert"
             />
           </m.div>
-          <m.div variants={animationVariants} className="relative z-50">
+          <m.div variants={animationVariants} className="relative">
             <Button>See plans</Button>
           </m.div>
         </div>
