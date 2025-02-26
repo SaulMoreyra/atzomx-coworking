@@ -6,7 +6,6 @@ import cx from "classnames";
 import { motion as m, type Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
 import { type FC, useLayoutEffect, useRef } from "react";
 import PlanCard from "../PlanCard/PlanCard";
 
@@ -70,7 +69,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColour }) => {
           >
             <div className="h-[1px] bg-theme-black w-10" />
             <p className="text-2xl md:text-3xl">
-              Best price of £{plan.startPrice}
+              Best price of ${plan.startPrice}
             </p>
           </m.div>
           <m.p
@@ -80,7 +79,13 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColour }) => {
             {name}
           </m.p>
           <m.div variants={animationVariants} className="relative z-50">
-            <Button className="text-2xl">Book</Button>
+            <a
+              href="https://m.me/61569786946519"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="text-2xl">Book</Button>
+            </a>
           </m.div>
         </div>
       </div>
