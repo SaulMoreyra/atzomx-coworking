@@ -1,3 +1,4 @@
+import React from "react";
 import MenuList from "@/components/MenuList/MenuList";
 
 export default async function Home() {

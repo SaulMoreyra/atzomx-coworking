@@ -1,3 +1,4 @@
+import React from "react";
 import { ALL_IMAGES } from "@/mocks/products";
 import ImagesCarousel from "../ImagesCarousel/ImagesCarousel";
 import ServiceBenefits from "../ServiceBenefits/ServiceBenefits";

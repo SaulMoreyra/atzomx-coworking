@@ -1,9 +1,9 @@
-export type VariantType = {
+export interface VariantType {
   name: string;
   price: number;
-};
+}
 
-export type FoodType = {
+export interface FoodType {
   id: string;
   name: string;
   description: string;
@@ -11,4 +11,4 @@ export type FoodType = {
   image: string;
   variants: VariantType[];
   category: string;
-};
+}

@@ -1,4 +1,4 @@
-import { FoodType } from "@/common/types/menuTypes";
+import type { FoodType } from "@/common/types/menuTypes";
 
 export const coffee: FoodType[] = [
   {

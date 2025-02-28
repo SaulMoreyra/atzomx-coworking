@@ -1,9 +1,10 @@
-import { FoodType } from "@/common/types/menuTypes";
+import type { FoodType } from "@/common/types/menuTypes";
 import Image from "next/image";
-import React, { FC } from "react";
+import React from "react";
+import type { FC } from "react";
 import { Heart } from "react-feather";
 
-type MenuCardProps = {
+interface MenuCardProps {
   item: FoodType;
 };
 

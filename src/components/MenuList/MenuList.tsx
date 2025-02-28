@@ -1,8 +1,8 @@
 "use client";
-import { FoodType } from "@/common/types/menuTypes";
+import { useMemo, useState } from "react";
+import type { FoodType } from "@/common/types/menuTypes";
 import MenuCard from "@/components/MenuCard/MenuCard";
 import { ALL_FOODS } from "@/mocks/menu/lunch";
-import { useMemo, useState } from "react";
 
 const reduceToArrayByCategory = (obj: FoodType[]) => {
   return obj.reduce(
