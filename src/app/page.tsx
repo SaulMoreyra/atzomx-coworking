@@ -1,3 +1,5 @@
+import React from "react";
+
 import { type ReviewType } from "@/common/types/planTypes";
 import { type ProductType } from "@/common/types/productTypes";
 

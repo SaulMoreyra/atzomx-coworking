@@ -1,24 +1,24 @@
 "use client";
-import { FoodType } from "@/common/types/menuTypes";
+import { type FoodType } from "@/common/types/menuTypes";
 import MenuCard from "@/components/MenuCard/MenuCard";
 import { ALL_FOODS } from "@/mocks/menu/lunch";
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 const reduceToArrayByCategory = (obj: FoodType[]) => {
-  return obj.reduce(
+  return obj.reduce<Record<string, FoodType[]>>(
     (acc, item) => {
       if (!acc[item.category]) acc[item.category] = [];
       acc[item.category].push(item);
       return acc;
     },
-    {} as Record<string, FoodType[]>
+    {}
   );
 };
 
 const MenuList = () => {
   const [filter, setFilter] = useState<string>("");
 
-  const ALL_COFFEES = useMemo(() => {
+  const ALL_FOODS_BY_CATEGORY = useMemo(() => {
     if (!filter) return reduceToArrayByCategory(ALL_FOODS);
 
     const filteredMenu = ALL_FOODS.filter(item => {
@@ -37,7 +37,7 @@ const MenuList = () => {
 
   return (
     <>
-      <section className="self-start w-[287px] sticky top-36">
+      <section className="self-start top-36 sticky hidden md:block">
         <h1 className="text-2xl font-semibold text-gray-700 mb-5 uppercase">
           Menu
         </h1>
@@ -45,34 +45,38 @@ const MenuList = () => {
           type="text"
           placeholder="Search"
           className="w-full p-3 border border-gray-200 rounded-md mb-5"
-          onChange={e => setFilter(e.target.value)}
+          onChange={e => { setFilter(e.target.value); }}
         />
         <div className="flex flex-col gap-2">
-          <h2 className="text-lg font-semibold text-gray-700 mb-2">
+          <h2 className="text-lg font-semibold text-gray-700 mb-2 hidden md:block">
             Categories
           </h2>
-          <ul className="space-y-2">
-            {Object.keys(ALL_COFFEES).map((category, index) => (
-              <li key={index} className="text-gray-400 cursor-pointer">
+          <ul className="space-y-0 md:space-y-2 flex md:block">
+            {Object.keys(ALL_FOODS_BY_CATEGORY).map((category, index) => (
+              <li
+                key={index}
+                className="text-gray-400 cursor-pointer inline md:block">
                 {category}
               </li>
             ))}
           </ul>
         </div>
       </section>
-      <section className="flex flex-col flex-1 gap-5 mb-24">
-        {Object.entries(ALL_COFFEES).map(([category, items], index) => (
-          <div key={index} className="flex flex-col gap-2">
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">
-              {category}
-            </h2>
-            <ul className="space-y-5">
-              {items.map(item => (
-                <MenuCard key={item.id} item={item} />
-              ))}
-            </ul>
-          </div>
-        ))}
+      <section className="flex flex-col flex-1 gap-10 mb-24 hidden md:block">
+        {Object.entries(ALL_FOODS_BY_CATEGORY).map(
+          ([category, items], index) => (
+            <div key={index} className="flex flex-col gap-2">
+              <h1 className="text-2xl font-semibold text-gray-700 mb-2 uppercase">
+                {category}
+              </h1>
+              <ul className="space-y-5">
+                {items.map(item => (
+                  <MenuCard key={item.id} item={item} />
+                ))}
+              </ul>
+            </div>
+          )
+        )}
       </section>
     </>
   );

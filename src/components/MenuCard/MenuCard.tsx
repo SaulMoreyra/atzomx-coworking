@@ -1,11 +1,11 @@
-import { FoodType } from "@/common/types/menuTypes";
+import { type FoodType } from "@/common/types/menuTypes";
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { type FC } from "react";
 import { Heart } from "react-feather";
 
-type MenuCardProps = {
+interface MenuCardProps {
   item: FoodType;
-};
+}
 
 const MenuCard: FC<MenuCardProps> = ({ item }) => {
   return (
@@ -13,7 +13,7 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
       <div className="p-6 flex">
         <div className="flex flex-col flex-1 gap-2">
           <div className="flex-1">
-            <h3 className="text-2xl font-semibold">{item.name}</h3>
+            <h3 className="text-xl md:text-2xl font-semibold">{item.name}</h3>
             <p className="text-gray-400 text-sm">{item.description}</p>
           </div>
           <div className="flex divide-x divide-gray-200">
@@ -26,12 +26,14 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
               ))
             ) : (
               <div className="min-w-[100px] px-5 first:pl-0">
-                <h4 className="text-xl font-semibold">${item.price}</h4>
+                <h4 className="text-lg md:text-xl font-semibold">
+                  ${item.price}
+                </h4>
               </div>
             )}
           </div>
         </div>
-        <div className="w-[140px] h-[140px] rounded-md overflow-hidden aspect-square relative">
+        <div className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] rounded-md overflow-hidden aspect-square relative">
           <Image
             src={item.image}
             alt={item.name}
