@@ -5,7 +5,7 @@ import { MessageSquare, Calendar, Zap, Coffee } from "react-feather";
 
 const ServiceBenefits = () => {
   return (
-    <div className="flex justify-center items-center md:px-10 py-20">
+    <div className="flex justify-center items-center md:px-10 py-5">
       <div className="flex flex-col justify-between gap-10 md:flex-row md:gap-20">
         <div className="flex gap-5">
           <Zap size={40} className="min-w-[40px]" />

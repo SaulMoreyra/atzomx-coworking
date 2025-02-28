@@ -55,7 +55,7 @@ const Presentation = () => {
       initial="hidden"
       whileInView="visible"
       className={cx(
-        "h-screen-header bg-white flex flex-col overflow-hidden rounded-md relative md:flex-row "
+        "h-[calc(100dvh-104px)] mb-5 bg-white flex flex-col overflow-hidden rounded-md relative md:flex-row"
       )}>
       <div className="w-full h-full bg-banner-soft">
         <div className="absolute h-[100%] w-[100%] flex items-center flex-1 flex-col justify-center gap-5">

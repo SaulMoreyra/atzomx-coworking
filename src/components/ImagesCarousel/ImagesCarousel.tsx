@@ -9,12 +9,8 @@ interface ImagesCarouselProps {
 const ImagesCarousel: FC<ImagesCarouselProps> = ({ images }) => {
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col items-center">
-        <p className="text-xl text-gray-400">Flavor & Atmosphere</p>
-      </div>
       <div
-        className={`grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-5 min-h-[50vh] items-center`}
-      >
+        className={`grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-5 min-h-[50vh] items-center`}>
         {images.map((category, index) => (
           <Category
             key={index}

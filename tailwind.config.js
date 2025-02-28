@@ -52,10 +52,10 @@ module.exports = {
         druk: ["Druk"],
       },
       height: {
-        "screen-header": "90vh",
+        "screen-header": "100dvh",
       },
       minHeight: {
-        "screen-header": "90vh",
+        "screen-header": "100dvh",
       },
       backgroundImage: {
         na: 'url("/images/na.png")',

@@ -65,11 +65,7 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-between">
-          <p>© 2023 FRIDA</p>
-          <span className="flex gap-10">
-            <p>Privacy Policy</p>
-            <p>Terms</p>
-          </span>
+          <p>© 2025 ATZOMX</p>
         </div>
       </div>
     </div>
