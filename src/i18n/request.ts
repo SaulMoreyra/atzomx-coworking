@@ -9,7 +9,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   const messages = await Promise.all(
     namespaces.map(
-      namespace => import(`../../messages/${locale}/${namespace}.json`)
+      async namespace =>
+        await import(`../../messages/${locale}/${namespace}.json`)
     )
   );
 

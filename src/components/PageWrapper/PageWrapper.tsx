@@ -12,8 +12,7 @@ const PageWrapper: FC<PageWrapperProps> = ({ children, className }) => {
       className={cx(
         "w-full p-5 py-0 flex flex-col min-h-screen-header",
         className
-      )}
-    >
+      )}>
       {children}
     </main>
   );

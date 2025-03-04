@@ -56,7 +56,9 @@ const Header = () => {
                 <li
                   className="cursor-pointer"
                   key={index}
-                  onClick={() => onScrollToElement(id)}>
+                  onClick={() => {
+                    onScrollToElement(id);
+                  }}>
                   {t(id)}
                 </li>
               ))}
@@ -104,7 +106,11 @@ const Header = () => {
         )}>
         <ul className="flex flex-col items-center gap-10 h-full text-xl">
           {menuLeftItems.map((id, index) => (
-            <li key={index} onClick={() => onClickItem(id)}>
+            <li
+              key={index}
+              onClick={() => {
+                onClickItem(id);
+              }}>
               {t(id)}
             </li>
           ))}

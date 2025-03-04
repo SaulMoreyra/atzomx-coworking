@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import React, { FC } from "react";
+import React, { type FC } from "react";
 import { MessageSquare, Calendar, Zap, Coffee } from "react-feather";
 
 interface BenefitProps {

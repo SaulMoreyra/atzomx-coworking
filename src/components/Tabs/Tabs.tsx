@@ -59,7 +59,9 @@ const TabItem = ({ value, children, schema = "primary" }: TabItemProps) => {
 
   return (
     <div
-      onClick={() => setActiveTab(value)}
+      onClick={() => {
+        setActiveTab(value);
+      }}
       className={cx(
         "px-4 py-2 text-sm min-w-16 break-keep whitespace-nowrap",
         "cursor-pointer border-b-4 text-center",

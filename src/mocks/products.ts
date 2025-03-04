@@ -4,7 +4,6 @@ import {
   type PlanType,
   type ReviewType,
 } from "@/common/types/planTypes";
-import { type ProductType } from "@/common/types/productTypes";
 
 export const ALL_IMAGES: ImageType[] = [
   {
@@ -31,69 +30,6 @@ export const ALL_IMAGES: ImageType[] = [
     id: 1,
     name: "Category 1",
     image: "/images/coworking/monitor.jpeg",
-  },
-];
-
-export const ALL_PRODUCTS: ProductType[] = [
-  {
-    id: 1,
-    name: "Product 1",
-    description: "Description for product 1",
-    price: 100,
-    category: ALL_IMAGES[0],
-    image: "/images/chair.png",
-    categoryId: ALL_IMAGES[0].id,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    createdBy: "Admin",
-    updatedBy: "Admin",
-    stock: 10,
-    subcategory: {
-      id: 1,
-      name: "Subcategory 1",
-      categoryId: ALL_IMAGES[0].id,
-    },
-    subcategoryId: 1,
-  },
-  {
-    id: 2,
-    name: "Product 1",
-    description: "Description for product 1",
-    price: 100,
-    category: ALL_IMAGES[0],
-    image: "/images/comfort_chair.png",
-    categoryId: ALL_IMAGES[0].id,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    createdBy: "Admin",
-    updatedBy: "Admin",
-    stock: 10,
-    subcategory: {
-      id: 1,
-      name: "Subcategory 1",
-      categoryId: ALL_IMAGES[0].id,
-    },
-    subcategoryId: 1,
-  },
-  {
-    id: 3,
-    name: "Product 1",
-    description: "Description for product 1",
-    price: 100,
-    category: ALL_IMAGES[0],
-    image: "/images/comfort_chair.png",
-    categoryId: ALL_IMAGES[0].id,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    createdBy: "Admin",
-    updatedBy: "Admin",
-    stock: 10,
-    subcategory: {
-      id: 1,
-      name: "Subcategory 1",
-      categoryId: ALL_IMAGES[0].id,
-    },
-    subcategoryId: 1,
   },
 ];
 

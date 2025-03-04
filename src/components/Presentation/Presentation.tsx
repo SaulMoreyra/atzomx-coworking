@@ -5,7 +5,7 @@ import { motion as m, type Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import React, { FC, useLayoutEffect, useRef } from "react";
+import React, { type FC, useLayoutEffect, useRef } from "react";
 import Button from "../Button/Button";
 import { useTranslations } from "next-intl";
 
