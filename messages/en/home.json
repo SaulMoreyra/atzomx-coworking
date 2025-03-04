@@ -1,0 +1,106 @@
+{
+  "header": {
+    "about": "About",
+    "plans": "Plans",
+    "contact": "Contact",
+    "reviews": "Reviews",
+    "menu": "Menu"
+  },
+  "presentation": {
+    "plans": "See Plans"
+  },
+  "about": {
+    "title": "Specially Designed for",
+    "public": {
+      "freelancers": "Freelancers",
+      "remote-workers": "Remote workers",
+      "creatives": "Creatives",
+      "digital-nomads": "Digital nomads",
+      "coffee-lovers": "Coffee lovers"
+    }
+  },
+  "benefits": {
+    "wifi": {
+      "title": "Speed WiFi",
+      "description": "1000 Mbps internet"
+    },
+    "plans": {
+      "title": "Flexible Plans",
+      "description": "Hourly, daily, weekly, or monthly"
+    },
+    "coffee": {
+      "title": "Amazing Coffee",
+      "description": "Specialty coffee, always fresh."
+    },
+    "feedback": {
+      "title": "Share Feedback",
+      "description": "We’d love to hear from you!"
+    }
+  },
+  "plans": {
+    "from": "From",
+    "features": {
+      "cafeteria": {
+        "pay-what-you-consume": "Pay only for what you consume",
+        "stable-internet": "Stable Internet",
+        "ergonomic-chairs": "Ergonomic Chairs",
+        "discount-on-cafeteria-menu": "5% Discount on cafeteria menu",
+        "unlimited-coffee-tea-and-water": "Unlimited Coffee, Tea, and Water",
+        "high-speed-internet": "High Speed Internet",
+        "roof-top-access": "Roof Top Access"
+      },
+      "co-working": {
+        "ergonomic-chairs": "Ergonomic Chairs",
+        "unlimited-coffee-tea-and-water": "Unlimited Coffee, Tea, and Water",
+        "high-speed-internet": "High Speed Internet",
+        "roof-top-access": "Roof Top Access",
+        "discount-on-cafeteria-menu": "5% Discount on cafeteria menu",
+        "individual-desk": "Individual Desk",
+        "extra-monitor": "Extra Monitor"
+      },
+      "meeting-room": {
+        "smart-tv": "Smart TV 55 Inch",
+        "whiteboard": "Whiteboard",
+        "space-for-up-to-6-people": "Space for up to 6 people",
+        "unlimited-coffee-tea-and-water": "Unlimited Coffee, Tea, and Water",
+        "high-speed-internet": "High Speed Internet",
+        "roof-top-access": "Roof Top Access",
+        "discount-on-cafeteria-menu": "5% Discount on cafeteria menu"
+      }
+    },
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Always accessible",
+        "area": "Cafeteria"
+      },
+      "standard": {
+        "name": "Standard",
+        "description": "Share a table with others in the co-working area",
+        "area": "Co-working"
+      },
+      "individual": {
+        "name": "Individual",
+        "description": "For those who need a private space",
+        "area": "Co-working"
+      },
+      "monitor": {
+        "name": "Monitor",
+        "description": "For those who need an extra monitor",
+        "area": "Co-working"
+      },
+      "meeting-room": {
+        "name": "Meeting Room",
+        "description": "For the team from 2 to 6 people",
+        "area": "Co-working"
+      }
+    }
+  },
+  "reviews": {
+    "title": "Happy Customers",
+    "footer": "Customers reviews"
+  },
+  "footer": {
+    "payments": "All major methods of payment accepted"
+  }
+}

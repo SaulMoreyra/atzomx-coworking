@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { FC } from "react";
 import { MessageSquare, Calendar, Zap, Coffee } from "react-feather";
 
@@ -22,28 +23,29 @@ const Benefit: FC<BenefitProps> = ({ icon, title, description }) => {
 };
 
 const ServiceBenefits = () => {
+  const t = useTranslations("home.benefits");
   return (
     <div className="flex justify-center items-center md:px-10 py-5">
       <div className="flex flex-col justify-between gap-10 md:flex-row md:gap-20">
         <Benefit
           icon={<Zap size={40} className="min-w-[40px]" />}
-          title="Speed WiFi"
-          description="1000 Mbps internet"
+          title={t("wifi.title")}
+          description={t("wifi.description")}
         />
         <Benefit
           icon={<Calendar size={40} className="min-w-[40px]" />}
-          title="Flexible Plans"
-          description="Hourly, daily, weekly, or monthly"
+          title={t("plans.title")}
+          description={t("plans.description")}
         />
         <Benefit
           icon={<Coffee size={40} className="min-w-[40px]" />}
-          title="Amazing Coffee"
-          description="Specialty coffee, always fresh."
+          title={t("coffee.title")}
+          description={t("coffee.description")}
         />
         <Benefit
           icon={<MessageSquare size={40} className="min-w-[40px]" />}
-          title="Share Feedback"
-          description="We’d love to hear from you!"
+          title={t("feedback.title")}
+          description={t("feedback.description")}
         />
       </div>
     </div>

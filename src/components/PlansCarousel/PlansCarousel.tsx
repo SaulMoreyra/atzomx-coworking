@@ -27,7 +27,7 @@ const PlansCarousel: FC<HeroProps> = ({ plans }) => {
           <PlanBanner
             key={index}
             plan={plan}
-            backgroundColour={bannerBackgroundColours[index]}
+            backgroundColor={bannerBackgroundColours[index]}
           />
         ))}
       </Carousel>

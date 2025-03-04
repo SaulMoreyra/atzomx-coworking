@@ -1,5 +1,9 @@
 import { type ImageType } from "@/common/types/categoryTypes";
-import { CategoryPlan, type PlanType, type ReviewType } from "@/common/types/planTypes";
+import {
+  CategoryPlan,
+  type PlanType,
+  type ReviewType,
+} from "@/common/types/planTypes";
 import { type ProductType } from "@/common/types/productTypes";
 
 export const ALL_IMAGES: ImageType[] = [
@@ -156,35 +160,35 @@ export const ALL_REVIEWS: ReviewType[] = [
   },
 ];
 
-export const CafeteriaPlanFeatures = {
-  PayWhatYouConsume: "Pay only for what you consume",
-  StableInternet: "Stable Internet",
-  ErgonomicChairs: "Ergonomic Chairs",
-  DiscountOnCafeteriaMenu: "5% Discount on cafeteria menu",
-  UnlimitedCoffeeTeaAndWater: "Unlimited Coffee, Tea, and Water",
-  HighSpeedInternet: "High Speed Internet",
-  RoofTopAccess: "Roof Top Access",
-};
+export enum CafeteriaPlanFeatures {
+  PayWhatYouConsume = "pay-what-you-consume",
+  StableInternet = "stable-internet",
+  ErgonomicChairs = "ergonomic-chairs",
+  DiscountOnCafeteriaMenu = "discount-on-cafeteria-menu",
+  UnlimitedCoffeeTeaAndWater = "unlimited-coffee-tea-and-water",
+  HighSpeedInternet = "high-speed-internet",
+  RoofTopAccess = "roof-top-access",
+}
 
-export const CoworkingPlanFeatures = {
-  ErgonomicChairs: "Ergonomic Chairs",
-  UnlimitedCoffeeTeaAndWater: "Unlimited Coffee, Tea, and Water",
-  HighSpeedInternet: "High Speed Internet",
-  RoofTopAccess: "Roof Top Access",
-  DiscountOnCafeteriaMenu: "5% Discount on cafeteria menu",
-  IndividualDesk: "Individual Desk",
-  ExtraMonitor: "Extra Monitor",
-};
+export enum CoworkingPlanFeatures {
+  ErgonomicChairs = "ergonomic-chairs",
+  UnlimitedCoffeeTeaAndWater = "unlimited-coffee-tea-and-water",
+  HighSpeedInternet = "high-speed-internet",
+  RoofTopAccess = "roof-top-access",
+  DiscountOnCafeteriaMenu = "discount-on-cafeteria-menu",
+  IndividualDesk = "individual-desk",
+  ExtraMonitor = "extra-monitor",
+}
 
-export const MeetingRoomFeatures = {
-  SmartTv: "Smart TV 55 Inch",
-  Whiteboard: "Whiteboard",
-  SpaceForUpTo6People: "Space for up to 6 people",
-  UnlimitedCoffeeTeaAndWater: "Unlimited Coffee, Tea, and Water",
-  HighSpeedInternet: "High Speed Internet",
-  RoofTopAccess: "Roof Top Access",
-  DiscountOnCafeteriaMenu: "5% Discount on cafeteria menu",
-};
+export enum MeetingRoomFeatures {
+  SmartTv = "smart-tv",
+  Whiteboard = "whiteboard",
+  SpaceForUpTo6People = "space-for-up-to-6-people",
+  UnlimitedCoffeeTeaAndWater = "unlimited-coffee-tea-and-water",
+  HighSpeedInternet = "high-speed-internet",
+  RoofTopAccess = "roof-top-access",
+  DiscountOnCafeteriaMenu = "discount-on-cafeteria-menu",
+}
 
 export const FeaturesByCategory = {
   [CategoryPlan.CAFETERIA]: CafeteriaPlanFeatures,
@@ -196,17 +200,16 @@ export const ALL_FEATURES = Object.values(CoworkingPlanFeatures);
 
 export const ALL_PLANS: PlanType[] = [
   {
-    name: "Free",
+    id: "free",
     startPrice: 0,
     features: [
       CafeteriaPlanFeatures.PayWhatYouConsume,
       CafeteriaPlanFeatures.StableInternet,
     ],
-    description: "Description for Standard plan",
-    category: "cafeteria",
+    area: CategoryPlan.CAFETERIA,
   },
   {
-    name: "Standard",
+    id: "standard",
     startPrice: 49,
     features: [
       CoworkingPlanFeatures.DiscountOnCafeteriaMenu,
@@ -215,12 +218,11 @@ export const ALL_PLANS: PlanType[] = [
       CoworkingPlanFeatures.UnlimitedCoffeeTeaAndWater,
       CoworkingPlanFeatures.RoofTopAccess,
     ],
-    description: "Description for Standard plan",
-    category: "coworking",
+    area: CategoryPlan.COWORKING,
   },
   {
-    name: "Individual",
-    startPrice: 49,
+    id: "individual",
+    startPrice: 69,
     features: [
       CoworkingPlanFeatures.DiscountOnCafeteriaMenu,
       CoworkingPlanFeatures.ErgonomicChairs,
@@ -229,12 +231,11 @@ export const ALL_PLANS: PlanType[] = [
       CoworkingPlanFeatures.IndividualDesk,
       CoworkingPlanFeatures.RoofTopAccess,
     ],
-    description: "Description for Standard plan",
-    category: "coworking",
+    area: CategoryPlan.COWORKING,
   },
   {
-    name: "Monitor",
-    startPrice: 49,
+    id: "monitor",
+    startPrice: 79,
     features: [
       CoworkingPlanFeatures.DiscountOnCafeteriaMenu,
       CoworkingPlanFeatures.ErgonomicChairs,
@@ -244,14 +245,12 @@ export const ALL_PLANS: PlanType[] = [
       CoworkingPlanFeatures.ExtraMonitor,
       CoworkingPlanFeatures.RoofTopAccess,
     ],
-    description: "Description for Standard plan",
-    category: "coworking",
+    area: CategoryPlan.COWORKING,
   },
   {
-    name: "Desk Room",
-    startPrice: 49,
+    id: "meeting-room",
+    startPrice: 249,
     features: Object.values(MeetingRoomFeatures),
-    description: "Description for Standard plan",
-    category: "meeting room",
+    area: CategoryPlan.MEETING_ROOM,
   },
 ];

@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import React, { FC, useLayoutEffect, useRef } from "react";
 import Button from "../Button/Button";
+import { useTranslations } from "next-intl";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -30,6 +31,7 @@ const animationVariantsImage: Variants = {
 const Presentation: FC = () => {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
+  const t = useTranslations("home.presentation");
 
   const onClickPlans = () => {
     const element = document.getElementById("plans");
@@ -77,7 +79,7 @@ const Presentation: FC = () => {
             />
           </m.div>
           <m.div variants={animationVariants} className="relative">
-            <Button onClick={onClickPlans}>See plans</Button>
+            <Button onClick={onClickPlans}>{t("plans")}</Button>
           </m.div>
         </div>
       </div>

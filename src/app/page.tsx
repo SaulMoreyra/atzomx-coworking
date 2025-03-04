@@ -27,24 +27,6 @@ export default async function Home() {
           <Presentation />
           <About />
           <PlansCarousel plans={ALL_PLANS} />
-          <div className="flex flex-col gap-20">
-            <div className="flex flex-col gap-10">
-              <Heading>Trending products</Heading>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
-                {trendingProducts.splice(0, 4).map((product, index) => (
-                  <ProductCard product={product} key={index} />
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-col gap-10">
-              <Heading>Fresh arrivals</Heading>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-4">
-                {latestProducts.splice(0, 4).map((product, index) => (
-                  <ProductCard product={product} key={index} />
-                ))}
-              </div>
-            </div>
-          </div>
           <ReviewContainer reviews={testimonials} />
         </PageWrapper>
       </div>

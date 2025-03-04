@@ -1,17 +1,16 @@
 export enum CategoryPlan {
   CAFETERIA = "cafeteria",
-  COWORKING = "coworking",
-  MEETING_ROOM = "meeting room",
+  COWORKING = "co-working",
+  MEETING_ROOM = "meeting-room",
 }
 
-export type CategoryPlanType = "cafeteria" | "coworking" | "meeting room";
+export type CategoryPlanType = "cafeteria" | "co-working" | "meeting-room";
 
 export interface PlanType {
-  name: string;
+  id: string;
   startPrice: number;
+  area: CategoryPlanType;
   features: string[];
-  description: string;
-  category: CategoryPlanType;
 }
 
 export interface ReviewType {

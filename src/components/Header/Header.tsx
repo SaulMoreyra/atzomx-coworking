@@ -5,23 +5,12 @@ import React, { useEffect, useState } from "react";
 import cx from "classnames";
 import { Menu, X, Coffee } from "react-feather";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-enum MenuItems {
-  ABOUT = "About",
-  PLANS = "Plans",
-  REVIEWS = "Reviews",
-  CONTACT = "Contact",
-  MENU = "Menu",
-}
-
-const menuLeftItems = [
-  { label: MenuItems.ABOUT, id: "about" },
-  { label: MenuItems.PLANS, id: "plans" },
-  { label: MenuItems.REVIEWS, id: "reviews" },
-  { label: MenuItems.CONTACT, id: "contact" },
-];
+const menuLeftItems = ["about", "plans", "reviews", "contact"];
 
 const Header = () => {
+  const t = useTranslations("home.header");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const onScrollToElement = (id: string) => {
@@ -63,12 +52,12 @@ const Header = () => {
           </div>
           <div className="hidden lg:block w-2/5">
             <ul className="flex gap-5 xl:gap-10 items-center h-full text-lg lg:text-xl">
-              {menuLeftItems.map(({ label, id }, index) => (
+              {menuLeftItems.map((id, index) => (
                 <li
                   className="cursor-pointer"
                   key={index}
                   onClick={() => onScrollToElement(id)}>
-                  {label}
+                  {t(id)}
                 </li>
               ))}
             </ul>
@@ -100,7 +89,7 @@ const Header = () => {
                     size={20}
                     className={cx("min-w-[40px]")}
                   />
-                  {MenuItems.MENU}
+                  {t("menu")}
                 </Link>
               </li>
             </ul>
@@ -114,9 +103,9 @@ const Header = () => {
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         )}>
         <ul className="flex flex-col items-center gap-10 h-full text-xl">
-          {menuLeftItems.map(({ label, id }, index) => (
+          {menuLeftItems.map((id, index) => (
             <li key={index} onClick={() => onClickItem(id)}>
-              {label}
+              {t(id)}
             </li>
           ))}
         </ul>

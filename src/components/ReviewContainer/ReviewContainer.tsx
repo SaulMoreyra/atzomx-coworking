@@ -5,6 +5,7 @@ import { motion as m, type Variants } from "framer-motion";
 import React, { type FC } from "react";
 import Heading from "../Heading/Heading";
 import ReviewCard from "../ReviewCard/ReviewCard";
+import { useTranslations } from "next-intl";
 
 interface ReviewContainerProps {
   reviews: ReviewType[];
@@ -29,11 +30,12 @@ const item: Variants = {
 };
 
 const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
+  const t = useTranslations("home.reviews");
   return (
     <div
       id="reviews"
       className="bg-theme-gray rounded-md py-20 px-5 flex flex-col gap-10 relative overflow-hidden">
-      <Heading className="md:absolute md:left-40">Happy customers</Heading>
+      <Heading className="md:absolute md:left-40">{t("title")}</Heading>
       <m.ul
         variants={container}
         initial="hidden"
@@ -46,7 +48,7 @@ const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
         ))}
       </m.ul>
       <h1 className="absolute -bottom-4 left-[50%] -translate-x-[50%] text-9xl font-bold whitespace-nowrap opacity-10">
-        customer reviews
+        {t("footer")}
       </h1>
     </div>
   );
