@@ -5,14 +5,11 @@ import { ALL_FOODS } from "@/mocks/menu/lunch";
 import React, { useMemo, useState } from "react";
 
 const reduceToArrayByCategory = (obj: FoodType[]) => {
-  return obj.reduce<Record<string, FoodType[]>>(
-    (acc, item) => {
-      if (!acc[item.category]) acc[item.category] = [];
-      acc[item.category].push(item);
-      return acc;
-    },
-    {}
-  );
+  return obj.reduce<Record<string, FoodType[]>>((acc, item) => {
+    if (!acc[item.category]) acc[item.category] = [];
+    acc[item.category].push(item);
+    return acc;
+  }, {});
 };
 
 const MenuList = () => {
@@ -35,6 +32,11 @@ const MenuList = () => {
     return reduceToArrayByCategory(filteredMenu);
   }, [filter]);
 
+  const scrollToTitle = (category: string) => () => {
+    const element = document.getElementById(category);
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <>
       <section className="self-start top-36 sticky hidden md:block">
@@ -45,7 +47,9 @@ const MenuList = () => {
           type="text"
           placeholder="Search"
           className="w-full p-3 border border-gray-200 rounded-md mb-5"
-          onChange={e => { setFilter(e.target.value); }}
+          onChange={e => {
+            setFilter(e.target.value);
+          }}
         />
         <div className="flex flex-col gap-2">
           <h2 className="text-lg font-semibold text-gray-700 mb-2 hidden md:block">
@@ -55,18 +59,21 @@ const MenuList = () => {
             {Object.keys(ALL_FOODS_BY_CATEGORY).map((category, index) => (
               <li
                 key={index}
-                className="text-gray-400 cursor-pointer inline md:block">
+                className="text-gray-400 cursor-pointer inline md:block"
+                onClick={scrollToTitle(category)}>
                 {category}
               </li>
             ))}
           </ul>
         </div>
       </section>
-      <section className="flex flex-col flex-1 gap-10 mb-24 hidden md:block">
+      <section className="flex flex-col flex-1 gap-8 hidden md:flex">
         {Object.entries(ALL_FOODS_BY_CATEGORY).map(
           ([category, items], index) => (
-            <div key={index} className="flex flex-col gap-2">
-              <h1 className="text-2xl font-semibold text-gray-700 mb-2 uppercase">
+            <div key={index} className="flex flex-col">
+              <h1
+                id={category}
+                className="text-2xl font-semibold text-gray-700 mb-5 uppercase scroll-mt-36">
                 {category}
               </h1>
               <ul className="space-y-5">

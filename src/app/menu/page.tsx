@@ -12,7 +12,7 @@ export default async function Home() {
         <MenuInformation className="hidden lg:block" />
       </div>
       <MenuListMobile />
-      <MenuInformation className="block lg:hidden min-w-[100%] mb-0 px-10" />
+      <MenuInformation className="block lg:hidden min-w-[100%] mb-0 p-5 md:px-10" />
     </>
   );
 }

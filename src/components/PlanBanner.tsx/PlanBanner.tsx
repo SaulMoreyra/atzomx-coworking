@@ -57,10 +57,10 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColour }) => {
       initial="hidden"
       whileInView="visible"
       className={cx(
-        "h-screen-header bg-theme-mint flex flex-col overflow-hidden rounded-md relative md:flex-row",
+        "min-h-[calc(100dvh-40px)] bg-theme-mint flex flex-col overflow-hidden rounded-md relative md:flex-row",
         backgroundColour
       )}>
-      <div className="w-full md:w-3/5 flex flex-col justify-center items-center px-10 md:px-40">
+      <div className="w-full flex flex-col justify-center items-center px-10 md:px-40">
         <div className="flex flex-col gap-5 py-10 md:py-0 w-full">
           <m.div
             variants={animationVariants}
@@ -85,8 +85,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColour }) => {
           </m.div>
         </div>
       </div>
-      <div className="w-2/5 h-full md:bg-white" />
-      <div className="relative md:absolute bottom-[10%] h-[50%] md:right-[10%] md:h-[100%] md:-bottom-[0%] flex items-center justify-center w-full md:w-2/5">
+      <div className="relative flex-1 md:absolute h-[50%] md:right-[10%] md:h-[100%] flex items-center justify-center w-full md:w-2/5">
         <div ref={imageRef} className="md:h-[50%] px-5 aspect-square relative">
           <PlanCard plan={plan} />
         </div>

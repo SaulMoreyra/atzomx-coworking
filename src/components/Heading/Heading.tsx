@@ -14,10 +14,10 @@ const Heading: FC<HeadingProps> = ({ children, className }) => {
   return (
     <div
       className={cx(
-        "flex gap-2 justify-center text-4xl md:text-5xl",
+        "flex gap-2 justify-center text-3xl md:text-4xl md:text-5xl",
         className
       )}>
-      <p>{nonEmphasisedWords}</p>
+      <p className="whitespace-nowrap">{nonEmphasisedWords}</p>
       <div className="relative">
         <p className="font-bold">{emphasisedWord}</p>
         <div className="absolute right-0 bg-primary-soft -translate-y-[5px] h-2 w-full" />

@@ -5,7 +5,7 @@ import { motion as m, type Variants } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { FC, useLayoutEffect, useRef } from "react";
 import Button from "../Button/Button";
 
 const containerVariants: Variants = {
@@ -27,9 +27,14 @@ const animationVariantsImage: Variants = {
   visible: { opacity: 1, transition: { duration: 1 } },
 };
 
-const Presentation = () => {
+const Presentation: FC = () => {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
+
+  const onClickPlans = () => {
+    const element = document.getElementById("plans");
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -50,6 +55,7 @@ const Presentation = () => {
 
   return (
     <m.div
+      id="home"
       ref={containerRef}
       variants={containerVariants}
       initial="hidden"
@@ -71,7 +77,7 @@ const Presentation = () => {
             />
           </m.div>
           <m.div variants={animationVariants} className="relative">
-            <Button>See plans</Button>
+            <Button onClick={onClickPlans}>See plans</Button>
           </m.div>
         </div>
       </div>

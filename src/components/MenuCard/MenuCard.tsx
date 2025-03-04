@@ -10,7 +10,7 @@ interface MenuCardProps {
 const MenuCard: FC<MenuCardProps> = ({ item }) => {
   return (
     <div className="rounded-md shadow-md hover:border-gray-400 flex-col border border-gray-200 min-height-[190px]">
-      <div className="p-6 flex">
+      <div className="p-6 flex gap-2">
         <div className="flex flex-col flex-1 gap-2">
           <div className="flex-1">
             <h3 className="text-xl md:text-2xl font-semibold">{item.name}</h3>
@@ -19,13 +19,15 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
           <div className="flex divide-x divide-gray-200">
             {item.variants.length > 1 ? (
               item.variants.map((variant, index) => (
-                <div key={index} className="min-w-[100px] px-5 first:pl-0">
+                <div
+                  key={index}
+                  className="min-w-[60px] md:min-w-[100px] px-2 md:px-5 first:pl-0">
                   <p className="text-xs text-gray-400">{variant.name}</p>
                   <h4 className="text-xl font-semibold">${variant.price}</h4>
                 </div>
               ))
             ) : (
-              <div className="min-w-[100px] px-5 first:pl-0">
+              <div className="min-w-[60px] md:min-w-[100px] px-2 md:px-5 first:pl-0">
                 <h4 className="text-lg md:text-xl font-semibold">
                   ${item.price}
                 </h4>

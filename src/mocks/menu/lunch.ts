@@ -166,8 +166,8 @@ export const coffee: FoodType[] = [
 
 export const lunch: FoodType[] = [
   {
-    id: "sandwich-verde",
-    name: "Sandwich Verde",
+    id: "green-sandwich",
+    name: "Green Sandwich",
     description:
       "Sourdough bread, mayonnaise, tomato, avocado, cucumber, Italian lettuce, baby spinach, and Manchego cheese",
     price: 110,

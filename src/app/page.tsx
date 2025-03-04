@@ -44,8 +44,8 @@ export default async function Home() {
                 ))}
               </div>
             </div>
-            <ReviewContainer reviews={testimonials} />
           </div>
+          <ReviewContainer reviews={testimonials} />
         </PageWrapper>
       </div>
       <Footer />

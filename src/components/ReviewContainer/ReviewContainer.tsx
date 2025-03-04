@@ -30,7 +30,9 @@ const item: Variants = {
 
 const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
   return (
-    <div className="bg-theme-gray rounded-md py-20 px-5 flex flex-col gap-10 relative overflow-hidden">
+    <div
+      id="reviews"
+      className="bg-theme-gray rounded-md py-20 px-5 flex flex-col gap-10 relative overflow-hidden">
       <Heading className="md:absolute md:left-40">Happy customers</Heading>
       <m.ul
         variants={container}

@@ -10,7 +10,7 @@ const MenuInformation: FC<MenuInformationProps> = ({ className }) => {
   return (
     <section
       className={cx(
-        "sticky top-36 bg-gray-100 rounded-lg w-[287px] p-5 pb-6 self-start mb-24",
+        "sticky top-36 bg-gray-100 rounded-lg w-[287px] p-5 pb-6 self-start",
         className
       )}>
       <h1 className="text-xl md:text-2xl font-semibold text-gray-700 mb-5 uppercase">
@@ -42,7 +42,8 @@ const MenuInformation: FC<MenuInformationProps> = ({ className }) => {
             <a
               target="_blank"
               href="https://maps.app.goo.gl/oWku9z3EYJRy7iKTA"
-              className="text-blue-500 text-sm" rel="noreferrer">
+              className="text-blue-500 text-sm"
+              rel="noreferrer">
               View on map
             </a>
           </div>
