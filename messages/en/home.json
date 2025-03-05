@@ -70,22 +70,22 @@
     },
     "plans": {
       "free": {
-        "name": "Free",
+        "name": "Free Plan",
         "description": "Always accessible",
         "area": "Cafeteria"
       },
       "standard": {
-        "name": "Standard",
+        "name": "Standard Plan",
         "description": "Share a table with others in the co-working area",
         "area": "Co-working"
       },
       "individual": {
-        "name": "Individual",
+        "name": "Individual Plan",
         "description": "For those who need a private space",
         "area": "Co-working"
       },
       "monitor": {
-        "name": "Monitor",
+        "name": "Monitor Plan",
         "description": "For those who need an extra monitor",
         "area": "Co-working"
       },
@@ -101,6 +101,9 @@
     "footer": "Customers reviews"
   },
   "footer": {
-    "payments": "All major methods of payment accepted"
+    "payments": "All major methods of payment accepted",
+    "address": "Address",
+    "location": "Location",
+    "social_networks": "Social Networks"
   }
 }
