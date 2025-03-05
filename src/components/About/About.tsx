@@ -17,7 +17,9 @@ const About = () => {
   const t = useTranslations("home.about");
 
   return (
-    <div id="about" className="min-h-screen-header flex flex-col gap-10 py-5">
+    <div
+      id="about"
+      className="min-h-screen-header flex flex-col gap-10 py-5 justify-center">
       <div className="flex flex-col justify-center gap-4 text-4xl md:text-5xl text-center">
         <Heading>{t("title")}</Heading>
         <ol className="list-none list-slide-up h-12 md:h-20 block text-4xl md:text-7xl">

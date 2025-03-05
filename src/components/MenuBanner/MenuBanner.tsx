@@ -19,7 +19,7 @@ const MenuBanner = () => {
       <div className="flex flex-col">
         <MenuHeader />
         <div className="flex flex-col items-center justify-center relative">
-          <div className="absolute h-[168px] bg-primary-main w-full top-0" />
+          <div className="absolute h-[168px] bg-primary-main w-full top-0 -mt-[1px]" />
           <div className="relative top-1 w-full max-h-[336px] max-w-[520px] md:rounded-md overflow-hidden aspect-square">
             <Image
               src="/images/coworking/atzomx.jpg"

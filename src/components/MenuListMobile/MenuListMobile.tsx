@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import cx from "classnames";
 import Tabs from "../Tabs/Tabs";
 import MenuCard from "../MenuCard/MenuCard";
+import { useTranslations } from "next-intl";
 
 const reduceToArrayByCategory = (obj: FoodType[]) => {
   const accumulator: Record<string, FoodType[]> = {};
@@ -18,6 +19,7 @@ const reduceToArrayByCategory = (obj: FoodType[]) => {
 };
 
 const MenuListMobile = () => {
+  const t = useTranslations("menu.categories");
   const [activeTab, setActiveTab] = useState<string | number>("coffee");
   const isScrollUp = useScrollUp({ distance: 380 });
   const ALL_FOODS_BY_CATEGORY = reduceToArrayByCategory(ALL_FOODS);
@@ -45,7 +47,7 @@ const MenuListMobile = () => {
               schema={isScrollUp ? "secondary" : "primary"}
               key={category}
               value={category}>
-              {category}
+              {t(category)}
             </Tabs.Item>
           ))}
         </Tabs>
