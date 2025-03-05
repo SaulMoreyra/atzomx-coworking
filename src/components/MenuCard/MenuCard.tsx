@@ -1,40 +1,54 @@
-import { FoodType } from "@/common/types/menuTypes";
+import { type FoodType } from "@/common/types/menuTypes";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import React, { FC } from "react";
+import React, { type FC } from "react";
 import { Heart } from "react-feather";
 
-type MenuCardProps = {
+interface MenuCardProps {
   item: FoodType;
-};
+}
 
 const MenuCard: FC<MenuCardProps> = ({ item }) => {
+  const { id, category } = item;
+  const t = useTranslations("menu");
+
   return (
     <div className="rounded-md shadow-md hover:border-gray-400 flex-col border border-gray-200 min-height-[190px]">
-      <div className="p-6 flex">
+      <div className="p-6 flex gap-2">
         <div className="flex flex-col flex-1 gap-2">
           <div className="flex-1">
-            <h3 className="text-2xl font-semibold">{item.name}</h3>
-            <p className="text-gray-400 text-sm">{item.description}</p>
+            <h3 className="text-xl md:text-2xl font-semibold">
+              {t(`menu.${category}.${id}.name`)}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              {t(`menu.${category}.${id}.description`)}
+            </p>
           </div>
           <div className="flex divide-x divide-gray-200">
-            {item.variants.length > 1 ? (
+            {item.variants.length > 0 ? (
               item.variants.map((variant, index) => (
-                <div key={index} className="min-w-[100px] px-5 first:pl-0">
-                  <p className="text-xs text-gray-400">{variant.name}</p>
+                <div
+                  key={index}
+                  className="min-w-[60px] md:min-w-[100px] px-2 md:px-5 first:pl-0">
+                  <p className="text-xs text-gray-400">
+                    {t(`variants.${variant.name}`)}
+                  </p>
                   <h4 className="text-xl font-semibold">${variant.price}</h4>
                 </div>
               ))
             ) : (
-              <div className="min-w-[100px] px-5 first:pl-0">
-                <h4 className="text-xl font-semibold">${item.price}</h4>
+              <div className="min-w-[60px] md:min-w-[100px] px-2 md:px-5 first:pl-0">
+                <h4 className="text-lg md:text-xl font-semibold">
+                  ${item.price}
+                </h4>
               </div>
             )}
           </div>
         </div>
-        <div className="w-[140px] h-[140px] rounded-md overflow-hidden aspect-square relative">
+        <div className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] rounded-md overflow-hidden aspect-square relative">
           <Image
             src={item.image}
-            alt={item.name}
+            alt={item.id}
             fill={true}
             className="object-cover"
           />

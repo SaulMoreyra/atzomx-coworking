@@ -19,8 +19,7 @@ const Category: FC<CategoryProps> = ({
       className={cx(
         "relative rounded-md p-10 flex flex-col items-center justify-center overflow-hidden",
         className
-      )}
-    >
+      )}>
       <Image
         src={image}
         alt={category}

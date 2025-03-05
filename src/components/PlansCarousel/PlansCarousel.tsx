@@ -21,15 +21,17 @@ const bannerBackgroundColours = [
 
 const PlansCarousel: FC<HeroProps> = ({ plans }) => {
   return (
-    <Carousel emulateTouch={true} showStatus={false} infiniteLoop={true}>
-      {plans.map((plan, index) => (
-        <PlanBanner
-          key={index}
-          plan={plan}
-          backgroundColour={bannerBackgroundColours[index]}
-        />
-      ))}
-    </Carousel>
+    <div id="plans" className="min-h-screen-header pt-5">
+      <Carousel showStatus={false} infiniteLoop={true}>
+        {plans.map((plan, index) => (
+          <PlanBanner
+            key={index}
+            plan={plan}
+            backgroundColor={bannerBackgroundColours[index]}
+          />
+        ))}
+      </Carousel>
+    </div>
   );
 };
 
