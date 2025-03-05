@@ -1,7 +1,7 @@
 "use client";
 import { type FoodType } from "@/common/types/menuTypes";
 import { useScrollUp } from "@/hooks/useScrollUp";
-import { ALL_FOODS } from "@/mocks/menu/lunch";
+import { ALL_FOODS } from "@/mocks/menu";
 import React, { useState } from "react";
 import cx from "classnames";
 import Tabs from "../Tabs/Tabs";
@@ -19,27 +19,30 @@ const reduceToArrayByCategory = (obj: FoodType[]) => {
 
 const MenuListMobile = () => {
   const [activeTab, setActiveTab] = useState<string | number>("coffee");
-  const isScrollUp = useScrollUp({ distance: 410 });
+  const isScrollUp = useScrollUp({ distance: 380 });
   const ALL_FOODS_BY_CATEGORY = reduceToArrayByCategory(ALL_FOODS);
+
+  const scrollToTitle = (category: string | number) => {
+    const element = document.getElementById("panel-container");
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActiveTab(category);
+  };
 
   return (
     <>
       <section
-        className={cx("sticky top-[100px] bg-white z-10 md:hidden", {
+        className={cx("sticky top-[132px] bg-white z-10 md:hidden", {
           "shadow-md": isScrollUp,
         })}>
         <Tabs
           tab={activeTab}
-          onChange={tab => {
-            setActiveTab(tab);
-          }}
-          className={cx("px-10", {
+          onChange={scrollToTitle}
+          className={cx("px-5 md:px-10", {
             "bg-primary-main": isScrollUp,
           })}>
           {Object.keys(ALL_FOODS_BY_CATEGORY).map(category => (
             <Tabs.Item
-              className={cx({ "text-gray-300": isScrollUp })}
-              activeClassName={cx({ "border-b-white text-white": isScrollUp })}
+              schema={isScrollUp ? "secondary" : "primary"}
               key={category}
               value={category}>
               {category}
@@ -47,7 +50,9 @@ const MenuListMobile = () => {
           ))}
         </Tabs>
       </section>
-      <section className="px-10 flex flex-col gap-10 my-12 md:hidden">
+      <section
+        id="panel-container"
+        className="px-5 md:px-10 flex flex-col gap-10 mt-12 mb-8 md:hidden scroll-mt-48">
         {Object.entries(ALL_FOODS_BY_CATEGORY).map(
           ([category, items], index) => (
             <Tabs.Panel key={index} value={activeTab} tab={category}>

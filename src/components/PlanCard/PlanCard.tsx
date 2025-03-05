@@ -3,14 +3,16 @@ import { type PlanType } from "@/common/types/planTypes";
 import { FeaturesByCategory } from "@/mocks/products";
 import cx from "classnames";
 import { CheckSquare, Square } from "react-feather";
+import { useTranslations } from "next-intl";
 
 interface PlanCardProps {
   plan: PlanType;
 }
 
 const PlanCard = ({ plan }: PlanCardProps) => {
+  const t = useTranslations(`home.plans.features.${plan.area}`);
   const featuresSet = new Set(plan.features);
-  const features = FeaturesByCategory[plan.category];
+  const features = FeaturesByCategory[plan.area];
 
   return (
     <div className="p-10 flex gap-5 bg-white rounded-md shadow-sm hover:shadow-xl flex-col">
@@ -27,7 +29,7 @@ const PlanCard = ({ plan }: PlanCardProps) => {
                 "text-xl text-left",
                 featuresSet.has(feature) ? "text-theme-mint" : "text-gray-400"
               )}>
-              {feature}
+              {t(feature)}
             </p>
           </li>
         ))}

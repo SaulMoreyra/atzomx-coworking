@@ -35,21 +35,27 @@ const Tabs = ({ children, tab, onChange, className }: TabsProps) => {
 interface TabItemProps {
   value: string | number;
   children: ReactNode;
-  className?: string;
-  activeClassName?: string;
+  schema?: "primary" | "secondary";
 }
 
-const TabItem = ({
-  value,
-  children,
-  activeClassName,
-  className,
-}: TabItemProps) => {
+const COLOR_SCHEMA = {
+  primary: {
+    active: "text-primary-main border-primary-main",
+    inactive: "text-gray-400 border-white",
+  },
+  secondary: {
+    active: "text-white border-white",
+    inactive: "text-gray-300 border-primary-main",
+  },
+};
+
+const TabItem = ({ value, children, schema = "primary" }: TabItemProps) => {
   const context = useContext(TabsContext);
   if (!context) throw new Error("TabItem must be used within a Tabs component");
 
   const { activeTab, setActiveTab } = context;
   const isActive = activeTab === value;
+  const schemaColors = COLOR_SCHEMA[schema];
 
   return (
     <div
@@ -57,26 +63,32 @@ const TabItem = ({
         setActiveTab(value);
       }}
       className={cx(
-        "px-4 py-2 text-sm transition-all ease-in-out min-w-16 break-keep whitespace-nowrap",
-        "cursor-pointer border-b-4 border-transparent text-gray-400 text-center",
-        { "border-b-4 border-primary-main text-primary-main": isActive },
-        ...(className ? [className] : []),
-        ...(isActive && activeClassName ? [activeClassName] : [])
+        "px-4 py-2 text-sm min-w-16 break-keep whitespace-nowrap",
+        "cursor-pointer border-b-4 text-center",
+        isActive ? schemaColors.active : schemaColors.inactive
       )}>
       {children}
     </div>
   );
 };
 
-interface TabPanelProps {
+interface TabPanelProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {
   value: string | number;
   tab: string;
   children: ReactNode;
 }
 
-const TabPanel = ({ value, tab, children }: TabPanelProps) => {
+const TabPanel = ({ value, tab, children, ...props }: TabPanelProps) => {
   if (value !== tab) return null;
-  return <div className="font-light">{children}</div>;
+  return (
+    <div className="font-light" {...props}>
+      {children}
+    </div>
+  );
 };
 
 Tabs.Item = TabItem;

@@ -3,27 +3,28 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import cx from "classnames";
-import { Menu, X } from "react-feather";
+import { Menu, X, Coffee } from "react-feather";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
+import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
+import { type Locale } from "@/i18n/config";
 
-enum MenuItems {
-  ABOUT = "About",
-  PLANS = "Plans",
-  MENU = "Menu",
-  REVIEWS = "Reviews",
-  CONTACT = "Contact",
-}
-
-const menuItems = [
-  { label: MenuItems.ABOUT, route: "/" },
-  { label: MenuItems.PLANS, route: "/" },
-  { label: MenuItems.MENU, route: "/" },
-  { label: MenuItems.REVIEWS, route: "/" },
-  { label: MenuItems.CONTACT, route: "/" },
-];
+const menuLeftItems = ["about", "plans", "reviews", "contact"];
 
 const Header = () => {
+  const locale = useLocale() as Locale;
+  const t = useTranslations("home.header");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const onScrollToElement = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const onClickItem = (id: string) => {
+    onScrollToElement(id);
+    setIsMenuOpen(false);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -38,9 +39,35 @@ const Header = () => {
 
   return (
     <div className="w-full">
-      <div className="relative bg-gray-50 items-center justify-between py-7 px-4 md:px-20 z-30">
-        <div className="flex gap-20 items-center pr-5 md:pr-0 h-full">
-          <div className="absolute left-[50%] -translate-x-[50%] h-full">
+      <div className="relative bg-gray-50 items-center justify-between py-7 px-10 xl:px-20 z-30">
+        <div className="flex items-center h-full">
+          <div className="flex lg:hidden flex-1 transition-all duration-300">
+            <X
+              onClick={toggleMenu}
+              size={20}
+              className={cx("min-w-[40px]", isMenuOpen ? "block" : "hidden")}
+            />
+            <Menu
+              onClick={toggleMenu}
+              size={20}
+              className={cx("min-w-[40px]", isMenuOpen ? "hidden" : "block")}
+            />
+          </div>
+          <div className="hidden lg:flex flex-1">
+            <ul className="flex gap-5 xl:gap-10 items-center h-full text-lg lg:text-xl">
+              {menuLeftItems.map((id, index) => (
+                <li
+                  className="cursor-pointer"
+                  key={index}
+                  onClick={() => {
+                    onScrollToElement(id);
+                  }}>
+                  {t(id)}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="h-full">
             <Link
               href="/"
               className="flex flex-col items-center h-full justify-center">
@@ -55,28 +82,27 @@ const Header = () => {
               </div>
             </Link>
           </div>
-          <div className="hidden lg:block">
-            <ul className="flex gap-10 items-center h-full text-xl">
-              {menuItems.map(({ label, route }, index) => (
-                <li key={index}>
-                  <Link href={route} aria-haspopup="menu">
-                    {label}
-                  </Link>
-                </li>
-              ))}
+          <div className="flex-1 flex justify-end items-center">
+            <ul className="flex gap-3 xl:gap-5 items-center h-full text-lg lg:text-xl">
+              <li>
+                <Link
+                  href="/menu"
+                  target="_blank"
+                  className="flex items-center gap-1">
+                  <Coffee
+                    onClick={toggleMenu}
+                    size={20}
+                    className={"min-w-[40px] block lg:hidden"}
+                  />
+                  <span className="hidden lg:block cursor-pointer">
+                    {t("menu")}
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <LocaleSwitch locale={locale} />
+              </li>
             </ul>
-          </div>
-          <div className="block lg:hidden transition-all duration-300">
-            <X
-              onClick={toggleMenu}
-              size={20}
-              className={cx("min-w-[40px]", isMenuOpen ? "block" : "hidden")}
-            />
-            <Menu
-              onClick={toggleMenu}
-              size={20}
-              className={cx("min-w-[40px]", isMenuOpen ? "hidden" : "block")}
-            />
           </div>
         </div>
       </div>
@@ -87,11 +113,13 @@ const Header = () => {
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         )}>
         <ul className="flex flex-col items-center gap-10 h-full text-xl">
-          {menuItems.map(({ label, route }, index) => (
-            <li key={index}>
-              <Link onClick={toggleMenu} href={route} aria-haspopup="menu">
-                {label}
-              </Link>
+          {menuLeftItems.map((id, index) => (
+            <li
+              key={index}
+              onClick={() => {
+                onClickItem(id);
+              }}>
+              {t(id)}
             </li>
           ))}
         </ul>

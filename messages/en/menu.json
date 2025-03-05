@@ -1,0 +1,269 @@
+{
+  "titles": {
+    "menu": "Menu",
+    "categories": "Categories"
+  },
+  "information": {
+    "title": "information",
+    "hours": "Opening Hours",
+    "schedule-days": "Monday to Friday",
+    "schedule-hours": "9:00 AM to 6:00 PM",
+    "address": "Address",
+    "button-map": "View on Map",
+    "contact": "Contact"
+  },
+  "categories": {
+    "coffee": "Coffee",
+    "lunch": "Lunch",
+    "dessert": "Dessert",
+    "smoothies": "Smoothies",
+    "combos": "Combos",
+    "frappes": "Frappes",
+    "italian-sodas": "Italian Sodas",
+    "extras": "Extras"
+  },
+  "variants": {
+    "hot": "Hot",
+    "iced": "Iced",
+    "chips": "Chips",
+    "salad": "Salad"
+  },
+  "menu": {
+    "coffee": {
+      "espresso": {
+        "name": "Espresso",
+        "description": "Strong black coffee"
+      },
+      "macchiato": {
+        "name": "Macchiato",
+        "description": "Espresso with a small amount of steamed milk"
+      },
+      "americano": {
+        "name": "Americano",
+        "description": "Espresso with water"
+      },
+      "cappuccino": {
+        "name": "Cappuccino",
+        "description": "Espresso with steamed milk and foam"
+      },
+      "latte": {
+        "name": "Latte",
+        "description": "Espresso with steamed milk"
+      },
+      "mocca": {
+        "name": "Mocca",
+        "description": "Espresso with chocolate and steamed milk"
+      },
+      "flat-white": {
+        "name": "Flat White",
+        "description": "Espresso with steamed milk"
+      },
+      "espresso-berry": {
+        "name": "Espresso Berry",
+        "description": "Espresso with berry flavor"
+      },
+      "espresso-tonic": {
+        "name": "Espresso Tonic",
+        "description": "Espresso with tonic water"
+      },
+      "espresso-pink": {
+        "name": "Espresso Pink",
+        "description": "Espresso with pink flavor"
+      },
+      "cold-brew": {
+        "name": "Iced Brew",
+        "description": "Iced brewed coffee"
+      },
+      "aeropress": {
+        "name": "Aeropress",
+        "description": "Hot variant AEROPRESS"
+      },
+      "v60": {
+        "name": "V60",
+        "description": "Hot variant V60"
+      },
+      "chemex": {
+        "name": "Chemex",
+        "description": "Hot variant CHEMEX"
+      },
+      "french-press": {
+        "name": "French Press",
+        "description": "Hot variant French Press"
+      },
+      "japanese-siphon": {
+        "name": "Japanese Siphon",
+        "description": "Hot variant Japanese Siphon"
+      }
+    },
+    "lunch": {
+      "green-sandwich": {
+        "name": "Green Sandwich",
+        "description": "Sourdough bread, mayonnaise, tomato, avocado, cucumber, Italian lettuce, baby spinach, and Manchego cheese"
+      },
+      "turkey-sandwich": {
+        "name": "Turkey Sandwich",
+        "description": "Sourdough bread, mayonnaise, tomato, avocado, Italian lettuce, yellow cheese, and turkey ham"
+      },
+      "iberian-sandwich": {
+        "name": "Iberian Sandwich",
+        "description": "Sourdough bread, mayonnaise, tomato, avocado, Italian lettuce, baby spinach, Manchego cheese, turkey ham, serrano ham, and pepperoni"
+      },
+      "serrano-sandwich": {
+        "name": "Serrano Sandwich",
+        "description": "Sourdough bread, mayonnaise, tomato, avocado, Italian lettuce, baby spinach, Manchego cheese, and serrano ham"
+      },
+      "house-salad": {
+        "name": "House Salad",
+        "description": "Italian lettuce, baby spinach, apple, strawberry, walnuts, cream cheese, honey mustard dressing, and cranberries"
+      },
+      "red-berry-bowl": {
+        "name": "Red Berry Bowl",
+        "description": "Greek yogurt, strawberries, blueberries, banana, honey, amaranth, and granola"
+      },
+      "chocolate-bowl": {
+        "name": "Chocolate Bowl",
+        "description": "Greek yogurt, strawberries, blueberries, honey, amaranth, granola, cocoa, and chocolate chips"
+      }
+    },
+    "dessert": {
+      "affogato": {
+        "name": "Affogato",
+        "description": "Vanilla ice cream with espresso"
+      },
+      "apple-tart": {
+        "name": "Apple Tart",
+        "description": "Apple tart with vanilla ice cream"
+      },
+      "cheesecake": {
+        "name": "Cheesecake",
+        "description": "Cheesecake with chocolate syrup"
+      },
+      "bread-of-the-day": {
+        "name": "Bread of the Day",
+        "description": "Ask for the bread of the day"
+      }
+    },
+    "smoothies": {
+      "tropical-smoothie": {
+        "name": "Tropical Smoothie",
+        "description": "Milk, Greek yogurt, honey, chia seeds, mixed fruits"
+      },
+      "mango-smoothie": {
+        "name": "Mango Smoothie",
+        "description": "Milk, Greek yogurt, honey, chia seeds, mango"
+      },
+      "green-smoothie": {
+        "name": "Green Smoothie",
+        "description": "Milk, Greek yogurt, honey, chia seeds, cucumber, spinach, green apple"
+      }
+    },
+    "combos": {
+      "el-mananero": {
+        "name": "El Mañanero",
+        "description": "Red Berry or Chocolate Bowl, Americano or Espresso Coffee"
+      },
+      "coffee-bread": {
+        "name": "Coffee + Bread",
+        "description": "Includes Americano or Espresso Coffee. Valid from 9 AM to 12 PM"
+      },
+      "bradfitt": {
+        "name": "Bradfitt",
+        "description": "House salad, Any Smoothie"
+      },
+      "freelancer": {
+        "name": "Freelancer",
+        "description": "Any Sandwich (except Serrano), Americano, Espresso, Cappuccino Coffee, or Italian Soda"
+      },
+      "the-ceo": {
+        "name": "The CEO",
+        "description": "Any Sandwich, Red Berry or Chocolate Bowl, Any hot or iced Coffee"
+      }
+    },
+    "frappes": {
+      "latte-frappe": {
+        "name": "Latte",
+        "description": "Blended coffee with milk"
+      },
+      "mocca-frappe": {
+        "name": "Mocha",
+        "description": "Blended coffee with chocolate and milk"
+      },
+      "chocolate-frappe": {
+        "name": "Chocolate",
+        "description": "Blended chocolate drink"
+      },
+      "mango-frappe": {
+        "name": "Mango",
+        "description": "Blended mango drink"
+      },
+      "cherry-frappe": {
+        "name": "Cherry",
+        "description": "Blended cherry drink"
+      },
+      "strawberry-frappe": {
+        "name": "Strawberry",
+        "description": "Blended strawberry drink"
+      },
+      "chai-frappe": {
+        "name": "Chai",
+        "description": "Blended chai drink"
+      }
+    },
+    "italian-sodas": {
+      "pineapple-italian-soda": {
+        "name": "Pineapple",
+        "description": "Refreshing pineapple Italian soda"
+      },
+      "blue-curacao-italian-soda": {
+        "name": "Blue Curacao",
+        "description": "Refreshing BLUE Curacao Italian soda"
+      },
+      "mango-italian-soda": {
+        "name": "Mango",
+        "description": "Refreshing mango Italian soda"
+      },
+      "passion-fruit-italian-soda": {
+        "name": "Passion Fruit",
+        "description": "Refreshing passion fruit Italian soda"
+      },
+      "green-apple-italian-soda": {
+        "name": "Green Apple",
+        "description": "Refreshing green apple Italian soda"
+      },
+      "cherry-italian-soda": {
+        "name": "Cherry",
+        "description": "Refreshing cherry Italian soda"
+      },
+      "strawberry-glitter-italian-soda": {
+        "name": "Strawberry Glitter",
+        "description": "Refreshing strawberry glitter Italian soda"
+      }
+    },
+    "extras": {
+      "chai-latte": {
+        "name": "Chai Latte",
+        "description": "Spiced tea with steamed milk"
+      },
+      "choco-latte": {
+        "name": "Choco-Latte",
+        "description": "Chocolate flavored latte"
+      },
+      "tizanas": {
+        "name": "Tinzanas",
+        "description": "Herbal tea"
+      },
+      "sodas": {
+        "name": "Sodas",
+        "description": "Assorted sodas"
+      },
+      "topo-chico": {
+        "name": "Topo Chico (Mineral Water)",
+        "description": "Mineral water"
+      },
+      "tea": {
+        "name": "Tea",
+        "description": "Hot tea"
+      }
+    }
+  }
+}

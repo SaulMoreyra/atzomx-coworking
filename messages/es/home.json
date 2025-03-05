@@ -1,0 +1,106 @@
+{
+  "header": {
+    "about": "Nosotros",
+    "plans": "Planes",
+    "contact": "Contacto",
+    "reviews": "Reseñas",
+    "menu": "Menú"
+  },
+  "presentation": {
+    "plans": "Ver planes"
+  },
+  "about": {
+    "title": "Diseñado especialmente para",
+    "public": {
+      "freelancers": "Freelancers",
+      "remote-workers": "Trabajadores remotos",
+      "creatives": "Creativos",
+      "digital-nomads": "Nómadas digitales",
+      "coffee-lovers": "Amantes del café"
+    }
+  },
+  "benefits": {
+    "wifi": {
+      "title": "WiFi de alta velocidad",
+      "description": "Internet de 1000 Mbps"
+    },
+    "plans": {
+      "title": "Planes flexibles",
+      "description": "Por hora, día, semana o mes"
+    },
+    "coffee": {
+      "title": "Café increíble",
+      "description": "Café de especialidad, siempre fresco"
+    },
+    "feedback": {
+      "title": "Comparte tu opinión",
+      "description": "¡Nos encantaría saber tu experiencia!"
+    }
+  },
+  "plans": {
+    "from": "Desde",
+    "features": {
+      "cafeteria": {
+        "pay-what-you-consume": "Paga solo por lo que consumes",
+        "stable-internet": "Internet estable",
+        "ergonomic-chairs": "Sillas ergonómicas",
+        "discount-on-cafeteria-menu": "5% de descuento en el menú de la cafetería",
+        "unlimited-coffee-tea-and-water": "Café, té y agua ilimitados",
+        "high-speed-internet": "Internet de alta velocidad",
+        "roof-top-access": "Acceso a la terraza"
+      },
+      "co-working": {
+        "ergonomic-chairs": "Sillas ergonómicas",
+        "unlimited-coffee-tea-and-water": "Café, té y agua ilimitados",
+        "high-speed-internet": "Internet de alta velocidad",
+        "roof-top-access": "Acceso a la terraza",
+        "discount-on-cafeteria-menu": "5% de descuento en el menú de la cafetería",
+        "individual-desk": "Escritorio individual",
+        "extra-monitor": "Monitor adicional"
+      },
+      "meeting-room": {
+        "smart-tv": "Smart TV de 55 pulgadas",
+        "whiteboard": "Pizarrón",
+        "space-for-up-to-6-people": "Espacio para hasta 6 personas",
+        "unlimited-coffee-tea-and-water": "Café, té y agua ilimitados",
+        "high-speed-internet": "Internet de alta velocidad",
+        "roof-top-access": "Acceso a la terraza",
+        "discount-on-cafeteria-menu": "5% de descuento en el menú de la cafetería"
+      }
+    },
+    "plans": {
+      "free": {
+        "name": "Gratis",
+        "description": "Siempre accesible",
+        "area": "Cafetería"
+      },
+      "standard": {
+        "name": "Estándar",
+        "description": "Comparte una mesa en el área de co-working",
+        "area": "Co-working"
+      },
+      "individual": {
+        "name": "Individual",
+        "description": "Para quienes necesitan un espacio privado",
+        "area": "Co-working"
+      },
+      "monitor": {
+        "name": "Monitor",
+        "description": "Para quienes necesitan un monitor adicional",
+        "area": "Co-working"
+      },
+      "meeting-room": {
+        "name": "Sala de reuniones",
+        "description": "Para equipos de 2 a 6 personas",
+        "area": "Co-working"
+      }
+    }
+  },
+  "reviews": {
+    "title": "Clientes satisfechos",
+    "footer": "Opiniones de clientes"
+  },
+  "footer": {
+    "payments": "Aceptamos todos los métodos de pago principales"
+  }
+}

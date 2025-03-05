@@ -1,15 +1,17 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
-import { Visa, Mastercard } from "react-payment-logos/dist/logo";
+import { Visa, Mastercard } from "react-payment-logos/dist/flat";
 
 const Footer = () => {
+  const t = useTranslations("home.footer");
   return (
     <div>
       <div className="mt-5 px-5 text-center w-full md:px-64">
-        All major payment methods accepted!
+        {t("payments")}
       </div>
       <div className="flex justify-center pb-5 items-center">
         <Visa

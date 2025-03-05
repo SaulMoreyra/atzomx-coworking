@@ -1,12 +1,17 @@
 import Image from "next/image";
 import React from "react";
 import cx from "classnames";
+import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
+import { useLocale } from "next-intl";
+import { type Locale } from "@/i18n/config";
 
 interface MenuHeaderProps {
   className?: string;
 }
 
 const MenuHeader = ({ className }: MenuHeaderProps) => {
+  const locale = useLocale() as Locale;
+
   return (
     <header
       className={cx(
@@ -33,10 +38,7 @@ const MenuHeader = ({ className }: MenuHeaderProps) => {
           </div>
         </div>
         <div className="flex flex-1 justify-end">
-          <select className="px-2 py-2 rounded-md text-white focus:outline-none bg-transparent">
-            <option value="es">🇲🇽 ES</option>
-            <option value="en">🇺🇸 EN</option>
-          </select>
+          <LocaleSwitch locale={locale} />
         </div>
       </div>
     </header>
