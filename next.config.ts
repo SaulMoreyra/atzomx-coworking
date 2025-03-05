@@ -1,9 +1,9 @@
-const createNextIntlPlugin = require("next-intl/plugin");
+import { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const config: NextConfig = {
   images: {
     domains: ["lh3.googleusercontent.com"],
   },
@@ -12,4 +12,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withNextIntl(nextConfig);
+export default withNextIntl(config);

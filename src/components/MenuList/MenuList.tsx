@@ -1,7 +1,8 @@
 "use client";
 import { type FoodType } from "@/common/types/menuTypes";
 import MenuCard from "@/components/MenuCard/MenuCard";
-import { ALL_FOODS } from "@/mocks/menu/lunch";
+import { ALL_FOODS } from "@/mocks/menu";
+import { useTranslations } from "next-intl";
 import React, { useMemo, useState } from "react";
 
 const reduceToArrayByCategory = (obj: FoodType[]) => {
@@ -14,19 +15,29 @@ const reduceToArrayByCategory = (obj: FoodType[]) => {
 
 const MenuList = () => {
   const [filter, setFilter] = useState<string>("");
+  const t = useTranslations("menu");
 
   const ALL_FOODS_BY_CATEGORY = useMemo(() => {
     if (!filter) return reduceToArrayByCategory(ALL_FOODS);
 
     const filteredMenu = ALL_FOODS.filter(item => {
-      const name = item.name.toLowerCase();
-      const description = item.description.toLowerCase();
+      const nameKey = `menu.${item.category}.${item.id}.name`;
+      const descriptionKey = `menu.${item.category}.${item.id}.description`;
+      const categoryKey = `categories.${item.category}`;
+
+      const name = t(nameKey).toLowerCase();
+      const description = t(descriptionKey).toLowerCase();
+      const category = t(categoryKey).toLowerCase();
+
       const filterLower = filter.toLowerCase();
-      return (
-        name.includes(filterLower) ||
-        description.includes(filterLower) ||
-        item.category.includes(filterLower)
-      );
+
+      const filterResult = [
+        name.includes(filterLower),
+        description.includes(filterLower),
+        category.includes(filterLower),
+      ].some(Boolean);
+
+      return filterResult;
     });
 
     return reduceToArrayByCategory(filteredMenu);
@@ -41,7 +52,7 @@ const MenuList = () => {
     <>
       <section className="self-start top-36 sticky hidden md:block">
         <h1 className="text-2xl font-semibold text-gray-700 mb-5 uppercase">
-          Menu
+          {t("titles.menu")}
         </h1>
         <input
           type="text"
@@ -53,7 +64,7 @@ const MenuList = () => {
         />
         <div className="flex flex-col gap-2">
           <h2 className="text-lg font-semibold text-gray-700 mb-2 hidden md:block">
-            Categories
+            {t("titles.categories")}
           </h2>
           <ul className="space-y-0 md:space-y-2 flex md:block">
             {Object.keys(ALL_FOODS_BY_CATEGORY).map((category, index) => (
@@ -61,7 +72,7 @@ const MenuList = () => {
                 key={index}
                 className="text-gray-400 cursor-pointer inline md:block"
                 onClick={scrollToTitle(category)}>
-                {category}
+                {t(`categories.${category}`)}
               </li>
             ))}
           </ul>
@@ -74,7 +85,7 @@ const MenuList = () => {
               <h1
                 id={category}
                 className="text-2xl font-semibold text-gray-700 mb-5 uppercase scroll-mt-36">
-                {category}
+                {t(`categories.${category}`)}
               </h1>
               <ul className="space-y-5">
                 {items.map(item => (

@@ -1,7 +1,7 @@
 "use client";
 import { type FoodType } from "@/common/types/menuTypes";
 import { useScrollUp } from "@/hooks/useScrollUp";
-import { ALL_FOODS } from "@/mocks/menu/lunch";
+import { ALL_FOODS } from "@/mocks/menu";
 import React, { useState } from "react";
 import cx from "classnames";
 import Tabs from "../Tabs/Tabs";

@@ -79,7 +79,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColor }) => {
           )}
           <m.p
             variants={animationVariants}
-            className="text-5xl font-semibold text-left lg:text-8xl mt-5">
+            className="text-5xl font-semibold text-left lg:text-7xl mt-5">
             {t("name")}
           </m.p>
           <m.p

@@ -1,11 +1,10 @@
+import { getUserLocale } from "@/services/locale";
 import { getRequestConfig } from "next-intl/server";
 
-const namespaces = ["home"];
+const namespaces = ["home", "menu"];
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  // Provide a static locale, fetch a user setting,
-  // read from `cookies()`, `headers()`, etc.
-  const locale = "en";
+  const locale = await getUserLocale();
 
   const messages = await Promise.all(
     namespaces.map(
