@@ -14,7 +14,7 @@ export const lunch: FoodType[] = [
   {
     id: "turkey-sandwich",
     price: 110,
-    image: "/images/food/espresso.jpeg",
+    image: "/images/food/turkey-sandwich.png",
     variants: [
       { name: "chips", price: 110 },
       { name: "salad", price: 110 },
