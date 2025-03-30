@@ -39,7 +39,7 @@ export const frappes: FoodType[] = [
   {
     id: "strawberry-frappe",
     price: 70,
-    image: "/images/food/strawberry-frappe.png",
+    image: "/images/food/strawberry-frappe2.png",
     variants: [],
     category: "frappes",
   },
