@@ -10,6 +10,7 @@
     "format": "tsc && prettier src --check"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.4",
     "@prisma/client": "4.11.0",
     "@stripe/stripe-js": "^1.53.0",
     "@types/node": "20.2.5",

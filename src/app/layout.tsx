@@ -2,6 +2,8 @@ import React from "react";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import { GoogleTagManager } from "@next/third-parties/google";
+
 import Head from "next/head";
 
 export const metadata = {
@@ -73,10 +75,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <Head>
-        <meta
-          name="google-site-verification"
-          content="4TeDxIftGn3N4wQSWXm7b5AKRtjm-BgfNTGYqPzS9cY"
-        />
+        <GoogleTagManager gtmId="GTM-NDNK3CRK" />
       </Head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
