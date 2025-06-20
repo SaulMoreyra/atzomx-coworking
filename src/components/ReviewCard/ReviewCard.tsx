@@ -14,7 +14,7 @@ const ReviewCard: FC<ReviewCardProps> = ({
   },
 }) => {
   return (
-    <div className="flex flex-col items-center p-10 flex gap-5 bg-white rounded-md">
+    <div className="flex flex-col items-center p-10 gap-5 bg-white rounded-md transition-transform duration-300 hover:scale-105">
       <div className="w-20 rounded-full overflow-hidden aspect-square relative">
         <Image src={image} alt={name} fill={true} className="object-cover" />
       </div>

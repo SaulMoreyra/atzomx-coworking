@@ -19,6 +19,7 @@ const Header = () => {
   const onScrollToElement = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.pushState(null, "", `#${id}`); // Update the URL without
   };
 
   const onClickItem = (id: string) => {

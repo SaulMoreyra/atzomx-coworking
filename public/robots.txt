@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://atzomx.com.mx/
+
+# Sitemaps
+Sitemap: https://atzomx.com.mx/sitemap.xml

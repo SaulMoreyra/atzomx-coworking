@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
-import { Facebook, Instagram, Phone } from "react-feather";
+import { Facebook, Instagram, Phone, PhoneCall } from "react-feather";
 
 import { Mastercard, Visa } from "react-payment-logos/dist/flat";
 
@@ -21,15 +21,20 @@ const SOCIAL_NETWORKS = [
   },
   {
     icon: Phone,
-    name: "WhatsApp",
+    name: "Whatsapp",
     url: "https://wa.me/5219515155328",
+  },
+  {
+    icon: PhoneCall,
+    name: "+52 951 515 5328",
+    url: "tel:5219515155328",
   },
 ];
 
 const Footer = () => {
   const t = useTranslations("home.footer");
   return (
-    <div>
+    <section id="contact">
       <div className="mt-5 px-5 text-center w-full md:px-64">
         {t("payments")}
       </div>
@@ -94,7 +99,7 @@ const Footer = () => {
           <p>© 2025 ATZOMX</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

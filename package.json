@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "tsc && prettier src --check"
+    "format": "tsc && prettier src --check",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.4",
@@ -26,6 +27,7 @@
     "jsonwebtoken": "^9.0.0",
     "next": "^15.2.0",
     "next-intl": "^3.0.0",
+    "next-sitemap": "^4.2.3",
     "postcss": "8.4.23",
     "postinstall": "^0.8.0",
     "react": "18.2.0",
