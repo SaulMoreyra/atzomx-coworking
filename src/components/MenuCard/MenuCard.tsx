@@ -1,8 +1,10 @@
 import { type FoodType } from "@/common/types/menuTypes";
+import { runFireworks } from "@/lib/confetti";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { type FC } from "react";
 import { Heart } from "react-feather";
+import cx from "classnames";
 
 interface MenuCardProps {
   item: FoodType;
@@ -11,6 +13,15 @@ interface MenuCardProps {
 const MenuCard: FC<MenuCardProps> = ({ item }) => {
   const { id, category } = item;
   const t = useTranslations("menu");
+  const [checked, setChecked] = React.useState(false);
+  const [animate, setAnimate] = React.useState(false);
+
+  const onClickCard = () => {
+    if (!checked) runFireworks();
+    setChecked(prev => !prev);
+    setAnimate(true);
+    setTimeout(() => setAnimate(false), 300); // 300ms for animation
+  };
 
   return (
     <div className="rounded-md shadow-md hover:border-gray-400 flex-col border border-gray-200 min-height-[190px]">
@@ -55,8 +66,15 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
         </div>
       </div>
       <div className="border-b border-gray-200" />
-      <div className="h-[64px] flex items-center px-6">
-        <Heart className="text-gray-400" />
+      <div
+        className="h-[64px] flex items-center px-6 cursor-pointer"
+        onClick={onClickCard}>
+        <Heart
+          className={cx("text-gray-400 transition-transform duration-300", {
+            "scale-125 transition-transform duration-300": animate,
+            "text-red-500 fill-red-500": checked,
+          })}
+        />
       </div>
     </div>
   );

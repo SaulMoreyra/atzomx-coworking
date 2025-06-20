@@ -87,6 +87,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2 w-full md:w-1/3">
             <h1 className="text-xl font-bold">{t("location")}</h1>
             <iframe
+              title="atzomx-location"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476.7599133940934!2d-96.7181858!3d17.068773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c723cfaf60de6b%3A0xd4660acd5a3a65bf!2sAtzomx%20Coworking!5e0!3m2!1ses-419!2smx!4v1740720931272!5m2!1ses-419!2smx"
               width="100%"
               height="205"

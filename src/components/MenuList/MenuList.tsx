@@ -78,7 +78,7 @@ const MenuList = () => {
           </ul>
         </div>
       </section>
-      <section className="flex flex-col flex-1 gap-8 hidden md:flex">
+      <section className="flex-col flex-1 gap-8 hidden md:flex">
         {Object.entries(ALL_FOODS_BY_CATEGORY).map(
           ([category, items], index) => (
             <div key={index} className="flex flex-col">
