@@ -4,7 +4,7 @@ export const lunch: FoodType[] = [
   {
     id: "turkey-sandwich",
     price: 110,
-    image: "/images/food/green-sandwich.jpeg",
+    image: "/images/food/green-sandwich.webp",
     variants: [
       { name: "chips", price: 110 },
       { name: "salad", price: 110 },
@@ -14,7 +14,7 @@ export const lunch: FoodType[] = [
   {
     id: "iberian-sandwich",
     price: 115,
-    image: "/images/food/green-sandwich.jpeg",
+    image: "/images/food/green-sandwich.webp",
     variants: [
       { name: "chips", price: 115 },
       { name: "salad", price: 115 },
@@ -24,7 +24,7 @@ export const lunch: FoodType[] = [
   {
     id: "serrano-sandwich",
     price: 135,
-    image: "/images/food/green-sandwich.jpeg",
+    image: "/images/food/green-sandwich.webp",
     variants: [
       { name: "chips", price: 135 },
       { name: "salad", price: 135 },
@@ -34,21 +34,21 @@ export const lunch: FoodType[] = [
   {
     id: "house-salad",
     price: 90,
-    image: "/images/food/house-salad.png",
+    image: "/images/food/house-salad.webp",
     variants: [],
     category: "lunch",
   },
   {
     id: "red-berry-bowl",
     price: 90,
-    image: "/images/food/red-berry-bowl.png",
+    image: "/images/food/red-berry-bowl.webp",
     variants: [],
     category: "lunch",
   },
   {
     id: "chocolate-bowl",
     price: 90,
-    image: "/images/food/chocolate-bowl.png",
+    image: "/images/food/chocolate-bowl.webp",
     variants: [],
     category: "lunch",
   },

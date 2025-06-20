@@ -4,7 +4,7 @@ export const extras: FoodType[] = [
   {
     id: "chai-latte",
     price: 65,
-    image: "/images/extras/chai.jpeg",
+    image: "/images/extras/chai.webp",
     variants: [
       { name: "hot", price: 65 },
       { name: "iced", price: 70 },
@@ -14,14 +14,14 @@ export const extras: FoodType[] = [
   {
     id: "choco-latte",
     price: 65,
-    image: "/images/food/choco-latte.png",
+    image: "/images/food/choco-latte.webp",
     variants: [],
     category: "extras",
   },
   {
     id: "tizanas",
     price: 70,
-    image: "/images/food/tizanas.png",
+    image: "/images/food/tizanas.webp",
     variants: [
       { name: "hot", price: 70 },
       { name: "iced", price: 75 },
@@ -31,21 +31,21 @@ export const extras: FoodType[] = [
   {
     id: "sodas",
     price: 35,
-    image: "/images/food/sodas.png",
+    image: "/images/food/sodas.webp",
     variants: [],
     category: "extras",
   },
   {
     id: "topo-chico",
     price: 35,
-    image: "/images/food/topo-chico.png",
+    image: "/images/food/topo-chico.webp",
     variants: [],
     category: "extras",
   },
   {
     id: "tea",
     price: 40,
-    image: "/images/food/tea.png",
+    image: "/images/food/tea.webp",
     variants: [
       { name: "hot", price: 40 },
       { name: "iced", price: 45 },
