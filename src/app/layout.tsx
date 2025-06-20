@@ -4,8 +4,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { GoogleTagManager } from "@next/third-parties/google";
 
-import Head from "next/head";
-
 export const metadata = {
   title: "Atzomx | Coworking & Café en Oaxaca",
   description:
