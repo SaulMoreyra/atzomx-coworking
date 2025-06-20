@@ -71,7 +71,7 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
         onClick={onClickCard}>
         <Heart
           className={cx("text-gray-400 transition-transform duration-300", {
-            "scale-125 transition-transform duration-300": animate,
+            "scale-125": animate,
             "text-red-500 fill-red-500": checked,
           })}
         />
