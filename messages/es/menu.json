@@ -66,40 +66,16 @@
         "name": "Espresso Tonic",
         "description": "Espresso con agua tónica"
       },
-      "espresso-pink": {
-        "name": "Espresso Pink",
-        "description": "Espresso con sabor a fresa"
-      },
       "cold-brew": {
         "name": "Café en Frío",
         "description": "Café infusionado en frío"
       },
-      "aeropress": {
-        "name": "Aeropress",
-        "description": "Café caliente preparado con Aeropress"
-      },
-      "v60": {
-        "name": "V60",
-        "description": "Café caliente preparado con V60"
-      },
-      "chemex": {
-        "name": "Chemex",
-        "description": "Café caliente preparado con Chemex"
-      },
-      "french-press": {
-        "name": "Prensa Francesa",
-        "description": "Café caliente preparado con prensa francesa"
-      },
-      "japanese-siphon": {
-        "name": "Sifón Japonés",
-        "description": "Café caliente preparado con sifón japonés"
+      "methods": {
+        "name": "Métodos de café de especialidad",
+        "description": "Variedad de métodos de extracción de café."
       }
     },
     "lunch": {
-      "green-sandwich": {
-        "name": "Sándwich Verde",
-        "description": "Pan de masa madre, mayonesa, tomate, aguacate, pepino, lechuga italiana, espinaca baby y queso manchego"
-      },
       "turkey-sandwich": {
         "name": "Sándwich de Pavo",
         "description": "Pan de masa madre, mayonesa, tomate, aguacate, lechuga italiana, queso amarillo y jamón de pavo"
@@ -138,9 +114,9 @@
         "name": "Cheesecake",
         "description": "Cheesecake con jarabe de chocolate"
       },
-      "bread-of-the-day": {
-        "name": "Pan del Día",
-        "description": "Pregunta por el pan del día"
+      "daily-dessert": {
+        "name": "Postre del Día",
+        "description": "Pregunta en barra por el postre de hoy"
       }
     },
     "smoothies": {
@@ -162,10 +138,6 @@
         "name": "El Mañanero",
         "description": "Bowl de frutos rojos o chocolate, café americano o espresso"
       },
-      "coffee-bread": {
-        "name": "Café + Pan",
-        "description": "Incluye café americano o espresso. Válido de 9 AM a 12 PM"
-      },
       "bradfitt": {
         "name": "Bradfitt",
         "description": "Ensalada de la casa, cualquier smoothie"
@@ -173,15 +145,11 @@
       "freelancer": {
         "name": "Freelancer",
         "description": "Cualquier sándwich (excepto Serrano), café americano, espresso, capuchino o soda italiana"
-      },
-      "the-ceo": {
-        "name": "The CEO",
-        "description": "Cualquier sándwich, bowl de frutos rojos o chocolate, cualquier café caliente o frío"
       }
     },
     "frappes": {
-      "latte-frappe": {
-        "name": "Latte",
+      "coffee-frappe": {
+        "name": "Café",
         "description": "Café licuado con leche"
       },
       "mocca-frappe": {
