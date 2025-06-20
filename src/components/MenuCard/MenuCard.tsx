@@ -20,7 +20,9 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
     if (!checked) runFireworks();
     setChecked(prev => !prev);
     setAnimate(true);
-    setTimeout(() => setAnimate(false), 300); // 300ms for animation
+    setTimeout(() => {
+      setAnimate(false);
+    }, 300);
   };
 
   return (
