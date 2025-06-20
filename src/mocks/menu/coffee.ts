@@ -48,7 +48,7 @@ export const coffee: FoodType[] = [
   {
     id: "mocca",
     price: 65,
-    image: "/images/coffee/espresso.jpeg",
+    image: "/images/coffee/mocca.jpeg",
     variants: [
       { name: "hot", price: 65 },
       { name: "iced", price: 70 },
@@ -80,52 +80,17 @@ export const coffee: FoodType[] = [
     category: "coffee",
   },
   {
-    id: "espresso-pink",
-    price: 75,
-    image: "/images/coffee/espresso.jpeg",
-    variants: [{ name: "iced", price: 75 }],
-    category: "coffee",
-  },
-  {
     id: "cold-brew",
     price: 65,
-    image: "/images/coffee/espresso.jpeg",
+    image: "/images/coffee/cold-brew.jpeg",
     variants: [{ name: "iced", price: 65 }],
     category: "coffee",
   },
   {
-    id: "aeropress",
+    id: "methods",
     price: 70,
     image: "/images/coffee/espresso.jpeg",
     variants: [{ name: "hot", price: 70 }],
-    category: "coffee",
-  },
-  {
-    id: "v60",
-    price: 70,
-    image: "/images/coffee/espresso.jpeg",
-    variants: [{ name: "hot", price: 70 }],
-    category: "coffee",
-  },
-  {
-    id: "chemex",
-    price: 70,
-    image: "/images/coffee/espresso.jpeg",
-    variants: [{ name: "hot", price: 70 }],
-    category: "coffee",
-  },
-  {
-    id: "french-press",
-    price: 70,
-    image: "/images/coffee/espresso.jpeg",
-    variants: [{ name: "hot", price: 70 }],
-    category: "coffee",
-  },
-  {
-    id: "japanese-siphon",
-    price: 75,
-    image: "/images/coffee/espresso.jpeg",
-    variants: [{ name: "hot", price: 75 }],
     category: "coffee",
   },
 ];

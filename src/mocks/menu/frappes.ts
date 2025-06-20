@@ -2,7 +2,7 @@ import { type FoodType } from "@/common/types/menuTypes";
 
 export const frappes: FoodType[] = [
   {
-    id: "latte-frappe",
+    id: "coffee-frappe",
     price: 65,
     image: "/images/frappe/latte-frappe.jpeg",
     variants: [],
@@ -11,28 +11,28 @@ export const frappes: FoodType[] = [
   {
     id: "mocca-frappe",
     price: 65,
-    image: "/images/frappe/latte-frappe.jpeg",
+    image: "/images/frappe/mocca-frappe.jpeg",
     variants: [],
     category: "frappes",
   },
   {
     id: "chocolate-frappe",
     price: 65,
-    image: "/images/frappe/latte-frappe.jpeg",
+    image: "/images/frappe/chocolate-frappe.png",
     variants: [],
     category: "frappes",
   },
   {
     id: "mango-frappe",
     price: 70,
-    image: "/images/food/mango-frappe.png",
+    image: "/images/frappe/mango-frappe.jpeg",
     variants: [],
     category: "frappes",
   },
   {
     id: "cherry-frappe",
     price: 70,
-    image: "/images/frappe/strawberry-frappe.jpeg",
+    image: "/images/frappe/cherry-frappe.jpeg",
     variants: [],
     category: "frappes",
   },

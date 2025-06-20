@@ -2,19 +2,9 @@ import { type FoodType } from "@/common/types/menuTypes";
 
 export const lunch: FoodType[] = [
   {
-    id: "green-sandwich",
-    price: 110,
-    image: "/images/food/espresso.jpeg",
-    variants: [
-      { name: "chips", price: 110 },
-      { name: "salad", price: 110 },
-    ],
-    category: "lunch",
-  },
-  {
     id: "turkey-sandwich",
     price: 110,
-    image: "/images/food/turkey-sandwich.png",
+    image: "/images/food/green-sandwich.jpeg",
     variants: [
       { name: "chips", price: 110 },
       { name: "salad", price: 110 },
@@ -24,7 +14,7 @@ export const lunch: FoodType[] = [
   {
     id: "iberian-sandwich",
     price: 115,
-    image: "/images/food/espresso.jpeg",
+    image: "/images/food/green-sandwich.jpeg",
     variants: [
       { name: "chips", price: 115 },
       { name: "salad", price: 115 },
@@ -34,7 +24,7 @@ export const lunch: FoodType[] = [
   {
     id: "serrano-sandwich",
     price: 135,
-    image: "/images/food/espresso.jpeg",
+    image: "/images/food/green-sandwich.jpeg",
     variants: [
       { name: "chips", price: 135 },
       { name: "salad", price: 135 },

@@ -4,7 +4,7 @@ export const extras: FoodType[] = [
   {
     id: "chai-latte",
     price: 65,
-    image: "/images/food/chai-latte.png",
+    image: "/images/extras/chai.jpeg",
     variants: [
       { name: "hot", price: 65 },
       { name: "iced", price: 70 },

@@ -2,6 +2,7 @@ import React from "react";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import Head from "next/head";
 
 export const metadata = {
   title: "Atzomx | Coworking & Café en Oaxaca",
@@ -71,6 +72,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="4TeDxIftGn3N4wQSWXm7b5AKRtjm-BgfNTGYqPzS9cY"
+        />
+      </Head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
