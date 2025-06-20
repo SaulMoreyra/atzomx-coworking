@@ -9,27 +9,27 @@ export const ALL_IMAGES: ImageType[] = [
   {
     id: 1,
     name: "Category 1",
-    image: "/images/coworking/meeting-room.jpeg",
+    image: "/images/coworking/meeting-room.webp",
   },
   {
     id: 1,
     name: "Category 1",
-    image: "/images/coworking/art-latte.jpeg",
+    image: "/images/coworking/art-latte.webp",
   },
   {
     id: 1,
     name: "Category 1",
-    image: "/images/coworking/atzomx.jpg",
+    image: "/images/coworking/atzomx.webp",
   },
   {
     id: 1,
     name: "Category 1",
-    image: "/images/coworking/lunch.jpg",
+    image: "/images/coworking/lunch.webp",
   },
   {
     id: 1,
     name: "Category 1",
-    image: "/images/coworking/monitor.jpeg",
+    image: "/images/coworking/monitor.webp",
   },
 ];
 
