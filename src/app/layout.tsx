@@ -2,7 +2,8 @@ import React from "react";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 export const metadata = {
   title: "Atzomx | Coworking & Café en Oaxaca",
@@ -75,6 +76,10 @@ export default async function RootLayout({
       <body>
         <GoogleTagManager gtmId="GTM-NDNK3CRK" />
         <GoogleTagManager gtmId="AW-16900625108" />
+        <GoogleAnalytics gaId="AW-16900625108" />
+        <Script id="conversion-contacto" strategy="afterInteractive">
+          {`gtag('event', 'conversion', {'send_to': 'AW-16900625108/TrwICJDbkoUbENSl7Po-'});`}
+        </Script>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

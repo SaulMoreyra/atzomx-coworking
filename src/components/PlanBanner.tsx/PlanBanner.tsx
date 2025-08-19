@@ -91,10 +91,13 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColor }) => {
             variants={animationVariants}
             className="relative flex gap-5 justify-between items-center">
             <a
-              href="https://m.me/61569786946519"
+              href={
+                "https://wa.me/5219515155328?text=" +
+                encodeURIComponent(tPlans("defaultAsk"))
+              }
               target="_blank"
               rel="noopener noreferrer">
-              <Button className="text-2xl">Book</Button>
+              <Button className="text-2xl">{tPlans("book")}</Button>
             </a>
           </m.div>
         </div>

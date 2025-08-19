@@ -39,6 +39,8 @@
   },
   "plans": {
     "from": "From",
+    "book": "Book Now",
+    "defaultAsk": "Hey there! I want to book a plan at Atzomx.",
     "features": {
       "cafeteria": {
         "pay-what-you-consume": "Pay only for what you consume",

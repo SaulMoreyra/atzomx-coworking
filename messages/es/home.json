@@ -39,6 +39,8 @@
   },
   "plans": {
     "from": "Desde",
+    "book": "Reservar ahora",
+    "defaultAsk": "¡Hola! Quiero reservar un plan en Atzomx.",
     "features": {
       "cafeteria": {
         "pay-what-you-consume": "Paga solo por lo que consumes",
