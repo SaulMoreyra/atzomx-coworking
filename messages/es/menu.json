@@ -34,6 +34,10 @@
         "name": "Espresso",
         "description": "Café negro fuerte"
       },
+      "cortado": {
+        "name": "Cortado",
+        "description": "Espresso con una gota de leche vaporizada"
+      },
       "macchiato": {
         "name": "Macchiato",
         "description": "Espresso con una pequeña cantidad de leche vaporizada"
@@ -49,6 +53,10 @@
       "latte": {
         "name": "Latte",
         "description": "Espresso con leche vaporizada"
+      },
+      "caramel-latte": {
+        "name": "Caramel Latte",
+        "description": "Espresso con leche vaporizada y caramelo"
       },
       "mocca": {
         "name": "Moca",
@@ -175,6 +183,18 @@
       "chai-frappe": {
         "name": "Chai",
         "description": "Bebida de chai licuado"
+      },
+      "oreo-frappe": {
+        "name": "Oreo",
+        "description": "Bebida de Oreo licuada"
+      },
+      "mazapan-frappe": {
+        "name": "Mazapan",
+        "description": "Bebida de Mazapan licuada"
+      },
+      "nutella-frappe": {
+        "name": "Nutella",
+        "description": "Bebida de Nutella licuada"
       }
     },
     "italian-sodas": {
@@ -219,6 +239,18 @@
       "tizanas": {
         "name": "Tizanas",
         "description": "Té herbal"
+      },
+      "taro": {
+        "name": "Taro",
+        "description": "Bebida a base de taro con leche"
+      },
+      "italian-soda": {
+        "name": "Sodas Italianas",
+        "description": "Variedad de sodas italianas,\npregunta por los sabores disponibles"
+      },
+      "avellana-cloud": {
+        "name": "Nube de Avellana",
+        "description": "Bebida a base de avellana con leche y crema batida"
       },
       "sodas": {
         "name": "Refrescos",

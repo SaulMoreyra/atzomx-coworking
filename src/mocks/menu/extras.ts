@@ -29,6 +29,30 @@ export const extras: FoodType[] = [
     category: "extras",
   },
   {
+    id: "taro",
+    price: 40,
+    image: "/images/food/tizanas.webp",
+    variants: [
+      { name: "hot", price: 65 },
+      { name: "iced", price: 70 },
+    ],
+    category: "extras",
+  },
+  {
+    id: "italian-soda",
+    price: 60,
+    image: "/images/food/tizanas.webp",
+    variants: [{ name: "iced", price: 60 }],
+    category: "extras",
+  },
+  {
+    id: "avellana-cloud",
+    price: 40,
+    image: "/images/food/tizanas.webp",
+    variants: [{ name: "iced", price: 75 }],
+    category: "extras",
+  },
+  {
     id: "sodas",
     price: 35,
     image: "/images/food/sodas.webp",

@@ -50,4 +50,25 @@ export const frappes: FoodType[] = [
     variants: [],
     category: "frappes",
   },
+  {
+    id: "oreo-frappe",
+    price: 85,
+    image: "/images/food/chocolate-frappe.webp",
+    variants: [],
+    category: "frappes",
+  },
+  {
+    id: "mazapan-frappe",
+    price: 85,
+    image: "/images/food/chocolate-frappe.webp",
+    variants: [],
+    category: "frappes",
+  },
+  {
+    id: "nutella-frappe",
+    price: 85,
+    image: "/images/food/chocolate-frappe.webp",
+    variants: [],
+    category: "frappes",
+  },
 ];

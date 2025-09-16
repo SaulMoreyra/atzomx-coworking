@@ -66,7 +66,7 @@ const Footer = () => {
           className="payment-icon"
         /> */}
       </div>
-      <div className="bg-theme-black flex flex-col gap-10 text-white m-5 rounded-md px-20 py-10">
+      <div className="bg-theme-black flex flex-col gap-10 text-white m-5 rounded-md md:px-20 px-10 py-10">
         <div className="flex flex-col gap-5 md:flex-row justify-around">
           <div className="flex flex-col gap-2 w-full md:w-1/3">
             <h1 className="text-xl font-bold">{t("social_networks")}</h1>

@@ -52,7 +52,7 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
             ) : (
               <div className="min-w-[60px] md:min-w-[100px] px-2 md:px-5 first:pl-0">
                 <h4 className="text-lg md:text-xl font-semibold">
-                  ${item.price}
+                  ${item.price < 0 ? "-" : item.price}
                 </h4>
               </div>
             )}

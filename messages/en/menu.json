@@ -34,6 +34,10 @@
         "name": "Espresso",
         "description": "Strong black coffee"
       },
+      "cortado": {
+        "name": "Cortado",
+        "description": "Espresso with a tiny amount of steamed milk"
+      },
       "macchiato": {
         "name": "Macchiato",
         "description": "Espresso with a small amount of steamed milk"
@@ -49,6 +53,10 @@
       "latte": {
         "name": "Latte",
         "description": "Espresso with steamed milk"
+      },
+      "caramel-latte": {
+        "name": "Caramel Latte",
+        "description": "Espresso with steamed milk and caramel"
       },
       "mocca": {
         "name": "Mocca",
@@ -175,6 +183,18 @@
       "chai-frappe": {
         "name": "Chai",
         "description": "Blended chai drink"
+      },
+      "oreo-frappe": {
+        "name": "Oreo",
+        "description": "Blended Oreo drink"
+      },
+      "mazapan-frappe": {
+        "name": "Mazapan",
+        "description": "Blended Mazapan drink"
+      },
+      "nutella-frappe": {
+        "name": "Nutella",
+        "description": "Blended Nutella drink"
       }
     },
     "italian-sodas": {
@@ -219,6 +239,18 @@
       "tizanas": {
         "name": "Tinzanas",
         "description": "Herbal tea"
+      },
+      "taro": {
+        "name": "Taro",
+        "description": "Taro drink"
+      },
+      "italian-soda": {
+        "name": "Sodas Italianas",
+        "description": "Variety of Italian sodas,\nask for available flavors"
+      },
+      "avellana-cloud": {
+        "name": "Avellana Cloud",
+        "description": "Avellana drink with milk and whipped cream"
       },
       "sodas": {
         "name": "Sodas",

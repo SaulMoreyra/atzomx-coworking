@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 const publicFocused = [
   "freelancers",
   "remote-workers",
-  "creatives",
+  "developers",
   "digital-nomads",
   "coffee-lovers",
 ];

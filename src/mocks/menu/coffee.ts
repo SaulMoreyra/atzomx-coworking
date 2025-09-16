@@ -9,6 +9,13 @@ export const coffee: FoodType[] = [
     category: "coffee",
   },
   {
+    id: "cortado",
+    price: 45,
+    image: "/images/coffee/espresso.webp",
+    variants: [{ name: "hot", price: 45 }],
+    category: "coffee",
+  },
+  {
     id: "macchiato",
     price: 50,
     image: "/images/coffee/espresso.webp",
@@ -17,7 +24,7 @@ export const coffee: FoodType[] = [
   },
   {
     id: "americano",
-    price: 40,
+    price: 45,
     image: "/images/coffee/americano.webp",
     variants: [
       { name: "hot", price: 45 },
@@ -59,10 +66,7 @@ export const coffee: FoodType[] = [
     id: "flat-white",
     price: 65,
     image: "/images/coffee/flat-white.webp",
-    variants: [
-      { name: "hot", price: 65 },
-      { name: "iced", price: 70 },
-    ],
+    variants: [{ name: "hot", price: 65 }],
     category: "coffee",
   },
   {
@@ -80,17 +84,20 @@ export const coffee: FoodType[] = [
     category: "coffee",
   },
   {
-    id: "cold-brew",
+    id: "caramel-latte",
     price: 65,
-    image: "/images/coffee/cold-brew.webp",
-    variants: [{ name: "iced", price: 65 }],
+    image: "/images/coffee/latte.webp",
+    variants: [
+      { name: "hot", price: 65 },
+      { name: "iced", price: 70 },
+    ],
     category: "coffee",
   },
   {
     id: "methods",
-    price: 70,
+    price: 75,
     image: "/images/coffee/espresso.webp",
-    variants: [{ name: "hot", price: 70 }],
+    variants: [{ name: "hot", price: 75 }],
     category: "coffee",
   },
 ];

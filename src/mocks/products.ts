@@ -146,7 +146,7 @@ export const ALL_PLANS: PlanType[] = [
   },
   {
     id: "standard",
-    startPrice: 49,
+    startPrice: 59,
     features: [
       CoworkingPlanFeatures.DiscountOnCafeteriaMenu,
       CoworkingPlanFeatures.ErgonomicChairs,
@@ -158,7 +158,7 @@ export const ALL_PLANS: PlanType[] = [
   },
   {
     id: "individual",
-    startPrice: 69,
+    startPrice: 79,
     features: [
       CoworkingPlanFeatures.DiscountOnCafeteriaMenu,
       CoworkingPlanFeatures.ErgonomicChairs,
@@ -171,7 +171,7 @@ export const ALL_PLANS: PlanType[] = [
   },
   {
     id: "monitor",
-    startPrice: 79,
+    startPrice: 89,
     features: [
       CoworkingPlanFeatures.DiscountOnCafeteriaMenu,
       CoworkingPlanFeatures.ErgonomicChairs,
@@ -185,7 +185,7 @@ export const ALL_PLANS: PlanType[] = [
   },
   {
     id: "meeting-room",
-    startPrice: 249,
+    startPrice: 259,
     features: Object.values(MeetingRoomFeatures),
     area: CategoryPlan.MEETING_ROOM,
   },
