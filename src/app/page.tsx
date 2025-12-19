@@ -1,7 +1,5 @@
 import React from "react";
-
 import { type ReviewType } from "@/common/types/planTypes";
-
 import About from "@/components/About/About";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";

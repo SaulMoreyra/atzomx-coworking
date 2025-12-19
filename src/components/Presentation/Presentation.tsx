@@ -8,6 +8,7 @@ import Image from "next/image";
 import React, { type FC, useLayoutEffect, useRef } from "react";
 import Button from "../Button/Button";
 import { useTranslations } from "next-intl";
+import ReactSnowfall from "react-snowfall";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -65,6 +66,7 @@ const Presentation: FC = () => {
       className={cx(
         "h-[calc(100dvh-104px)] mb-5 bg-white flex flex-col overflow-hidden rounded-md relative md:flex-row"
       )}>
+      <ReactSnowfall color="#fff" />
       <div className="w-full h-full bg-banner-soft">
         <div className="absolute h-[100%] w-[100%] flex items-center flex-1 flex-col justify-center gap-5">
           <m.div
