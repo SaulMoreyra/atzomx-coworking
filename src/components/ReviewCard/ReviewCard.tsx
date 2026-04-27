@@ -19,7 +19,7 @@ const ReviewCard: FC<ReviewCardProps> = ({
         <Image src={image} alt={name} fill={true} className="object-cover" />
       </div>
       <div className="flex flex-col items-center">
-        <h1 className="text-lg font-bold">{name}</h1>
+        <h3 className="text-lg font-bold">{name}</h3>
         <div className="flex text-yellow-500">
           {Array.from({ length: rating }, (_, i) => (
             <p className="text-2xl" key={i}>

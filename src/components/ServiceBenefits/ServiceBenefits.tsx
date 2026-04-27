@@ -15,7 +15,7 @@ const Benefit: FC<BenefitProps> = ({ icon, title, description }) => {
     <div className="flex gap-5">
       {icon}
       <div>
-        <h1 className="text-xl md:text-2xl text-nowrap">{title}</h1>
+        <h3 className="text-xl md:text-2xl text-nowrap">{title}</h3>
         <p className="text-gray-400 text-lg md:text-xl">{description}</p>
       </div>
     </div>

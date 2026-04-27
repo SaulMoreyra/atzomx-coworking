@@ -4,63 +4,41 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://atzomx.com.mx"),
   title: "Atzomx | Coworking & Café en Oaxaca",
   description:
-    "Atzomx es un espacio de coworking en el corazón de Oaxaca con café ilimitado, WiFi rápido y un ambiente ideal para trabajar.",
-  keywords: [
-    "coworking en Oaxaca",
-    "espacios de trabajo Oaxaca",
-    "café y coworking",
-    "oficinas compartidas",
-    "freelancers Oaxaca",
-    "wifi rápido Oaxaca",
-    "espacios para trabajar",
-    "zona de trabajo en Oaxaca",
-    "mejor coworking en Oaxaca",
-    "trabajar remoto en Oaxaca",
-    "networking en Oaxaca",
-
-    "coworking in Oaxaca",
-    "best coworking Oaxaca",
-    "freelancer workspace Oaxaca",
-    "digital nomad Oaxaca",
-    "remote work Oaxaca",
-    "shared office Oaxaca",
-    "high-speed WiFi coworking",
-    "work-friendly cafe",
-    "hot desk Oaxaca",
-    "meeting rooms Oaxaca",
-    "business hub Oaxaca",
-  ],
+    "Coworking en el Centro de Oaxaca con WiFi de 1000 Mbps, sillas ergonómicas, clima y café ilimitado. Desde $59 MXN/hora. Reserva por WhatsApp.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Atzomx | Coworking & Café en Oaxaca",
     description:
-      "Disfruta de un coworking con café ilimitado y un espacio cómodo en el centro de Oaxaca.",
-    url: "https://atzomx.com",
-    images: ["/favicon.ico"],
-    type: "website",
+      "Coworking en el Centro de Oaxaca con WiFi de 1000 Mbps, sillas ergonómicas y café ilimitado. Desde $59 MXN/hora.",
+    url: "https://atzomx.com.mx",
+    siteName: "Atzomx Café y Coworking",
+    images: [
+      {
+        url: "/images/og/atzomx-og.webp",
+        width: 1200,
+        height: 630,
+        alt: "Interior del coworking Atzomx en el Centro de Oaxaca",
+      },
+    ],
     locale: "es_MX",
+    type: "website",
   },
-  instagram: {
+  twitter: {
     card: "summary_large_image",
-    site: "@atzomx",
     title: "Atzomx | Coworking & Café en Oaxaca",
     description:
-      "Un coworking con café ilimitado, WiFi rápido y un ambiente ideal para trabajar en Oaxaca.",
-    images: ["/favicon.ico"],
-  },
-  facebook: {
-    card: "summary_large_image",
-    site: "@atzomx",
-    title: "Atzomx | Coworking & Café en Oaxaca",
-    description:
-      "Un coworking con café ilimitado, WiFi rápido y un ambiente ideal para trabajar en Oaxaca.",
-    images: ["/favicon.ico"],
+      "Coworking en el Centro de Oaxaca con WiFi de 1000 Mbps, sillas ergonómicas y café ilimitado.",
+    images: ["/images/og/atzomx-og.webp"],
   },
   robots: "index, follow",
-  canonical: "https://atzomx.com",
 };
 
 export default async function RootLayout({
@@ -74,6 +52,98 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["CafeOrCoffeeShop", "LocalBusiness"],
+              name: "Atzomx Café y Coworking",
+              image: [
+                "https://atzomx.com.mx/images/og/atzomx-og.webp",
+                "https://atzomx.com.mx/images/coworking/atzomx.webp",
+                "https://atzomx.com.mx/images/coworking/meeting-room.webp",
+              ],
+              logo: "https://atzomx.com.mx/images/logos/logo-symbol.svg",
+              "@id": "https://atzomx.com.mx",
+              url: "https://atzomx.com.mx",
+              telephone: "+525219515155328",
+              priceRange: "$$",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "C. de Los Libres 800-B",
+                addressLocality: "Oaxaca de Juárez",
+                addressRegion: "Oaxaca",
+                postalCode: "68000",
+                addressCountry: "MX",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 17.0689553,
+                longitude: -96.7181622,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "09:00",
+                  closes: "18:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "10:00",
+                  closes: "20:00",
+                },
+              ],
+              sameAs: [
+                "https://www.instagram.com/atzomx/",
+                "https://www.facebook.com/profile.php?id=61569786946519",
+                "https://maps.app.goo.gl/7MMrgV3Uhf7x5KNF9",
+              ],
+              amenityFeature: [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "WiFi de 1000 Mbps",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Aire acondicionado",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Mobiliario ergonómico",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Terraza",
+                  value: true,
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  name: "Sala de juntas",
+                  value: true,
+                },
+              ],
+              hasMenu: "https://atzomx.com.mx/menu",
+              servesCuisine: [
+                "Café de especialidad",
+                "Desayunos",
+                "Sándwiches",
+                "Bowls",
+              ],
+            }),
+          }}
+        />
         <GoogleTagManager gtmId="GTM-NDNK3CRK" />
         <GoogleTagManager gtmId="AW-16900625108" />
         <GoogleAnalytics gaId="AW-16900625108" />
