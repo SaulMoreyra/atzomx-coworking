@@ -57,13 +57,16 @@ const Header = () => {
           <div className="hidden lg:flex flex-1">
             <ul className="flex gap-5 xl:gap-10 items-center h-full text-lg lg:text-xl">
               {menuLeftItems.map((id, index) => (
-                <li
-                  className="cursor-pointer"
-                  key={index}
-                  onClick={() => {
-                    onScrollToElement(id);
-                  }}>
-                  {t(id)}
+                <li className="cursor-pointer" key={index}>
+                  <a
+                    href={`#${id}`}
+                    className="block text-inherit no-underline"
+                    onClick={e => {
+                      e.preventDefault();
+                      onScrollToElement(id);
+                    }}>
+                    {t(id)}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -115,12 +118,16 @@ const Header = () => {
         )}>
         <ul className="flex flex-col items-center gap-10 h-full text-xl">
           {menuLeftItems.map((id, index) => (
-            <li
-              key={index}
-              onClick={() => {
-                onClickItem(id);
-              }}>
-              {t(id)}
+            <li key={index}>
+              <a
+                href={`#${id}`}
+                className="block text-inherit no-underline"
+                onClick={e => {
+                  e.preventDefault();
+                  onClickItem(id);
+                }}>
+                {t(id)}
+              </a>
             </li>
           ))}
         </ul>
