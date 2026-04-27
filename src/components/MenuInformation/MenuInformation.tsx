@@ -20,9 +20,9 @@ const MenuInformation: FC<MenuInformationProps> = ({ className }) => {
         "sticky top-36 bg-gray-100 rounded-lg w-[287px] p-5 pb-6 self-start",
         className
       )}>
-      <h1 className="text-xl md:text-2xl font-semibold text-gray-700 mb-5 uppercase">
+      <h2 className="text-xl md:text-2xl font-semibold text-gray-700 mb-5 uppercase">
         {t("information.title")}
-      </h1>
+      </h2>
       <div className="flex flex-col gap-4">
         <div className="flex flex-1 gap-4">
           <div className="p-2 bg-white rounded-md flex items-center justify-center w-12 h-12">

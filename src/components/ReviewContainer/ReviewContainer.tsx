@@ -47,9 +47,11 @@ const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
           </m.li>
         ))}
       </m.ul>
-      <h1 className="absolute -bottom-4 left-[50%] -translate-x-[50%] text-9xl font-bold whitespace-nowrap opacity-10">
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-4 left-[50%] -translate-x-[50%] text-9xl font-bold whitespace-nowrap opacity-10">
         {t("footer")}
-      </h1>
+      </div>
     </div>
   );
 };

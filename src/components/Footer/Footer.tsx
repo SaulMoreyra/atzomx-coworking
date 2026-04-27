@@ -69,7 +69,7 @@ const Footer = () => {
       <div className="bg-theme-black flex flex-col gap-10 text-white m-5 rounded-md md:px-20 px-10 py-10">
         <div className="flex flex-col gap-5 md:flex-row justify-around">
           <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h1 className="text-xl font-bold">{t("social_networks")}</h1>
+            <h3 className="text-xl font-bold">{t("social_networks")}</h3>
             {SOCIAL_NETWORKS.map(network => (
               <span className="flex items-center gap-2" key={network.name}>
                 <network.icon size={24} className="min-w-[24px]" />
@@ -80,12 +80,12 @@ const Footer = () => {
             ))}
           </div>
           <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h1 className="text-xl font-bold">{t("address")}</h1>
+            <h3 className="text-xl font-bold">{t("address")}</h3>
             <p className="max-w-[80%]">{ADDRESS}</p>
           </div>
 
           <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h1 className="text-xl font-bold">{t("location")}</h1>
+            <h3 className="text-xl font-bold">{t("location")}</h3>
             <iframe
               title="atzomx-location"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476.7599133940934!2d-96.7181858!3d17.068773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c723cfaf60de6b%3A0xd4660acd5a3a65bf!2sAtzomx%20Coworking!5e0!3m2!1ses-419!2smx!4v1740720931272!5m2!1ses-419!2smx"

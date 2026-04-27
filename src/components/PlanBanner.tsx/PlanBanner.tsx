@@ -107,9 +107,11 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColor }) => {
           <PlanCard plan={plan} />
         </div>
       </div>
-      <h1 className="absolute -bottom-2 lg:-bottom-4 left-[50%] -translate-x-[50%] text-7xl lg:text-9xl font-bold whitespace-nowrap opacity-10">
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-2 lg:-bottom-4 left-[50%] -translate-x-[50%] text-7xl lg:text-9xl font-bold whitespace-nowrap opacity-10">
         {t("area").toLowerCase()}
-      </h1>
+      </div>
     </m.div>
   );
 };

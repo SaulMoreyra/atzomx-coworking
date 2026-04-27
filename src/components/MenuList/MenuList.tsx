@@ -51,9 +51,9 @@ const MenuList = () => {
   return (
     <>
       <section className="self-start top-36 sticky hidden md:block">
-        <h1 className="text-2xl font-semibold text-gray-700 mb-5 uppercase">
+        <h2 className="text-2xl font-semibold text-gray-700 mb-5 uppercase">
           {t("titles.menu")}
-        </h1>
+        </h2>
         <input
           type="text"
           placeholder="Search"
@@ -82,11 +82,11 @@ const MenuList = () => {
         {Object.entries(ALL_FOODS_BY_CATEGORY).map(
           ([category, items], index) => (
             <div key={index} className="flex flex-col">
-              <h1
+              <h2
                 id={category}
                 className="text-2xl font-semibold text-gray-700 mb-5 uppercase scroll-mt-36">
                 {t(`categories.${category}`)}
-              </h1>
+              </h2>
               <ul className="space-y-5">
                 {items.map(item => (
                   <MenuCard key={item.id} item={item} />

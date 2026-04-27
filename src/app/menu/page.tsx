@@ -7,6 +7,7 @@ import MenuListMobile from "@/components/MenuListMobile/MenuListMobile";
 export default async function Home() {
   return (
     <>
+      <h1 className="sr-only">Menú de Atzomx Café — Centro de Oaxaca</h1>
       <div className="w-full px-10 gap-5 max-w-7xl pt-9 mx-auto flex flex-col md:flex-row">
         <MenuList />
         <MenuInformation className="hidden lg:block" />
