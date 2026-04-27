@@ -38,3 +38,4 @@ next-env.d.ts
 # claude code (project memory + skills, not committed)
 CLAUDE.md
 .claude/skills/
+.claude/plans/
