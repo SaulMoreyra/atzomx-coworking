@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-between">
-          <p>© 2025 ATZOMX</p>
+          <p>© 2026 ATZOMX</p>
         </div>
       </div>
     </section>
