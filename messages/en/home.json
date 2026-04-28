@@ -75,27 +75,32 @@
       "free": {
         "name": "Free Plan",
         "description": "Always accessible",
-        "area": "Cafeteria"
+        "area": "Cafeteria",
+        "book": "Hey there! I want to book a free plan at Atzomx."
       },
       "standard": {
         "name": "Standard Plan",
         "description": "Share a table with others in the co-working area",
-        "area": "Co-working"
+        "area": "Co-working",
+        "book": "Hey there! I want to book a standard plan at Atzomx."
       },
       "individual": {
         "name": "Individual Plan",
         "description": "For those who need a private space",
-        "area": "Co-working"
+        "area": "Co-working",
+        "book": "Hey there! I want to book an individual plan at Atzomx."
       },
       "monitor": {
         "name": "Monitor Plan",
         "description": "For those who need an extra monitor",
-        "area": "Co-working"
+        "area": "Co-working",
+        "book": "Hey there! I want to book a monitor plan at Atzomx."
       },
       "meeting-room": {
         "name": "Meeting Room",
         "description": "For the team from 2 to 6 people",
-        "area": "Co-working"
+        "area": "Co-working",
+        "book": "Hey there! I want to book a meeting room plan at Atzomx."
       }
     }
   },
