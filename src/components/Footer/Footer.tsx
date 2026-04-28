@@ -3,7 +3,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { Facebook, Instagram, Phone, PhoneCall } from "react-feather";
 
-import { Mastercard, Visa } from "react-payment-logos/dist/flat";
+import { Mastercard, Visa, Amex } from "react-payment-logos/dist/flat";
 
 const ADDRESS =
   "C. de Los Libres 800-letra B, RUTA INDEPENDENCIA, Centro, 68000 Oaxaca de Juárez, Oax.";
@@ -46,6 +46,11 @@ const Footer = () => {
         />
         <Mastercard
           id="mastercard"
+          style={{ margin: 10, width: 50 }}
+          className="payment-icon"
+        />
+        <Amex
+          id="amex"
           style={{ margin: 10, width: 50 }}
           className="payment-icon"
         />
@@ -97,7 +102,7 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-between">
-          <p>© 2025 ATZOMX</p>
+          <p>© 2026 ATZOMX</p>
         </div>
       </div>
     </section>

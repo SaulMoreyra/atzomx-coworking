@@ -37,6 +37,36 @@ export const ALL_REVIEWS: ReviewType[] = [
   {
     client: {
       image:
+        "https://lh3.googleusercontent.com/a-/ALV-UjUYn5S3Np1SYtnvjKQGUmuaCJ624muxjfHR-wuiqbvLJLf_S8Ya-g=w36-h36-p-rp-mo-br100",
+      name: "Gina Benn-O'Leary",
+    },
+    rating: 5,
+    review:
+      "This is a really nice peaceful cafe and coworking space upstairs. The coworking space is great to work from, quiet, comfortable (great chairs), with great monitors for you to plug into as well. The best space we've found to work in Oaxaca city, and reasonably priced too. I had a lovely iced latte with oat milk as well. And the owners are lovely!"
+  },
+  {
+    client: {
+      image:
+        "https://lh3.googleusercontent.com/a-/ALV-UjXcaw_nVCqrsHqARM55UQGgWCjKYf9GYdnzvh1dNVTiLtoUCJ3P=w36-h36-p-rp-mo-ba3-br100",
+      name: "Leif Dyrsten",
+    },
+    rating: 5,
+    review:
+      "Great staff, great drinks and reliable internet for the 6 weeks I worked there. I highly recommend it!",
+  },
+  {
+    client: {
+      image:
+        "https://lh3.googleusercontent.com/a-/ALV-UjWWFOVw3P-1aXnkzNuPIAREIKBf6EjduIZ5d0dzkk61Zk4oPuVx=w36-h36-p-rp-mo-ba2-br100",
+      name: "Daniel Berger",
+    },
+    rating: 5,
+    review:
+      "By far the best Coworking near Centro for remote workers. I've worked at Atzomx for a week in the upstairs coworking space. Previously I toured 3 and tried 2 other coworking spaces. This is the only one that actually has what remote workers need: spacious desks, comfortable ergonomic chairs, fast internet with lots of connection ports, and air conditioning so you can stay focused during the hot Oaxacan afternoons. As a bonus, the coffee is excellent and included in the membership. The space is very clean and calming with lots of plants and local art hanging on the walls. Good food and nice, helpful staff. The only thing missing are lockers so I don't have to bring my full set of gear every day",
+  },
+  {
+    client: {
+      image:
         "https://lh3.googleusercontent.com/a-/ALV-UjUQE99gUkMvUVBMDNMwRAW5d6FO4F9r-VScBwzpP6XEs5EuvsFk-w=w60-h60-p-rp-mo-br100",
       name: "Eve Anderson",
     },

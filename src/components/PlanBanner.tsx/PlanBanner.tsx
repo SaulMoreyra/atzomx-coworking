@@ -22,6 +22,10 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColor }) => {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
 
+  const bookText = t.has("book")
+      ? t("book")
+      : tPlans("defaultAsk");
+
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -93,7 +97,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, backgroundColor }) => {
             <a
               href={
                 "https://wa.me/5219515155328?text=" +
-                encodeURIComponent(tPlans("defaultAsk"))
+                encodeURIComponent(bookText)
               }
               target="_blank"
               rel="noopener noreferrer">
