@@ -5,6 +5,8 @@ import Header from "@/components/Header/Header";
 import PlansCarousel from "@/components/PlansCarousel/PlansCarousel";
 import Presentation from "@/components/Presentation/Presentation";
 import ReviewContainer from "@/components/ReviewContainer/ReviewContainer";
+import BlogSection from "@/components/BlogSection/BlogSection";
+import FaqSection from "@/components/FaqSection/FaqSection";
 import { ALL_PLANS } from "@/mocks/products";
 import { getReviews } from "@/services/reviews/getReviews";
 
@@ -18,6 +20,8 @@ export default async function Home() {
         <Presentation />
         <About />
         <PlansCarousel plans={ALL_PLANS} />
+        <FaqSection />
+        <BlogSection />
         <ReviewContainer {...reviewsData} />
       </main>
       <Footer />

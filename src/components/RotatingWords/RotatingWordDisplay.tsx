@@ -10,7 +10,7 @@ interface RotatingWordDisplayProps {
 }
 
 const wordClassName =
-  "font-sans text-3xl font-bold uppercase tracking-wide text-brand-green md:text-5xl lg:text-6xl";
+  "text-display text-3xl leading-none text-brand-green md:text-5xl lg:text-6xl";
 
 /**
  * Mobile: one segment per line (vertical stack).

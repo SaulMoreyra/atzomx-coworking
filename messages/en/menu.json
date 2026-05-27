@@ -14,6 +14,8 @@
     "hours": "Opening Hours",
     "schedule-days": "Monday to Friday",
     "schedule-hours": "9:00 AM to 6:00 PM",
+    "schedule-saturday": "Saturday: 10:00 AM to 8:00 PM",
+    "schedule-sunday": "Sunday: check via WhatsApp",
     "address": "Address",
     "button-map": "View on Map",
     "contact": "Contact"

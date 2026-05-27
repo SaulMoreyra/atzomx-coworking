@@ -24,7 +24,11 @@ const OrganicDivider: FC<OrganicDividerProps> = ({
 }) => {
   return (
     <div
-      className={cx("w-full min-w-0 leading-[0]", flip && "rotate-180", className)}
+      className={cx(
+        "w-full min-w-0 leading-[0] -mb-px block",
+        flip && "rotate-180",
+        className
+      )}
       aria-hidden="true">
       <svg
         viewBox="0 0 1440 120"

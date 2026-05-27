@@ -2,8 +2,6 @@
 
 import MenuCategoryBand from "@/components/MenuCatalog/MenuCategoryBand";
 import MenuCategoryNav from "@/components/MenuCatalog/MenuCategoryNav";
-import MenuInformation from "@/components/MenuInformation/MenuInformation";
-import OrganicDivider from "@/components/ui/OrganicDivider/OrganicDivider";
 import { planSlideSurfaces } from "@/design-system";
 import { ALL_FOODS } from "@/mocks/menu";
 import { useTranslations } from "next-intl";
@@ -108,13 +106,6 @@ const MenuCatalog = () => {
           );
         })}
       </div>
-
-      <OrganicDivider fill="accent" variant="star" />
-      <section className="bg-brand-accent py-12 md:py-16">
-        <div className="section-container max-w-lg">
-          <MenuInformation className="border-brand-green/15" />
-        </div>
-      </section>
     </>
   );
 };

@@ -2,17 +2,27 @@
   "header": {
     "about": "Über uns",
     "plans": "Tarife",
+    "faq": "FAQ",
     "contact": "Kontakt",
     "reviews": "Bewertungen",
+    "blog": "Blog",
     "menu": "Menü"
   },
   "presentation": {
     "taglineLine1": "COMMUNITY & CAFÉ",
     "taglineLine2": "COWORKING",
     "scheduleLabel": "ÖFFNUNGSZEITEN",
-    "scheduleHours": "9:00 — 18:00 Uhr",
+    "scheduleHours": "Mo–Fr 9:00–18:00 Uhr · Sa 10:00–20:00 Uhr",
     "plans": "Tarife ansehen",
     "whatsapp": "WhatsApp"
+  },
+  "hours": {
+    "weekdaysLabel": "Montag bis Freitag",
+    "weekdaysHours": "9:00 — 18:00 Uhr",
+    "saturdayLabel": "Samstag",
+    "saturdayHours": "10:00 — 20:00 Uhr",
+    "sundayLabel": "Sonntag",
+    "sundayHours": "Öffnungszeiten per WhatsApp"
   },
   "about": {
     "title": "Speziell entwickelt für",
@@ -26,6 +36,8 @@
     }
   },
   "benefits": {
+    "sectionTitle": "Das ist dabei",
+    "sectionSubtitle": "Alles, was du brauchst, um komfortabel im Zentrum von Oaxaca zu arbeiten.",
     "wifi": {
       "title": "Highspeed-WLAN",
       "description": "1000 Mbps Internet"
@@ -38,9 +50,13 @@
       "title": "Hervorragender Kaffee",
       "description": "Spezialitätenkaffee, immer frisch"
     },
+    "chairs": {
+      "title": "Ergonomische Stühle",
+      "description": "Echter Komfort für lange Arbeitstage"
+    },
     "feedback": {
       "title": "Feedback teilen",
-      "description": "Wir freuen uns über Ihre Erfahrung!"
+      "description": "Wir freuen uns über deine Erfahrung!"
     }
   },
   "plans": {
@@ -109,6 +125,72 @@
         "book": "Hallo! Ich möchte einen Besprechungsraum bei Atzomx buchen."
       }
     }
+  },
+  "pricingTable": {
+    "sectionTitle": "Preise",
+    "title": "Preise nach Tarif",
+    "subtitle": "Preise in MXN. Tages-, Wochen- und Monatspässe verfügbar — schreib uns für aktuelle Tarife.",
+    "columns": {
+      "plan": "Tarif",
+      "hour": "Stunde",
+      "day": "Tag",
+      "week": "Woche",
+      "month": "Monat",
+      "action": "Buchen"
+    },
+    "contact": "Anfragen",
+    "book": "Buchen",
+    "footnote": "Tages-, Wochen- und Monatspreise können saisonal variieren. Schreib uns auf WhatsApp für ein genaues Angebot.",
+    "freePlan": {
+      "title": "Gratis-Tarif — Café",
+      "description": "Arbeite unten und zahle nur, was du konsumierst. Stabiles WLAN inklusive.",
+      "cta": "Gratis-Tarif anfragen"
+    }
+  },
+  "faq": {
+    "sectionTitle": "FAQ",
+    "title": "Häufige Fragen",
+    "subtitle": "Das Wichtigste, bevor du deinen Platz im Zentrum von Oaxaca buchst.",
+    "moreQuestions": "Noch eine Frage?",
+    "whatsappCta": "Schreib uns auf WhatsApp",
+    "items": {
+      "wifi": {
+        "question": "Wie schnell ist das Internet?",
+        "answer": "1000 Mbps Glasfaser im Coworking-Bereich oben — ausreichend für Videocalls, große Uploads und anspruchsvolles Remote Work."
+      },
+      "reservation": {
+        "question": "Muss ich im Voraus reservieren?",
+        "answer": "Nicht immer nötig, aber wir empfehlen eine WhatsApp-Reservierung in der Hochsaison (Guelaguetza, Día de Muertos, Dezember) oder wenn du Schreibtisch mit Monitor oder Meetingraum brauchst."
+      },
+      "hours": {
+        "question": "Was sind die Öffnungszeiten von Atzomx?",
+        "answer": "Montag bis Freitag 9:00–18:00 Uhr. Samstag 10:00–20:00 Uhr. Sonntag: aktuelle Zeiten vorher per WhatsApp erfragen."
+      },
+      "day-pass": {
+        "question": "Gibt es Tages-, Wochen- oder Monatspässe?",
+        "answer": "Ja. Neben Stundentarifen bieten wir Tages-, Wochen- und Monatspässe für Coworking-Tarife. Schreib uns auf WhatsApp mit dem gewünschten Tarif für aktuelle Preise."
+      },
+      "meeting-room": {
+        "question": "Wie buche ich den Meetingraum?",
+        "answer": "Der Raum ist für 2–6 Personen mit 55\" Smart TV, Whiteboard, WLAN und Kaffee. Buchung per WhatsApp mit Datum, Uhrzeit und Personenzahl. Ab 259 MXN pro Stunde."
+      },
+      "cafe-vs-coworking": {
+        "question": "Was ist der Unterschied zwischen Café und Coworking?",
+        "answer": "Unten (Café): gratis arbeiten und nur für Essen/Getränke zahlen. Oben: Coworking mit ergonomischen Tischen, Klimaanlage, unbegrenzt Kaffee und 1000 Mbps Glasfaser — Coworking-Tarif erforderlich."
+      },
+      "payment": {
+        "question": "Welche Zahlungsmethoden akzeptiert ihr?",
+        "answer": "Bar, Kredit- und Debitkarten (Visa, Mastercard, American Express)."
+      },
+      "parking": {
+        "question": "Gibt es Parkplätze in der Nähe?",
+        "answer": "Wir sind in Los Libres 800-B im historischen Zentrum, wenige Gehminuten vom Zócalo. Straßenparkplätze und private Parkhäuser in der Nähe; viele Gäste kommen zu Fuß oder mit Taxi/DiDi."
+      }
+    }
+  },
+  "whatsappFab": {
+    "label": "Per WhatsApp buchen",
+    "ariaLabel": "WhatsApp öffnen, um bei Atzomx zu buchen"
   },
   "reviews": {
     "sectionTitle": "Bewertungen",

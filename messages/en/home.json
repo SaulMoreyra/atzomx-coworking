@@ -2,17 +2,27 @@
   "header": {
     "about": "About",
     "plans": "Plans",
+    "faq": "FAQ",
     "contact": "Contact",
     "reviews": "Reviews",
+    "blog": "Blog",
     "menu": "Menu"
   },
   "presentation": {
     "taglineLine1": "COMUNIDAD & CAFÉ",
     "taglineLine2": "COWORKING",
     "scheduleLabel": "HOURS",
-    "scheduleHours": "9:00 am — 6:00 pm",
+    "scheduleHours": "Mon–Fri 9:00 am–6:00 pm · Sat 10:00 am–8:00 pm",
     "plans": "See Plans",
     "whatsapp": "WhatsApp"
+  },
+  "hours": {
+    "weekdaysLabel": "Monday to Friday",
+    "weekdaysHours": "9:00 am — 6:00 pm",
+    "saturdayLabel": "Saturday",
+    "saturdayHours": "10:00 am — 8:00 pm",
+    "sundayLabel": "Sunday",
+    "sundayHours": "Check hours via WhatsApp"
   },
   "about": {
     "title": "Specially Designed for",
@@ -26,6 +36,8 @@
     }
   },
   "benefits": {
+    "sectionTitle": "What's included",
+    "sectionSubtitle": "Everything you need to work comfortably in downtown Oaxaca.",
     "wifi": {
       "title": "Speed WiFi",
       "description": "1000 Mbps internet"
@@ -38,9 +50,13 @@
       "title": "Amazing Coffee",
       "description": "Specialty coffee, always fresh."
     },
+    "chairs": {
+      "title": "Ergonomic Chairs",
+      "description": "Real comfort for long work sessions"
+    },
     "feedback": {
       "title": "Share Feedback",
-      "description": "We’d love to hear from you!"
+      "description": "We'd love to hear from you!"
     }
   },
   "plans": {
@@ -109,6 +125,72 @@
         "book": "Hey there! I want to book a meeting room plan at Atzomx."
       }
     }
+  },
+  "pricingTable": {
+    "sectionTitle": "Rates",
+    "title": "Pricing by plan",
+    "subtitle": "Prices in MXN. Day, week, and month passes available — message us for current rates.",
+    "columns": {
+      "plan": "Plan",
+      "hour": "Hour",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "action": "Book"
+    },
+    "contact": "Ask us",
+    "book": "Book",
+    "footnote": "Day, week, and month rates may vary by season. Message us on WhatsApp for an exact quote and promotions.",
+    "freePlan": {
+      "title": "Free Plan — Café",
+      "description": "Work downstairs and pay only for what you consume. Stable WiFi included.",
+      "cta": "Ask about free plan"
+    }
+  },
+  "faq": {
+    "sectionTitle": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before booking your spot in downtown Oaxaca.",
+    "moreQuestions": "Have another question?",
+    "whatsappCta": "Message us on WhatsApp",
+    "items": {
+      "wifi": {
+        "question": "How fast is the internet?",
+        "answer": "We have 1000 Mbps fiber optic in the upstairs coworking area — enough for video calls, heavy uploads, and demanding remote work."
+      },
+      "reservation": {
+        "question": "Do I need to book in advance?",
+        "answer": "Not always required, but we recommend booking via WhatsApp during peak season (Guelaguetza, Day of the Dead, December) or if you need a desk with monitor or the meeting room."
+      },
+      "hours": {
+        "question": "What are Atzomx opening hours?",
+        "answer": "Monday to Friday 9:00 am – 6:00 pm. Saturday 10:00 am – 8:00 pm. Sunday: check current hours on WhatsApp before visiting."
+      },
+      "day-pass": {
+        "question": "Do you offer day, week, or month passes?",
+        "answer": "Yes. In addition to hourly rates, we offer day, week, and month passes for coworking plans. Message us on WhatsApp with the plan you're interested in for current pricing."
+      },
+      "meeting-room": {
+        "question": "How do I book the meeting room?",
+        "answer": "The room fits 2–6 people and includes a 55\" Smart TV, whiteboard, WiFi, and coffee. Book via WhatsApp with date, time, and headcount. From $259 MXN per hour."
+      },
+      "cafe-vs-coworking": {
+        "question": "What's the difference between the café and coworking?",
+        "answer": "Downstairs (café): work for free while paying only for food and drinks. Upstairs: dedicated coworking with ergonomic desks, A/C, unlimited coffee, and 1000 Mbps fiber — requires a coworking plan."
+      },
+      "payment": {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept cash, credit cards, and debit cards (Visa, Mastercard, American Express)."
+      },
+      "parking": {
+        "question": "Is there parking nearby?",
+        "answer": "We're at Los Libres 800-B in downtown Oaxaca, walking distance from the Zócalo. Street parking and private lots are available nearby; many visitors walk or take a taxi/DiDi."
+      }
+    }
+  },
+  "whatsappFab": {
+    "label": "Book via WhatsApp",
+    "ariaLabel": "Open WhatsApp to book at Atzomx"
   },
   "reviews": {
     "sectionTitle": "Reviews",

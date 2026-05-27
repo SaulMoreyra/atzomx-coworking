@@ -1,18 +1,28 @@
 "use client";
 
 import { type PlanType } from "@/common/types/planTypes";
-import Button from "@/components/Button/Button";
-import { brandSurfaces, BRAND_CONTACT, type BrandSurface } from "@/design-system";
+import WhatsAppLink from "@/components/WhatsAppLink/WhatsAppLink";
+import {
+  brandSurfaces,
+  type BrandSurface,
+  type OrganicDividerFill,
+  type OrganicDividerVariant,
+} from "@/design-system";
 import cx from "classnames";
 import { motion as m, type Variants } from "framer-motion";
 import React, { type FC } from "react";
 import PlanCard from "../PlanCard/PlanCard";
 import Label from "../ui/Label/Label";
+import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
 import { useTranslations } from "next-intl";
 
 interface PlanBannerProps {
   plan: PlanType;
   surface: BrandSurface;
+  trailingDivider?: {
+    fill: OrganicDividerFill;
+    variant: OrganicDividerVariant;
+  };
 }
 
 const containerVariants: Variants = {
@@ -25,7 +35,7 @@ const fadeUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
 };
 
-const PlanBanner: FC<PlanBannerProps> = ({ plan, surface }) => {
+const PlanBanner: FC<PlanBannerProps> = ({ plan, surface, trailingDivider }) => {
   const t = useTranslations(`home.plans.plans.${plan.id}`);
   const tPlans = useTranslations("home.plans");
 
@@ -65,14 +75,11 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, surface }) => {
           </m.div>
 
           <m.div variants={fadeUp}>
-            <a
-              href={`${BRAND_CONTACT.whatsapp}?text=${encodeURIComponent(bookText)}`}
-              target="_blank"
-              rel="noopener noreferrer">
-              <Button variant="primary" size="md">
-                {tPlans("book")}
-              </Button>
-            </a>
+            <WhatsAppLink
+              message={bookText}
+              className="inline-flex min-h-[44px] items-center justify-center rounded-brand border border-brand-green bg-brand-green px-6 py-3 text-base text-label text-brand-on-green transition-colors duration-200 hover:border-brand-green/90 hover:bg-brand-green/90 focus-brand">
+              {tPlans("book")}
+            </WhatsAppLink>
           </m.div>
         </div>
 
@@ -80,6 +87,14 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, surface }) => {
           <PlanCard plan={plan} />
         </m.div>
       </div>
+
+      {trailingDivider ? (
+        <OrganicDivider
+          fill={trailingDivider.fill}
+          variant={trailingDivider.variant}
+          className="w-full shrink-0"
+        />
+      ) : null}
     </m.article>
   );
 };

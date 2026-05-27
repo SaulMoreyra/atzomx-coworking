@@ -2,17 +2,27 @@
   "header": {
     "about": "Nosotros",
     "plans": "Planes",
+    "faq": "FAQ",
     "contact": "Contacto",
     "reviews": "Reseñas",
+    "blog": "Blog",
     "menu": "Menú"
   },
   "presentation": {
     "taglineLine1": "COMUNIDAD & CAFÉ",
     "taglineLine2": "COWORKING",
     "scheduleLabel": "HORARIO",
-    "scheduleHours": "9:00 am — 6:00 pm",
+    "scheduleHours": "Lun–Vie 9:00 am–6:00 pm · Sáb 10:00 am–8:00 pm",
     "plans": "Ver planes",
     "whatsapp": "WhatsApp"
+  },
+  "hours": {
+    "weekdaysLabel": "Lunes a viernes",
+    "weekdaysHours": "9:00 am — 6:00 pm",
+    "saturdayLabel": "Sábado",
+    "saturdayHours": "10:00 am — 8:00 pm",
+    "sundayLabel": "Domingo",
+    "sundayHours": "Consulta horario por WhatsApp"
   },
   "about": {
     "title": "Diseñado especialmente para",
@@ -20,12 +30,14 @@
       "freelancers": "Freelancers",
       "remote-workers": "Trabajadores remotos",
       "creatives": "Creativos",
-      "digital-nomads": "Nómadas digitales",
-      "coffee-lovers": "Amantes del café",
+      "digital-nomads": "Nomadas digitales",
+      "coffee-lovers": "Amantes del cafe",
       "developers": "Developers"
     }
   },
   "benefits": {
+    "sectionTitle": "Lo que incluye",
+    "sectionSubtitle": "Todo lo que necesitas para trabajar cómodo en el centro de Oaxaca.",
     "wifi": {
       "title": "WiFi de alta velocidad",
       "description": "Internet de 1000 Mbps"
@@ -37,6 +49,10 @@
     "coffee": {
       "title": "Café increíble",
       "description": "Café de especialidad, siempre fresco"
+    },
+    "chairs": {
+      "title": "Sillas ergonómicas",
+      "description": "Comodidad real para jornadas largas de trabajo"
     },
     "feedback": {
       "title": "Comparte tu opinión",
@@ -85,7 +101,7 @@
         "book": "¡Hola! Quiero reservar un plan gratis en Atzomx."
       },
       "standard": {
-        "name": "Plan Estándar",
+        "name": "Plan Estandar",
         "description": "Comparte una mesa en el área de co-working",
         "area": "Co-working",
         "book": "¡Hola! Quiero reservar un plan estándar en Atzomx."
@@ -109,6 +125,72 @@
         "book": "¡Hola! Quiero reservar una sala de reuniones en Atzomx."
       }
     }
+  },
+  "pricingTable": {
+    "sectionTitle": "Tarifas",
+    "title": "Precios por plan",
+    "subtitle": "Tarifas en MXN. Pase de día, semana y mes disponibles — escríbenos para precios actuales.",
+    "columns": {
+      "plan": "Plan",
+      "hour": "Hora",
+      "day": "Día",
+      "week": "Semana",
+      "month": "Mes",
+      "action": "Reservar"
+    },
+    "contact": "Consultar",
+    "book": "Reservar",
+    "footnote": "Los precios por día, semana y mes pueden variar según temporada. Escríbenos por WhatsApp para cotización exacta y promociones.",
+    "freePlan": {
+      "title": "Plan Gratis — Cafetería",
+      "description": "Trabaja en planta baja pagando solo lo que consumes. WiFi estable incluido.",
+      "cta": "Preguntar por plan gratis"
+    }
+  },
+  "faq": {
+    "sectionTitle": "FAQ",
+    "title": "Preguntas frecuentes",
+    "subtitle": "Lo esencial antes de reservar tu espacio en el Centro de Oaxaca.",
+    "moreQuestions": "¿Tienes otra duda?",
+    "whatsappCta": "Escríbenos por WhatsApp",
+    "items": {
+      "wifi": {
+        "question": "¿Qué velocidad de internet tienen?",
+        "answer": "Contamos con fibra óptica de 1000 Mbps en el área de coworking (piso superior). Es suficiente para videollamadas, subida de archivos pesados y trabajo remoto exigente."
+      },
+      "reservation": {
+        "question": "¿Necesito reservar con anticipación?",
+        "answer": "No siempre es obligatorio, pero recomendamos reservar por WhatsApp en temporada alta (Guelaguetza, Día de Muertos, diciembre) o si necesitas escritorio con monitor o sala de juntas."
+      },
+      "hours": {
+        "question": "¿Cuál es el horario de Atzomx?",
+        "answer": "Lunes a viernes de 9:00 am a 6:00 pm. Sábados de 10:00 am a 8:00 pm. Domingo: consulta el horario actual por WhatsApp antes de visitarnos."
+      },
+      "day-pass": {
+        "question": "¿Ofrecen pase por día, semana o mes?",
+        "answer": "Sí. Además de la tarifa por hora, tenemos tarifas por día, semana y mes en los planes de coworking. Escríbenos por WhatsApp con el plan que te interesa y te compartimos los precios vigentes."
+      },
+      "meeting-room": {
+        "question": "¿Cómo reservo la sala de juntas?",
+        "answer": "La sala es para equipos de 2 a 6 personas, incluye Smart TV de 55\", pizarrón, WiFi y café. Resérvala por WhatsApp indicando fecha, hora y número de personas. Tarifa desde $259 MXN por hora."
+      },
+      "cafe-vs-coworking": {
+        "question": "¿Cuál es la diferencia entre la cafetería y el coworking?",
+        "answer": "En planta baja (cafetería) puedes trabajar gratis pagando solo lo que consumes en comida y bebida. En el piso superior está el coworking con mesas ergonómicas, A/C, café ilimitado y fibra de 1000 Mbps — requiere plan de coworking."
+      },
+      "payment": {
+        "question": "¿Qué formas de pago aceptan?",
+        "answer": "Aceptamos efectivo, tarjeta de crédito y débito (Visa, Mastercard, American Express)."
+      },
+      "parking": {
+        "question": "¿Hay estacionamiento cerca?",
+        "answer": "Estamos en Los Libres 800-B, Centro Histórico — zona caminable cerca del Zócalo. Hay estacionamiento en calle y estacionamientos privados en los alrededores; muchos clientes llegan caminando o en taxi/DiDi."
+      }
+    }
+  },
+  "whatsappFab": {
+    "label": "Reservar por WhatsApp",
+    "ariaLabel": "Abrir WhatsApp para reservar en Atzomx"
   },
   "reviews": {
     "sectionTitle": "Reseñas",

@@ -7,6 +7,7 @@ import { Mastercard, Visa, Amex } from "react-payment-logos/dist/flat";
 import Label from "../ui/Label/Label";
 import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
 import { BRAND_CONTACT } from "@/design-system";
+import { trackWhatsAppConversion } from "@/lib/analytics";
 
 const SOCIAL_NETWORKS = [
   { icon: Instagram, name: BRAND_CONTACT.instagramHandle, url: BRAND_CONTACT.instagram },
@@ -18,6 +19,7 @@ const SOCIAL_NETWORKS = [
 
 const Footer = () => {
   const t = useTranslations("home.footer");
+  const tHours = useTranslations("home.hours");
 
   return (
     <footer id="contact" className="w-full bg-brand-cream text-brand-green">
@@ -47,6 +49,9 @@ const Footer = () => {
                 href={network.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  if (network.name === "WhatsApp") trackWhatsAppConversion();
+                }}
                 className="flex items-center gap-3 text-brand-green/80 hover:text-brand-green transition-colors duration-200 focus-brand rounded-sm text-body text-sm">
                 <network.icon size={18} className="min-w-[18px]" aria-hidden="true" />
                 <span>{network.name}</span>
@@ -66,9 +71,20 @@ const Footer = () => {
               className="text-label text-xs text-brand-green/70 hover:text-brand-green underline-offset-2 hover:underline transition-colors duration-200">
               atzomx.com.mx
             </a>
-            <p className="text-schedule text-brand-green/60 text-xs mt-2">
-              9:00 am — 6:00 pm
-            </p>
+            <div className="text-schedule mt-2 space-y-1 text-brand-green/60 text-xs">
+              <p>
+                <span className="text-brand-green/75">{tHours("weekdaysLabel")}: </span>
+                {tHours("weekdaysHours")}
+              </p>
+              <p>
+                <span className="text-brand-green/75">{tHours("saturdayLabel")}: </span>
+                {tHours("saturdayHours")}
+              </p>
+              <p>
+                <span className="text-brand-green/75">{tHours("sundayLabel")}: </span>
+                {tHours("sundayHours")}
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col gap-4">

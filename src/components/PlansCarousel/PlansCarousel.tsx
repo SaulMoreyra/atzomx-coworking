@@ -4,6 +4,7 @@ import { type PlanType } from "@/common/types/planTypes";
 import { highlightDividerVariants, planSlideSurfaces, type BrandSurface, type OrganicDividerFill } from "@/design-system";
 import React, { Fragment, type FC } from "react";
 import PlanBanner from "../PlanBanner/PlanBanner";
+import PlansPricingTable from "../PlansPricingTable/PlansPricingTable";
 import Label from "../ui/Label/Label";
 import HighlightShape from "../ui/HighlightShape/HighlightShape";
 import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
@@ -39,23 +40,37 @@ const PlansCarousel: FC<PlansCarouselProps> = ({ plans }) => {
       <div className="flex flex-col">
         {plans.map((plan, index) => {
           const surface: BrandSurface = planSlideSurfaces[index % planSlideSurfaces.length];
-          const prevSurface: BrandSurface =
-            index === 0 ? "cream" : planSlideSurfaces[(index - 1) % planSlideSurfaces.length];
-          const showDivider = index === 0 || surface !== prevSurface;
+          const nextSurface: BrandSurface | null =
+            index + 1 < plans.length
+              ? planSlideSurfaces[(index + 1) % planSlideSurfaces.length]
+              : null;
 
           return (
             <Fragment key={plan.id}>
-              {showDivider && (
+              {index === 0 ? (
                 <OrganicDivider
                   fill={toDividerFill(surface)}
                   variant={dividerVariants[index % dividerVariants.length]}
                 />
-              )}
-              <PlanBanner plan={plan} surface={surface} />
+              ) : null}
+              <PlanBanner
+                plan={plan}
+                surface={surface}
+                trailingDivider={
+                  nextSurface && surface !== nextSurface
+                    ? {
+                        fill: toDividerFill(nextSurface),
+                        variant: dividerVariants[(index + 1) % dividerVariants.length],
+                      }
+                    : undefined
+                }
+              />
             </Fragment>
           );
         })}
       </div>
+
+      <PlansPricingTable plans={plans} />
     </section>
   );
 };

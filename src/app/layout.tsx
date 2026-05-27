@@ -3,10 +3,10 @@ import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import Script from "next/script";
 import type { Metadata, Viewport } from "next";
 import { businessJsonLd } from "@/lib/business-jsonld";
 import { BRAND_CONTACT } from "@/design-system";
+import WhatsAppFab from "@/components/WhatsAppFab/WhatsAppFab";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -92,11 +92,9 @@ export default async function RootLayout({
         <GoogleTagManager gtmId="GTM-NDNK3CRK" />
         <GoogleTagManager gtmId="AW-16900625108" />
         <GoogleAnalytics gaId="AW-16900625108" />
-        <Script id="conversion-contacto" strategy="afterInteractive">
-          {`gtag('event', 'conversion', {'send_to': 'AW-16900625108/TrwICJDbkoUbENSl7Po-'});`}
-        </Script>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
+          <WhatsAppFab />
         </NextIntlClientProvider>
       </body>
     </html>

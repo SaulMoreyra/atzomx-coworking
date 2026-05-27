@@ -3,6 +3,7 @@ import FeedGrid from "../FeedGrid/FeedGrid";
 import RotatingWords from "../RotatingWords/RotatingWords";
 import ServiceBenefits from "../ServiceBenefits/ServiceBenefits";
 import Heading from "../Heading/Heading";
+import HighlightShape from "../ui/HighlightShape/HighlightShape";
 import SectionBlock from "../ui/SectionBlock/SectionBlock";
 import { useTranslations } from "next-intl";
 
@@ -19,17 +20,18 @@ const About = () => {
   const rotatingWords = publicFocused.map(item => t(`public.${item}`));
 
   return (
-    <SectionBlock id="about" surface="cream" className="w-full py-12 md:py-16">
-      <div className="section-container flex flex-col gap-12">
-        <div className="flex flex-col justify-center gap-6 text-center">
+    <SectionBlock id="about" surface="cream" className="w-full py-14 md:py-20">
+      <div className="section-container flex flex-col gap-14 md:gap-20">
+        <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center md:gap-8">
+          <HighlightShape variant="cloud" fill="accent" size={52} className="opacity-95" />
           <Heading>{t("title")}</Heading>
-          <RotatingWords words={rotatingWords} />
+          <RotatingWords words={rotatingWords} className="mt-1 md:mt-2" />
         </div>
+
         <ServiceBenefits />
       </div>
 
-      {/* Full-bleed feed — edge-to-edge like @atzomx Instagram */}
-      <div className="mt-12 md:mt-16">
+      <div className="mt-14 md:mt-20">
         <FeedGrid />
       </div>
     </SectionBlock>

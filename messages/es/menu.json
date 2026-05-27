@@ -14,6 +14,8 @@
     "hours": "Horario",
     "schedule-days": "Lunes a Viernes",
     "schedule-hours": "9:00 AM a 6:00 PM",
+    "schedule-saturday": "Sábado: 10:00 AM a 8:00 PM",
+    "schedule-sunday": "Domingo: consulta por WhatsApp",
     "address": "Dirección",
     "button-map": "Ver en el mapa",
     "contact": "Contacto"

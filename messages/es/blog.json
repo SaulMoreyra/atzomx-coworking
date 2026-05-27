@@ -1,0 +1,87 @@
+{
+  "banner": {
+    "title": "Blog",
+    "tagline": "Historias de coworking, café y comunidad en Oaxaca"
+  },
+  "section": {
+    "sectionTitle": "Blog",
+    "title": "Historias desde el centro de Oaxaca",
+    "viewAll": "Ver todas las entradas"
+  },
+  "readMore": "Leer artículo",
+  "backToBlog": "Volver al blog",
+  "readingTime": "{minutes} min de lectura",
+  "publishedOn": "Publicado el {date}",
+  "categories": {
+    "coworking": "Coworking",
+    "coffee": "Café",
+    "community": "Comunidad",
+    "oaxaca": "Oaxaca"
+  },
+  "posts": {
+    "welcome-atzomx": {
+      "title": "Bienvenidos a Atzomx: coworking con alma de café",
+      "excerpt": "Somos desarrolladores de software oaxaqueños que buscábamos un lugar cómodo para trabajar — y terminamos construyendo el espacio que nos faltaba en el Centro.",
+      "paragraphs": [
+        "Atzomx no empezó como un plan de negocios en una pizarra. Empezó como una necesidad muy concreta: somos desarrolladores de software oaxaqueños y, como muchos en nuestra generación, trabajamos en remoto, con clientes en otras ciudades y en otros países. Lo que no encontrábamos en Oaxaca era un lugar que realmente quisiéramos usar todos los días.",
+        "Probamos cafés — el ruido, el internet inestable y las miradas cuando te quedas cinco horas con una sola taza. Probamos oficinas compartidas — correctas, funcionales, pero frías: paredes blancas, silencio incómodo, esa sensación de estar en una oficina aburrida a la que no te dan ganas de regresar. Ningún lugar combinaba lo que necesitábamos para trabajar en serio con lo que queríamos para vivir el día: comodidad, buen café y gente con quien cruzar una conversación.",
+        "Así nació la idea de Atzomx: un espacio hecho por quienes entienden lo que significa depender del WiFi, tener calls a las 9:00 AM y necesitar un monitor extra un martes cualquiera — pero que no se sintiera como trámite. Queríamos un lugar cómodo y divertido, más cercano a un encuentro entre amigos que a una sala de juntas corporativa. Un sitio donde pudieras pasar el rato: abrir el laptop por la mañana, bajar por un latte después, quedarte en la terraza al atardecer sin que nadie te apure a irte.",
+        "Por eso el café no quedó como detalle decorativo. Para nosotros, el ritual de la barra — pedir tu bebida, oler el espresso recién extraído, tomar cinco minutos antes de volver al código — es parte del trabajo, no una pausa robada. Combinar coworking con café de especialidad fue la forma natural de construir el ambiente que buscábamos: productivo cuando lo necesitas, relajado cuando lo permites.",
+        "Encontramos el lugar en C. de Los Libres 800-B, en pleno Centro Histórico de Oaxaca de Juárez, a unos minutos caminando del Zócalo. Desde aquí puedes salir a comer un tlayuda, visitar mercados, regresar a una videollamada y terminar el día en la planta baja sin cambiar de cuadra.",
+        "Diseñamos el espacio en dos niveles con intención. Abajo está el café: espresso, Chemex, sandwiches, bowls y un ambiente donde también puedes trabajar con WiFi estable pagando solo lo que consumes. Arriba, el coworking: mesas amplias, sillas ergonómicas, aire acondicionado, enchufes en cada puesto y la infraestructura que nosotros mismos hubiéramos exigido como developers — fibra óptica de 1000 Mbps, pensada para videollamadas, deploys y archivos pesados sin la ansiedad de un internet que se cae a mitad de un sprint.",
+        "Los planes son flexibles y empiezan desde 59 MXN por hora en el área compartida. Incluyen café, té y agua ilimitados, acceso a la terraza y un 5% de descuento en el menú del café. También hay escritorio individual, plan con monitor externo y sala de juntas para equipos de hasta seis personas con Smart TV de 55 pulgadas y pizarra — porque sabemos lo que cuesta encontrar un cuarto decente para una demo con cliente.",
+        "Con el tiempo, Atzomx dejó de ser solo nuestro refugio de trabajo. Llegaron freelancers, diseñadores, consultores, nómadas digitales y emprendedores locales. Lo que construimos para nosotros se convirtió en punto de encuentro para quien busca en Oaxaca lo mismo que buscábamos nosotros: un lugar donde trabajar con enfoque sin sentir que estás encerrado en una oficina aburrida.",
+        "Lo que dicen quienes ya nos visitaron lo confirma: ambiente limpio y tranquilo, personal amable, sillas cómodas y «el mejor coworking del centro». Con más de 75 reseñas y una calificación de 4.9 en Google, nos enorgullece que otros sientan lo que perseguíamos desde el principio.",
+        "Si eres de Oaxaca o estás de paso, pasa por la barra y preséntate. Atzomx existe porque dos developers locales querían un mejor lugar para trabajar — y decidieron construirlo. Ojalá te quedes no solo por el WiFi, sino porque aquí se siente bien pasar el rato."
+      ]
+    },
+    "specialty-coffee-oaxaca": {
+      "title": "Café de especialidad en Oaxaca: más que un acompañante",
+      "excerpt": "Pluma Hidalgo, Sierra Madre del Sur y métodos de barismo: por qué el café oaxaqueño merece el mismo respeto que tu deadline.",
+      "paragraphs": [
+        "En muchos coworkings el café es un dispensador olvidado en un rincón. En Atzomx es lo contrario: el café de especialidad está en el centro de la experiencia, tanto en la barra de planta baja como en las tazas ilimitadas incluidas con los planes de coworking.",
+        "Oaxaca lleva siglos en la historia del café mexicano. Los primeros cafetos llegaron al país en el siglo XVII y, con el tiempo, la región desarrolló variedades y microclimas únicos. Hoy el estado es referencia nacional en calidad y diversidad de origen.",
+        "El corazón de esa tradición está en la Sierra Madre del Sur, donde el pueblo de Pluma Hidalgo da nombre a una de las variedades más reconocidas de México: Pluma Hidalgo, descendiente del Typica original. Su nombre evoca las nubes en forma de pluma que se forman sobre las montañas al amanecer.",
+        "Esta región cuenta con Denominación de Origen protegida — la Región Pluma abarca decenas de municipios oaxaqueños donde se cultiva Coffea arabica en alturas que van de 1.300 a más de 1.900 metros sobre el nivel del mar. El suelo volcánico, la brisa que sube desde la costa y el cultivo bajo sombra producen granos con perfil equilibrado: notas de cacao, cítricos, especias cálidas y un final floral que catadores internacionales han premiado.",
+        "Los productores locales suelen trabajar en lotes pequeños — muchas fincas miden entre una y nueve hectáreas — con métodos artesanales transmitidos por generaciones: cosecha selectiva, despulpado, fermentación controlada y secado en patio al sol. Ese cuidado se nota en la taza.",
+        "En Atzomx preparamos cada bebida con la intención de respetar ese origen. Nuestro menú incluye espresso y bebidas con leche — desde un shot intenso hasta lattes con latte art — además de métodos de filtrado como Chemex, ideales para apreciar la complejidad de un single origin oaxaqueño sin prisa.",
+        "La diferencia entre un café commodity y uno de especialidad no es snobismo: es trazabilidad, frescura de tueste y extracción controlada. Un espresso bien preparado tiene crema uniforme, balance entre acidez y dulzor, y un cuerpo que acompaña — no interrumpe — horas de trabajo profundo.",
+        "Para quienes trabajan arriba, el café ilimitado no es un gimmick: es combustible ritual. La pausa en la barra — dos minutos frente a la máquina, el aroma del espresso recién extraído, una conversación breve con el barista — marca la transición entre bloques de concentración y es uno de los momentos que más extrañan quienes dejan la ciudad.",
+        "También servimos opciones frías, smoothies, tés y un menú de comida pensado para quien pasa la jornada completa: bowls, sandwiches y ensaladas que complementan la barra sin obligarte a salir del edificio.",
+        "Si visitas Oaxaca y te interesa el tercer wave del café, te recomendamos preguntar en barra qué origen estamos trabajando esa semana, probar un pour-over si tienes tiempo, y comparar cómo cambia el perfil entre métodos. Es una forma accesible de entender por qué el café oaxaqueño compite a nivel internacional — y por qué en Atzomx no lo tratamos como un complemento, sino como parte esencial del día."
+      ]
+    },
+    "remote-work-oaxaca": {
+      "title": "Trabajar remoto desde Oaxaca: guía práctica",
+      "excerpt": "Zona horaria UTC-6, internet variable en depas pero fibra en coworking, y un centro histórico donde caminar al trabajo es la norma.",
+      "paragraphs": [
+        "Oaxaca de Juárez se ha consolidado como uno de los destinos favoritos de nómadas digitales en México. No compite con la escala de Ciudad de México, pero sí con algo más valioso para muchos: calidad de vida, gastronomía de clase mundial, costo accesible y una cultura viva que invita a quedarse más tiempo del previsto.",
+        "La zona horaria es UTC-6 — la misma de Ciudad de México y del Centro de Estados Unidos en horario estándar. Si trabajas con clientes en la costa este de EE.UU., tus mañanas coinciden con su mediodía; si colaboras con equipos en California, tendrás que acostumbrarte a empezar temprano o extender un poco la tarde. Para la mayoría de freelancers con clientes norteamericanos, es una ventaja natural.",
+        "El costo de vida permite un estilo cómodo sin presupuesto de gran metrópoli. Un departamento en Centro, Jalatlaco o Reforma puede costar entre 8.000 y 20.000 MXN mensuales según tamaño y temporada; comer en mercados y fondas cuesta una fracción de lo que pagarías en CDMX; y el coworking mensual ronda los 1.500–3.000 MXN si lo usas de forma regular. Muchos nómadas viven bien con 25.000–40.000 MXN al mes.",
+        "El tema del internet merece honestidad: en departamentos la velocidad varía entre 30 y 60 Mbps, suficiente para la mayoría de tareas pero no siempre confiable para una videollamada crítica con CEO. Por eso los coworkings con fibra dedicada — como los 1000 Mbps de Atzomx — son la red de seguridad de quien trabaja remoto en serio.",
+        "La mejor estrategia que recomendamos: usa tu departamento para trabajo asíncrono — escribir, diseñar, programar — y reserva el coworking para llamadas, entregables con deadline y días en los que necesites máxima concentración. Así no dependes de un solo punto de falla.",
+        "Oaxaca es una ciudad caminable. Vivir en el Centro Histórico significa resolver gran parte de la vida diaria a pie: mercado, café, coworking, cena. Atzomx en Los Libres 800-B queda en esa órbita, a minutos del Zócalo y de las calles más activas sin el ruido constante de la plaza principal.",
+        "La temporada importa. De noviembre a abril predomina el clima seco y templado — ideal para largas jornadas con ventanas abiertas. De mayo a octubre llega la lluvia: refresca las tardes pero conviene tener plan B para internet si trabajas desde casa. Febrero a abril suele ser el sweet spot: buen clima, menos multitudes post-fiestas y comunidad nómada activa.",
+        "Sobre visas: la mayoría de visitantes entra con permiso turístico de hasta 180 días. Para estancias más largas existen opciones de residencia temporal con requisitos de solvencia económica que conviene revisar con un gestor o abogado migratorio antes de planear un año completo.",
+        "Un día tipo productivo podría verse así: desayuno en mercado, coworking de 9:00 a 13:00 con bloque de deep work, almuerzo en la planta baja de Atzomx, segunda sesión hasta las 17:00, paseo al atardecer por Jalatlaco o una cata de mezcal el fin de semana. La clave no es optimizar cada hora — es tener un ancla fija a la que regresar.",
+        "Reserva tu espacio por WhatsApp en temporadas altas (Guelaguetza, Muertos, Navidad). Lleva audífonos con micrófono, identifica la zona más silenciosa del coworking para calls, y aprovecha la terraza para breaks sin pantalla. Oaxaca premia a quien combina disciplina con curiosidad — y un buen coworking hace que la primera parte sea mucho más fácil."
+      ]
+    },
+    "community-coworking": {
+      "title": "Comunidad en el coworking: conexiones que van más allá del WiFi",
+      "excerpt": "Investigaciones muestran que el coworking reduce el aislamiento y expande redes profesionales. En Atzomx eso ocurre en la barra, la terraza y la sala de juntas.",
+      "paragraphs": [
+        "Trabajar remoto trae libertad, pero también un costo silencioso: aislamiento. Estudios en psicología organizacional han documentado que los espacios de coworking funcionan como fuentes de apoyo social para profesionales independientes — no solo ofrecen un escritorio, sino interacciones que reemplazan el «café de la oficina» que muchos extrañan.",
+        "Una encuesta citada por Harvard Business Review encontró que el 87% de quienes usan coworking socializan con otros miembros, el 82% expandió su red profesional y el 64% considera que esas conexiones generan referidos de trabajo reales. No es magia de networking forzado: son conversaciones que empiezan de forma natural.",
+        "En Atzomx esa dinámica se ve todos los días. En la barra de planta baja se cruzan diseñadores gráficos, desarrolladores de software, consultores de marketing, traductores, emprendedores locales y nómadas digitales de Alemania, Estados Unidos o Argentina. La mezcla de perfiles — local e internacional, creativo y técnico — es lo que hace interesante cada semana.",
+        "Las colaboraciones rara vez nacen de un pitch deck en la sala de juntas. Surgen cuando alguien pregunta qué estás construyendo, cuando compartes mesa en la terraza, o cuando el barista conecta a dos personas que piden lo mismo dos días seguidos. Es networking orgánico, no evento de tarjetas de presentación.",
+        "Para freelancers, eso se traduce en cosas concretas: un diseñador que encuentra desarrollador para su landing, un consultor que recibe referido de un cliente en CDMX, un nómada que conoce roommates para el siguiente mes. La literatura académica lo describe como «red como medio, no como fin» — la red no garantiza resultados por sí sola, pero abre acceso a ideas, benchmarks y oportunidades que desde casa no aparecen.",
+        "La comunidad también reduce la fricción emocional del trabajo independiente. Tener gente alrededor — aunque no hables con todos — crea accountability ambiental: es más fácil empezar la mañana cuando ves a otros abriendo laptops a las 9:00. Los espacios bien diseñados facilitan encuentros casuales sin forzar extroversión.",
+        "En Oaxaca, donde la escena nómada crece cada temporada, Atzomx funciona como punto de encuentro estable. A diferencia de cafés donde el WiFi puede fallar o el ruido interrumpe calls, aquí la infraestructura profesional permite relajarse en lo social sin sacrificar productividad.",
+        "Organizamos el espacio para que convivan zonas de concentración — arriba, con aire acondicionado y mesas amplias — y momentos de pausa en la barra o la terraza. La sala de juntas concentra equipos pequeños que a veces terminan intercambiando contactos con otros grupos del piso.",
+        "Si eres nuevo en la ciudad, presentarte en la barra es el gesto más simple y efectivo. Pregunta qué origen de café están sirviendo, menciona de dónde vienes y qué proyecto traes. Oaxaca tiene fama de hospitalidad, y en Atzomx esa calidez se combina con un entorno de trabajo serio.",
+        "Un buen coworking no se mide solo en megas por segundo. Se mide en las conversaciones que empiezan junto a la máquina de espresso y terminan en un proyecto compartido — o simplemente en sentir que no estás trabajando solo. Eso es lo que buscamos cultivar cada día en Los Libres 800-B."
+      ]
+    }
+  }
+}

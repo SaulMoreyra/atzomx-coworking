@@ -1,10 +1,10 @@
 import { type FoodType } from "@/common/types/menuTypes";
 import { runFireworks } from "@/lib/confetti";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import React, { type FC } from "react";
 import { Heart } from "react-feather";
 import cx from "classnames";
+import MenuItemImage from "../MenuCatalog/MenuItemImage";
 
 interface MenuCardProps {
   item: FoodType;
@@ -62,7 +62,7 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
         </div>
 
         <div className="w-[88px] h-[88px] md:w-[104px] md:h-[104px] overflow-hidden shrink-0 relative border border-brand-green/10">
-          <Image src={item.image} alt={name} fill={true} className="object-cover" sizes="104px" />
+          <MenuItemImage src={item.image} alt={name} sizes="104px" />
         </div>
       </div>
 

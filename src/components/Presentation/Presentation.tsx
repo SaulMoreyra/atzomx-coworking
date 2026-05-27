@@ -4,7 +4,7 @@ import { motion as m, type Variants } from "framer-motion";
 import React, { type FC } from "react";
 import BrandIllustration from "../ui/BrandIllustration/BrandIllustration";
 import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
-import { BRAND_CONTACT } from "@/design-system";
+import WhatsAppLink from "../WhatsAppLink/WhatsAppLink";
 import { useTranslations } from "next-intl";
 
 const containerVariants: Variants = {
@@ -90,13 +90,9 @@ const Presentation: FC = () => {
           <span className="text-brand-green/30 hidden sm:inline" aria-hidden="true">
             ·
           </span>
-          <a
-            href={BRAND_CONTACT.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-label text-xs md:text-sm text-brand-green/70 hover:text-brand-green underline-offset-4 hover:underline focus-brand rounded-sm">
+          <WhatsAppLink className="text-label text-xs md:text-sm text-brand-green/70 hover:text-brand-green underline-offset-4 hover:underline focus-brand rounded-sm">
             {t("whatsapp")}
-          </a>
+          </WhatsAppLink>
         </m.div>
       </div>
       </div>

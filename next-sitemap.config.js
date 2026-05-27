@@ -22,7 +22,20 @@ module.exports = {
     transformRobotsTxt: async (_, robotsTxt) =>
       `# Atzomx — https://atzomx.com.mx\n# LLM index: https://atzomx.com.mx/llms.txt\n# Full AI profile: https://atzomx.com.mx/llms-full.txt\n\n${robotsTxt}`,
   },
-  additionalPaths: async config => {
+  additionalPaths: async () => {
+    const blogSlugs = [
+      "welcome-atzomx",
+      "specialty-coffee-oaxaca",
+      "remote-work-oaxaca",
+      "community-coworking",
+    ];
+
+    const blogPaths = blogSlugs.map(slug => ({
+      loc: `/blog/${slug}`,
+      priority: 0.6,
+      lastmod: new Date().toISOString(),
+    }));
+
     return [
       {
         loc: "/",
@@ -34,6 +47,12 @@ module.exports = {
         priority: 0.7,
         lastmod: new Date().toISOString(),
       },
+      {
+        loc: "/blog",
+        priority: 0.7,
+        lastmod: new Date().toISOString(),
+      },
+      ...blogPaths,
     ];
   },
   exclude: ["/404", "/500"],

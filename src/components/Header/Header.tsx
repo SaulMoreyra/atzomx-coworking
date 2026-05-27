@@ -9,7 +9,11 @@ import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
 import Button from "../Button/Button";
 import { type Locale } from "@/i18n/config";
 
-const menuLeftItems = ["about", "plans", "reviews", "contact"];
+const hashNavItems = ["about", "plans", "faq", "reviews", "contact"] as const;
+const linkNavItems = [{ id: "blog", href: "/blog" }] as const;
+
+const navLinkClass =
+  "text-label text-brand-green hover:text-brand-green/70 transition-colors duration-200 focus-brand rounded-sm";
 
 const Header = () => {
   const locale = useLocale() as Locale;
@@ -74,17 +78,24 @@ const Header = () => {
             </div>
             <nav className="hidden lg:flex" aria-label="Principal">
               <ul className="flex gap-6 xl:gap-10 items-center h-full">
-                {menuLeftItems.map(id => (
+                {hashNavItems.map(id => (
                   <li key={id}>
                     <a
                       href={`#${id}`}
-                      className="text-label text-brand-green hover:text-brand-green/70 transition-colors duration-200 focus-brand rounded-sm"
+                      className={navLinkClass}
                       onClick={e => {
                         e.preventDefault();
                         onScrollToElement(id);
                       }}>
                       {t(id)}
                     </a>
+                  </li>
+                ))}
+                {linkNavItems.map(item => (
+                  <li key={item.id}>
+                    <Link href={item.href} className={navLinkClass}>
+                      {t(item.id)}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -113,7 +124,7 @@ const Header = () => {
           className="lg:hidden fixed inset-x-0 bottom-0 top-site-header z-header bg-brand-main py-12 px-6 site-header-bar overflow-y-auto"
           aria-label="Menú móvil">
           <ul className="flex flex-col items-center gap-8">
-            {menuLeftItems.map(id => (
+            {hashNavItems.map(id => (
               <li key={id}>
                 <a
                   href={`#${id}`}
@@ -124,6 +135,18 @@ const Header = () => {
                   }}>
                   {t(id)}
                 </a>
+              </li>
+            ))}
+            {linkNavItems.map(item => (
+              <li key={item.id}>
+                <Link
+                  href={item.href}
+                  className="text-label text-xl text-brand-green focus-brand"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                  }}>
+                  {t(item.id)}
+                </Link>
               </li>
             ))}
             <li>
