@@ -36,7 +36,8 @@ const Presentation: FC = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative z-content min-h-[calc(100dvh-4.5rem-env(safe-area-inset-top,0px))] w-full overflow-x-clip bg-brand-main flex flex-col pt-6 pb-0 md:pt-10 text-brand-green">
+      className="relative z-content min-h-[calc(100dvh-4.5rem-env(safe-area-inset-top,0px))] w-full overflow-x-clip bg-brand-main flex flex-col pt-6 pb-0 md:pt-10 text-brand-green"
+      data-header-surface="main">
       <div className="flex flex-1 flex-col items-center px-5 w-full">
         <h1 className="sr-only">Café y Coworking en el Centro de Oaxaca</h1>
 

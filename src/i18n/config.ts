@@ -11,8 +11,8 @@ export const localeLabels = {
   de: { name: "Deutsch", short: "DE" },
 } as const satisfies Record<Locale, { name: string; short: string }>;
 
-/** Segmented pill UI up to this count; beyond that, use the popover menu */
-export const LOCALE_SEGMENTED_MAX = 4;
+/** Segmented pill UI up to this count; beyond that, use the compact popover menu */
+export const LOCALE_SEGMENTED_MAX = 3;
 
 export function isLocale(value: string | undefined | null): value is Locale {
   return locales.includes(value as Locale);

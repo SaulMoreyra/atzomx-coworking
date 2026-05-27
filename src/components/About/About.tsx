@@ -19,7 +19,7 @@ const About = () => {
   const rotatingWords = publicFocused.map(item => t(`public.${item}`));
 
   return (
-    <SectionBlock id="about" surface="cream" className="w-full py-14 md:py-20">
+    <SectionBlock id="about" surface="cream" headerSurface="cream" className="w-full py-14 md:py-20">
       <div className="section-container flex flex-col gap-14 md:gap-16">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center md:gap-8">
           <HighlightShape variant="cloud" fill="accent" size={52} className="opacity-95" />

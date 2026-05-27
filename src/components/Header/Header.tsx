@@ -8,6 +8,9 @@ import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
 import Button from "../Button/Button";
 import { type Locale } from "@/i18n/config";
+import { useHeaderSurface } from "@/hooks/useHeaderSurface";
+import { DEFAULT_HEADER_SURFACE } from "@/design-system/header";
+import { getHeaderBarClassName } from "./headerSurfaceStyles";
 
 /** High-intent destinations — always visible on desktop */
 const primaryHashNavItems = ["plans", "gallery"] as const;
@@ -32,6 +35,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const sectionSurface = useHeaderSurface(!isMenuOpen);
+  const isDynamicHeader = sectionSurface !== null;
+  const activeSurface = sectionSurface ?? DEFAULT_HEADER_SURFACE;
 
   const onScrollToElement = (id: string) => {
     const element = document.getElementById(id);
@@ -97,12 +103,11 @@ const Header = () => {
   return (
     <header className="site-header-shell w-full">
       <div
-        className={cx(
-          "site-header-bar-inner text-brand-green transition-[background-color,box-shadow,border-color] duration-300",
-          isScrolled
-            ? "border-b border-brand-green/15 bg-brand-cream shadow-md"
-            : "border-b border-transparent bg-brand-main"
-        )}>
+        className={getHeaderBarClassName({
+          surface: activeSurface,
+          isScrolled,
+          isDynamic: isDynamicHeader,
+        })}>
         <div className="section-container flex h-[4.5rem] items-center justify-between gap-3 xl:gap-4">
           {/* Left: mobile menu + logo + desktop nav */}
           <div className="flex min-w-0 flex-1 items-center gap-3 md:gap-4 xl:gap-6">

@@ -22,7 +22,7 @@ const CommunitySection = () => {
   return (
     <>
       <OrganicDivider fill="cream" variant="star" />
-      <section id="community" className="w-full bg-brand-cream py-14 text-brand-green md:py-20">
+      <section id="community" data-header-surface="cream" className="w-full bg-brand-cream py-14 text-brand-green md:py-20">
         <div className="section-container max-w-5xl">
           <div className="mb-10 flex flex-col items-center gap-3 text-center md:mb-12">
             <HighlightShape variant="star" fill="accent" size={48} className="opacity-90" />

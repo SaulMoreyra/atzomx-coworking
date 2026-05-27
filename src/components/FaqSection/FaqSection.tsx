@@ -39,7 +39,7 @@ const FaqSection = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <OrganicDivider fill="accent" variant="star" />
-      <section id="faq" className="w-full bg-brand-accent py-14 text-brand-green md:py-20">
+      <section id="faq" data-header-surface="accent" className="w-full bg-brand-accent py-14 text-brand-green md:py-20">
         <div className="section-container max-w-3xl">
           <div className="mb-10 flex flex-col items-center gap-3 text-center md:mb-12">
             <HighlightShape variant="clover" fill="main" size={52} className="opacity-95" />

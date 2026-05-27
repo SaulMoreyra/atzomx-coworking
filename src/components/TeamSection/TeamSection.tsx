@@ -15,7 +15,7 @@ const TeamSection = () => {
   return (
     <>
       <OrganicDivider fill="main" variant="cloud" />
-      <section id="team" className="w-full bg-brand-main py-14 text-brand-green md:py-20">
+      <section id="team" data-header-surface="main" className="w-full bg-brand-main py-14 text-brand-green md:py-20">
         <div className="section-container max-w-5xl">
           <div className="mb-10 flex flex-col items-center gap-3 text-center md:mb-12">
             <HighlightShape variant="cloud" fill="accent" size={48} className="opacity-95" />

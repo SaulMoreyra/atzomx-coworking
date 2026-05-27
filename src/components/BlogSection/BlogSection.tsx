@@ -18,7 +18,7 @@ const BlogSection = () => {
   return (
     <>
       <OrganicDivider fill="cream" variant="star" />
-      <section id="blog" className="w-full bg-brand-cream py-14 md:py-20">
+      <section id="blog" data-header-surface="cream" className="w-full bg-brand-cream py-14 md:py-20">
         <div className="section-container flex flex-col items-center gap-4 text-center">
           <HighlightShape variant="clover" fill="accent" size={52} className="opacity-90" />
           <Label as="p" className="text-xs tracking-[0.25em]">

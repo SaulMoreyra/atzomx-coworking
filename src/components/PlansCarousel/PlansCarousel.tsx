@@ -28,7 +28,7 @@ const PlansCarousel: FC<PlansCarouselProps> = ({ plans }) => {
   const t = useTranslations("home.plans");
 
   return (
-    <section id="plans" className="w-full bg-brand-cream">
+    <section id="plans" data-header-surface="cream" className="w-full bg-brand-cream">
       <div className="section-container py-10 md:py-14 text-center">
         <div className="flex flex-col items-center gap-3">
           <HighlightShape variant="star" fill="accent" size={56} className="opacity-90" />

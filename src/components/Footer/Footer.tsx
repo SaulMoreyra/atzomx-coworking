@@ -22,7 +22,7 @@ const Footer = () => {
   const tHours = useTranslations("home.hours");
 
   return (
-    <footer id="contact" className="w-full bg-brand-cream text-brand-green">
+    <footer id="contact" data-header-surface="cream" className="w-full bg-brand-cream text-brand-green">
       <OrganicDivider fill="cream" variant="star" />
 
       <div className="section-container pt-8 pb-6 text-center border-b border-brand-green/10">

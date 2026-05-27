@@ -40,7 +40,7 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
   return (
     <>
       <OrganicDivider fill="accent" variant="clover" />
-      <section id="reviews" className="w-full bg-brand-accent text-brand-green py-14 md:py-20">
+      <section id="reviews" data-header-surface="accent" className="w-full bg-brand-accent text-brand-green py-14 md:py-20">
       <div className="section-container flex flex-col items-center gap-4 text-center mb-8 md:mb-10">
         <Label as="p" className="text-xs tracking-[0.25em]">
           {t("sectionTitle")}

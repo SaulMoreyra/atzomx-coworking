@@ -1,10 +1,12 @@
 import { brandSurfaces, type BrandSurface } from "@/design-system";
+import { HEADER_SURFACE_ATTR, type HeaderSurface } from "@/design-system/header";
 import cx from "classnames";
 import React, { type FC, type ReactNode } from "react";
 
 interface SectionBlockProps {
   children: ReactNode;
   surface?: BrandSurface;
+  headerSurface?: HeaderSurface;
   id?: string;
   className?: string;
   as?: "section" | "div" | "article";
@@ -19,6 +21,7 @@ const textBySurface: Partial<Record<BrandSurface, string>> = {
 const SectionBlock: FC<SectionBlockProps> = ({
   children,
   surface = "cream",
+  headerSurface,
   id,
   className,
   as: Tag = "section",
@@ -27,6 +30,7 @@ const SectionBlock: FC<SectionBlockProps> = ({
   return (
     <Tag
       id={id}
+      {...(headerSurface ? { [HEADER_SURFACE_ATTR]: headerSurface } : {})}
       className={cx(
         brandSurfaces[surface],
         textBySurface[surface] ?? "text-brand-green",

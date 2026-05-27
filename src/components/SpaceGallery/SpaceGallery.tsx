@@ -71,7 +71,7 @@ const SpaceGallery = () => {
   return (
     <>
       <OrganicDivider fill="main" variant="wave" />
-      <section id="gallery" className="w-full bg-brand-main py-14 text-brand-green md:py-20">
+      <section id="gallery" data-header-surface="main" className="w-full bg-brand-main py-14 text-brand-green md:py-20">
         <div className="section-container mb-10 flex flex-col items-center gap-3 text-center md:mb-12">
           <HighlightShape variant="clover" fill="accent" size={52} className="opacity-95" />
           <Label as="p" className="text-xs tracking-[0.25em]">
