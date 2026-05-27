@@ -18,13 +18,10 @@ interface TabsProps {
 const Tabs = ({ children, tab, onChange, className }: TabsProps) => {
   return (
     <TabsContext.Provider value={{ activeTab: tab, setActiveTab: onChange }}>
-      <div className={cx("w-full", className)}>
+      <div className={cx("w-full", className)} role="tablist">
         <div
-          className="relative flex flex-nowrap list-none overflow-x-scroll"
-          style={{
-            WebkitOverflowScrolling: "touch",
-            scrollbarWidth: "none",
-          }}>
+          className="relative flex flex-nowrap list-none overflow-x-auto"
+          style={{ WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
           {children}
         </div>
       </div>
@@ -40,12 +37,12 @@ interface TabItemProps {
 
 const COLOR_SCHEMA = {
   primary: {
-    active: "text-primary-main border-primary-main",
-    inactive: "text-gray-400 border-white",
+    active: "text-brand-green border-brand-green",
+    inactive: "text-brand-green/40 border-transparent",
   },
   secondary: {
-    active: "text-white border-white",
-    inactive: "text-gray-300 border-primary-main",
+    active: "text-brand-on-green border-brand-accent",
+    inactive: "text-brand-on-green/50 border-transparent",
   },
 };
 
@@ -58,25 +55,25 @@ const TabItem = ({ value, children, schema = "primary" }: TabItemProps) => {
   const schemaColors = COLOR_SCHEMA[schema];
 
   return (
-    <div
+    <button
+      type="button"
+      role="tab"
+      aria-selected={isActive}
       onClick={() => {
         setActiveTab(value);
       }}
       className={cx(
-        "px-4 py-2 text-sm min-w-16 break-keep whitespace-nowrap",
-        "cursor-pointer border-b-4 text-center",
+        "px-4 py-3 text-label text-xs min-w-16 min-h-[44px] whitespace-nowrap",
+        "cursor-pointer border-b-[3px] text-center focus-brand transition-colors duration-200",
         isActive ? schemaColors.active : schemaColors.inactive
       )}>
       {children}
-    </div>
+    </button>
   );
 };
 
 interface TabPanelProps
-  extends React.DetailedHTMLProps<
-    React.HTMLAttributes<HTMLDivElement>,
-    HTMLDivElement
-  > {
+  extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   value: string | number;
   tab: string;
   children: ReactNode;
@@ -85,7 +82,7 @@ interface TabPanelProps
 const TabPanel = ({ value, tab, children, ...props }: TabPanelProps) => {
   if (value !== tab) return null;
   return (
-    <div className="font-light" {...props}>
+    <div role="tabpanel" {...props}>
       {children}
     </div>
   );

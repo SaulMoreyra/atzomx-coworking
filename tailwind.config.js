@@ -1,6 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires,no-undef
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+/** Official ATZOMX palette — 4 colors only */
+const OFFICIAL = {
+  cream: "#fffbed",
+  main: "#d5f4c3",
+  green: "#2f3e22",
+  accent: "#d3bedb",
+};
+
 /** @type {import('tailwindcss').Config} */
 // eslint-disable-next-line no-undef
 module.exports = {
@@ -13,49 +21,47 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        theme: {
-          white: "#fbfbfb",
-          gray: "#efefef",
-          black: "#1c211f",
-        },
-        filter: {
-          white: "#ffffff",
-          black: "#000000",
-          gray: "#808080",
-          red: "#ef233c",
-          blue: "#4cc9f0",
-          green: "#06d6a0",
-          yellow: "#f4d35e",
-          orange: "#ffa500",
-          purple: "#c77dff",
-          pink: "#ff70a6",
-          brown: "#a52a2a",
-          na: "#808080",
-        },
-        banner: {
-          mint: "#D8E2DC",
-          blue: "#bedbfe",
-          cream: "#f4eee0",
-          lavender: "#E3DFF3",
-          peach: "#FAD4C0",
-          pink: "#F3C6C3",
-          yellow: "#FAE3B0",
-          soft: "#C5D6CC",
-        },
-        primary: {
-          soft: "#C5D6CC",
-          main: "#6F8D81",
+        brand: {
+          cream: OFFICIAL.cream,
+          main: OFFICIAL.main,
+          green: OFFICIAL.green,
+          accent: OFFICIAL.accent,
+          "on-green": OFFICIAL.cream,
+          "on-main": OFFICIAL.green,
         },
       },
       fontFamily: {
         sans: ["Mabry", ...defaultTheme.fontFamily.sans],
-        druk: ["Druk"],
+        druk: ["Druk", ...defaultTheme.fontFamily.sans],
+      },
+      letterSpacing: {
+        label: "0.12em",
+        wide: "0.08em",
+      },
+      borderRadius: {
+        brand: "0.75rem",
       },
       height: {
         "screen-header": "100dvh",
       },
       minHeight: {
         "screen-header": "100dvh",
+      },
+      zIndex: {
+        content: "0",
+        sticky: "40",
+        header: "100",
+        "header-bar": "1000",
+        overlay: "110",
+      },
+      spacing: {
+        "site-header": "calc(4.5rem + env(safe-area-inset-top, 0px))",
+      },
+      padding: {
+        "site-header": "calc(4.5rem + env(safe-area-inset-top, 0px))",
+      },
+      scrollMargin: {
+        "site-header": "calc(4.5rem + env(safe-area-inset-top, 0px))",
       },
       backgroundImage: {
         na: 'url("/images/na.png")',

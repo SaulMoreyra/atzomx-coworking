@@ -7,6 +7,7 @@ import { Menu, X, Coffee } from "react-feather";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
+import Button from "../Button/Button";
 import { type Locale } from "@/i18n/config";
 
 const menuLeftItems = ["about", "plans", "reviews", "contact"];
@@ -15,11 +16,12 @@ const Header = () => {
   const locale = useLocale() as Locale;
   const t = useTranslations("home.header");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const onScrollToElement = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth", block: "start" });
-    window.history.pushState(null, "", `#${id}`); // Update the URL without
+    window.history.pushState(null, "", `#${id}`);
   };
 
   const onClickItem = (id: string) => {
@@ -32,6 +34,18 @@ const Header = () => {
   };
 
   useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 8);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
@@ -39,100 +53,105 @@ const Header = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="w-full">
-      <div className="relative bg-gray-50 items-center justify-between py-7 px-10 xl:px-20 z-30">
-        <div className="flex items-center h-full">
-          <div className="flex lg:hidden flex-1 transition-all duration-300">
-            <X
-              onClick={toggleMenu}
-              size={20}
-              className={cx("min-w-[40px]", isMenuOpen ? "block" : "hidden")}
-            />
-            <Menu
-              onClick={toggleMenu}
-              size={20}
-              className={cx("min-w-[40px]", isMenuOpen ? "hidden" : "block")}
-            />
+    <header className="site-header-shell w-full">
+      <div
+        className={cx(
+          "site-header-bar-inner border-b border-brand-green/15 bg-brand-cream text-brand-green transition-shadow duration-200",
+          isScrolled && "shadow-md"
+        )}>
+        <div className="section-container flex items-center justify-between py-3 md:py-5">
+          <div className="flex items-center h-full">
+            <div className="flex lg:hidden flex-1">
+              <button
+                type="button"
+                onClick={toggleMenu}
+                className="focus-brand min-w-[44px] min-h-[44px] flex items-center justify-center text-brand-green"
+                aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+                aria-expanded={isMenuOpen}>
+                {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              </button>
+            </div>
+            <nav className="hidden lg:flex flex-1" aria-label="Principal">
+              <ul className="flex gap-6 xl:gap-10 items-center h-full">
+                {menuLeftItems.map(id => (
+                  <li key={id}>
+                    <a
+                      href={`#${id}`}
+                      className="text-label text-brand-green hover:text-brand-green/70 transition-colors duration-200 focus-brand rounded-sm"
+                      onClick={e => {
+                        e.preventDefault();
+                        onScrollToElement(id);
+                      }}>
+                      {t(id)}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
-          <div className="hidden lg:flex flex-1">
-            <ul className="flex gap-5 xl:gap-10 items-center h-full text-lg lg:text-xl">
-              {menuLeftItems.map((id, index) => (
-                <li className="cursor-pointer" key={index}>
-                  <a
-                    href={`#${id}`}
-                    className="block text-inherit no-underline"
-                    onClick={e => {
-                      e.preventDefault();
-                      onScrollToElement(id);
-                    }}>
-                    {t(id)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="h-full">
-            <Link
-              href="/"
-              className="flex flex-col items-center h-full justify-center">
-              <div className="font-druk text-4xl">
-                <Image
-                  src="/images/logos/logo-symbol.svg"
-                  width={42}
-                  height={42}
-                  alt="Logo"
-                  className="invert"
-                />
-              </div>
+
+          <Link
+            href="/"
+            className="flex flex-col items-center justify-center focus-brand rounded-sm"
+            aria-label="Atzomx inicio">
+            <Image
+              src="/images/logos/logo-symbol.svg"
+              width={44}
+              height={44}
+              alt="Atzomx"
+            />
+          </Link>
+
+          <div className="flex-1 flex justify-end items-center gap-3 xl:gap-5">
+            <Link href="/menu" className="hidden lg:block">
+              <Button variant="accent" size="sm">
+                {t("menu")}
+              </Button>
             </Link>
-          </div>
-          <div className="flex-1 flex justify-end items-center">
-            <ul className="flex gap-3 xl:gap-5 items-center h-full text-lg lg:text-xl">
-              <li>
-                <Link
-                  href="/menu"
-                  target="_blank"
-                  className="flex items-center gap-1">
-                  <Coffee
-                    onClick={toggleMenu}
-                    size={20}
-                    className={"min-w-[40px] block lg:hidden"}
-                  />
-                  <span className="hidden lg:block cursor-pointer">
-                    {t("menu")}
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <LocaleSwitch locale={locale} />
-              </li>
-            </ul>
+            <Link
+              href="/menu"
+              className="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-brand-green focus-brand rounded-sm"
+              aria-label={t("menu")}>
+              <Coffee size={22} />
+            </Link>
+            <LocaleSwitch locale={locale} />
           </div>
         </div>
       </div>
-      <div
-        className={cx(
-          "block lg:hidden",
-          "absolute min-h-screen bg-gray-50 left-0 w-full py-10 px-10 transition-all duration-300 z-10",
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        )}>
-        <ul className="flex flex-col items-center gap-10 h-full text-xl">
-          {menuLeftItems.map((id, index) => (
-            <li key={index}>
-              <a
-                href={`#${id}`}
-                className="block text-inherit no-underline"
-                onClick={e => {
-                  e.preventDefault();
-                  onClickItem(id);
+
+      {isMenuOpen && (
+        <nav
+          className="lg:hidden fixed inset-x-0 bottom-0 top-site-header z-header bg-brand-main py-12 px-6 site-header-bar overflow-y-auto"
+          aria-label="Menú móvil">
+          <ul className="flex flex-col items-center gap-8">
+            {menuLeftItems.map(id => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  className="text-label text-xl text-brand-green focus-brand"
+                  onClick={e => {
+                    e.preventDefault();
+                    onClickItem(id);
+                  }}>
+                  {t(id)}
+                </a>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="/menu"
+                onClick={() => {
+                  setIsMenuOpen(false);
                 }}>
-                {t(id)}
-              </a>
+                <Button variant="primary" size="md">
+                  {t("menu")}
+                </Button>
+              </Link>
             </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+          </ul>
+        </nav>
+      )}
+    </header>
   );
 };
 

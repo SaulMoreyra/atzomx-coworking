@@ -1,19 +1,23 @@
 import React from "react";
 
-import MenuInformation from "@/components/MenuInformation/MenuInformation";
 import MenuList from "@/components/MenuList/MenuList";
 import MenuListMobile from "@/components/MenuListMobile/MenuListMobile";
+import MenuInformation from "@/components/MenuInformation/MenuInformation";
+import OrganicDivider from "@/components/ui/OrganicDivider/OrganicDivider";
 
-export default async function Home() {
+export default async function MenuPage() {
   return (
-    <>
+    <div className="bg-brand-cream min-h-screen flex flex-col flex-1 site-main">
       <h1 className="sr-only">Menú de Atzomx Café — Centro de Oaxaca</h1>
-      <div className="w-full px-10 gap-5 max-w-7xl pt-9 mx-auto flex flex-col md:flex-row">
-        <MenuList />
-        <MenuInformation className="hidden lg:block" />
-      </div>
+      <MenuList />
       <MenuListMobile />
-      <MenuInformation className="block lg:hidden min-w-[100%] mb-0 p-5 md:px-10" />
-    </>
+
+      <OrganicDivider fill="main" variant="clover" />
+      <div className="w-full bg-brand-main lg:hidden pb-10 pt-2">
+        <div className="section-container">
+          <MenuInformation className="static max-w-lg mx-auto border-brand-green/15" />
+        </div>
+      </div>
+    </div>
   );
 }

@@ -8,11 +8,7 @@ interface PageWrapperProps {
 
 const PageWrapper: FC<PageWrapperProps> = ({ children, className }) => {
   return (
-    <main
-      className={cx(
-        "w-full p-5 py-0 flex flex-col min-h-screen-header",
-        className
-      )}>
+    <main className={cx("w-full section-container flex flex-col min-h-screen-header gap-6 py-4", className)}>
       {children}
     </main>
   );

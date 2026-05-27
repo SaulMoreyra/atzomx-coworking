@@ -7,7 +7,12 @@
     "menu": "Menu"
   },
   "presentation": {
-    "plans": "See Plans"
+    "taglineLine1": "COMUNIDAD & CAFÉ",
+    "taglineLine2": "COWORKING",
+    "scheduleLabel": "HOURS",
+    "scheduleHours": "9:00 am — 6:00 pm",
+    "plans": "See Plans",
+    "whatsapp": "WhatsApp"
   },
   "about": {
     "title": "Specially Designed for",
@@ -39,6 +44,7 @@
     }
   },
   "plans": {
+    "sectionTitle": "Plans",
     "from": "From",
     "book": "Book Now",
     "defaultAsk": "Hey there! I want to book a plan at Atzomx.",
@@ -105,10 +111,13 @@
     }
   },
   "reviews": {
+    "sectionTitle": "Reviews",
+    "badge": "Google Reviews",
     "title": "Happy Customers",
     "footer": "Customers reviews"
   },
   "footer": {
+    "sectionTitle": "Contact",
     "payments": "All major methods of payment accepted",
     "address": "Address",
     "location": "Location",

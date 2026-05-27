@@ -7,7 +7,12 @@
     "menu": "Menú"
   },
   "presentation": {
-    "plans": "Ver planes"
+    "taglineLine1": "COMUNIDAD & CAFÉ",
+    "taglineLine2": "COWORKING",
+    "scheduleLabel": "HORARIO",
+    "scheduleHours": "9:00 am — 6:00 pm",
+    "plans": "Ver planes",
+    "whatsapp": "WhatsApp"
   },
   "about": {
     "title": "Diseñado especialmente para",
@@ -39,6 +44,7 @@
     }
   },
   "plans": {
+    "sectionTitle": "Planes",
     "from": "Desde",
     "book": "Reservar ahora",
     "defaultAsk": "¡Hola! Quiero reservar un plan en Atzomx.",
@@ -105,10 +111,13 @@
     }
   },
   "reviews": {
+    "sectionTitle": "Reseñas",
+    "badge": "Google Reviews",
     "title": "Clientes satisfechos",
     "footer": "Opiniones de clientes"
   },
   "footer": {
+    "sectionTitle": "Contacto",
     "payments": "Aceptamos todos los métodos de pago principales",
     "address": "Dirección",
     "location": "Ubicación",

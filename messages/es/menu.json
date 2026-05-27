@@ -1,4 +1,10 @@
 {
+  "search": "Buscar",
+  "banner": {
+    "title": "Menú",
+    "taglineLine1": "COMUNIDAD & CAFÉ",
+    "taglineLine2": "COWORKING"
+  },
   "titles": {
     "menu": "Menú",
     "categories": "Categorías"

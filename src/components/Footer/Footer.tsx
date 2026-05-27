@@ -1,111 +1,99 @@
 "use client";
+
 import React from "react";
 import { useTranslations } from "next-intl";
-import { Facebook, Instagram, Phone, PhoneCall } from "react-feather";
-
+import { Facebook, Instagram, Mail, Phone, PhoneCall } from "react-feather";
 import { Mastercard, Visa, Amex } from "react-payment-logos/dist/flat";
-
-const ADDRESS =
-  "C. de Los Libres 800-letra B, RUTA INDEPENDENCIA, Centro, 68000 Oaxaca de Juárez, Oax.";
+import Label from "../ui/Label/Label";
+import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
+import { BRAND_CONTACT } from "@/design-system";
 
 const SOCIAL_NETWORKS = [
-  {
-    icon: Facebook,
-    name: "Facebook",
-    url: "https://www.facebook.com/profile.php?id=61569786946519",
-  },
-  {
-    icon: Instagram,
-    name: "Instagram",
-    url: "https://www.instagram.com/atzomx/",
-  },
-  {
-    icon: Phone,
-    name: "Whatsapp",
-    url: "https://wa.me/5219515155328",
-  },
-  {
-    icon: PhoneCall,
-    name: "+52 951 515 5328",
-    url: "tel:5219515155328",
-  },
+  { icon: Instagram, name: BRAND_CONTACT.instagramHandle, url: BRAND_CONTACT.instagram },
+  { icon: Facebook, name: "Facebook", url: BRAND_CONTACT.facebook },
+  { icon: Phone, name: "WhatsApp", url: BRAND_CONTACT.whatsapp },
+  { icon: PhoneCall, name: BRAND_CONTACT.phone, url: BRAND_CONTACT.phoneHref },
+  { icon: Mail, name: BRAND_CONTACT.email, url: BRAND_CONTACT.emailHref },
 ];
 
 const Footer = () => {
   const t = useTranslations("home.footer");
+
   return (
-    <section id="contact">
-      <div className="mt-5 px-5 text-center w-full md:px-64">
-        {t("payments")}
+    <footer id="contact" className="w-full bg-brand-cream text-brand-green">
+      <OrganicDivider fill="cream" variant="star" />
+
+      <div className="section-container pt-8 pb-6 text-center border-b border-brand-green/10">
+        <Label as="h2" className="text-sm tracking-[0.25em] mb-4">
+          {t("sectionTitle")}
+        </Label>
+        <p className="text-body text-sm text-brand-green/70">{t("payments")}</p>
+        <div className="flex justify-center items-center mt-3">
+          <Visa id="visa" style={{ margin: 8, width: 44 }} />
+          <Mastercard id="mastercard" style={{ margin: 8, width: 44 }} />
+          <Amex id="amex" style={{ margin: 8, width: 44 }} />
+        </div>
       </div>
-      <div className="flex justify-center pb-5 items-center">
-        <Visa
-          id="visa"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Mastercard
-          id="mastercard"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Amex
-          id="amex"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        {/*
-        <PaypalTransparent
-          id="paypal"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Applepay
-          id="appleplay"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Googlepay
-          id="googleplay"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        /> */}
-      </div>
-      <div className="bg-theme-black flex flex-col gap-10 text-white m-5 rounded-md md:px-20 px-10 py-10">
-        <div className="flex flex-col gap-5 md:flex-row justify-around">
-          <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h3 className="text-xl font-bold">{t("social_networks")}</h3>
+
+      <div className="section-container flex flex-col gap-8 px-6 py-10 md:px-14 md:py-12">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <div className="flex flex-col gap-4">
+            <Label as="h3" className="text-xs tracking-[0.2em]">
+              {t("social_networks")}
+            </Label>
             {SOCIAL_NETWORKS.map(network => (
-              <span className="flex items-center gap-2" key={network.name}>
-                <network.icon size={24} className="min-w-[24px]" />
-                <a href={network.url} target="_blank" rel="noopener noreferrer">
-                  {network.name}
-                </a>
-              </span>
+              <a
+                key={network.name}
+                href={network.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-brand-green/80 hover:text-brand-green transition-colors duration-200 focus-brand rounded-sm text-body text-sm">
+                <network.icon size={18} className="min-w-[18px]" aria-hidden="true" />
+                <span>{network.name}</span>
+              </a>
             ))}
           </div>
-          <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h3 className="text-xl font-bold">{t("address")}</h3>
-            <p className="max-w-[80%]">{ADDRESS}</p>
+
+          <div className="flex flex-col gap-4">
+            <Label as="h3" className="text-xs tracking-[0.2em]">
+              {t("address")}
+            </Label>
+            <p className="text-body text-sm text-brand-green/80 max-w-xs leading-relaxed">
+              {BRAND_CONTACT.address}
+            </p>
+            <a
+              href={BRAND_CONTACT.website}
+              className="text-label text-xs text-brand-green/70 hover:text-brand-green underline-offset-2 hover:underline transition-colors duration-200">
+              atzomx.com.mx
+            </a>
+            <p className="text-schedule text-brand-green/60 text-xs mt-2">
+              9:00 am — 6:00 pm
+            </p>
           </div>
 
-          <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h3 className="text-xl font-bold">{t("location")}</h3>
+          <div className="flex flex-col gap-4">
+            <Label as="h3" className="text-xs tracking-[0.2em]">
+              {t("location")}
+            </Label>
             <iframe
               title="atzomx-location"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476.7599133940934!2d-96.7181858!3d17.068773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c723cfaf60de6b%3A0xd4660acd5a3a65bf!2sAtzomx%20Coworking!5e0!3m2!1ses-419!2smx!4v1740720931272!5m2!1ses-419!2smx"
+              src={BRAND_CONTACT.mapsEmbed}
               width="100%"
-              height="205"
+              height="200"
               allowFullScreen={true}
-              loading="lazy"></iframe>
+              loading="lazy"
+              className="border border-brand-green/15 grayscale-[20%] contrast-[1.05]"
+            />
           </div>
         </div>
 
-        <div className="flex justify-between">
-          <p>© 2026 ATZOMX</p>
+        <div className="pt-6 border-t border-brand-green/10 text-center md:text-left">
+          <p className="text-label text-[10px] tracking-[0.25em] text-brand-green/45">
+            © 2026 ATZOMX
+          </p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 

@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import React, { type FC } from "react";
 import { MessageSquare, Calendar, Zap, Coffee } from "react-feather";
+import Label from "../ui/Label/Label";
 
 interface BenefitProps {
   icon: React.ReactNode;
@@ -12,11 +13,15 @@ interface BenefitProps {
 
 const Benefit: FC<BenefitProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex gap-5">
-      {icon}
+    <div className="flex gap-4 p-5 bg-brand-main/40 border-y border-brand-green/10 sm:border sm:border-brand-green/10">
+      <div className="text-brand-green shrink-0" aria-hidden="true">
+        {icon}
+      </div>
       <div>
-        <h3 className="text-xl md:text-2xl text-nowrap">{title}</h3>
-        <p className="text-gray-400 text-lg md:text-xl">{description}</p>
+        <Label as="h3" className="text-base md:text-lg mb-1">
+          {title}
+        </Label>
+        <p className="text-body text-brand-green/70 text-base md:text-lg">{description}</p>
       </div>
     </div>
   );
@@ -25,25 +30,25 @@ const Benefit: FC<BenefitProps> = ({ icon, title, description }) => {
 const ServiceBenefits = () => {
   const t = useTranslations("home.benefits");
   return (
-    <div className="flex justify-center items-center md:px-10 py-5">
-      <div className="flex flex-col justify-between gap-10 md:flex-row md:gap-20">
+    <div className="flex justify-center items-center py-2">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 w-full max-w-6xl">
         <Benefit
-          icon={<Zap size={40} className="min-w-[40px]" />}
+          icon={<Zap size={36} />}
           title={t("wifi.title")}
           description={t("wifi.description")}
         />
         <Benefit
-          icon={<Calendar size={40} className="min-w-[40px]" />}
+          icon={<Calendar size={36} />}
           title={t("plans.title")}
           description={t("plans.description")}
         />
         <Benefit
-          icon={<Coffee size={40} className="min-w-[40px]" />}
+          icon={<Coffee size={36} />}
           title={t("coffee.title")}
           description={t("coffee.description")}
         />
         <Benefit
-          icon={<MessageSquare size={40} className="min-w-[40px]" />}
+          icon={<MessageSquare size={36} />}
           title={t("feedback.title")}
           description={t("feedback.description")}
         />

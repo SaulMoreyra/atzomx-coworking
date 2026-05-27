@@ -1,37 +1,62 @@
 "use client";
 
 import { type PlanType } from "@/common/types/planTypes";
-import React, { type FC } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import PlanBanner from "../PlanBanner.tsx/PlanBanner";
+import { highlightDividerVariants, planSlideSurfaces, type BrandSurface, type OrganicDividerFill } from "@/design-system";
+import React, { Fragment, type FC } from "react";
+import PlanBanner from "../PlanBanner/PlanBanner";
+import Label from "../ui/Label/Label";
+import HighlightShape from "../ui/HighlightShape/HighlightShape";
+import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
+import { useTranslations } from "next-intl";
 
-interface HeroProps {
+interface PlansCarouselProps {
   plans: PlanType[];
 }
 
-const bannerBackgroundColours = [
-  "bg-banner-blue",
-  "bg-banner-cream",
-  "bg-banner-yellow",
-  "bg-banner-pink",
-  "bg-banner-lavender",
-  "bg-banner-peach",
-];
+const dividerVariants = highlightDividerVariants;
 
-const PlansCarousel: FC<HeroProps> = ({ plans }) => {
+const toDividerFill = (surface: BrandSurface): OrganicDividerFill => {
+  if (surface === "green") return "green";
+  if (surface === "white") return "cream";
+  return surface;
+};
+
+/** Vertical full-bleed plan bands — editorial layout, no carousel boxes */
+const PlansCarousel: FC<PlansCarouselProps> = ({ plans }) => {
+  const t = useTranslations("home.plans");
+
   return (
-    <div id="plans" className="min-h-screen-header pt-5">
-      <Carousel showStatus={false} infiniteLoop={true}>
-        {plans.map((plan, index) => (
-          <PlanBanner
-            key={index}
-            plan={plan}
-            backgroundColor={bannerBackgroundColours[index]}
-          />
-        ))}
-      </Carousel>
-    </div>
+    <section id="plans" className="w-full bg-brand-cream">
+      <div className="section-container py-10 md:py-14 text-center">
+        <div className="flex flex-col items-center gap-3">
+          <HighlightShape variant="star" fill="accent" size={56} className="opacity-90" />
+          <Label as="h2" className="text-sm md:text-base tracking-[0.25em]">
+            {t("sectionTitle")}
+          </Label>
+        </div>
+      </div>
+
+      <div className="flex flex-col">
+        {plans.map((plan, index) => {
+          const surface: BrandSurface = planSlideSurfaces[index % planSlideSurfaces.length];
+          const prevSurface: BrandSurface =
+            index === 0 ? "cream" : planSlideSurfaces[(index - 1) % planSlideSurfaces.length];
+          const showDivider = index === 0 || surface !== prevSurface;
+
+          return (
+            <Fragment key={plan.id}>
+              {showDivider && (
+                <OrganicDivider
+                  fill={toDividerFill(surface)}
+                  variant={dividerVariants[index % dividerVariants.length]}
+                />
+              )}
+              <PlanBanner plan={plan} surface={surface} />
+            </Fragment>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

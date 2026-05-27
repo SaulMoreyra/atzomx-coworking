@@ -3,7 +3,6 @@ import { type ReviewType } from "@/common/types/planTypes";
 import About from "@/components/About/About";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import PlansCarousel from "@/components/PlansCarousel/PlansCarousel";
 import Presentation from "@/components/Presentation/Presentation";
 import ReviewContainer from "@/components/ReviewContainer/ReviewContainer";
@@ -15,14 +14,12 @@ export default async function Home() {
   return (
     <>
       <Header />
-      <div className="min-h-screen">
-        <PageWrapper>
-          <Presentation />
-          <About />
-          <PlansCarousel plans={ALL_PLANS} />
-          <ReviewContainer reviews={testimonials} />
-        </PageWrapper>
-      </div>
+      <main className="site-main min-h-screen flex flex-col pt-site-header">
+        <Presentation />
+        <About />
+        <PlansCarousel plans={ALL_PLANS} />
+        <ReviewContainer reviews={testimonials} />
+      </main>
       <Footer />
     </>
   );

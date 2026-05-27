@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import cx from "classnames";
 import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
@@ -15,28 +16,27 @@ const MenuHeader = ({ className }: MenuHeaderProps) => {
   return (
     <header
       className={cx(
-        "bg-primary-main min-h-[132px] flex items-center",
+        "bg-brand-cream border-b border-brand-green/15 text-brand-green min-h-[88px] md:min-h-[96px] flex items-center site-header-bar-inner shadow-sm",
         className
       )}>
-      <div className="flex flex-1 w-full max-w-7xl px-10 mx-auto">
-        <div className="flex flex-1 justify-start">
+      <div className="section-container flex w-full items-center gap-4">
+        <Link href="/" className="flex flex-1 justify-start focus-brand rounded-sm" aria-label="Inicio">
           <Image
             src="/images/logos/logo-symbol.svg"
-            alt="logo"
-            width={60}
-            height={60}
+            alt="Atzomx"
+            width={44}
+            height={44}
           />
-        </div>
-        <div className="flex flex-1 justify-center">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/images/logos/logo-letters.svg"
-              alt="logo"
-              width={250}
-              height={60}
-            />
-          </div>
-        </div>
+        </Link>
+        <Link href="/" className="flex flex-1 justify-center focus-brand rounded-sm">
+          <Image
+            src="/images/logos/logo-letters.svg"
+            alt="Atzomx"
+            width={180}
+            height={44}
+            className="hidden sm:block"
+          />
+        </Link>
         <div className="flex flex-1 justify-end">
           <LocaleSwitch locale={locale} />
         </div>

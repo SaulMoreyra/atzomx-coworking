@@ -18,13 +18,93 @@
   font-display: swap;
 }
 
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-green antialiased;
+  }
+
+  ::selection {
+    @apply bg-brand-accent text-brand-green;
+  }
+}
+
+@layer components {
+  .text-label {
+    @apply uppercase tracking-label text-sm md:text-base font-medium;
+  }
+
+  .text-display {
+    @apply font-druk uppercase;
+  }
+
+  .text-body {
+    @apply font-sans normal-case tracking-normal leading-relaxed;
+  }
+
+  .focus-brand {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+
+  .text-schedule {
+    @apply font-mono text-sm md:text-base tracking-[0.15em] uppercase;
+  }
+
+  .section-container {
+    @apply w-full max-w-7xl mx-auto px-6 md:px-12 xl:px-20;
+  }
+
+  .site-header-bar {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  /* Fixed shell — above Framer Motion / transformed siblings on mobile */
+  .site-header-shell {
+    @apply fixed top-0 left-0 right-0 z-header site-header-bar;
+  }
+
+  .site-header-bar-inner {
+    @apply relative z-header-bar;
+  }
+
+  .site-main {
+    @apply relative z-content;
+  }
+
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .scroll-snap-x::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-snap-x {
+      scroll-behavior: auto;
+    }
+  }
+}
+
 @layer utilities {
   .transition-zoom {
     transition-property: transform;
     transition-duration: 1000ms;
   }
+
   .transition-zoom:hover {
-    transform: scale(1.2);
+    transform: scale(1.08);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .transition-zoom:hover {
+      transform: none;
+    }
   }
 }
 
@@ -67,9 +147,16 @@
 .list-slide-up li span {
   text-wrap: nowrap;
   overflow: hidden;
-  border-right: 8px solid #6f8d81;
+  border-right: 8px solid theme("colors.brand.green");
   display: inline-block;
   animation:
     cursor 0.5s step-end infinite,
     typing 3s steps(16) infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list-slide-up > li,
+  .list-slide-up li span {
+    animation: none;
+  }
 }
