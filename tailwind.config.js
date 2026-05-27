@@ -56,12 +56,22 @@ module.exports = {
       },
       spacing: {
         "site-header": "calc(4.5rem + env(safe-area-inset-top, 0px))",
+        "site-menu-sticky":
+          "calc(4.5rem + 1.5rem + env(safe-area-inset-top, 0px))",
+        "site-menu-chrome":
+          "calc(4.5rem + 3rem + env(safe-area-inset-top, 0px))",
       },
       padding: {
         "site-header": "calc(4.5rem + env(safe-area-inset-top, 0px))",
+        "site-menu-chrome":
+          "calc(4.5rem + 3rem + 1.5rem + env(safe-area-inset-top, 0px))",
       },
       scrollMargin: {
         "site-header": "calc(4.5rem + env(safe-area-inset-top, 0px))",
+        "site-menu-sticky":
+          "calc(4.5rem + 1.5rem + env(safe-area-inset-top, 0px))",
+        "site-menu-chrome":
+          "calc(4.5rem + 3rem + env(safe-area-inset-top, 0px))",
       },
       backgroundImage: {
         na: 'url("/images/na.png")',

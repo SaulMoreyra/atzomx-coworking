@@ -17,6 +17,9 @@ const reduceToArrayByCategory = (obj: FoodType[]) => {
   }, {});
 };
 
+/** Height of the mobile category tab bar — must match fixed tabs + flow spacer */
+const MOBILE_TABS_HEIGHT = "3rem";
+
 const MenuListMobile = () => {
   const t = useTranslations("menu.categories");
   const [activeTab, setActiveTab] = useState<string | number>("coffee");
@@ -32,10 +35,11 @@ const MenuListMobile = () => {
     <>
       <section
         className={cx(
-          "sticky z-sticky md:hidden bg-brand-cream border-b border-brand-green/10 top-site-header transition-shadow duration-200",
+          "fixed inset-x-0 top-site-header z-sticky border-b border-brand-green/10 bg-brand-main transition-shadow duration-200 md:hidden",
           isScrollUp && "shadow-md"
-        )}>
-        <Tabs tab={activeTab} onChange={scrollToTitle} className="px-2">
+        )}
+        style={{ height: MOBILE_TABS_HEIGHT }}>
+        <Tabs tab={activeTab} onChange={scrollToTitle} className="h-full px-2">
           {Object.keys(ALL_FOODS_BY_CATEGORY).map(category => (
             <Tabs.Item schema="primary" key={category} value={category}>
               {t(category)}
@@ -43,9 +47,12 @@ const MenuListMobile = () => {
           ))}
         </Tabs>
       </section>
+
+      <div className="md:hidden" style={{ height: MOBILE_TABS_HEIGHT }} aria-hidden="true" />
+
       <section
         id="panel-container"
-        className="section-container flex flex-col gap-8 mt-6 mb-10 md:hidden scroll-mt-site-header">
+        className="section-container mb-10 flex max-w-2xl scroll-mt-site-menu-chrome flex-col gap-8 bg-brand-cream max-md:px-5 max-md:py-6 md:hidden">
         {Object.entries(ALL_FOODS_BY_CATEGORY).map(([category, items]) => (
           <Tabs.Panel key={category} value={activeTab} tab={category}>
             <ul className="divide-y divide-brand-green/10">

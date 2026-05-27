@@ -16,7 +16,7 @@ const MenuInformation: FC<MenuInformationProps> = ({ className }) => {
   return (
     <aside
       className={cx(
-        "bg-brand-main border border-brand-green/10 p-5 pb-6 self-start text-brand-green",
+        "scroll-mt-site-menu-sticky self-start bg-brand-main border border-brand-green/10 p-5 pb-6 text-brand-green",
         className
       )}>
       <Label as="h2" className="text-sm tracking-[0.2em] mb-4 block">

@@ -1,5 +1,6 @@
 import React from "react";
 import FeedGrid from "../FeedGrid/FeedGrid";
+import RotatingWords from "../RotatingWords/RotatingWords";
 import ServiceBenefits from "../ServiceBenefits/ServiceBenefits";
 import Heading from "../Heading/Heading";
 import SectionBlock from "../ui/SectionBlock/SectionBlock";
@@ -11,23 +12,18 @@ const publicFocused = [
   "developers",
   "digital-nomads",
   "coffee-lovers",
-];
+] as const;
 
 const About = () => {
   const t = useTranslations("home.about");
+  const rotatingWords = publicFocused.map(item => t(`public.${item}`));
 
   return (
     <SectionBlock id="about" surface="cream" className="w-full py-12 md:py-16">
       <div className="section-container flex flex-col gap-12">
         <div className="flex flex-col justify-center gap-6 text-center">
           <Heading>{t("title")}</Heading>
-          <ol className="list-none list-slide-up h-12 md:h-20 block text-3xl md:text-6xl">
-            {publicFocused.map((item, index) => (
-              <li key={index}>
-                <span className="text-display text-brand-green">{t(`public.${item}`)}</span>
-              </li>
-            ))}
-          </ol>
+          <RotatingWords words={rotatingWords} />
         </div>
         <ServiceBenefits />
       </div>

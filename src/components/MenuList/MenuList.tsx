@@ -3,8 +3,8 @@
 import { type FoodType } from "@/common/types/menuTypes";
 import MenuCard from "@/components/MenuCard/MenuCard";
 import MenuInformation from "@/components/MenuInformation/MenuInformation";
+import HighlightShape from "@/components/ui/HighlightShape/HighlightShape";
 import Label from "@/components/ui/Label/Label";
-import OrganicDivider from "@/components/ui/OrganicDivider/OrganicDivider";
 import { highlightDividerVariants } from "@/design-system";
 import { ALL_FOODS } from "@/mocks/menu";
 import { useTranslations } from "next-intl";
@@ -51,23 +51,23 @@ const MenuList = () => {
   const categories = Object.keys(ALL_FOODS_BY_CATEGORY);
 
   return (
-    <div className="hidden md:flex w-full pt-8 pb-4 gap-6 lg:gap-8">
-      <div className="shrink-0 pl-6 md:pl-12 xl:pl-20">
-        <aside className="sticky top-36 w-56 lg:w-64">
-          <div className="bg-brand-main/40 border border-brand-green/10 p-5">
-            <Label as="h2" className="text-sm tracking-[0.2em] mb-4 block">
+    <div className="hidden w-full bg-brand-cream pb-14 pt-8 md:block md:pt-site-menu-sticky">
+      <div className="section-container flex max-w-7xl gap-6 lg:gap-10">
+        <aside className="sticky top-site-menu-sticky w-52 shrink-0 self-start lg:w-56">
+          <div className="border border-brand-green/10 bg-brand-main p-5">
+            <Label as="h2" className="mb-4 block text-sm tracking-[0.2em]">
               {t("titles.menu")}
             </Label>
             <input
               type="search"
               placeholder={t("search")}
               aria-label={t("search")}
-              className="w-full p-3 mb-5 border border-brand-green/15 bg-brand-cream text-brand-green focus-brand text-body text-sm"
+              className="text-body mb-5 w-full border border-brand-green/15 bg-brand-cream p-3 text-sm text-brand-green focus-brand"
               onChange={e => {
                 setFilter(e.target.value);
               }}
             />
-            <Label as="h3" className="text-xs mb-3 block text-brand-green/50 tracking-[0.15em]">
+            <Label as="h3" className="mb-3 block text-xs tracking-[0.15em] text-brand-green/50">
               {t("titles.categories")}
             </Label>
             <ul className="space-y-1">
@@ -79,10 +79,10 @@ const MenuList = () => {
                       scrollToTitle(category);
                     }}
                     className={cx(
-                      "w-full text-left text-label text-xs py-2 px-3 transition-colors duration-200 focus-brand",
+                      "focus-brand w-full px-3 py-2 text-left text-label text-xs transition-colors duration-200",
                       activeCategory === category
                         ? "bg-brand-accent text-brand-green"
-                        : "text-brand-green/60 hover:bg-brand-main/60 hover:text-brand-green"
+                        : "text-brand-green/60 hover:bg-brand-cream/20 hover:text-brand-green"
                     )}>
                     {t(`categories.${category}`)}
                   </button>
@@ -91,45 +91,35 @@ const MenuList = () => {
             </ul>
           </div>
         </aside>
-      </div>
 
-      <div className="flex-1 min-w-0">
-        {Object.entries(ALL_FOODS_BY_CATEGORY).map(([category, items], index) => {
-          const isAltBand = index % 2 === 1;
-          const showDivider = index > 0;
-
-          return (
-            <section key={category} className="w-full">
-              {showDivider && (
-                <OrganicDivider
-                  fill={isAltBand ? "main" : "cream"}
+        <div className="min-w-0 flex-1 space-y-12">
+          {Object.entries(ALL_FOODS_BY_CATEGORY).map(([category, items], index) => (
+            <section key={category} id={category} className="scroll-mt-site-header">
+              <div className="mb-6 flex items-center gap-3 border-b border-brand-green/10 pb-4">
+                <HighlightShape
                   variant={highlightDividerVariants[index % highlightDividerVariants.length]}
+                  fill="accent"
+                  size={36}
+                  className="opacity-90"
                 />
-              )}
-              <div
-                id={category}
-                className={cx(
-                  "scroll-mt-site-header py-10 md:py-12 px-6 md:px-8 lg:px-10",
-                  isAltBand ? "bg-brand-main/45" : "bg-brand-cream"
-                )}>
-                <Label as="h2" className="text-base tracking-[0.2em] mb-6 block">
+                <Label as="h2" className="block text-base tracking-[0.2em]">
                   {t(`categories.${category}`)}
                 </Label>
-                <ul className="divide-y divide-brand-green/10">
-                  {items.map(item => (
-                    <li key={item.id}>
-                      <MenuCard item={item} />
-                    </li>
-                  ))}
-                </ul>
               </div>
+              <ul className="divide-y divide-brand-green/10 border border-brand-green/10 bg-brand-cream px-4 md:px-6">
+                {items.map(item => (
+                  <li key={item.id}>
+                    <MenuCard item={item} />
+                  </li>
+                ))}
+              </ul>
             </section>
-          );
-        })}
-      </div>
+          ))}
+        </div>
 
-      <div className="hidden lg:block shrink-0 w-[280px] pr-6 md:pr-12 xl:pr-20">
-        <MenuInformation className="sticky top-36" />
+        <div className="hidden w-64 shrink-0 lg:block xl:w-72">
+          <MenuInformation className="sticky top-site-menu-sticky" />
+        </div>
       </div>
     </div>
   );
