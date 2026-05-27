@@ -1,3 +1,47 @@
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# OAI-SearchBot
+User-agent: OAI-SearchBot
+Allow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Allow: /
+
+# Claude-Web
+User-agent: Claude-Web
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# cohere-ai
+User-agent: cohere-ai
+Allow: /
+
+# Bytespider
+User-agent: Bytespider
+Allow: /
+
+# Meta-ExternalAgent
+User-agent: Meta-ExternalAgent
+Allow: /
+
 # *
 User-agent: *
 Allow: /

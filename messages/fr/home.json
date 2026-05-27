@@ -1,0 +1,129 @@
+{
+  "header": {
+    "about": "À propos",
+    "plans": "Forfaits",
+    "contact": "Contact",
+    "reviews": "Avis",
+    "menu": "Menu"
+  },
+  "presentation": {
+    "taglineLine1": "COMMUNAUTÉ & CAFÉ",
+    "taglineLine2": "COWORKING",
+    "scheduleLabel": "HORAIRES",
+    "scheduleHours": "9h00 — 18h00",
+    "plans": "Voir les forfaits",
+    "whatsapp": "WhatsApp"
+  },
+  "about": {
+    "title": "Conçu spécialement pour",
+    "public": {
+      "freelancers": "Freelances",
+      "remote-workers": "Télétravailleurs",
+      "creatives": "Créatifs",
+      "digital-nomads": "Nomades digitaux",
+      "coffee-lovers": "Amateurs de café",
+      "developers": "Développeurs"
+    }
+  },
+  "benefits": {
+    "wifi": {
+      "title": "WiFi haut débit",
+      "description": "Internet 1000 Mbps"
+    },
+    "plans": {
+      "title": "Forfaits flexibles",
+      "description": "À l'heure, à la journée, à la semaine ou au mois"
+    },
+    "coffee": {
+      "title": "Café exceptionnel",
+      "description": "Café de spécialité, toujours frais"
+    },
+    "feedback": {
+      "title": "Partagez votre avis",
+      "description": "Nous aimerions connaître votre expérience !"
+    }
+  },
+  "plans": {
+    "sectionTitle": "Forfaits",
+    "from": "À partir de",
+    "book": "Réserver",
+    "defaultAsk": "Bonjour ! Je souhaite réserver un forfait chez Atzomx.",
+    "features": {
+      "cafeteria": {
+        "pay-what-you-consume": "Payez uniquement ce que vous consommez",
+        "stable-internet": "Internet stable",
+        "ergonomic-chairs": "Chaises ergonomiques",
+        "discount-on-cafeteria-menu": "5 % de réduction sur le menu du café",
+        "unlimited-coffee-tea-and-water": "Café, thé et eau illimités",
+        "high-speed-internet": "Internet haut débit",
+        "roof-top-access": "Accès à la terrasse"
+      },
+      "co-working": {
+        "ergonomic-chairs": "Chaises ergonomiques",
+        "unlimited-coffee-tea-and-water": "Café, thé et eau illimités",
+        "high-speed-internet": "Internet haut débit",
+        "roof-top-access": "Accès à la terrasse",
+        "discount-on-cafeteria-menu": "5 % de réduction sur le menu du café",
+        "individual-desk": "Bureau individuel",
+        "extra-monitor": "Écran supplémentaire"
+      },
+      "meeting-room": {
+        "smart-tv": "Smart TV 55 pouces",
+        "whiteboard": "Tableau blanc",
+        "space-for-up-to-6-people": "Espace pour jusqu'à 6 personnes",
+        "unlimited-coffee-tea-and-water": "Café, thé et eau illimités",
+        "high-speed-internet": "Internet haut débit",
+        "roof-top-access": "Accès à la terrasse",
+        "discount-on-cafeteria-menu": "5 % de réduction sur le menu du café"
+      }
+    },
+    "plans": {
+      "free": {
+        "name": "Forfait Gratuit",
+        "description": "Toujours accessible",
+        "area": "Cafétéria",
+        "book": "Bonjour ! Je souhaite réserver le forfait gratuit chez Atzomx."
+      },
+      "standard": {
+        "name": "Forfait Standard",
+        "description": "Partagez une table dans l'espace coworking",
+        "area": "Coworking",
+        "book": "Bonjour ! Je souhaite réserver le forfait standard chez Atzomx."
+      },
+      "individual": {
+        "name": "Forfait Individuel",
+        "description": "Pour ceux qui ont besoin d'un espace privé",
+        "area": "Coworking",
+        "book": "Bonjour ! Je souhaite réserver le forfait individuel chez Atzomx."
+      },
+      "monitor": {
+        "name": "Forfait Écran",
+        "description": "Pour ceux qui ont besoin d'un écran supplémentaire",
+        "area": "Coworking",
+        "book": "Bonjour ! Je souhaite réserver le forfait écran chez Atzomx."
+      },
+      "meeting-room": {
+        "name": "Salle de réunion",
+        "description": "Pour les équipes de 2 à 6 personnes",
+        "area": "Coworking",
+        "book": "Bonjour ! Je souhaite réserver une salle de réunion chez Atzomx."
+      }
+    }
+  },
+  "reviews": {
+    "sectionTitle": "Avis",
+    "badge": "Google Reviews",
+    "title": "Clients satisfaits",
+    "footer": "Avis clients",
+    "googleRatingSummary": "{rating} · {count} avis sur Google",
+    "googleAttribution": "Avis de Google.",
+    "viewOnGoogle": "Voir sur Google Maps"
+  },
+  "footer": {
+    "sectionTitle": "Contact",
+    "payments": "Tous les principaux moyens de paiement acceptés",
+    "address": "Adresse",
+    "location": "Emplacement",
+    "social_networks": "Réseaux sociaux"
+  }
+}

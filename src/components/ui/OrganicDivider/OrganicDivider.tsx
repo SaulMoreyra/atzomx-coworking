@@ -24,12 +24,12 @@ const OrganicDivider: FC<OrganicDividerProps> = ({
 }) => {
   return (
     <div
-      className={cx("w-full leading-[0] -mt-px", flip && "rotate-180", className)}
+      className={cx("w-full min-w-0 leading-[0]", flip && "rotate-180", className)}
       aria-hidden="true">
       <svg
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="block w-full h-8 sm:h-10 md:h-12 lg:h-14"
+        className="block h-8 w-full min-w-full sm:h-10 md:h-12 lg:h-14"
         role="presentation">
         <path d={organicDividerPaths[variant]} fill={organicDividerFills[fill]} />
       </svg>

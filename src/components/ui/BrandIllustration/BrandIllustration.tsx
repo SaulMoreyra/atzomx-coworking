@@ -23,6 +23,7 @@ const BrandIllustration: FC<BrandIllustrationProps> = ({
 }) => {
   const asset = BRAND_ILLUSTRATIONS[id];
   const src = getIllustrationSrc(id);
+  const isRaster = /\.(png|jpe?g|webp)$/i.test(src);
 
   return (
     <div className={cx("relative w-full", className)}>
@@ -33,6 +34,8 @@ const BrandIllustration: FC<BrandIllustrationProps> = ({
         height={800}
         priority={priority}
         sizes={sizes}
+        unoptimized={isRaster}
+        decoding="sync"
         className="w-full h-auto object-contain"
       />
     </div>

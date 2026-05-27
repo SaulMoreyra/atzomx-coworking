@@ -1,0 +1,129 @@
+{
+  "header": {
+    "about": "Über uns",
+    "plans": "Tarife",
+    "contact": "Kontakt",
+    "reviews": "Bewertungen",
+    "menu": "Menü"
+  },
+  "presentation": {
+    "taglineLine1": "COMMUNITY & CAFÉ",
+    "taglineLine2": "COWORKING",
+    "scheduleLabel": "ÖFFNUNGSZEITEN",
+    "scheduleHours": "9:00 — 18:00 Uhr",
+    "plans": "Tarife ansehen",
+    "whatsapp": "WhatsApp"
+  },
+  "about": {
+    "title": "Speziell entwickelt für",
+    "public": {
+      "freelancers": "Freelancer",
+      "remote-workers": "Remote-Mitarbeiter",
+      "creatives": "Kreative",
+      "digital-nomads": "Digitale Nomaden",
+      "coffee-lovers": "Kaffeeliebhaber",
+      "developers": "Entwickler"
+    }
+  },
+  "benefits": {
+    "wifi": {
+      "title": "Highspeed-WLAN",
+      "description": "1000 Mbps Internet"
+    },
+    "plans": {
+      "title": "Flexible Tarife",
+      "description": "Stündlich, täglich, wöchentlich oder monatlich"
+    },
+    "coffee": {
+      "title": "Hervorragender Kaffee",
+      "description": "Spezialitätenkaffee, immer frisch"
+    },
+    "feedback": {
+      "title": "Feedback teilen",
+      "description": "Wir freuen uns über Ihre Erfahrung!"
+    }
+  },
+  "plans": {
+    "sectionTitle": "Tarife",
+    "from": "Ab",
+    "book": "Jetzt buchen",
+    "defaultAsk": "Hallo! Ich möchte einen Tarif bei Atzomx buchen.",
+    "features": {
+      "cafeteria": {
+        "pay-what-you-consume": "Zahlen Sie nur, was Sie konsumieren",
+        "stable-internet": "Stabiles Internet",
+        "ergonomic-chairs": "Ergonomische Stühle",
+        "discount-on-cafeteria-menu": "5 % Rabatt auf das Café-Menü",
+        "unlimited-coffee-tea-and-water": "Unbegrenzt Kaffee, Tee und Wasser",
+        "high-speed-internet": "Highspeed-Internet",
+        "roof-top-access": "Zugang zur Dachterrasse"
+      },
+      "co-working": {
+        "ergonomic-chairs": "Ergonomische Stühle",
+        "unlimited-coffee-tea-and-water": "Unbegrenzt Kaffee, Tee und Wasser",
+        "high-speed-internet": "Highspeed-Internet",
+        "roof-top-access": "Zugang zur Dachterrasse",
+        "discount-on-cafeteria-menu": "5 % Rabatt auf das Café-Menü",
+        "individual-desk": "Einzelner Schreibtisch",
+        "extra-monitor": "Zusätzlicher Monitor"
+      },
+      "meeting-room": {
+        "smart-tv": "55-Zoll Smart TV",
+        "whiteboard": "Whiteboard",
+        "space-for-up-to-6-people": "Platz für bis zu 6 Personen",
+        "unlimited-coffee-tea-and-water": "Unbegrenzt Kaffee, Tee und Wasser",
+        "high-speed-internet": "Highspeed-Internet",
+        "roof-top-access": "Zugang zur Dachterrasse",
+        "discount-on-cafeteria-menu": "5 % Rabatt auf das Café-Menü"
+      }
+    },
+    "plans": {
+      "free": {
+        "name": "Gratis-Tarif",
+        "description": "Jederzeit zugänglich",
+        "area": "Cafeteria",
+        "book": "Hallo! Ich möchte den Gratis-Tarif bei Atzomx buchen."
+      },
+      "standard": {
+        "name": "Standard-Tarif",
+        "description": "Teilen Sie einen Tisch im Coworking-Bereich",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte den Standard-Tarif bei Atzomx buchen."
+      },
+      "individual": {
+        "name": "Einzel-Tarif",
+        "description": "Für alle, die einen privaten Arbeitsplatz brauchen",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte den Einzel-Tarif bei Atzomx buchen."
+      },
+      "monitor": {
+        "name": "Monitor-Tarif",
+        "description": "Für alle, die einen zusätzlichen Monitor brauchen",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte den Monitor-Tarif bei Atzomx buchen."
+      },
+      "meeting-room": {
+        "name": "Besprechungsraum",
+        "description": "Für Teams von 2 bis 6 Personen",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte einen Besprechungsraum bei Atzomx buchen."
+      }
+    }
+  },
+  "reviews": {
+    "sectionTitle": "Bewertungen",
+    "badge": "Google Reviews",
+    "title": "Zufriedene Gäste",
+    "footer": "Kundenbewertungen",
+    "googleRatingSummary": "{rating} · {count} Bewertungen auf Google",
+    "googleAttribution": "Bewertungen von Google.",
+    "viewOnGoogle": "Auf Google Maps ansehen"
+  },
+  "footer": {
+    "sectionTitle": "Kontakt",
+    "payments": "Alle gängigen Zahlungsmethoden werden akzeptiert",
+    "address": "Adresse",
+    "location": "Standort",
+    "social_networks": "Soziale Netzwerke"
+  }
+}

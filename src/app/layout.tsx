@@ -5,11 +5,14 @@ import { getLocale, getMessages } from "next-intl/server";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 import type { Metadata, Viewport } from "next";
+import { businessJsonLd } from "@/lib/business-jsonld";
+import { BRAND_CONTACT } from "@/design-system";
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: "#fffbed",
 };
 
 export const metadata: Metadata = {
@@ -17,8 +20,22 @@ export const metadata: Metadata = {
   title: "Atzomx | Coworking & Café en Oaxaca",
   description:
     "Coworking en el Centro de Oaxaca con WiFi de 1000 Mbps, sillas ergonómicas, clima y café ilimitado. Desde $59 MXN/hora. Reserva por WhatsApp.",
+  keywords: [
+    "coworking Oaxaca",
+    "coworking Oaxaca Centro",
+    "café coworking Oaxaca",
+    "espacio de coworking Oaxaca de Juárez",
+    "digital nomads Oaxaca",
+    "WiFi rápido Oaxaca",
+    "sala de juntas Oaxaca",
+    "Atzomx",
+  ],
+  category: "Coworking",
   alternates: {
     canonical: "/",
+  },
+  other: {
+    "llms-txt": `${BRAND_CONTACT.website}/llms.txt`,
   },
   openGraph: {
     title: "Atzomx | Coworking & Café en Oaxaca",
@@ -57,97 +74,19 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link
+          rel="alternate"
+          type="text/plain"
+          href={`${BRAND_CONTACT.website}/llms.txt`}
+          title="LLM site index"
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": ["CafeOrCoffeeShop", "LocalBusiness"],
-              name: "Atzomx Café y Coworking",
-              image: [
-                "https://atzomx.com.mx/images/og/atzomx-og.webp",
-                "https://atzomx.com.mx/images/coworking/atzomx.webp",
-                "https://atzomx.com.mx/images/coworking/meeting-room.webp",
-              ],
-              logo: "https://atzomx.com.mx/images/logos/logo-symbol.svg",
-              "@id": "https://atzomx.com.mx",
-              url: "https://atzomx.com.mx",
-              telephone: "+525219515155328",
-              priceRange: "$$",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "C. de Los Libres 800-B",
-                addressLocality: "Oaxaca de Juárez",
-                addressRegion: "Oaxaca",
-                postalCode: "68000",
-                addressCountry: "MX",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 17.0689553,
-                longitude: -96.7181622,
-              },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
-                  opens: "09:00",
-                  closes: "18:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Saturday",
-                  opens: "10:00",
-                  closes: "20:00",
-                },
-              ],
-              sameAs: [
-                "https://www.instagram.com/atzomx/",
-                "https://www.facebook.com/profile.php?id=61569786946519",
-                "https://maps.app.goo.gl/7MMrgV3Uhf7x5KNF9",
-              ],
-              amenityFeature: [
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "WiFi de 1000 Mbps",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Aire acondicionado",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Mobiliario ergonómico",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Terraza",
-                  value: true,
-                },
-                {
-                  "@type": "LocationFeatureSpecification",
-                  name: "Sala de juntas",
-                  value: true,
-                },
-              ],
-              hasMenu: "https://atzomx.com.mx/menu",
-              servesCuisine: [
-                "Café de especialidad",
-                "Desayunos",
-                "Sándwiches",
-                "Bowls",
-              ],
-            }),
+            __html: JSON.stringify(businessJsonLd),
           }}
         />
         <GoogleTagManager gtmId="GTM-NDNK3CRK" />

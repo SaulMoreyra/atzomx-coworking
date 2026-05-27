@@ -1,15 +1,15 @@
 import React from "react";
-import { type ReviewType } from "@/common/types/planTypes";
 import About from "@/components/About/About";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import PlansCarousel from "@/components/PlansCarousel/PlansCarousel";
 import Presentation from "@/components/Presentation/Presentation";
 import ReviewContainer from "@/components/ReviewContainer/ReviewContainer";
-import { ALL_PLANS, ALL_REVIEWS } from "@/mocks/products";
+import { ALL_PLANS } from "@/mocks/products";
+import { getReviews } from "@/services/reviews/getReviews";
 
 export default async function Home() {
-  const testimonials: ReviewType[] = [...ALL_REVIEWS];
+  const reviewsData = await getReviews();
 
   return (
     <>
@@ -18,7 +18,7 @@ export default async function Home() {
         <Presentation />
         <About />
         <PlansCarousel plans={ALL_PLANS} />
-        <ReviewContainer reviews={testimonials} />
+        <ReviewContainer {...reviewsData} />
       </main>
       <Footer />
     </>

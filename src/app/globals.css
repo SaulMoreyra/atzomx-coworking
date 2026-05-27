@@ -19,8 +19,27 @@
 }
 
 @layer base {
+  /*
+   * iOS Safari: fixed html + scrolling body prevents rubber-band overscroll
+   * and avoids exposing the default white canvas behind the page.
+   */
+  html {
+    @apply bg-brand-cream;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
   body {
     @apply bg-brand-cream text-brand-green antialiased;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
   }
 
   ::selection {
@@ -73,6 +92,7 @@
   .scroll-snap-x {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
   }
 

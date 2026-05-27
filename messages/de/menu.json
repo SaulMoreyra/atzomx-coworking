@@ -1,0 +1,275 @@
+{
+  "search": "Suchen",
+  "banner": {
+    "title": "Menü",
+    "taglineLine1": "COMMUNITY & CAFÉ",
+    "taglineLine2": "COWORKING"
+  },
+  "titles": {
+    "menu": "Menü",
+    "categories": "Kategorien"
+  },
+  "information": {
+    "title": "Informationen",
+    "hours": "Öffnungszeiten",
+    "schedule-days": "Montag bis Freitag",
+    "schedule-hours": "9:00 bis 18:00 Uhr",
+    "address": "Adresse",
+    "button-map": "Auf der Karte ansehen",
+    "contact": "Kontakt"
+  },
+  "categories": {
+    "coffee": "Kaffee",
+    "lunch": "Mittagessen",
+    "dessert": "Desserts",
+    "smoothies": "Smoothies",
+    "combos": "Combos",
+    "frappes": "Frappés",
+    "italian-sodas": "Italienische Sodas",
+    "extras": "Extras"
+  },
+  "variants": {
+    "hot": "Heiß",
+    "iced": "Kalt",
+    "chips": "Chips",
+    "salad": "Salat"
+  },
+  "menu": {
+    "coffee": {
+      "espresso": {
+        "name": "Espresso",
+        "description": "Starker schwarzer Kaffee"
+      },
+      "cortado": {
+        "name": "Cortado",
+        "description": "Espresso mit einem Schuss aufgeschäumter Milch"
+      },
+      "macchiato": {
+        "name": "Macchiato",
+        "description": "Espresso mit einer kleinen Menge aufgeschäumter Milch"
+      },
+      "americano": {
+        "name": "Americano",
+        "description": "Espresso mit Wasser"
+      },
+      "cappuccino": {
+        "name": "Cappuccino",
+        "description": "Espresso mit aufgeschäumter Milch und Schaum"
+      },
+      "latte": {
+        "name": "Latte",
+        "description": "Espresso mit aufgeschäumter Milch"
+      },
+      "caramel-latte": {
+        "name": "Caramel Latte",
+        "description": "Espresso mit aufgeschäumter Milch und Karamell"
+      },
+      "mocca": {
+        "name": "Mocha",
+        "description": "Espresso mit Schokolade und aufgeschäumter Milch"
+      },
+      "flat-white": {
+        "name": "Flat White",
+        "description": "Espresso mit aufgeschäumter Milch"
+      },
+      "espresso-berry": {
+        "name": "Espresso Berry",
+        "description": "Espresso mit Beerenaroma"
+      },
+      "espresso-tonic": {
+        "name": "Espresso Tonic",
+        "description": "Espresso mit Tonic Water"
+      },
+      "cold-brew": {
+        "name": "Cold Brew",
+        "description": "Kalt aufgegossener Kaffee"
+      },
+      "methods": {
+        "name": "Spezialitätenkaffee-Methoden",
+        "description": "Verschiedene Kaffeezubereitungsmethoden"
+      }
+    },
+    "lunch": {
+      "turkey-sandwich": {
+        "name": "Puten-Sandwich",
+        "description": "Sauerteigbrot, Mayonnaise, Tomate, Avocado, Romana-Salat, Gelbkäse und Putenschinken"
+      },
+      "iberian-sandwich": {
+        "name": "Iberisches Sandwich",
+        "description": "Sauerteigbrot, Mayonnaise, Tomate, Avocado, Romana-Salat, Babyspinat, Manchego, Putenschinken, Serrano-Schinken und Pepperoni"
+      },
+      "serrano-sandwich": {
+        "name": "Serrano-Sandwich",
+        "description": "Sauerteigbrot, Mayonnaise, Tomate, Avocado, Romana-Salat, Babyspinat, Manchego und Serrano-Schinken"
+      },
+      "house-salad": {
+        "name": "Haussalat",
+        "description": "Romana-Salat, Babyspinat, Apfel, Erdbeere, Walnüsse, Frischkäse, Honig-Senf-Dressing und Cranberries"
+      },
+      "red-berry-bowl": {
+        "name": "Rote-Beeren-Bowl",
+        "description": "Griechischer Joghurt, Erdbeeren, Blaubeeren, Banane, Honig, Amaranth und Granola"
+      },
+      "chocolate-bowl": {
+        "name": "Schokoladen-Bowl",
+        "description": "Griechischer Joghurt, Erdbeeren, Blaubeeren, Honig, Amaranth, Granola, Kakao und Schokoladenstückchen"
+      }
+    },
+    "dessert": {
+      "affogato": {
+        "name": "Affogato",
+        "description": "Vanilleeis mit Espresso"
+      },
+      "apple-tart": {
+        "name": "Apfeltarte",
+        "description": "Apfeltarte mit Vanilleeis"
+      },
+      "cheesecake": {
+        "name": "Cheesecake",
+        "description": "Cheesecake mit Schokoladensirup"
+      },
+      "daily-dessert": {
+        "name": "Dessert des Tages",
+        "description": "Fragen Sie an der Theke nach dem Dessert des Tages"
+      }
+    },
+    "smoothies": {
+      "tropical-smoothie": {
+        "name": "Tropischer Smoothie",
+        "description": "Milch, griechischer Joghurt, Honig, Chiasamen, gemischte Früchte"
+      },
+      "mango-smoothie": {
+        "name": "Mango-Smoothie",
+        "description": "Milch, griechischer Joghurt, Honig, Chiasamen, Mango"
+      },
+      "green-smoothie": {
+        "name": "Grüner Smoothie",
+        "description": "Milch, griechischer Joghurt, Honig, Chiasamen, Gurke, Spinat, grüner Apfel"
+      }
+    },
+    "combos": {
+      "el-mananero": {
+        "name": "El Mañanero",
+        "description": "Rote-Beeren- oder Schokoladen-Bowl, Americano oder Espresso"
+      },
+      "bradfitt": {
+        "name": "Bradfitt",
+        "description": "Haussalat, Smoothie nach Wahl"
+      },
+      "freelancer": {
+        "name": "Freelancer",
+        "description": "Sandwich nach Wahl (außer Serrano), Americano, Espresso, Cappuccino oder italienische Soda"
+      }
+    },
+    "frappes": {
+      "coffee-frappe": {
+        "name": "Kaffee",
+        "description": "Mixgetränk aus Kaffee und Milch"
+      },
+      "mocca-frappe": {
+        "name": "Mocha",
+        "description": "Mixgetränk aus Kaffee, Schokolade und Milch"
+      },
+      "chocolate-frappe": {
+        "name": "Schokolade",
+        "description": "Mixgetränk aus Schokolade"
+      },
+      "mango-frappe": {
+        "name": "Mango",
+        "description": "Mixgetränk aus Mango"
+      },
+      "cherry-frappe": {
+        "name": "Kirsche",
+        "description": "Mixgetränk aus Kirsche"
+      },
+      "strawberry-frappe": {
+        "name": "Erdbeere",
+        "description": "Mixgetränk aus Erdbeere"
+      },
+      "chai-frappe": {
+        "name": "Chai",
+        "description": "Mixgetränk aus Chai"
+      },
+      "oreo-frappe": {
+        "name": "Oreo",
+        "description": "Mixgetränk aus Oreo"
+      },
+      "mazapan-frappe": {
+        "name": "Mazapan",
+        "description": "Mixgetränk aus Mazapan"
+      },
+      "nutella-frappe": {
+        "name": "Nutella",
+        "description": "Mixgetränk aus Nutella"
+      }
+    },
+    "italian-sodas": {
+      "pineapple-italian-soda": {
+        "name": "Ananas",
+        "description": "Erfrischende italienische Ananas-Soda"
+      },
+      "blue-curacao-italian-soda": {
+        "name": "Blue Curacao",
+        "description": "Erfrischende italienische Blue-Curacao-Soda"
+      },
+      "mango-italian-soda": {
+        "name": "Mango",
+        "description": "Erfrischende italienische Mango-Soda"
+      },
+      "passion-fruit-italian-soda": {
+        "name": "Maracuja",
+        "description": "Erfrischende italienische Maracuja-Soda"
+      },
+      "green-apple-italian-soda": {
+        "name": "Grüner Apfel",
+        "description": "Erfrischende italienische Grünapfel-Soda"
+      },
+      "cherry-italian-soda": {
+        "name": "Kirsche",
+        "description": "Erfrischende italienische Kirsch-Soda"
+      },
+      "strawberry-glitter-italian-soda": {
+        "name": "Erdbeere Glitter",
+        "description": "Erfrischende italienische Erdbeer-Glitzer-Soda"
+      }
+    },
+    "extras": {
+      "chai-latte": {
+        "name": "Chai Latte",
+        "description": "Gewürztee mit aufgeschäumter Milch"
+      },
+      "choco-latte": {
+        "name": "Choco-Latte",
+        "description": "Latte mit Schokoladengeschmack"
+      },
+      "tizanas": {
+        "name": "Kräutertees",
+        "description": "Kräuterinfusion"
+      },
+      "taro": {
+        "name": "Taro",
+        "description": "Taro-Getränk mit Milch"
+      },
+      "italian-soda": {
+        "name": "Italienische Sodas",
+        "description": "Verschiedene italienische Sodas,\nfragen Sie nach verfügbaren Geschmacksrichtungen"
+      },
+      "avellana-cloud": {
+        "name": "Haselnuss-Wolke",
+        "description": "Haselnussgetränk mit Milch und Schlagsahne"
+      },
+      "sodas": {
+        "name": "Erfrischungsgetränke",
+        "description": "Verschiedene Erfrischungsgetränke"
+      },
+      "topo-chico": {
+        "name": "Topo Chico (Mineralwasser)",
+        "description": "Mineralwasser"
+      },
+      "tea": {
+        "name": "Tee",
+        "description": "Heißer Tee"
+      }
+    }
+  }
+}

@@ -114,7 +114,10 @@
     "sectionTitle": "Reseñas",
     "badge": "Google Reviews",
     "title": "Clientes satisfechos",
-    "footer": "Opiniones de clientes"
+    "footer": "Opiniones de clientes",
+    "googleRatingSummary": "{rating} · {count} reseñas en Google",
+    "googleAttribution": "Reseñas de Google.",
+    "viewOnGoogle": "Ver en Google Maps"
   },
   "footer": {
     "sectionTitle": "Contacto",

@@ -4,7 +4,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import cx from "classnames";
 import { Menu, X, Coffee } from "react-feather";
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitch from "../LocaleSwitch/LocaleSwitch";
 import Button from "../Button/Button";
@@ -56,12 +55,14 @@ const Header = () => {
     <header className="site-header-shell w-full">
       <div
         className={cx(
-          "site-header-bar-inner border-b border-brand-green/15 bg-brand-cream text-brand-green transition-shadow duration-200",
-          isScrolled && "shadow-md"
+          "site-header-bar-inner text-brand-green transition-[background-color,box-shadow,border-color] duration-300",
+          isScrolled
+            ? "border-b border-brand-green/15 bg-brand-cream shadow-md"
+            : "border-b border-transparent bg-brand-main"
         )}>
-        <div className="section-container flex items-center justify-between py-3 md:py-5">
+        <div className="section-container flex h-[4.5rem] items-center justify-between">
           <div className="flex items-center h-full">
-            <div className="flex lg:hidden flex-1">
+            <div className="flex lg:hidden">
               <button
                 type="button"
                 onClick={toggleMenu}
@@ -71,7 +72,7 @@ const Header = () => {
                 {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
               </button>
             </div>
-            <nav className="hidden lg:flex flex-1" aria-label="Principal">
+            <nav className="hidden lg:flex" aria-label="Principal">
               <ul className="flex gap-6 xl:gap-10 items-center h-full">
                 {menuLeftItems.map(id => (
                   <li key={id}>
@@ -90,19 +91,7 @@ const Header = () => {
             </nav>
           </div>
 
-          <Link
-            href="/"
-            className="flex flex-col items-center justify-center focus-brand rounded-sm"
-            aria-label="Atzomx inicio">
-            <Image
-              src="/images/logos/logo-symbol.svg"
-              width={44}
-              height={44}
-              alt="Atzomx"
-            />
-          </Link>
-
-          <div className="flex-1 flex justify-end items-center gap-3 xl:gap-5">
+          <div className="flex items-center gap-3 xl:gap-5">
             <Link href="/menu" className="hidden lg:block">
               <Button variant="accent" size="sm">
                 {t("menu")}

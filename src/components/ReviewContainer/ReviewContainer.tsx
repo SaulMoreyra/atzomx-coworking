@@ -11,6 +11,10 @@ import { useTranslations } from "next-intl";
 
 interface ReviewContainerProps {
   reviews: ReviewType[];
+  source: "google" | "static";
+  rating?: number;
+  userRatingCount?: number;
+  googleMapsUri?: string;
 }
 
 const container: Variants = {
@@ -23,8 +27,15 @@ const item: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
 };
 
-const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
+const ReviewContainer: FC<ReviewContainerProps> = ({
+  reviews,
+  source,
+  rating,
+  userRatingCount,
+  googleMapsUri,
+}) => {
   const t = useTranslations("home.reviews");
+  const showGoogleRating = source === "google" && rating != null && userRatingCount != null;
 
   return (
     <>
@@ -35,7 +46,12 @@ const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
           {t("sectionTitle")}
         </Label>
         <span className="text-label text-[10px] md:text-xs bg-brand-cream/60 border border-brand-green/20 rounded-full px-4 py-1.5">
-          {t("badge")}
+          {showGoogleRating
+            ? t("googleRatingSummary", {
+                rating: rating.toFixed(1),
+                count: userRatingCount,
+              })
+            : t("badge")}
         </span>
         <Heading className="mt-2">{t("title")}</Heading>
       </div>
@@ -50,7 +66,7 @@ const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
         aria-label={t("title")}>
         {reviews.map((review, index) => (
           <m.div
-            key={index}
+            key={review.id ?? `${review.client.name}-${index}`}
             variants={item}
             role="listitem"
             className="scroll-snap-start shrink-0 w-[min(85vw,300px)] md:w-[min(32vw,340px)]">
@@ -58,6 +74,19 @@ const ReviewContainer: FC<ReviewContainerProps> = ({ reviews }) => {
           </m.div>
         ))}
       </m.div>
+
+      {source === "google" && googleMapsUri && (
+        <p className="section-container mt-8 text-center text-xs text-brand-green/70">
+          {t("googleAttribution")}{" "}
+          <a
+            href={googleMapsUri}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-brand-green">
+            {t("viewOnGoogle")}
+          </a>
+        </p>
+      )}
       </section>
     </>
   );
