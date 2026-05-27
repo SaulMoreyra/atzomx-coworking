@@ -4,7 +4,10 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import PlansCarousel from "@/components/PlansCarousel/PlansCarousel";
 import Presentation from "@/components/Presentation/Presentation";
+import SpaceGallery from "@/components/SpaceGallery/SpaceGallery";
 import ReviewContainer from "@/components/ReviewContainer/ReviewContainer";
+import CommunitySection from "@/components/CommunitySection/CommunitySection";
+import TeamSection from "@/components/TeamSection/TeamSection";
 import BlogSection from "@/components/BlogSection/BlogSection";
 import FaqSection from "@/components/FaqSection/FaqSection";
 import { ALL_PLANS } from "@/mocks/products";
@@ -19,9 +22,12 @@ export default async function Home() {
       <main className="site-main min-h-screen flex flex-col pt-site-header">
         <Presentation />
         <About />
+        <SpaceGallery />
         <PlansCarousel plans={ALL_PLANS} />
         <FaqSection />
         <BlogSection />
+        <CommunitySection />
+        <TeamSection />
         <ReviewContainer {...reviewsData} />
       </main>
       <Footer />

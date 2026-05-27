@@ -1,5 +1,5 @@
 import BlogArticle from "@/components/BlogArticle/BlogArticle";
-import { ALL_BLOG_POSTS, getBlogPostBySlug } from "@/mocks/blog";
+import { ALL_BLOG_POSTS, getBlogPostBySlug, getRelatedPosts } from "@/mocks/blog";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import React from "react";
@@ -45,9 +45,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const relatedPosts = getRelatedPosts(slug, 2);
+
   return (
-    <div className="site-main flex min-h-screen flex-1 flex-col bg-brand-main">
-      <BlogArticle post={post} />
+    <div className="site-main flex min-h-screen flex-1 flex-col bg-brand-cream">
+      <BlogArticle post={post} relatedPosts={relatedPosts} />
     </div>
   );
 }

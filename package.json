@@ -48,6 +48,8 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/stripe": "^8.0.417",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "baseline-browser-mapping": "^2.10.32",
+    "caniuse-lite": "^1.0.30001793",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-standard-with-typescript": "^37.0.0",
     "eslint-plugin-import": "^2.25.2",

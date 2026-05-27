@@ -1,12 +1,19 @@
 {
   "header": {
     "about": "About",
+    "gallery": "Gallery",
     "plans": "Plans",
     "faq": "FAQ",
     "contact": "Contact",
     "reviews": "Reviews",
     "blog": "Blog",
-    "menu": "Menu"
+    "remoteWork": "Remote work",
+    "menu": "Menu",
+    "more": "More",
+    "navPrimary": "Explore",
+    "navMobile": "Navigation menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "presentation": {
     "taglineLine1": "COMUNIDAD & CAFÉ",
@@ -33,6 +40,23 @@
       "digital-nomads": "Digital nomads",
       "coffee-lovers": "Coffee lovers",
       "developers": "Developers"
+    }
+  },
+  "gallery": {
+    "sectionTitle": "Gallery",
+    "title": "Explore the space",
+    "subtitle": "Rooftop, desks, meeting room, and coffee bar in downtown Oaxaca.",
+    "openPhoto": "Enlarge photo: {label}",
+    "closePhoto": "Close photo",
+    "tiles": {
+      "terrace": { "label": "Rooftop", "alt": "Atzomx rooftop terrace in downtown Oaxaca" },
+      "desks": { "label": "Desks", "alt": "Shared desks in the coworking area" },
+      "meeting-room": { "label": "Meeting room", "alt": "Meeting room with Smart TV at Atzomx" },
+      "coffee-bar": { "label": "Coffee bar", "alt": "Specialty coffee bar on the ground floor" },
+      "monitor-desk": { "label": "Monitor desk", "alt": "Workstation with an extra monitor" },
+      "facade": { "label": "Facade", "alt": "Atzomx entrance on Los Libres, downtown Oaxaca" },
+      "community": { "label": "Community", "alt": "Community atmosphere at Atzomx" },
+      "latte-art": { "label": "Latte art", "alt": "Latte art prepared at the Atzomx bar" }
     }
   },
   "benefits": {
@@ -192,6 +216,60 @@
     "label": "Book via WhatsApp",
     "ariaLabel": "Open WhatsApp to book at Atzomx"
   },
+  "planComparison": {
+    "sectionTitle": "Compare",
+    "title": "Pick your plan",
+    "subtitle": "Free café vs. Standard vs. Individual vs. Monitor — side by side.",
+    "featureColumn": "Includes",
+    "wifiRow": "WiFi",
+    "hour": "hr",
+    "freePrice": "Free",
+    "included": "Included",
+    "notIncluded": "Not included"
+  },
+  "community": {
+    "sectionTitle": "Community",
+    "title": "This week at Atzomx",
+    "subtitle": "Events, coffee, and connection in downtown Oaxaca.",
+    "instagramCta": "See on Instagram",
+    "instagramHint": "Follow @atzomx for updates and schedules.",
+    "dates": {
+      "this-week": "This week",
+      "friday": "Friday",
+      "daily": "Daily"
+    },
+    "events": {
+      "nomad-coffee": {
+        "title": "Coffee with nomads",
+        "description": "Meet remote workers in Oaxaca. No fixed agenda — just good coffee and conversation."
+      },
+      "pour-over": {
+        "title": "Pour-over session",
+        "description": "Try this week's origin with our barista team."
+      },
+      "focus-hours": {
+        "title": "Focus hours",
+        "description": "Quiet coworking mornings for deep work. Book your spot via WhatsApp."
+      }
+    }
+  },
+  "team": {
+    "sectionTitle": "Team",
+    "title": "Built by Oaxacan devs",
+    "subtitle": "We built the space we needed to work remotely from downtown.",
+    "storyPrompt": "Read the full story on the blog:",
+    "storyLink": "Welcome to Atzomx",
+    "members": {
+      "founder-1": {
+        "name": "Atzomx Co-founder",
+        "role": "Engineering & operations"
+      },
+      "founder-2": {
+        "name": "Atzomx Co-founder",
+        "role": "Product & community"
+      }
+    }
+  },
   "reviews": {
     "sectionTitle": "Reviews",
     "badge": "Google Reviews",
@@ -199,7 +277,9 @@
     "footer": "Customers reviews",
     "googleRatingSummary": "{rating} · {count} reviews on Google",
     "googleAttribution": "Reviews from Google.",
-    "viewOnGoogle": "View on Google Maps"
+    "viewOnGoogle": "View on Google Maps",
+    "readMore": "Read more",
+    "readLess": "Read less"
   },
   "footer": {
     "sectionTitle": "Contact",

@@ -52,6 +52,11 @@ module.exports = {
         priority: 0.7,
         lastmod: new Date().toISOString(),
       },
+      {
+        loc: "/remote-work",
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      },
       ...blogPaths,
     ];
   },

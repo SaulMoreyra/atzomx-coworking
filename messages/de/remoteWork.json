@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Remote Work in Oaxaca | Atzomx Coworking",
+    "description": "Lokales Coworking mit 1000 Mbps Glasfaser im Zentrum von Oaxaca. Flexible Tarife und Spezialitätenkaffee für Freelancer und Professionals."
+  },
+  "banner": {
+    "title": "Remote Work in Oaxaca",
+    "subtitle": "Lokaler Coworking-Space mit dedizierter Glasfaser und Spezialitätenkaffee — für Menschen, die hier leben, und Besucher, die das Viertel respektieren.",
+    "backHome": "Start",
+    "trust": {
+      "wifi": "1000 Mbps Glasfaser",
+      "timezone": "UTC-6",
+      "location": "Historisches Zentrum"
+    },
+    "ctaWhatsapp": "Per WhatsApp buchen",
+    "ctaPlans": "Tarife ansehen"
+  },
+  "problem": {
+    "sectionTitle": "REMOTE WORK",
+    "title": "Infrastruktur für deinen Arbeitstag",
+    "lead": "Immer mehr Freelancer, Kreative und Professionals arbeiten online in Oaxaca — Einheimische und Menschen auf Durchreise. Atzomx ist ein Space, der hier entstanden ist: stabile Glasfaser, professionelles Umfeld und ruhige Atmosphäre im Zentrum.",
+    "context": "Die UTC-6-Zeitzone erleichtert die Abstimmung mit Teams in Mexiko und Nordamerika. Wenn du außerhalb deiner Wohnung einen festen Ort für Videocalls oder Fokusarbeit brauchst, bieten wir Stunden-, Tages- und Monatstarife — mit veröffentlichten Preisen und ohne Überraschungen.",
+    "solutionTitle": "Wenn das Heim-WLAN nicht reicht",
+    "solution": "Die Verbindung zu Hause hält nicht immer für wichtige Calls oder Deadlines. Die 1000-Mbps-Glasfaser bei Atzomx ist Arbeitsinfrastruktur — kein Reise-Shortcut."
+  },
+  "localValues": {
+    "sectionTitle": "TEIL DES VIERTELS",
+    "title": "Mit Respekt dabei sein",
+    "lead": "Atzomx entstand in Oaxaca, und die meisten Menschen, die den Space nutzen, leben in der Stadt. Wenn du zu Besuch bist, behandle das historische Zentrum als bewohntes Viertel — nicht als Kulisse: kaufe lokal, achte auf den öffentlichen Raum und höre den Menschen zu, die schon lange hier sind.",
+    "note": "Coworking bringt einen Mehrwert, wenn es lokale Jobs schafft, regionale Lieferanten unterstützt und mit Nachbarn und Geschäften im selben Block zusammenlebt."
+  },
+  "stats": {
+    "wifi": { "value": "1000", "suffix": "Mbps", "label": "Dedizierte Glasfaser" },
+    "timezone": { "value": "UTC-6", "suffix": "", "label": "Zeitzone" },
+    "plans": { "value": "1,5k–3k", "suffix": "MXN", "label": "Referenz-Monatstarif" }
+  },
+  "workflow": {
+    "sectionTitle": "DEIN TAG",
+    "title": "Zu Hause oder bei Atzomx — je nach Bedarf",
+    "subtitle": "Viele wechseln zwischen eigenem Space und Coworking — ohne den ganzen Tag am selben Ort zu verbringen.",
+    "steps": {
+      "async": {
+        "title": "Aufgaben im eigenen Space",
+        "description": "E-Mails, Docs und asynchrone Arbeit, wo es dir passt."
+      },
+      "focus": {
+        "title": "Calls und Fokus hier",
+        "description": "Videocalls, Demos und Deliverables mit dedizierter Glasfaser und professionellem Umfeld."
+      },
+      "community": {
+        "title": "Community im Space",
+        "description": "Lokale Freelancer, Kreative und Besucher auf Durchreise — am Tisch mit gegenseitigem Respekt."
+      }
+    }
+  },
+  "highlights": {
+    "sectionTitle": "WARUM ATZOMX",
+    "title": "Für konzentriertes Arbeiten gemacht",
+    "subtitle": "Infrastruktur und Atmosphäre für Freelancer, kleine Teams und unabhängige Professionals — egal woher du kommst.",
+    "wifi": {
+      "title": "1000 Mbps Glasfaser",
+      "description": "Dediziertes Internet für Calls, Demos und große Uploads — wenn die Heimverbindung nicht reicht."
+    },
+    "timezone": {
+      "title": "UTC-6",
+      "description": "Erleichtert die Abstimmung mit Teams in Mexiko und an der US-Ostküste."
+    },
+    "location": {
+      "title": "Fußläufiges Zentrum",
+      "description": "Los Libres 800-B, wenige Minuten vom Zócalo — im selben Viertel, in dem wir von Anfang an arbeiten."
+    }
+  },
+  "amenities": {
+    "sectionTitle": "INKLUSIVE",
+    "title": "Das Wesentliche für gutes Arbeiten",
+    "coffee": "Spezialitätenkaffee",
+    "terrace": "Dachterrasse",
+    "chairs": "Ergonomische Stühle",
+    "meeting": "Besprechungsraum"
+  },
+  "spacePreview": {
+    "sectionTitle": "DER RAUM",
+    "title": "Ein Arbeitsplatz im Stadtzentrum",
+    "subtitle": "Große Schreibtische, Tageslicht und Spezialitätenkaffee in unmittelbarer Nähe.",
+    "galleryLink": "Galerie ansehen"
+  },
+  "testimonials": {
+    "sectionTitle": "BEWERTUNGEN",
+    "title": "Was Menschen sagen, die hier arbeiten",
+    "googleRatingSummary": "{rating} · {count} Google-Bewertungen",
+    "badge": "Stimmen der Community",
+    "readMore": "Mehr lesen",
+    "readLess": "Weniger",
+    "viewOnGoogle": "Auf Google Maps ansehen"
+  },
+  "cta": {
+    "title": "Platz buchen",
+    "description": "Schreib uns auf WhatsApp für Stunden-, Tages- oder Monatstarife. In der Hochsaison empfiehlt sich eine frühe Reservierung.",
+    "whatsapp": "Per WhatsApp buchen",
+    "whatsappMessage": "Hallo! Ich suche Coworking-Space bei Atzomx in Oaxaca.",
+    "plans": "Tarife ansehen",
+    "articlePrompt": "Mehr Kontext gewünscht?",
+    "articleLink": "Artikel: Remote work aus Oaxaca",
+    "stickyWhatsapp": "WhatsApp"
+  }
+}

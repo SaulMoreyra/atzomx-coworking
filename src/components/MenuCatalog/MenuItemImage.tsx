@@ -3,16 +3,18 @@
 import Image from "next/image";
 import React, { type FC, useEffect, useState } from "react";
 import cx from "classnames";
-import { MENU_DEFAULT_IMAGE } from "./menuUtils";
+import { getMenuCategoryDefault, MENU_DEFAULT_IMAGE } from "./menuUtils";
 
 interface MenuItemImageProps {
   src: string;
   alt: string;
+  category: string;
   sizes: string;
   className?: string;
 }
 
-const MenuItemImage: FC<MenuItemImageProps> = ({ src, alt, sizes, className }) => {
+const MenuItemImage: FC<MenuItemImageProps> = ({ src, alt, category, sizes, className }) => {
+  const categoryFallback = getMenuCategoryDefault(category);
   const [imgSrc, setImgSrc] = useState(src);
 
   useEffect(() => {
@@ -27,7 +29,13 @@ const MenuItemImage: FC<MenuItemImageProps> = ({ src, alt, sizes, className }) =
       className={cx("object-cover", className)}
       sizes={sizes}
       onError={() => {
-        if (imgSrc !== MENU_DEFAULT_IMAGE) setImgSrc(MENU_DEFAULT_IMAGE);
+        if (imgSrc === src) {
+          setImgSrc(categoryFallback);
+          return;
+        }
+        if (imgSrc !== MENU_DEFAULT_IMAGE) {
+          setImgSrc(MENU_DEFAULT_IMAGE);
+        }
       }}
     />
   );

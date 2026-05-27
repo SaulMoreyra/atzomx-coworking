@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Trabajo remoto en Oaxaca | Atzomx Coworking",
+    "description": "Coworking local con fibra de 1000 Mbps en el Centro de Oaxaca. Planes flexibles y café de especialidad para freelancers y profesionales."
+  },
+  "banner": {
+    "title": "Trabajo remoto en Oaxaca",
+    "subtitle": "Coworking local con fibra dedicada y café de especialidad — para quien vive aquí y para quien visita con respeto al barrio.",
+    "backHome": "Inicio",
+    "trust": {
+      "wifi": "1000 Mbps fibra",
+      "timezone": "UTC-6",
+      "location": "Centro Histórico"
+    },
+    "ctaWhatsapp": "Reservar por WhatsApp",
+    "ctaPlans": "Ver planes"
+  },
+  "problem": {
+    "sectionTitle": "TRABAJO REMOTO",
+    "title": "Infraestructura para tu jornada",
+    "lead": "En Oaxaca cada vez más freelancers, creativos y profesionales trabajan en línea — oaxaqueños y personas en movimiento. Atzomx es un espacio hecho aquí: fibra estable, ambiente profesional y convivencia tranquila en el Centro.",
+    "context": "La zona horaria UTC-6 facilita coordinar con equipos en México y Norteamérica. Si buscas un lugar fijo fuera de casa para videollamadas o concentración, aquí encuentras planes por hora, día o mes — con tarifas publicadas y sin sorpresas.",
+    "solutionTitle": "Cuando necesitas más que el WiFi de casa",
+    "solution": "La conexión en casa no siempre alcanza para una call importante o un entregable con deadline. Los 1000 Mbps de fibra en Atzomx son infraestructura de trabajo — no un atajo de viaje."
+  },
+  "localValues": {
+    "sectionTitle": "PARTE DEL BARRIO",
+    "title": "Presencia con respeto",
+    "lead": "Atzomx nació en Oaxaca y la mayoría de quienes usan el espacio viven en la ciudad. Si estás de visita, trata al Centro como un barrio habitado — no como escenario: compra en negocios locales, cuida el espacio público y escucha a quienes llevan años aquí.",
+    "note": "Creemos que un coworking suma cuando genera empleo local, compra a proveedores de la región y convive con vecinos y comercios del mismo piso de calle."
+  },
+  "stats": {
+    "wifi": { "value": "1000", "suffix": "Mbps", "label": "Fibra dedicada" },
+    "timezone": { "value": "UTC-6", "suffix": "", "label": "Zona horaria" },
+    "plans": { "value": "1.5k–3k", "suffix": "MXN", "label": "Plan mensual referencia" }
+  },
+  "workflow": {
+    "sectionTitle": "TU JORNADA",
+    "title": "En casa o en Atzomx, según lo que necesites",
+    "subtitle": "Muchos alternan espacio propio y coworking — sin depender de uno solo para todo el día.",
+    "steps": {
+      "async": {
+        "title": "Tareas en tu espacio",
+        "description": "Correos, documentación y trabajo asíncrono donde te convenga."
+      },
+      "focus": {
+        "title": "Calls y concentración aquí",
+        "description": "Videollamadas, demos y entregables con fibra dedicada y ambiente profesional."
+      },
+      "community": {
+        "title": "Comunidad en el espacio",
+        "description": "Freelancers locales, creativos y visitantes de paso — compartiendo mesa con respeto mutuo."
+      }
+    }
+  },
+  "highlights": {
+    "sectionTitle": "POR QUÉ ATZOMX",
+    "title": "Hecho para trabajar bien",
+    "subtitle": "Infraestructura y ambiente para freelancers, equipos pequeños y profesionales independientes — sin importar de dónde seas.",
+    "wifi": {
+      "title": "1000 Mbps fibra",
+      "description": "Internet dedicado para calls, demos y subidas pesadas — cuando la conexión de casa no alcanza."
+    },
+    "timezone": {
+      "title": "UTC-6",
+      "description": "Facilita coordinar con equipos en México y la costa este de Norteamérica."
+    },
+    "location": {
+      "title": "Centro caminable",
+      "description": "Los Libres 800-B, a minutos del Zócalo — en el mismo barrio donde operamos desde el inicio."
+    }
+  },
+  "amenities": {
+    "sectionTitle": "INCLUIDO",
+    "title": "Lo esencial para trabajar bien",
+    "coffee": "Café de especialidad",
+    "terrace": "Terraza con vista",
+    "chairs": "Sillas ergonómicas",
+    "meeting": "Sala de juntas"
+  },
+  "spacePreview": {
+    "sectionTitle": "EL ESPACIO",
+    "title": "Un lugar de trabajo en el Centro",
+    "subtitle": "Escritorios amplios, luz natural y café de especialidad a un paso.",
+    "galleryLink": "Ver galería completa"
+  },
+  "testimonials": {
+    "sectionTitle": "RESEÑAS",
+    "title": "Lo dicen quienes trabajan aquí",
+    "googleRatingSummary": "{rating} · {count} reseñas en Google",
+    "badge": "Opiniones de la comunidad",
+    "readMore": "Leer más",
+    "readLess": "Leer menos",
+    "viewOnGoogle": "Ver en Google Maps"
+  },
+  "cta": {
+    "title": "Reserva tu espacio",
+    "description": "Escríbenos por WhatsApp para plan por hora, día o mes. En temporada alta conviene reservar con anticipación.",
+    "whatsapp": "Reservar por WhatsApp",
+    "whatsappMessage": "¡Hola! Busco espacio de coworking en Atzomx en Oaxaca.",
+    "plans": "Ver planes",
+    "articlePrompt": "¿Quieres más contexto?",
+    "articleLink": "Leer: Trabajar remoto desde Oaxaca",
+    "stickyWhatsapp": "WhatsApp"
+  }
+}

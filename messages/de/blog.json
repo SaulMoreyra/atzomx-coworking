@@ -1,11 +1,29 @@
 {
+  "metadata": {
+    "title": "Blog | Atzomx — Coworking & Kaffee in Oaxaca",
+    "description": "Remote-Work-Guides, Spezialitätenkaffee und Community-Geschichten aus dem Zentrum von Oaxaca."
+  },
   "banner": {
     "title": "Blog",
-    "tagline": "Geschichten über Coworking, Kaffee und Community in Oaxaca"
+    "tagline": "Geschichten über Coworking, Kaffee und Community in Oaxaca",
+    "backHome": "Start",
+    "articlesCount": "{count} veröffentlichte Geschichten"
+  },
+  "index": {
+    "intro": "Guides, Notizen und Gedanken aus dem Zentrum — {count} Artikel in deinem Tempo.",
+    "featuredLabel": "Empfohlen",
+    "filterAll": "Alle",
+    "filterLabel": "Nach Thema stöbern",
+    "emptyState": "Noch keine Artikel in dieser Kategorie."
+  },
+  "article": {
+    "sectionTitle": "WEITERLESEN",
+    "relatedTitle": "Mehr vom Blog"
   },
   "section": {
     "sectionTitle": "Blog",
     "title": "Geschichten aus dem Zentrum von Oaxaca",
+    "subtitle": "Coworking, Spezialitätenkaffee und das Leben rund um Los Libres 800-B.",
     "viewAll": "Alle Beiträge ansehen"
   },
   "readMore": "Artikel lesen",

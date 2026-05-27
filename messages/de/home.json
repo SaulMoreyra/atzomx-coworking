@@ -1,12 +1,19 @@
 {
   "header": {
     "about": "Über uns",
+    "gallery": "Galerie",
     "plans": "Tarife",
     "faq": "FAQ",
     "contact": "Kontakt",
     "reviews": "Bewertungen",
     "blog": "Blog",
-    "menu": "Menü"
+    "remoteWork": "Remote work",
+    "menu": "Menü",
+    "more": "Mehr",
+    "navPrimary": "Entdecken",
+    "navMobile": "Navigationsmenü",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
   },
   "presentation": {
     "taglineLine1": "COMMUNITY & CAFÉ",
@@ -33,6 +40,23 @@
       "digital-nomads": "Digitale Nomaden",
       "coffee-lovers": "Kaffeeliebhaber",
       "developers": "Entwickler"
+    }
+  },
+  "gallery": {
+    "sectionTitle": "Galerie",
+    "title": "Entdecke den Space",
+    "subtitle": "Dachterrasse, Schreibtische, Besprechungsraum und Kaffeetheke im Zentrum von Oaxaca.",
+    "openPhoto": "Foto vergrößern: {label}",
+    "closePhoto": "Foto schließen",
+    "tiles": {
+      "terrace": { "label": "Dachterrasse", "alt": "Dachterrasse von Atzomx im Zentrum von Oaxaca" },
+      "desks": { "label": "Schreibtische", "alt": "Gemeinsame Tische im Coworking-Bereich" },
+      "meeting-room": { "label": "Besprechungsraum", "alt": "Besprechungsraum mit Smart TV bei Atzomx" },
+      "coffee-bar": { "label": "Kaffeetheke", "alt": "Spezialitätenkaffee-Bar im Erdgeschoss" },
+      "monitor-desk": { "label": "Monitor-Arbeitsplatz", "alt": "Arbeitsplatz mit zusätzlichem Monitor" },
+      "facade": { "label": "Fassade", "alt": "Eingang von Atzomx an Los Libres, Zentrum Oaxaca" },
+      "community": { "label": "Community", "alt": "Community-Atmosphäre bei Atzomx" },
+      "latte-art": { "label": "Latte art", "alt": "Latte art an der Atzomx-Bar zubereitet" }
     }
   },
   "benefits": {
@@ -192,6 +216,60 @@
     "label": "Per WhatsApp buchen",
     "ariaLabel": "WhatsApp öffnen, um bei Atzomx zu buchen"
   },
+  "planComparison": {
+    "sectionTitle": "Vergleich",
+    "title": "Wähle deinen Tarif",
+    "subtitle": "Gratis-Café vs. Standard vs. Einzel vs. Monitor — im Direktvergleich.",
+    "featureColumn": "Enthalten",
+    "wifiRow": "WLAN",
+    "hour": "Std",
+    "freePrice": "Gratis",
+    "included": "Enthalten",
+    "notIncluded": "Nicht enthalten"
+  },
+  "community": {
+    "sectionTitle": "Community",
+    "title": "Diese Woche bei Atzomx",
+    "subtitle": "Events, Kaffee und Austausch im Zentrum von Oaxaca.",
+    "instagramCta": "Auf Instagram ansehen",
+    "instagramHint": "Folge @atzomx für Updates und Öffnungszeiten.",
+    "dates": {
+      "this-week": "Diese Woche",
+      "friday": "Freitag",
+      "daily": "Täglich"
+    },
+    "events": {
+      "nomad-coffee": {
+        "title": "Kaffee mit Nomaden",
+        "description": "Triff Remote Worker in Oaxaca. Keine feste Agenda — nur guter Kaffee."
+      },
+      "pour-over": {
+        "title": "Pour-over Session",
+        "description": "Probiere die Herkunft der Woche mit unserem Barista-Team."
+      },
+      "focus-hours": {
+        "title": "Fokus-Stunden",
+        "description": "Ruhige Coworking-Morgen für Deep Work. Platz per WhatsApp reservieren."
+      }
+    }
+  },
+  "team": {
+    "sectionTitle": "Team",
+    "title": "Von Oaxaca-Devs gebaut",
+    "subtitle": "Wir haben den Space gebaut, den wir für Remote Work im Zentrum brauchten.",
+    "storyPrompt": "Die ganze Geschichte im Blog:",
+    "storyLink": "Willkommen bei Atzomx",
+    "members": {
+      "founder-1": {
+        "name": "Atzomx Co-Founder",
+        "role": "Engineering & Betrieb"
+      },
+      "founder-2": {
+        "name": "Atzomx Co-Founder",
+        "role": "Produkt & Community"
+      }
+    }
+  },
   "reviews": {
     "sectionTitle": "Bewertungen",
     "badge": "Google Reviews",
@@ -199,7 +277,9 @@
     "footer": "Kundenbewertungen",
     "googleRatingSummary": "{rating} · {count} Bewertungen auf Google",
     "googleAttribution": "Bewertungen von Google.",
-    "viewOnGoogle": "Auf Google Maps ansehen"
+    "viewOnGoogle": "Auf Google Maps ansehen",
+    "readMore": "Mehr lesen",
+    "readLess": "Weniger lesen"
   },
   "footer": {
     "sectionTitle": "Kontakt",

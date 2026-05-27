@@ -62,7 +62,7 @@ const MenuCard: FC<MenuCardProps> = ({ item }) => {
         </div>
 
         <div className="w-[88px] h-[88px] md:w-[104px] md:h-[104px] overflow-hidden shrink-0 relative border border-brand-green/10">
-          <MenuItemImage src={item.image} alt={name} sizes="104px" />
+          <MenuItemImage src={item.image} alt={name} category={category} sizes="104px" />
         </div>
       </div>
 

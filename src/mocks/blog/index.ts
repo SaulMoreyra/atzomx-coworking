@@ -42,3 +42,17 @@ export const FEATURED_BLOG_POSTS = ALL_BLOG_POSTS.filter(post => post.featured);
 
 export const getBlogPostBySlug = (slug: string) =>
   ALL_BLOG_POSTS.find(post => post.slug === slug);
+
+export const getRelatedPosts = (slug: string, limit = 2) => {
+  const current = getBlogPostBySlug(slug);
+  if (!current) return [];
+
+  const sameCategory = ALL_BLOG_POSTS.filter(
+    post => post.slug !== slug && post.category === current.category
+  );
+  const others = ALL_BLOG_POSTS.filter(
+    post => post.slug !== slug && post.category !== current.category
+  );
+
+  return [...sameCategory, ...others].slice(0, limit);
+};

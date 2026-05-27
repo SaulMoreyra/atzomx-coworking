@@ -4,6 +4,7 @@ import { type PlanType } from "@/common/types/planTypes";
 import { highlightDividerVariants, planSlideSurfaces, type BrandSurface, type OrganicDividerFill } from "@/design-system";
 import React, { Fragment, type FC } from "react";
 import PlanBanner from "../PlanBanner/PlanBanner";
+import PlanComparisonMatrix from "../PlanComparisonMatrix/PlanComparisonMatrix";
 import PlansPricingTable from "../PlansPricingTable/PlansPricingTable";
 import Label from "../ui/Label/Label";
 import HighlightShape from "../ui/HighlightShape/HighlightShape";
@@ -71,6 +72,7 @@ const PlansCarousel: FC<PlansCarouselProps> = ({ plans }) => {
       </div>
 
       <PlansPricingTable plans={plans} />
+      <PlanComparisonMatrix />
     </section>
   );
 };

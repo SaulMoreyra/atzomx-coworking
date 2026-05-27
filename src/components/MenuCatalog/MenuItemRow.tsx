@@ -89,7 +89,7 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
         </div>
 
         <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden border border-brand-green/10 md:h-20 md:w-20">
-          <MenuItemImage src={item.image} alt={name} sizes="80px" />
+          <MenuItemImage src={item.image} alt={name} category={category} sizes="80px" />
         </div>
       </div>
     </article>

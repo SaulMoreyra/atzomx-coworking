@@ -1,11 +1,29 @@
 {
+  "metadata": {
+    "title": "Blog | Atzomx — Coworking et café à Oaxaca",
+    "description": "Guides télétravail, café de spécialité et communauté depuis le centre de Oaxaca. Histoires du coworking Atzomx."
+  },
   "banner": {
     "title": "Blog",
-    "tagline": "Récits de coworking, café et communauté à Oaxaca"
+    "tagline": "Récits de coworking, café et communauté à Oaxaca",
+    "backHome": "Accueil",
+    "articlesCount": "{count} récits publiés"
+  },
+  "index": {
+    "intro": "Guides, notes et réflexions du centre-ville — {count} articles à lire à votre rythme.",
+    "featuredLabel": "À la une",
+    "filterAll": "Tous",
+    "filterLabel": "Explorer par thème",
+    "emptyState": "Pas encore d'articles dans cette catégorie."
+  },
+  "article": {
+    "sectionTitle": "POUR ALLER PLUS LOIN",
+    "relatedTitle": "Plus sur le blog"
   },
   "section": {
     "sectionTitle": "Blog",
     "title": "Récits du centre de Oaxaca",
+    "subtitle": "Coworking, café de spécialité et la vie autour de Los Libres 800-B.",
     "viewAll": "Voir tous les articles"
   },
   "readMore": "Lire l'article",

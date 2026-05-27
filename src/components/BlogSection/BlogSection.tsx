@@ -4,6 +4,7 @@ import { FEATURED_BLOG_POSTS } from "@/mocks/blog";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";
+import { ArrowRight } from "react-feather";
 import BlogCard from "../BlogCard/BlogCard";
 import Heading from "../Heading/Heading";
 import HighlightShape from "../ui/HighlightShape/HighlightShape";
@@ -24,16 +25,15 @@ const BlogSection = () => {
             {t("sectionTitle")}
           </Label>
           <Heading className="mt-2">{t("title")}</Heading>
+          <p className="text-body max-w-xl text-sm leading-relaxed text-brand-green/65 md:text-base">{t("subtitle")}</p>
         </div>
 
         {featured ? (
-          <div className="section-container mt-10 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-2 md:gap-6 lg:grid-cols-12">
-            <div className="lg:col-span-7">
-              <BlogCard post={featured} variant="featured" className="h-full" />
-            </div>
-            <div className="flex flex-col gap-4 md:gap-6 lg:col-span-5">
+          <div className="section-container mt-10 md:mt-12">
+            <BlogCard post={featured} variant="hero" className="mb-6 md:mb-8" />
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
               {rest.map(post => (
-                <BlogCard key={post.id} post={post} />
+                <BlogCard key={post.id} post={post} variant="horizontal" />
               ))}
             </div>
           </div>
@@ -42,8 +42,9 @@ const BlogSection = () => {
         <div className="section-container mt-10 flex justify-center md:mt-12">
           <Link
             href="/blog"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-brand border border-brand-accent bg-brand-accent px-6 py-3 text-label text-base text-brand-green transition-colors duration-200 hover:border-brand-accent/80 hover:bg-brand-accent/80 focus-brand">
+            className="text-label inline-flex min-h-[44px] items-center justify-center gap-2 rounded-brand border border-brand-green bg-brand-green px-6 py-3 text-sm text-brand-cream transition-colors duration-200 hover:bg-brand-green/90 focus-brand">
             {t("viewAll")}
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </section>

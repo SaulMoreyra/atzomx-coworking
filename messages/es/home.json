@@ -1,12 +1,19 @@
 {
   "header": {
     "about": "Nosotros",
+    "gallery": "Galería",
     "plans": "Planes",
     "faq": "FAQ",
     "contact": "Contacto",
     "reviews": "Reseñas",
     "blog": "Blog",
-    "menu": "Menú"
+    "remoteWork": "Trabaja remoto",
+    "menu": "Menú",
+    "more": "Más",
+    "navPrimary": "Explorar",
+    "navMobile": "Menú de navegación",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
   },
   "presentation": {
     "taglineLine1": "COMUNIDAD & CAFÉ",
@@ -33,6 +40,47 @@
       "digital-nomads": "Nomadas digitales",
       "coffee-lovers": "Amantes del cafe",
       "developers": "Developers"
+    }
+  },
+  "gallery": {
+    "sectionTitle": "Galería",
+    "title": "Conoce el espacio",
+    "subtitle": "Terraza, escritorios, sala de juntas y barra de café en el Centro de Oaxaca.",
+    "openPhoto": "Ampliar foto: {label}",
+    "closePhoto": "Cerrar foto",
+    "tiles": {
+      "terrace": {
+        "label": "Terraza",
+        "alt": "Terraza de Atzomx con vista al centro de Oaxaca"
+      },
+      "desks": {
+        "label": "Escritorios",
+        "alt": "Mesas compartidas en el area de coworking"
+      },
+      "meeting-room": {
+        "label": "Sala de juntas",
+        "alt": "Sala de reuniones con Smart TV en Atzomx"
+      },
+      "coffee-bar": {
+        "label": "Barra de cafe",
+        "alt": "Barra de cafe de especialidad en planta baja"
+      },
+      "monitor-desk": {
+        "label": "Escritorio con monitor",
+        "alt": "Puesto de trabajo con monitor adicional"
+      },
+      "facade": {
+        "label": "Fachada",
+        "alt": "Entrada de Atzomx en Los Libres, Centro de Oaxaca"
+      },
+      "community": {
+        "label": "Comunidad",
+        "alt": "Ambiente de comunidad y convivencia en Atzomx"
+      },
+      "latte-art": {
+        "label": "Latte art",
+        "alt": "Latte art preparado en la barra de Atzomx"
+      }
     }
   },
   "benefits": {
@@ -192,6 +240,60 @@
     "label": "Reservar por WhatsApp",
     "ariaLabel": "Abrir WhatsApp para reservar en Atzomx"
   },
+  "planComparison": {
+    "sectionTitle": "Comparativa",
+    "title": "Elige tu plan",
+    "subtitle": "Free cafe vs. Standard vs. Individual vs. Monitor — lado a lado.",
+    "featureColumn": "Incluye",
+    "wifiRow": "WiFi",
+    "hour": "hora",
+    "freePrice": "Gratis",
+    "included": "Incluido",
+    "notIncluded": "No incluido"
+  },
+  "community": {
+    "sectionTitle": "Comunidad",
+    "title": "Esta semana en Atzomx",
+    "subtitle": "Eventos, cafe y convivencia en el centro de Oaxaca.",
+    "instagramCta": "Ver en Instagram",
+    "instagramHint": "Sigue @atzomx para horarios y novedades.",
+    "dates": {
+      "this-week": "Esta semana",
+      "friday": "Viernes",
+      "daily": "Diario"
+    },
+    "events": {
+      "nomad-coffee": {
+        "title": "Cafe con nómadas",
+        "description": "Conoce a quienes trabajan remoto en Oaxaca. Sin agenda fija — solo buen cafe y conversacion."
+      },
+      "pour-over": {
+        "title": "Sesion pour-over",
+        "description": "Prueba el origen de la semana con nuestro equipo de baristas."
+      },
+      "focus-hours": {
+        "title": "Horas de enfoque",
+        "description": "Mananas silenciosas en coworking para deep work. Reserva tu lugar por WhatsApp."
+      }
+    }
+  },
+  "team": {
+    "sectionTitle": "Equipo",
+    "title": "Hecho por devs oaxaqueños",
+    "subtitle": "Construimos el espacio que nos faltaba para trabajar en remoto desde el Centro.",
+    "storyPrompt": "Conoce la historia completa en el blog:",
+    "storyLink": "Bienvenidos a Atzomx",
+    "members": {
+      "founder-1": {
+        "name": "Co-fundador Atzomx",
+        "role": "Desarrollo & operaciones"
+      },
+      "founder-2": {
+        "name": "Co-fundador Atzomx",
+        "role": "Producto & comunidad"
+      }
+    }
+  },
   "reviews": {
     "sectionTitle": "Reseñas",
     "badge": "Google Reviews",
@@ -199,7 +301,9 @@
     "footer": "Opiniones de clientes",
     "googleRatingSummary": "{rating} · {count} reseñas en Google",
     "googleAttribution": "Reseñas de Google.",
-    "viewOnGoogle": "Ver en Google Maps"
+    "viewOnGoogle": "Ver en Google Maps",
+    "readMore": "Leer mas",
+    "readLess": "Leer menos"
   },
   "footer": {
     "sectionTitle": "Contacto",

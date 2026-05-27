@@ -1,19 +1,30 @@
-import BlogCard from "@/components/BlogCard/BlogCard";
-import OrganicDivider from "@/components/ui/OrganicDivider/OrganicDivider";
-import { ALL_BLOG_POSTS } from "@/mocks/blog";
+import BlogIndex from "@/components/BlogIndex/BlogIndex";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import React from "react";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("blog.metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      images: [{ url: "/images/og/blog-og.webp", alt: "Atzomx Blog" }],
+      type: "website",
+    },
+    alternates: {
+      canonical: "https://atzomx.com.mx/blog",
+    },
+  };
+}
 
 export default function BlogPage() {
   return (
     <div className="site-main flex min-h-screen flex-1 flex-col bg-brand-cream">
-      <OrganicDivider fill="cream" variant="clover" />
-      <section className="w-full py-10 md:py-14">
-        <div className="section-container grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {ALL_BLOG_POSTS.map(post => (
-            <BlogCard key={post.id} post={post} />
-          ))}
-        </div>
-      </section>
+      <BlogIndex />
     </div>
   );
 }

@@ -69,8 +69,14 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
             key={review.id ?? `${review.client.name}-${index}`}
             variants={item}
             role="listitem"
-            className="scroll-snap-start shrink-0 w-[min(85vw,300px)] md:w-[min(32vw,340px)]">
-            <ReviewCard review={review} />
+            className="scroll-snap-start shrink-0 w-[min(85vw,300px)] md:w-[min(32vw,360px)]">
+            <ReviewCard
+              review={review}
+              googleMapsUri={source === "google" ? googleMapsUri : undefined}
+              readMoreLabel={t("readMore")}
+              readLessLabel={t("readLess")}
+              viewOnGoogleLabel={t("viewOnGoogle")}
+            />
           </m.div>
         ))}
       </m.div>

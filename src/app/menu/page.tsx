@@ -1,6 +1,26 @@
 import React from "react";
 
 import MenuCatalog from "@/components/MenuCatalog/MenuCatalog";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("menu.metadata");
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      images: [{ url: "/images/og/menu-og.webp", alt: "Atzomx Menu" }],
+      type: "website",
+    },
+    alternates: {
+      canonical: "https://atzomx.com.mx/menu",
+    },
+  };
+}
 
 export default async function MenuPage() {
   return (
