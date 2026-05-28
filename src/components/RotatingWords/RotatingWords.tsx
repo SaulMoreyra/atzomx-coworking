@@ -25,7 +25,7 @@ const RotatingWords: FC<RotatingWordsProps> = ({ words, className }) => {
       )}
       aria-live="polite"
       aria-atomic="true">
-      <RotatingWordDisplay text={displayed} showCursor={showCursor} />
+      <RotatingWordDisplay text={displayed} showCursor={showCursor} className={className} />
     </div>
   );
 };

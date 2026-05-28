@@ -2,7 +2,6 @@
 
 import MenuCategoryBand from "@/components/MenuCatalog/MenuCategoryBand";
 import MenuCategoryNav from "@/components/MenuCatalog/MenuCategoryNav";
-import { planSlideSurfaces } from "@/design-system";
 import { ALL_FOODS } from "@/mocks/menu";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useMemo, useState } from "react";
@@ -74,8 +73,10 @@ const MenuCatalog = () => {
 
   if (categories.length === 0) {
     return (
-      <div className="section-container max-w-5xl py-16 text-center">
-        <p className="text-body text-brand-green/70">{t("search")}: “{filter}”</p>
+      <div className="section-container max-w-3xl py-16 text-center lg:max-w-4xl">
+        <p className="text-body text-brand-green/70">
+          {t("search")}: “{filter}”
+        </p>
       </div>
     );
   }
@@ -90,21 +91,10 @@ const MenuCatalog = () => {
         onSelectCategory={scrollToCategory}
       />
 
-      <div className="flex flex-col">
-        {categoryEntries.map(([category, items], index) => {
-          const previousSurface =
-            index === 0 ? undefined : planSlideSurfaces[(index - 1) % planSlideSurfaces.length];
-
-          return (
-            <MenuCategoryBand
-              key={category}
-              category={category}
-              items={items}
-              index={index}
-              previousSurface={previousSurface}
-            />
-          );
-        })}
+      <div className="flex flex-col pb-14 md:pb-20">
+        {categoryEntries.map(([category, items]) => (
+          <MenuCategoryBand key={category} category={category} items={items} />
+        ))}
       </div>
     </>
   );

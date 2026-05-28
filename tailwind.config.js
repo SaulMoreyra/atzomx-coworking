@@ -33,6 +33,11 @@ module.exports = {
       fontFamily: {
         sans: ["Mabry", ...defaultTheme.fontFamily.sans],
         druk: ["Druk", ...defaultTheme.fontFamily.sans],
+        "display-prose": [
+          "var(--font-display-prose)",
+          "Antonio",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       letterSpacing: {
         label: "0.12em",

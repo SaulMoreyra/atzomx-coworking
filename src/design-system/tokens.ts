@@ -41,7 +41,10 @@ export const planSlideSurfaces: BrandSurface[] = [
 ];
 
 export const typography = {
+  /** ATZOMX wordmark, nav, all-caps UI — Druk (basic Latin only) */
   display: "font-druk",
+  /** Editorial headlines with accents — Antonio (latin-ext) */
+  displayProse: "font-display-prose",
   body: "font-sans",
   labelTracking: "tracking-[0.12em]",
   labelSize: "text-sm md:text-base",

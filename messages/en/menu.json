@@ -1,11 +1,13 @@
 {
   "metadata": {
     "title": "Menu | Atzomx Café — Downtown Oaxaca",
-    "description": "Specialty coffee, bowls, smoothies, combos and more at Atzomx. Full menu from the coworking café in downtown Oaxaca."
+    "description": "Specialty coffee, bowls, smoothies and more at Atzomx. Full menu from the coworking café in downtown Oaxaca."
   },
   "search": "Search",
   "banner": {
     "title": "Menu",
+    "itemsCount": "{count} items on the menu",
+    "tagline": "Specialty coffee, bowls and more — made at the heart of the coworking space.",
     "taglineLine1": "COMUNIDAD & CAFÉ",
     "taglineLine2": "COWORKING"
   },

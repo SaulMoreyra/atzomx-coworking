@@ -3,10 +3,8 @@
 import { type ReviewType } from "@/common/types/planTypes";
 import { motion as m, type Variants } from "framer-motion";
 import React, { type FC } from "react";
-import Heading from "../Heading/Heading";
 import ReviewCard from "../ReviewCard/ReviewCard";
-import Label from "../ui/Label/Label";
-import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
+import HomeSectionIntro from "../ui/HomeSectionIntro/HomeSectionIntro";
 import { useTranslations } from "next-intl";
 
 interface ReviewContainerProps {
@@ -38,22 +36,17 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
   const showGoogleRating = source === "google" && rating != null && userRatingCount != null;
 
   return (
-    <>
-      <OrganicDivider fill="accent" variant="clover" />
-      <section id="reviews" data-header-surface="accent" className="w-full bg-brand-accent text-brand-green py-14 md:py-20">
-      <div className="section-container flex flex-col items-center gap-4 text-center mb-8 md:mb-10">
-        <Label as="p" className="text-xs tracking-[0.25em]">
-          {t("sectionTitle")}
-        </Label>
-        <span className="text-label text-[10px] md:text-xs bg-brand-cream/60 border border-brand-green/20 rounded-full px-4 py-1.5">
+    <section id="reviews" data-header-surface="accent" className="w-full border-t border-brand-green/10 bg-brand-accent py-14 text-brand-green md:py-20">
+      <div className="section-container mb-8 md:mb-10">
+        <HomeSectionIntro title={t("title")} kicker={t("sectionTitle")} />
+        <p className="text-label mt-4 inline-flex text-[10px] tracking-[0.14em] text-brand-green/70 md:text-xs">
           {showGoogleRating
             ? t("googleRatingSummary", {
                 rating: rating.toFixed(1),
                 count: userRatingCount,
               })
             : t("badge")}
-        </span>
-        <Heading className="mt-2">{t("title")}</Heading>
+        </p>
       </div>
 
       <m.div
@@ -61,7 +54,7 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="scroll-snap-x flex gap-4 md:gap-6 overflow-x-auto pb-4 px-6 md:px-12 xl:px-20"
+        className="scroll-snap-x flex gap-4 overflow-x-auto pb-4 pl-6 md:gap-6 md:pl-12 xl:pl-20"
         role="list"
         aria-label={t("title")}>
         {reviews.map((review, index) => (
@@ -69,7 +62,7 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
             key={review.id ?? `${review.client.name}-${index}`}
             variants={item}
             role="listitem"
-            className="scroll-snap-start shrink-0 w-[min(85vw,300px)] md:w-[min(32vw,360px)]">
+            className="w-[min(85vw,300px)] shrink-0 scroll-snap-start md:w-[min(32vw,360px)]">
             <ReviewCard
               review={review}
               googleMapsUri={source === "google" ? googleMapsUri : undefined}
@@ -81,8 +74,8 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
         ))}
       </m.div>
 
-      {source === "google" && googleMapsUri && (
-        <p className="section-container mt-8 text-center text-xs text-brand-green/70">
+      {source === "google" && googleMapsUri ? (
+        <p className="section-container mt-8 text-left text-xs text-brand-green/70">
           {t("googleAttribution")}{" "}
           <a
             href={googleMapsUri}
@@ -92,9 +85,8 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
             {t("viewOnGoogle")}
           </a>
         </p>
-      )}
-      </section>
-    </>
+      ) : null}
+    </section>
   );
 };
 

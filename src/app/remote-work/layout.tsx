@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer/Footer";
-import RemoteWorkBanner from "@/components/RemoteWorkBanner/RemoteWorkBanner";
 import React from "react";
 
 export default function RemoteWorkLayout({
@@ -9,7 +8,6 @@ export default function RemoteWorkLayout({
 }) {
   return (
     <>
-      <RemoteWorkBanner />
       {children}
       <Footer />
     </>

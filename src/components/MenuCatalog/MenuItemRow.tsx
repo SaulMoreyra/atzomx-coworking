@@ -32,10 +32,10 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
 
   return (
     <article className="group border-b border-brand-green/10 py-5 last:border-b-0 md:py-6">
-      <div className="flex gap-4 md:gap-5">
+      <div className="flex min-w-0 gap-4 md:gap-5">
         <div className="min-w-0 flex-1">
-          <div className="flex items-baseline gap-2">
-            <h3 className="text-label shrink-0 text-sm normal-case tracking-wide text-brand-green md:text-base">
+          <div className="flex min-w-0 items-baseline gap-2">
+            <h3 className="text-display-prose min-w-0 shrink text-base font-bold leading-snug text-brand-green md:text-lg">
               {name}
             </h3>
             {item.variants.length === 0 && (
@@ -44,7 +44,7 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
                   className="mb-1 min-w-[1rem] flex-1 border-b border-dotted border-brand-green/30"
                   aria-hidden="true"
                 />
-                <p className="shrink-0 text-lg font-semibold tabular-nums text-brand-green md:text-xl">
+                <p className="shrink-0 text-base font-semibold tabular-nums text-brand-green md:text-lg">
                   ${item.price < 0 ? "—" : item.price}
                 </p>
               </>
@@ -52,17 +52,17 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
           </div>
 
           {item.variants.length > 0 ? (
-            <ul className="mt-3 space-y-2">
+            <ul className="mt-3 space-y-2" role="list">
               {item.variants.map((variant, index) => (
-                <li key={index} className="flex items-baseline gap-2">
-                  <span className="text-label shrink-0 text-[10px] normal-case tracking-wider text-brand-green/55 md:text-xs">
+                <li key={index} className="flex min-w-0 items-baseline gap-2">
+                  <span className="text-body shrink-0 text-xs text-brand-green/55 md:text-sm">
                     {t(`variants.${variant.name}`)}
                   </span>
                   <span
                     className="mb-1 min-w-[1rem] flex-1 border-b border-dotted border-brand-green/25"
                     aria-hidden="true"
                   />
-                  <span className="shrink-0 text-base font-semibold tabular-nums text-brand-green md:text-lg">
+                  <span className="shrink-0 text-sm font-semibold tabular-nums text-brand-green md:text-base">
                     ${variant.price}
                   </span>
                 </li>
@@ -88,9 +88,9 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
           </button>
         </div>
 
-        <div className="relative h-[72px] w-[72px] shrink-0 overflow-hidden border border-brand-green/10 md:h-20 md:w-20">
+        <figure className="relative h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden border border-brand-green/12 md:h-20 md:w-20">
           <MenuItemImage src={item.image} alt={name} category={category} sizes="80px" />
-        </div>
+        </figure>
       </div>
     </article>
   );

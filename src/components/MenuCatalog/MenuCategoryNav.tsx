@@ -1,6 +1,5 @@
 "use client";
 
-import Label from "@/components/ui/Label/Label";
 import { useTranslations } from "next-intl";
 import React, { type FC } from "react";
 import cx from "classnames";
@@ -26,46 +25,50 @@ const MenuCategoryNav: FC<MenuCategoryNavProps> = ({
     <nav
       className="sticky top-site-header z-sticky border-b border-brand-green/10 bg-brand-cream/95 backdrop-blur-sm"
       aria-label={t("titles.categories")}>
-      <div className="section-container max-w-5xl py-4">
-        <Label as="h2" className="sr-only">
-          {t("titles.menu")}
-        </Label>
-
+      <div className="section-container max-w-3xl py-4 md:py-5 lg:max-w-4xl">
+        <label htmlFor="menu-search" className="sr-only">
+          {t("search")}
+        </label>
         <input
+          id="menu-search"
           type="search"
           value={filter}
           placeholder={t("search")}
-          aria-label={t("search")}
           onChange={event => {
             onFilterChange(event.target.value);
           }}
-          className="text-body mb-4 w-full max-w-sm border border-brand-green/15 bg-white p-3 text-sm text-brand-green focus-brand"
+          className="text-body mb-3 w-full max-w-md border border-brand-green/15 bg-white px-4 py-2.5 text-sm text-brand-green focus-brand md:mb-4"
         />
 
-        <div className="scroll-snap-x flex gap-2 overflow-x-auto pb-1">
+        <span className="text-label mb-1.5 block text-[10px] tracking-[0.2em] text-brand-green/45">
+          {t("titles.categories")}
+        </span>
+        <ul
+          className="-mx-1 flex gap-x-2 overflow-x-auto pb-0.5 scroll-smooth md:gap-x-3 md:flex-wrap md:overflow-visible"
+          role="list">
           {categories.map(category => {
             const isActive = activeCategory === category;
 
             return (
-              <button
-                key={category}
-                type="button"
-                onClick={() => {
-                  onSelectCategory(category);
-                }}
-                aria-current={isActive ? "true" : undefined}
-                className={cx(
-                  "scroll-snap-start shrink-0 px-4 py-2.5 text-label text-xs transition-colors duration-200 focus-brand",
-                  "min-h-[44px] border border-brand-green/15",
-                  isActive
-                    ? "border-brand-green bg-brand-main text-brand-green"
-                    : "bg-brand-cream text-brand-green/55 hover:border-brand-green/30 hover:text-brand-green"
-                )}>
-                {t(`categories.${category}`)}
-              </button>
+              <li key={category} className="shrink-0 md:shrink">
+                <button
+                  type="button"
+                  aria-current={isActive ? "true" : undefined}
+                  onClick={() => {
+                    onSelectCategory(category);
+                  }}
+                  className={cx(
+                    "text-label min-h-[44px] whitespace-nowrap border-b-2 px-2 py-1.5 text-left text-[10px] tracking-[0.16em] transition-colors duration-200 focus-brand md:text-xs",
+                    isActive
+                      ? "border-brand-green text-brand-green"
+                      : "border-transparent text-brand-green/50 hover:border-brand-green/25 hover:text-brand-green/80"
+                  )}>
+                  {t(`categories.${category}`)}
+                </button>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
     </nav>
   );

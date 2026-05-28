@@ -6,9 +6,7 @@ import {
   feedGridLayoutClasses,
   type SpaceGalleryTile,
 } from "@/design-system/gallery";
-import HighlightShape from "@/components/ui/HighlightShape/HighlightShape";
-import Label from "@/components/ui/Label/Label";
-import OrganicDivider from "@/components/ui/OrganicDivider/OrganicDivider";
+import HomeSectionIntro from "@/components/ui/HomeSectionIntro/HomeSectionIntro";
 import cx from "classnames";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -70,20 +68,12 @@ const SpaceGallery = () => {
 
   return (
     <>
-      <OrganicDivider fill="main" variant="wave" />
-      <section id="gallery" data-header-surface="main" className="w-full bg-brand-main py-14 text-brand-green md:py-20">
-        <div className="section-container mb-10 flex flex-col items-center gap-3 text-center md:mb-12">
-          <HighlightShape variant="clover" fill="accent" size={52} className="opacity-95" />
-          <Label as="p" className="text-xs tracking-[0.25em]">
-            {t("sectionTitle")}
-          </Label>
-          <h2 className="text-label text-xl normal-case tracking-wide md:text-2xl">{t("title")}</h2>
-          <p className="text-body max-w-2xl text-sm leading-relaxed text-brand-green/70 md:text-base">
-            {t("subtitle")}
-          </p>
+      <section id="gallery" data-header-surface="main" className="w-full border-t border-brand-green/10 bg-brand-main py-14 text-brand-green md:py-20">
+        <div className="section-container mb-10 md:mb-12">
+          <HomeSectionIntro kicker={t("sectionTitle")} title={t("title")} subtitle={t("subtitle")} />
         </div>
 
-        <div className="grid grid-cols-2 auto-rows-fr gap-1 sm:gap-1.5 md:gap-2 lg:grid-cols-4">
+        <div className="section-container grid grid-cols-2 auto-rows-fr gap-1 sm:gap-1.5 md:gap-2 lg:grid-cols-4">
           {SPACE_GALLERY_TILES.map(tile => {
             const label = t(`tiles.${tile.id}.label`);
             const alt = t(`tiles.${tile.id}.alt`);
@@ -96,7 +86,7 @@ const SpaceGallery = () => {
                   setActiveId(tile.id);
                 }}
                 className={cx(
-                  "group relative min-h-[140px] overflow-hidden bg-brand-cream/40 text-left",
+                  "group relative min-h-[140px] min-w-0 overflow-hidden bg-brand-cream/40 text-left",
                   "transition-shadow duration-200 hover:shadow-[0_8px_24px_-10px_rgba(47,62,34,0.2)] focus-brand",
                   feedGridLayoutClasses[tile.layout]
                 )}
@@ -122,7 +112,6 @@ const SpaceGallery = () => {
           })}
         </div>
       </section>
-      <OrganicDivider fill="cream" variant="cloud" />
 
       {activeTile ? (
         <div

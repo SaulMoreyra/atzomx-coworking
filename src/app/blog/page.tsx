@@ -1,4 +1,5 @@
 import BlogIndex from "@/components/BlogIndex/BlogIndex";
+import BlogBanner from "@/components/BlogBanner/BlogBanner";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import React from "react";
@@ -24,6 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function BlogPage() {
   return (
     <div className="site-main flex min-h-screen flex-1 flex-col bg-brand-cream">
+      <BlogBanner />
       <BlogIndex />
     </div>
   );

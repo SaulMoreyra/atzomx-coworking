@@ -2,27 +2,16 @@
 
 import { type PlanType } from "@/common/types/planTypes";
 import WhatsAppLink from "@/components/WhatsAppLink/WhatsAppLink";
-import {
-  brandSurfaces,
-  type BrandSurface,
-  type OrganicDividerFill,
-  type OrganicDividerVariant,
-} from "@/design-system";
 import cx from "classnames";
 import { motion as m, type Variants } from "framer-motion";
 import React, { type FC } from "react";
 import PlanCard from "../PlanCard/PlanCard";
 import Label from "../ui/Label/Label";
-import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
 import { useTranslations } from "next-intl";
 
 interface PlanBannerProps {
   plan: PlanType;
-  surface: BrandSurface;
-  trailingDivider?: {
-    fill: OrganicDividerFill;
-    variant: OrganicDividerVariant;
-  };
+  reverse?: boolean;
 }
 
 const containerVariants: Variants = {
@@ -35,7 +24,7 @@ const fadeUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
 };
 
-const PlanBanner: FC<PlanBannerProps> = ({ plan, surface, trailingDivider }) => {
+const PlanBanner: FC<PlanBannerProps> = ({ plan, reverse = false }) => {
   const t = useTranslations(`home.plans.plans.${plan.id}`);
   const tPlans = useTranslations("home.plans");
 
@@ -47,31 +36,29 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, surface, trailingDivider }) => 
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-10% 0px" }}
-      className={cx("w-full text-brand-green", brandSurfaces[surface])}>
+      className="w-full border-t border-brand-green/10 bg-brand-cream text-brand-green">
       <div
         className={cx(
-          "section-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12",
-          "items-center py-12 md:py-16 lg:py-20"
+          "section-container grid grid-cols-1 items-center gap-8 py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12 lg:py-20",
+          reverse && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1"
         )}>
-        <div className="flex flex-col gap-6 order-2 lg:order-1">
+        <div className="flex min-w-0 flex-col gap-6">
           {plan.startPrice > 0 && (
             <m.div variants={fadeUp} className="flex items-center gap-4">
               <Label as="p" className="text-xs">
                 {tPlans("from")}
               </Label>
-              <span className="inline-flex items-center justify-center rounded-full bg-brand-cream px-6 py-2 text-2xl md:text-4xl font-semibold text-brand-green">
+              <span className="inline-flex items-center justify-center rounded-full border border-brand-green/15 bg-brand-main px-6 py-2 text-2xl font-semibold tabular-nums text-brand-green md:text-4xl">
                 ${plan.startPrice}
               </span>
             </m.div>
           )}
 
-          <m.div variants={fadeUp} className="flex flex-col gap-3">
-            <h3 className="text-display text-3xl md:text-5xl lg:text-6xl leading-none">
+          <m.div variants={fadeUp} className="flex min-w-0 flex-col gap-3">
+            <h3 className="text-display-prose min-w-0 [overflow-wrap:anywhere] text-3xl font-bold leading-none md:text-4xl lg:text-5xl">
               {t("name")}
             </h3>
-            <p className="text-body text-lg md:text-xl max-w-md text-brand-green/80">
-              {t("description")}
-            </p>
+            <p className="text-body max-w-md text-lg text-brand-green/80 md:text-xl">{t("description")}</p>
           </m.div>
 
           <m.div variants={fadeUp}>
@@ -83,18 +70,10 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, surface, trailingDivider }) => 
           </m.div>
         </div>
 
-        <m.div variants={fadeUp} className="order-1 lg:order-2 w-full max-w-md mx-auto lg:max-w-none">
+        <m.div variants={fadeUp} className="mx-auto w-full min-w-0 max-w-md lg:max-w-none">
           <PlanCard plan={plan} />
         </m.div>
       </div>
-
-      {trailingDivider ? (
-        <OrganicDivider
-          fill={trailingDivider.fill}
-          variant={trailingDivider.variant}
-          className="w-full shrink-0"
-        />
-      ) : null}
     </m.article>
   );
 };

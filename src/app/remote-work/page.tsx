@@ -1,3 +1,4 @@
+import RemoteWorkBanner from "@/components/RemoteWorkBanner/RemoteWorkBanner";
 import RemoteWorkLanding from "@/components/RemoteWorkLanding/RemoteWorkLanding";
 import { getReviews } from "@/services/reviews/getReviews";
 import { getTranslations } from "next-intl/server";
@@ -27,6 +28,7 @@ export default async function RemoteWorkPage() {
 
   return (
     <div className="site-main flex min-h-screen flex-1 flex-col bg-brand-cream">
+      <RemoteWorkBanner />
       <RemoteWorkLanding
         reviews={reviewsData.reviews}
         reviewsSource={reviewsData.source}

@@ -10,7 +10,7 @@ import { ArrowRight, Clock } from "react-feather";
 
 interface BlogCardProps {
   post: BlogPost;
-  variant?: "default" | "featured" | "horizontal" | "hero";
+  variant?: "default" | "featured" | "horizontal" | "hero" | "lead" | "index";
   className?: string;
 }
 
@@ -35,6 +35,83 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
   const excerpt = t(`posts.${post.id}.excerpt`);
   const categoryLabel = t(`categories.${post.category}`);
   const categoryClass = categoryAccent[post.category];
+
+  if (variant === "lead") {
+    return (
+      <article className={cx("group", className)}>
+        <Link href={`/blog/${post.slug}`} className="focus-brand block">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-brand-green/55">
+            <span className={cx("border px-2 py-0.5", categoryClass)}>{categoryLabel}</span>
+            <span>{formattedDate}</span>
+            <span aria-hidden="true">·</span>
+            <span className="inline-flex items-center gap-1">
+              <Clock size={11} aria-hidden="true" />
+              {t("readingTime", { minutes: post.readingMinutes })}
+            </span>
+          </div>
+          <h2 className="text-display-prose mt-4 max-w-2xl text-2xl leading-tight text-brand-green transition-colors duration-200 group-hover:text-brand-green/80 md:text-3xl lg:text-4xl">
+            {title}
+          </h2>
+          <p className="text-body mt-4 max-w-xl text-base leading-relaxed text-brand-green/70 md:text-lg">
+            {excerpt}
+          </p>
+          <span className="text-label mt-5 inline-flex min-h-[44px] items-center gap-2 text-xs tracking-[0.14em] text-brand-green transition-transform duration-200 group-hover:translate-x-0.5">
+            {t("readMore")}
+            <ArrowRight size={14} aria-hidden="true" />
+          </span>
+        </Link>
+        <Link
+          href={`/blog/${post.slug}`}
+          className="focus-brand relative mt-8 block aspect-[16/9] max-w-2xl overflow-hidden border border-brand-green/12 bg-brand-main/30 md:mt-10">
+          <Image
+            src={post.coverImage}
+            alt={title}
+            fill
+            priority
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            sizes="(max-width: 768px) 100vw, 672px"
+          />
+        </Link>
+      </article>
+    );
+  }
+
+  if (variant === "index") {
+    return (
+      <article
+        className={cx(
+          "group border-b border-brand-green/12 py-5 transition-colors duration-200 last:border-b-0 hover:bg-brand-main/25 md:py-6",
+          className
+        )}>
+        <Link
+          href={`/blog/${post.slug}`}
+          className="focus-brand grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start md:gap-6">
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-brand-green/50">
+              <span>{formattedDate}</span>
+              <span aria-hidden="true">·</span>
+              <span className={cx("border px-1.5 py-px", categoryClass)}>{categoryLabel}</span>
+            </div>
+            <h3 className="text-label mt-2 text-base normal-case leading-snug tracking-wide text-brand-green transition-colors duration-200 group-hover:text-brand-green/75 md:text-lg">
+              {title}
+            </h3>
+            <p className="text-body mt-1.5 line-clamp-2 text-sm leading-relaxed text-brand-green/60 md:line-clamp-1">
+              {excerpt}
+            </p>
+          </div>
+          <span className="text-label inline-flex min-h-[44px] shrink-0 items-center gap-1.5 self-start text-[10px] tracking-[0.14em] text-brand-green/55 md:pt-1">
+            <Clock size={11} aria-hidden="true" className="opacity-70" />
+            {t("readingTime", { minutes: post.readingMinutes })}
+            <ArrowRight
+              size={12}
+              aria-hidden="true"
+              className="opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100"
+            />
+          </span>
+        </Link>
+      </article>
+    );
+  }
 
   const metaRow = (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-brand-green/55">

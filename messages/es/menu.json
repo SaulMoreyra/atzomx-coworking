@@ -1,11 +1,13 @@
 {
   "metadata": {
     "title": "Menú | Atzomx Café — Centro de Oaxaca",
-    "description": "Café de especialidad, bowls, smoothies, combos y más en Atzomx. Menú completo del coworking con café en el Centro de Oaxaca."
+    "description": "Café de especialidad, bowls, smoothies y más en Atzomx. Menú completo del coworking con café en el Centro de Oaxaca."
   },
   "search": "Buscar",
   "banner": {
     "title": "Menú",
+    "itemsCount": "{count} platos en carta",
+    "tagline": "Café de especialidad, bowls y más — hecho en el corazón del coworking.",
     "taglineLine1": "COMUNIDAD & CAFÉ",
     "taglineLine2": "COWORKING"
   },

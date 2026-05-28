@@ -1,5 +1,4 @@
 import { coffee } from "./coffee";
-import { combos } from "./combos";
 import { dessert } from "./dessert";
 import { extras } from "./extras";
 import { frappes } from "./frappes";
@@ -11,7 +10,6 @@ export const ALL_FOODS = [
   lunch,
   dessert,
   smoothies,
-  combos,
   frappes,
   extras,
 ].flat();

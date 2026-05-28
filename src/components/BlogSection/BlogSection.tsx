@@ -6,49 +6,41 @@ import Link from "next/link";
 import React from "react";
 import { ArrowRight } from "react-feather";
 import BlogCard from "../BlogCard/BlogCard";
-import Heading from "../Heading/Heading";
-import HighlightShape from "../ui/HighlightShape/HighlightShape";
-import Label from "../ui/Label/Label";
-import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
+import HomeSectionIntro from "../ui/HomeSectionIntro/HomeSectionIntro";
 
 const BlogSection = () => {
   const t = useTranslations("blog.section");
   const [featured, ...rest] = FEATURED_BLOG_POSTS;
 
   return (
-    <>
-      <OrganicDivider fill="cream" variant="star" />
-      <section id="blog" data-header-surface="cream" className="w-full bg-brand-cream py-14 md:py-20">
-        <div className="section-container flex flex-col items-center gap-4 text-center">
-          <HighlightShape variant="clover" fill="accent" size={52} className="opacity-90" />
-          <Label as="p" className="text-xs tracking-[0.25em]">
-            {t("sectionTitle")}
-          </Label>
-          <Heading className="mt-2">{t("title")}</Heading>
-          <p className="text-body max-w-xl text-sm leading-relaxed text-brand-green/65 md:text-base">{t("subtitle")}</p>
+    <section id="blog" data-header-surface="cream" className="w-full border-t border-brand-green/10 bg-brand-cream py-14 md:py-20">
+      <div className="section-container max-w-3xl lg:max-w-4xl">
+        <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between md:gap-12">
+          <HomeSectionIntro kicker={t("sectionTitle")} title={t("title")} subtitle={t("subtitle")} />
+          <Link
+            href="/blog"
+            className="text-label inline-flex min-h-[44px] shrink-0 items-center gap-2 self-start border-b-2 border-brand-green pb-1 text-[10px] tracking-[0.16em] text-brand-green transition-colors duration-200 hover:text-brand-green/80 focus-brand md:text-xs">
+            {t("viewAll")}
+            <ArrowRight size={14} aria-hidden="true" />
+          </Link>
         </div>
 
         {featured ? (
-          <div className="section-container mt-10 md:mt-12">
-            <BlogCard post={featured} variant="hero" className="mb-6 md:mb-8" />
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6">
-              {rest.map(post => (
-                <BlogCard key={post.id} post={post} variant="horizontal" />
-              ))}
-            </div>
+          <div className="mt-10 border-t border-brand-green/12 pt-10 md:mt-12 md:pt-12">
+            <BlogCard post={featured} variant="lead" />
+            {rest.length > 0 ? (
+              <ul className="mt-8 flex flex-col md:mt-10" role="list">
+                {rest.map(post => (
+                  <li key={post.id} className="border-t border-brand-green/12">
+                    <BlogCard post={post} variant="index" />
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         ) : null}
-
-        <div className="section-container mt-10 flex justify-center md:mt-12">
-          <Link
-            href="/blog"
-            className="text-label inline-flex min-h-[44px] items-center justify-center gap-2 rounded-brand border border-brand-green bg-brand-green px-6 py-3 text-sm text-brand-cream transition-colors duration-200 hover:bg-brand-green/90 focus-brand">
-            {t("viewAll")}
-            <ArrowRight size={16} aria-hidden="true" />
-          </Link>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

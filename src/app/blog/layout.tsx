@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "@/components/Footer/Footer";
-import BlogBanner from "@/components/BlogBanner/BlogBanner";
 
 export default function BlogLayout({
   children,
@@ -9,7 +8,6 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      <BlogBanner />
       {children}
       <Footer />
     </>

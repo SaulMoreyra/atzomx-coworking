@@ -56,6 +56,10 @@
     @apply font-druk uppercase;
   }
 
+  .text-display-prose {
+    @apply font-display-prose normal-case tracking-wide;
+  }
+
   .text-body {
     @apply font-sans normal-case tracking-normal leading-relaxed;
   }
