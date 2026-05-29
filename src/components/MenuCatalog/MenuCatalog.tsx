@@ -2,20 +2,24 @@
 
 import MenuCategoryBand from "@/components/MenuCatalog/MenuCategoryBand";
 import MenuCategoryNav from "@/components/MenuCatalog/MenuCategoryNav";
-import { ALL_FOODS } from "@/mocks/menu";
+import { type FoodType } from "@/common/types/menuTypes";
 import { useTranslations } from "next-intl";
 import React, { useEffect, useMemo, useState } from "react";
 import { categorySectionId, groupFoodsByCategory } from "./menuUtils";
 
-const MenuCatalog = () => {
+interface MenuCatalogProps {
+  foods: FoodType[];
+}
+
+const MenuCatalog = ({ foods }: MenuCatalogProps) => {
   const t = useTranslations("menu");
   const [filter, setFilter] = useState("");
   const [activeCategory, setActiveCategory] = useState("coffee");
 
   const foodsByCategory = useMemo(() => {
-    if (!filter.trim()) return groupFoodsByCategory(ALL_FOODS);
+    if (!filter.trim()) return groupFoodsByCategory(foods);
 
-    const filtered = ALL_FOODS.filter(item => {
+    const filtered = foods.filter(item => {
       const nameKey = `menu.${item.category}.${item.id}.name`;
       const descriptionKey = `menu.${item.category}.${item.id}.description`;
       const categoryKey = `categories.${item.category}`;
@@ -27,7 +31,7 @@ const MenuCatalog = () => {
     });
 
     return groupFoodsByCategory(filtered);
-  }, [filter, t]);
+  }, [filter, foods, t]);
 
   const categories = Object.keys(foodsByCategory);
   const categoryEntries = Object.entries(foodsByCategory);

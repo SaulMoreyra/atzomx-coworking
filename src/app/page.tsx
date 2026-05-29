@@ -10,11 +10,11 @@ import CommunitySection from "@/components/CommunitySection/CommunitySection";
 import TeamSection from "@/components/TeamSection/TeamSection";
 import BlogSection from "@/components/BlogSection/BlogSection";
 import FaqSection from "@/components/FaqSection/FaqSection";
-import { ALL_PLANS } from "@/mocks/products";
+import { getPublicPlans } from "@/lib/products/public-products";
 import { getReviews } from "@/services/reviews/getReviews";
 
 export default async function Home() {
-  const reviewsData = await getReviews();
+  const [reviewsData, plans] = await Promise.all([getReviews(), getPublicPlans()]);
 
   return (
     <>
@@ -23,7 +23,7 @@ export default async function Home() {
         <Presentation />
         <About />
         <SpaceGallery />
-        <PlansCarousel plans={ALL_PLANS} />
+        <PlansCarousel plans={plans} />
         <FaqSection />
         <BlogSection />
         <CommunitySection />

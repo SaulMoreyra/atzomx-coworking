@@ -1,5 +1,6 @@
 import MenuBanner from "@/components/MenuBanner/MenuBanner";
 import MenuCatalog from "@/components/MenuCatalog/MenuCatalog";
+import { getPublicMenu } from "@/lib/products/public-products";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import React from "react";
@@ -23,10 +24,12 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function MenuPage() {
+  const foods = await getPublicMenu();
+
   return (
     <div className="site-main flex min-h-screen flex-1 flex-col bg-brand-cream">
-      <MenuBanner />
-      <MenuCatalog />
+      <MenuBanner itemCount={foods.length} />
+      <MenuCatalog foods={foods} />
     </div>
   );
 }

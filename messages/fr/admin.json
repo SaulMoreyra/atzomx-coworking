@@ -1,0 +1,151 @@
+{
+  "layout": {
+    "brand": "Atzomx",
+    "title": "Admin",
+    "navAriaLabel": "Admin",
+    "nav": {
+      "products": "Produits",
+      "categories": "Catégories",
+      "users": "Utilisateurs"
+    },
+    "logout": "Déconnexion"
+  },
+  "login": {
+    "brand": "Atzomx",
+    "title": "Connexion",
+    "subtitle": "Panneau de tarifs et produits.",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "submit": "Connexion",
+    "submitting": "Connexion…",
+    "backToSite": "Retour au site",
+    "loading": "Chargement…",
+    "errorDefault": "Échec de la connexion"
+  },
+  "products": {
+    "catalog": "Catalogue",
+    "title": "Produits",
+    "menuTitle": "Menu café",
+    "plansTitle": "Forfaits coworking",
+    "newProduct": "Nouveau produit",
+    "tabListAria": "Type de produit",
+    "tabMenu": "Menu",
+    "tabPlans": "Forfaits",
+    "table": {
+      "slug": "Slug",
+      "price": "Prix",
+      "categoryOrArea": "Catégorie / Zone",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "loading": "Chargement…",
+    "empty": "Aucun produit dans cette catégorie.",
+    "statusActive": "Actif",
+    "statusInactive": "Inactif",
+    "edit": "Modifier"
+  },
+  "productForm": {
+    "backToProducts": "← Produits",
+    "editTitle": "Modifier le produit",
+    "newTitle": "Nouveau produit",
+    "slug": "Slug",
+    "type": "Type",
+    "typeMenu": "Menu",
+    "typePlan": "Forfait",
+    "basePrice": "Prix de base (MXN)",
+    "sortOrder": "Ordre",
+    "image": "Image (chemin)",
+    "imagePlaceholder": "/images/coffee/espresso.webp",
+    "category": "Catégorie",
+    "categorySelect": "Sélectionner…",
+    "planArea": "Zone du forfait",
+    "planAreaCafeteria": "Cafétéria",
+    "planAreaCoWorking": "Coworking",
+    "planAreaMeetingRoom": "Salle de réunion",
+    "variants": "Variantes",
+    "variantSlugPlaceholder": "slug (hot, iced)",
+    "removeVariant": "Retirer",
+    "addVariant": "+ Variante",
+    "featureKeys": "Clés de fonctionnalités (une par ligne)",
+    "featureKeysPlaceholder": "discount-on-cafeteria-menu",
+    "activeLabel": "Produit actif sur le site",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "delete": "Supprimer",
+    "deleteConfirm": "Supprimer ce produit ?",
+    "loading": "Chargement du produit…",
+    "loadingFallback": "Chargement…",
+    "created": "Produit créé.",
+    "updated": "Produit mis à jour.",
+    "saveError": "Échec de l'enregistrement",
+    "deleteError": "Échec de la suppression"
+  },
+  "categories": {
+    "section": "Menu",
+    "title": "Catégories",
+    "description": "Slug opérationnel en base de données. Libellés visibles dans",
+    "descriptionCode": "messages/*/menu.json → categories.*",
+    "newSlug": "Nouveau slug",
+    "slugPlaceholder": "coffee",
+    "add": "Ajouter",
+    "table": {
+      "slug": "Slug",
+      "order": "Ordre",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "loading": "Chargement…",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "createError": "Échec de la création",
+    "updateError": "Échec de la mise à jour"
+  },
+  "users": {
+    "section": "Accès",
+    "title": "Utilisateurs",
+    "email": "E-mail",
+    "name": "Nom",
+    "password": "Mot de passe",
+    "role": "Rôle",
+    "roleStaff": "Staff",
+    "roleAdmin": "Admin",
+    "create": "Créer un utilisateur",
+    "forbidden": "Seuls les administrateurs peuvent gérer les comptes.",
+    "table": {
+      "email": "E-mail",
+      "role": "Rôle",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "statusActive": "Actif",
+    "statusInactive": "Inactif",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "createError": "Échec de la création de l'utilisateur"
+  },
+  "i18nPanel": {
+    "title": "Clés i18n requises",
+    "description": "Ajoutez ces clés dans les fichiers JSON de traduction pour afficher le nom et la description sur le site.",
+    "menuNameKey": "messages/{locales}/menu.json → menu.{categorySlug}.{slug}.name",
+    "menuDescriptionKey": "messages/{locales}/menu.json → menu.{categorySlug}.{slug}.description",
+    "planTitleKey": "messages/{locales}/home.json → plans.plans.{slug}.title",
+    "planDescriptionKey": "messages/{locales}/home.json → plans.plans.{slug}.description"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "error": "Erreur"
+  },
+  "validation": {
+    "emailRequired": "L'e-mail est obligatoire",
+    "emailInvalid": "E-mail invalide",
+    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères",
+    "slugRequired": "Le slug est obligatoire",
+    "slugFormat": "Utilisez kebab-case (ex. cold-brew)",
+    "categoryRequired": "Sélectionnez une catégorie",
+    "priceRequired": "Le prix est obligatoire",
+    "priceInvalid": "Prix invalide",
+    "variantSlugRequired": "Le slug de la variante est obligatoire"
+  }
+}

@@ -8,10 +8,10 @@ import MenuMasthead from "./MenuMasthead";
  * nav: subpage utility bar · footer: site Footer (unchanged) · enrichment: none
  */
 
-const MenuBanner = () => (
+const MenuBanner = ({ itemCount }: { itemCount: number }) => (
   <>
     <BlogUtilityHeader />
-    <MenuMasthead />
+    <MenuMasthead itemCount={itemCount} />
   </>
 );
 

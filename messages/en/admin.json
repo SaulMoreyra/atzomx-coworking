@@ -1,0 +1,151 @@
+{
+  "layout": {
+    "brand": "Atzomx",
+    "title": "Admin",
+    "navAriaLabel": "Admin",
+    "nav": {
+      "products": "Products",
+      "categories": "Categories",
+      "users": "Users"
+    },
+    "logout": "Log out"
+  },
+  "login": {
+    "brand": "Atzomx",
+    "title": "Sign in",
+    "subtitle": "Pricing and product panel.",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign in",
+    "submitting": "Signing in…",
+    "backToSite": "Back to site",
+    "loading": "Loading…",
+    "errorDefault": "Sign-in failed"
+  },
+  "products": {
+    "catalog": "Catalog",
+    "title": "Products",
+    "menuTitle": "Café menu",
+    "plansTitle": "Coworking plans",
+    "newProduct": "New product",
+    "tabListAria": "Product type",
+    "tabMenu": "Menu",
+    "tabPlans": "Plans",
+    "table": {
+      "slug": "Slug",
+      "price": "Price",
+      "categoryOrArea": "Category / Area",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "loading": "Loading…",
+    "empty": "No products in this category.",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "edit": "Edit"
+  },
+  "productForm": {
+    "backToProducts": "← Products",
+    "editTitle": "Edit product",
+    "newTitle": "New product",
+    "slug": "Slug",
+    "type": "Type",
+    "typeMenu": "Menu",
+    "typePlan": "Plan",
+    "basePrice": "Base price (MXN)",
+    "sortOrder": "Order",
+    "image": "Image (path)",
+    "imagePlaceholder": "/images/coffee/espresso.webp",
+    "category": "Category",
+    "categorySelect": "Select…",
+    "planArea": "Plan area",
+    "planAreaCafeteria": "Cafeteria",
+    "planAreaCoWorking": "Coworking",
+    "planAreaMeetingRoom": "Meeting room",
+    "variants": "Variants",
+    "variantSlugPlaceholder": "slug (hot, iced)",
+    "removeVariant": "Remove",
+    "addVariant": "+ Variant",
+    "featureKeys": "Feature keys (one per line)",
+    "featureKeysPlaceholder": "discount-on-cafeteria-menu",
+    "activeLabel": "Product active on site",
+    "save": "Save",
+    "saving": "Saving…",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this product?",
+    "loading": "Loading product…",
+    "loadingFallback": "Loading…",
+    "created": "Product created.",
+    "updated": "Product updated.",
+    "saveError": "Failed to save",
+    "deleteError": "Failed to delete"
+  },
+  "categories": {
+    "section": "Menu",
+    "title": "Categories",
+    "description": "Operational slug in the database. Visible labels in",
+    "descriptionCode": "messages/*/menu.json → categories.*",
+    "newSlug": "New slug",
+    "slugPlaceholder": "coffee",
+    "add": "Add",
+    "table": {
+      "slug": "Slug",
+      "order": "Order",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "loading": "Loading…",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "createError": "Failed to create",
+    "updateError": "Failed to update"
+  },
+  "users": {
+    "section": "Access",
+    "title": "Users",
+    "email": "Email",
+    "name": "Name",
+    "password": "Password",
+    "role": "Role",
+    "roleStaff": "Staff",
+    "roleAdmin": "Admin",
+    "create": "Create user",
+    "forbidden": "Only administrators can manage accounts.",
+    "table": {
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "createError": "Failed to create user"
+  },
+  "i18nPanel": {
+    "title": "Required i18n keys",
+    "description": "Add these keys in the translation JSON files so the site shows name and description.",
+    "menuNameKey": "messages/{locales}/menu.json → menu.{categorySlug}.{slug}.name",
+    "menuDescriptionKey": "messages/{locales}/menu.json → menu.{categorySlug}.{slug}.description",
+    "planTitleKey": "messages/{locales}/home.json → plans.plans.{slug}.title",
+    "planDescriptionKey": "messages/{locales}/home.json → plans.plans.{slug}.description"
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Error"
+  },
+  "validation": {
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email",
+    "passwordMin": "Password must be at least 8 characters",
+    "slugRequired": "Slug is required",
+    "slugFormat": "Use kebab-case (e.g. cold-brew)",
+    "categoryRequired": "Select a category",
+    "priceRequired": "Price is required",
+    "priceInvalid": "Invalid price",
+    "variantSlugRequired": "Variant slug is required"
+  }
+}
