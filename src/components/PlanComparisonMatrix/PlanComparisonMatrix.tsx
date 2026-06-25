@@ -20,23 +20,24 @@ const PlanComparisonMatrix = () => {
   const plans = getComparisonPlans();
 
   return (
-    <div className="section-container max-w-6xl py-12 md:py-16">
-      <div className="mb-8 flex flex-col items-center gap-2 text-center md:mb-10">
-        <HighlightShape variant="star" fill="accent" size={44} className="opacity-90" />
-        <Label as="p" className="text-xs tracking-[0.25em]">
-          {t("sectionTitle")}
-        </Label>
-        <h3 className="text-label text-lg normal-case tracking-wide md:text-xl">{t("title")}</h3>
-        <p className="text-body max-w-xl text-sm text-brand-green/65 md:text-base">{t("subtitle")}</p>
-      </div>
+    <div className="w-full bg-brand-cream pb-14 pt-10 md:pb-20 md:pt-12">
+      <div className="section-container max-w-5xl">
+        <div className="mb-10 flex flex-col items-center gap-3 text-center md:mb-12">
+          <HighlightShape variant="star" fill="accent" size={52} className="opacity-90" />
+          <Label as="p" className="text-xs tracking-[0.25em]">
+            {t("sectionTitle")}
+          </Label>
+          <h3 className="text-label text-xl normal-case tracking-wide text-brand-green md:text-2xl">{t("title")}</h3>
+          <p className="text-body max-w-2xl text-sm leading-relaxed text-brand-green/65 md:text-base">{t("subtitle")}</p>
+        </div>
 
-      {/* Mobile: stacked cards */}
-      <div className="flex flex-col gap-4 lg:hidden">
+        {/* Mobile: stacked cards */}
+        <div className="flex flex-col gap-4 lg:hidden">
         {plans.map(plan => (
           <article
             key={plan.id}
-            className="border border-brand-green/12 bg-brand-cream p-5 md:p-6">
-            <div className="mb-4 flex items-baseline justify-between gap-3 border-b border-brand-green/10 pb-4">
+            className="bg-brand-cream p-5 md:p-6">
+            <div className="mb-4 flex items-baseline justify-between gap-3 pb-4">
               <h4 className="text-label text-sm normal-case tracking-wide md:text-base">
                 {tPlans(`plans.${plan.id}.name`)}
               </h4>
@@ -80,18 +81,18 @@ const PlanComparisonMatrix = () => {
       </div>
 
       {/* Desktop: matrix table */}
-      <div className="hidden overflow-x-auto lg:block">
-        <table className="w-full min-w-[720px] border-collapse border border-brand-green/12 bg-brand-cream text-left">
+      <div className="hidden overflow-hidden border border-brand-green lg:block">
+        <table className="w-full border-collapse text-left text-sm">
           <thead>
-            <tr className="border-b border-brand-green/12 bg-brand-main/40">
-              <th scope="col" className="text-label px-5 py-4 text-xs tracking-[0.14em] md:px-6">
+            <tr className="border-b border-brand-green bg-brand-main/60">
+              <th scope="col" className="text-label px-6 py-4 text-xs normal-case tracking-wider text-brand-green">
                 {t("featureColumn")}
               </th>
               {plans.map(plan => (
                 <th
                   key={plan.id}
                   scope="col"
-                  className="text-label px-4 py-4 text-center text-xs normal-case tracking-wide md:px-5">
+                  className="text-label px-5 py-4 text-center text-xs normal-case tracking-wider text-brand-green">
                   <span className="block">{tPlans(`plans.${plan.id}.name`)}</span>
                   <span className="mt-1 block text-base font-semibold tabular-nums text-brand-green">
                     {plan.startPrice === 0 ? t("freePrice") : `$${plan.startPrice}`}
@@ -105,10 +106,10 @@ const PlanComparisonMatrix = () => {
               <tr
                 key={featureKey}
                 className={cx(
-                  "border-b border-brand-green/10 last:border-b-0",
-                  rowIndex % 2 === 0 ? "bg-brand-cream" : "bg-brand-main/20"
+                  "border-b border-brand-green last:border-b-0",
+                  rowIndex % 2 === 0 ? "bg-brand-cream" : "bg-brand-main/25"
                 )}>
-                <th scope="row" className="text-body px-5 py-3.5 text-sm font-medium text-brand-green md:px-6">
+                <th scope="row" className="text-label px-6 py-4 text-left text-sm normal-case tracking-wide text-brand-green">
                   {featureKey === "high-speed-internet"
                     ? t("wifiRow")
                     : tFeatures(`co-working.${featureKey}`)}
@@ -116,7 +117,7 @@ const PlanComparisonMatrix = () => {
                 {plans.map(plan => {
                   const included = planIncludesComparisonFeature(plan, featureKey);
                   return (
-                    <td key={plan.id} className="px-4 py-3.5 text-center md:px-5">
+                    <td key={plan.id} className="px-5 py-4 text-center">
                       <span className="sr-only">
                         {tPlans(`plans.${plan.id}.name`)} —{" "}
                         {included ? t("included") : t("notIncluded")}
@@ -133,6 +134,7 @@ const PlanComparisonMatrix = () => {
             ))}
           </tbody>
         </table>
+      </div>
       </div>
     </div>
   );

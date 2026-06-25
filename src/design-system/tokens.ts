@@ -6,7 +6,7 @@ export const brandColors = {
   /** Crema — fondos base, calidez */
   cream: "#fffbed",
   /** Verde principal — bloques dominantes, fondos de sección */
-  main: "#d5f4c3",
+  main: "#d4e6c0",
   /** Verde fuente — textos, logo, line art, iconos */
   green: "#2f3e22",
   /** Accent — promos, CTAs secundarios, highlights */
@@ -41,11 +41,17 @@ export const planSlideSurfaces: BrandSurface[] = [
 ];
 
 export const typography = {
-  /** ATZOMX wordmark, nav, all-caps UI — Druk (basic Latin only) */
-  display: "font-druk",
-  /** Editorial headlines with accents — Antonio (latin-ext) */
-  displayProse: "font-display-prose",
+  /** ATZOMX wordmark — Blur (prefer SVG logo in UI) */
+  logo: "font-logo",
+  /** Short all-caps display — Anonymous Pro Bold */
+  display: "font-sans font-bold uppercase",
+  /** Headlines with accents — Anonymous Pro Bold */
+  displayProse: "font-sans font-bold",
   body: "font-sans",
+  /** Kickers, nav, buttons, metadata — Anonymous Pro caps */
+  label: "font-mono",
+  /** Hours, admin slugs, tabular data — Anonymous Pro */
+  mono: "font-mono",
   labelTracking: "tracking-[0.12em]",
   labelSize: "text-sm md:text-base",
 } as const;

@@ -13,12 +13,12 @@ const RemoteWorkMasthead = () => {
   const tCta = useTranslations("remoteWork.cta");
 
   return (
-    <section className="relative z-content w-full border-b border-brand-green/15 bg-brand-cream pt-site-menu-sticky text-brand-green">
+    <section className="relative z-content w-full border-b border-brand-green bg-brand-cream pt-site-menu-sticky text-brand-green">
       <div className="section-container max-w-3xl py-10 md:py-14 lg:max-w-4xl">
         <h1 className="text-display min-w-0 [overflow-wrap:anywhere] text-4xl leading-[0.95] tracking-wide md:text-5xl lg:text-6xl">
           {t("title")}
         </h1>
-        <div className="mt-5 h-1 border-b border-t border-brand-green/20" aria-hidden="true" />
+        <div className="mt-5 h-1 border-b border-t border-brand-green" aria-hidden="true" />
         <p className="text-body mt-6 max-w-xl text-base leading-relaxed text-brand-green/75 md:text-lg">
           {t("subtitle")}
         </p>

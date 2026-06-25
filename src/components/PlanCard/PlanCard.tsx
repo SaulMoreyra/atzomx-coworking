@@ -15,7 +15,7 @@ const PlanCard = ({ plan }: PlanCardProps) => {
   const features = FeaturesByCategory[plan.area];
 
   return (
-    <div className="p-6 md:p-8 bg-brand-cream border border-brand-green/15 flex flex-col">
+    <div className="p-6 md:p-8 bg-brand-cream border border-brand-green flex flex-col">
       <ul className="flex flex-col gap-3 md:gap-4">
         {Object.values(features).map((feature, index) => {
           const isIncluded = featuresSet.has(feature);

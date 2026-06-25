@@ -53,14 +53,3 @@ export function useRotatingTypewriter(words: string[]) {
     showCursor: !prefersReducedMotion,
   };
 }
-
-export function splitWordSegments(text: string): string[] {
-  const trimmed = text.trim();
-  if (!trimmed) return [];
-  return trimmed.split(/\s+/);
-}
-
-export function maxSegmentCount(words: string[]): number {
-  if (words.length === 0) return 1;
-  return Math.max(1, ...words.map(word => splitWordSegments(word).length));
-}

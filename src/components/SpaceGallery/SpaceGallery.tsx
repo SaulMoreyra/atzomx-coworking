@@ -68,7 +68,7 @@ const SpaceGallery = () => {
 
   return (
     <>
-      <section id="gallery" data-header-surface="main" className="w-full border-t border-brand-green/10 bg-brand-main py-14 text-brand-green md:py-20">
+      <section id="gallery" data-header-surface="main" className="w-full bg-brand-main py-14 text-brand-green md:py-20">
         <div className="section-container mb-10 md:mb-12">
           <HomeSectionIntro kicker={t("sectionTitle")} title={t("title")} subtitle={t("subtitle")} />
         </div>
@@ -128,7 +128,7 @@ const SpaceGallery = () => {
             <X size={20} />
           </button>
           <figure
-            className="relative h-[min(80vh,720px)] w-full max-w-5xl overflow-hidden border border-brand-green/15 bg-brand-cream shadow-2xl"
+            className="relative h-[min(80vh,720px)] w-full max-w-5xl overflow-hidden border border-brand-green bg-brand-cream shadow-2xl"
             onClick={event => {
               event.stopPropagation();
             }}>

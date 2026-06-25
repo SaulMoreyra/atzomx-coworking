@@ -229,27 +229,65 @@
   },
   "community": {
     "sectionTitle": "Community",
-    "title": "This week at Atzomx",
-    "subtitle": "Events, coffee, and connection in downtown Oaxaca.",
+    "title": "Upcoming events",
+    "subtitle": "Meetups, talks, and workshops at Atzomx.",
+    "registerCta": "Register",
+    "eventHostPrompt": "Have an event?",
+    "eventHostCta": "Message us on WhatsApp",
+    "eventHostMessage": "Hi! I have an event",
     "instagramCta": "See on Instagram",
     "instagramHint": "Follow @atzomx for updates and schedules.",
-    "dates": {
-      "this-week": "This week",
-      "friday": "Friday",
-      "daily": "Daily"
-    },
+    "emptyState": "No events scheduled for this month or next. Follow @atzomx on Instagram for more dates.",
     "events": {
-      "nomad-coffee": {
-        "title": "Coffee with nomads",
-        "description": "Meet remote workers in Oaxaca. No fixed agenda — just good coffee and conversation."
+      "spec-driven-development": {
+        "date": "JUN 26",
+        "title": "Spec-Driven Development",
+        "description": "Talk on specification-driven development: from chaos to compliance."
       },
-      "pour-over": {
-        "title": "Pour-over session",
-        "description": "Try this week's origin with our barista team."
+      "quantum-computing-intro": {
+        "date": "JUL 25",
+        "title": "A first look at quantum computing concepts",
+        "description": "An accessible introduction to the core ideas of quantum computing."
       },
-      "focus-hours": {
-        "title": "Focus hours",
-        "description": "Quiet coworking mornings for deep work. Book your spot via WhatsApp."
+      "programmer-to-programmer-csharp": {
+        "date": "SEP 26",
+        "title": "From programmer to programmer — C#",
+        "description": "Series to go deeper into C# with the Oaxaca dev community."
+      },
+      "tarde-de-lenguas-jul-04": {
+        "date": "JUL 4",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-ago-22": {
+        "date": "AUG 22",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-sep-12": {
+        "date": "SEP 12",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-oct-03": {
+        "date": "OCT 3",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-oct-24": {
+        "date": "OCT 24",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-nov-21": {
+        "date": "NOV 21",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-dic-12": {
+        "date": "DEC 12",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
       }
     }
   },
@@ -257,18 +295,9 @@
     "sectionTitle": "Team",
     "title": "Built by Oaxacan devs",
     "subtitle": "We built the space we needed to work remotely from downtown.",
-    "storyPrompt": "Read the full story on the blog:",
-    "storyLink": "Welcome to Atzomx",
-    "members": {
-      "founder-1": {
-        "name": "Atzomx Co-founder",
-        "role": "Engineering & operations"
-      },
-      "founder-2": {
-        "name": "Atzomx Co-founder",
-        "role": "Product & community"
-      }
-    }
+    "story1": "We're developers who live and work in Oaxaca. For years we bounced between noisy cafés and dim apartments, looking for a place where focus wasn't a luxury.",
+    "story2": "We couldn't find a space that understood Friday deploys, client calls across time zones, or power outlets that weren't three metres away. So we built one.",
+    "story3": "Atzomx came from that shared frustration: a coworking café designed by Oaxacan devs, for anyone working remotely from downtown. We still run it the way we'd want to use it — because we're users too."
   },
   "reviews": {
     "sectionTitle": "Reviews",

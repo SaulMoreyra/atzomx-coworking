@@ -13,7 +13,7 @@ Implementation today uses **Tailwind** (`brand-*`, utility classes in `globals.c
 | **Genre** | editorial |
 | **Theme** | Atzomx brand (custom — 4-color palette, no catalog rotation) |
 | **Paper band** | light (cream `L > 85%`) |
-| **Display style** | Druk wordmark + Antonio prose headlines |
+| **Display style** | Anonymous Pro mono-editorial + Blur logo (SVG) |
 | **Accent hue** | chromatic-other (lavender `#d3bedb`, use ≤ 5% per viewport) |
 
 **Diversification rule is inverted** on this project: pages share this system. Macrostructure may differ by page type; colour, type, chrome, and CTA voice do not.
@@ -27,7 +27,7 @@ Four official colours only. No fifth brand colour without amending this file.
 | Role | Hex | Tailwind | Token | Use |
 | --- | --- | --- | --- | --- |
 | Cream | `#fffbed` | `brand-cream` | `--color-paper` | Default background, prose sections |
-| Main | `#d5f4c3` | `brand-main` | `--color-paper-2` | Hero (Presentation), gallery, plan bands, team |
+| Main | `#d4e6c0` | `brand-main` | `--color-paper-2` | Hero (Presentation), gallery, plan bands, team |
 | Green | `#2f3e22` | `brand-green` | `--color-ink` | Text, borders, primary buttons, focus ring |
 | Accent | `#d3bedb` | `brand-accent` | `--color-accent` | Selection, small highlights — not full-section fills |
 
@@ -41,13 +41,14 @@ Four official colours only. No fifth brand colour without amending this file.
 
 | Role | Face | Class / token | When |
 | --- | --- | --- | --- |
-| Wordmark | Druk | `.text-display` | ATZOMX logo, short all-caps (no accents) |
-| Prose display | Antonio 700 | `.text-display-prose` | Headlines with `é`, `ñ`, ü — titles, category names, plan names |
-| Body | Mabry | `.text-body` / `font-sans` | Paragraphs, answers, descriptions |
-| Label | Mabry caps | `.text-label` | Kickers, nav, buttons, metadata — `tracking-[0.12em]`–`0.22em` |
-| Schedule | system mono | `.text-schedule` | Hours pill in Presentation only |
+| Logo | Blur (SVG preferred) | `.font-logo` / `font-logo` | ATZOMX wordmark only — use `logo-atzomx.svg` in chrome |
+| Display | Anonymous Pro 700 caps | `.text-display` | Short all-caps mastheads, RotatingWords |
+| Prose display | Anonymous Pro 700 | `.text-display-prose` | Headlines with accents — titles, plans, categories |
+| Body | Anonymous Pro 400 | `.text-body` / `font-sans` | Paragraphs, answers, descriptions |
+| Label | Anonymous Pro caps | `.text-label` / `font-mono` | Kickers, nav, buttons, metadata — `tracking-[0.12em]`–`0.22em` |
+| Schedule / data | Anonymous Pro | `.text-schedule` / `font-mono` | Hours pill, admin slugs, tabular fields |
 
-**Do not** use Druk for copy that includes accented Latin characters.
+**Do not** use Blur outside the logo. Prefer SVG logos in header and utility bars.
 
 **Section titles:** left-aligned via `HomeSectionIntro` — kicker (optional) → `text-display-prose` title → hairline (`max-w-[4rem]`) → subtitle.
 
@@ -150,7 +151,7 @@ Append an entry to `.hallmark/log.json` after page-scope work.
 - Three equal feature cards with icon circles
 - `OrganicDivider` between every section (use `border-t border-brand-green/10`)
 - Rotating `planSlideSurfaces` / accent section bands with nested cream boxes
-- Druk for accented copy; invented stats or fake testimonial counts
+- Blur outside logo wordmark; invented stats or fake testimonial counts
 - Fake browser chrome, stock-photo placeholders presented as final art
 
 ---
@@ -164,12 +165,14 @@ Canonical file: [`tokens.css`](./tokens.css). Tailwind mapping: [`tailwind.confi
 ```css
 @theme {
   --color-paper: oklch(98.4% 0.016 98);
-  --color-paper-2: oklch(92.2% 0.052 130);
+  --color-paper-2: oklch(90.2% 0.054 128);
   --color-ink: oklch(28.5% 0.038 132);
   --color-accent: oklch(80.5% 0.048 310);
-  --font-display: "Druk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Mabry", ui-sans-serif, system-ui, sans-serif;
-  --font-display-prose: var(--font-display-prose), "Antonio", ui-sans-serif, sans-serif;
+  --font-logo: "Blur", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-body: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display-prose: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
   --radius-brand: 0.75rem;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -182,14 +185,16 @@ Canonical file: [`tokens.css`](./tokens.css). Tailwind mapping: [`tailwind.confi
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "color": {
     "paper": { "$value": "oklch(98.4% 0.016 98)", "$type": "color" },
-    "paper-2": { "$value": "oklch(92.2% 0.052 130)", "$type": "color" },
+    "paper-2": { "$value": "oklch(90.2% 0.054 128)", "$type": "color" },
     "ink": { "$value": "oklch(28.5% 0.038 132)", "$type": "color" },
     "accent": { "$value": "oklch(80.5% 0.048 310)", "$type": "color" }
   },
   "font": {
-    "display": { "$value": "Druk, ui-sans-serif, system-ui, sans-serif", "$type": "fontFamily" },
-    "display-prose": { "$value": "Antonio, ui-sans-serif, system-ui, sans-serif", "$type": "fontFamily" },
-    "body": { "$value": "Mabry, ui-sans-serif, system-ui, sans-serif", "$type": "fontFamily" }
+    "logo": { "$value": "Blur, ui-sans-serif, system-ui, sans-serif", "$type": "fontFamily" },
+    "display": { "$value": "Anonymous Pro, ui-monospace, SF Mono, Menlo, monospace", "$type": "fontFamily" },
+    "display-prose": { "$value": "Anonymous Pro, ui-monospace, SF Mono, Menlo, monospace", "$type": "fontFamily" },
+    "body": { "$value": "Anonymous Pro, ui-monospace, SF Mono, Menlo, monospace", "$type": "fontFamily" },
+    "mono": { "$value": "Anonymous Pro, ui-monospace, SF Mono, Menlo, monospace", "$type": "fontFamily" }
   }
 }
 ```
@@ -202,7 +207,7 @@ Canonical file: [`tokens.css`](./tokens.css). Tailwind mapping: [`tailwind.confi
   --foreground: 28.5% 0.038 132;
   --primary: 28.5% 0.038 132;
   --primary-foreground: 98.4% 0.016 98;
-  --secondary: 92.2% 0.052 130;
+  --secondary: 90.2% 0.054 128;
   --secondary-foreground: 28.5% 0.038 132;
   --accent: 80.5% 0.048 310;
   --accent-foreground: 28.5% 0.038 132;

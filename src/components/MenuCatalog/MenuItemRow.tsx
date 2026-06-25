@@ -31,24 +31,24 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
   };
 
   return (
-    <article className="group border-b border-brand-green/10 py-5 last:border-b-0 md:py-6">
+    <article className="group py-5 md:py-6">
       <div className="flex min-w-0 gap-4 md:gap-5">
         <div className="min-w-0 flex-1">
           <div className="flex min-w-0 items-baseline gap-2">
             <h3 className="text-display-prose min-w-0 shrink text-base font-bold leading-snug text-brand-green md:text-lg">
               {name}
             </h3>
-            {item.variants.length === 0 && (
+            {item.variants.length === 0 ? (
               <>
                 <span
-                  className="mb-1 min-w-[1rem] flex-1 border-b border-dotted border-brand-green/30"
+                  className="mb-1 min-w-[1rem] flex-1 border-b border-dotted border-brand-green"
                   aria-hidden="true"
                 />
                 <p className="shrink-0 text-base font-semibold tabular-nums text-brand-green md:text-lg">
                   ${item.price < 0 ? "—" : item.price}
                 </p>
               </>
-            )}
+            ) : null}
           </div>
 
           {item.variants.length > 0 ? (
@@ -59,7 +59,7 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
                     {t(`variants.${variant.name}`)}
                   </span>
                   <span
-                    className="mb-1 min-w-[1rem] flex-1 border-b border-dotted border-brand-green/25"
+                    className="mb-1 min-w-[1rem] flex-1 border-b border-dotted border-brand-green"
                     aria-hidden="true"
                   />
                   <span className="shrink-0 text-sm font-semibold tabular-nums text-brand-green md:text-base">
@@ -70,11 +70,11 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
             </ul>
           ) : null}
 
-          <p className="text-body mt-2 text-sm leading-relaxed text-brand-green/60">{description}</p>
+          <p className="text-body mt-2 text-sm leading-relaxed text-brand-green/65">{description}</p>
 
           <button
             type="button"
-            className="focus-brand mt-3 flex h-11 w-11 items-center justify-center text-brand-green/35 transition-colors duration-200 hover:text-brand-accent"
+            className="focus-brand mt-3 flex h-11 w-11 items-center justify-center rounded-none border border-transparent text-brand-green/35 transition-colors duration-200 hover:border-brand-green/30 hover:text-brand-accent"
             onClick={onClickFavorite}
             aria-pressed={checked}
             aria-label={checked ? "Quitar de favoritos" : "Agregar a favoritos"}>
@@ -88,7 +88,7 @@ const MenuItemRow: FC<MenuItemRowProps> = ({ item }) => {
           </button>
         </div>
 
-        <figure className="relative h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden border border-brand-green/12 md:h-20 md:w-20">
+        <figure className="relative h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden bg-brand-main/30 md:h-20 md:w-20">
           <MenuItemImage src={item.image} alt={name} category={category} sizes="80px" />
         </figure>
       </div>

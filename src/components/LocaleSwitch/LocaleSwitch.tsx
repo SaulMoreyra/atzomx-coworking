@@ -52,12 +52,12 @@ interface VariantStyles {
 
 const variantStyles: Record<NonNullable<LocaleSwitchProps["variant"]>, VariantStyles> = {
   default: {
-    group: "border-brand-green/20 bg-brand-cream/40",
+    group: "border-brand-green bg-brand-cream/40",
     segmentActive: "bg-brand-green text-brand-cream",
     segmentInactive: "text-brand-green hover:bg-brand-main/70",
     menuTrigger:
-      "border-brand-green/20 text-brand-green hover:bg-brand-main/50 focus-brand cursor-pointer",
-    menuPanel: "border-brand-green/15 bg-brand-cream shadow-[0_10px_28px_-12px_rgba(47,62,34,0.22)]",
+      "border-brand-green text-brand-green hover:bg-brand-main/50 focus-brand cursor-pointer",
+    menuPanel: "border-brand-green bg-brand-cream shadow-[0_10px_28px_-12px_rgba(47,62,34,0.22)]",
     menuItemActive: "bg-brand-main text-brand-green font-medium",
     menuItemInactive: "text-brand-green hover:bg-brand-main/60",
   },
@@ -102,7 +102,7 @@ const SegmentedLocaleSwitch: FC<
       aria-busy={isPending}
       onKeyDown={onKeyDown}
       className={cx(
-        "inline-flex max-w-full rounded-brand border p-0.5",
+        "inline-flex max-w-full rounded-none border p-0.5",
         styles.group,
         isPending && "pointer-events-none opacity-60"
       )}>
@@ -123,7 +123,7 @@ const SegmentedLocaleSwitch: FC<
               onSelect(code);
             }}
             className={cx(
-              "min-h-[44px] min-w-[44px] shrink-0 rounded-[calc(0.75rem-2px)] px-2 sm:px-3",
+              "min-h-[44px] min-w-[44px] shrink-0 rounded-none px-2 sm:px-3",
               "text-label cursor-pointer text-xs tracking-[0.14em] transition-colors duration-200",
               "focus-brand focus-visible:z-10",
               isActive ? styles.segmentActive : styles.segmentInactive
@@ -184,7 +184,7 @@ const MenuLocaleSwitch: FC<
           setIsOpen(open => !open);
         }}
         className={cx(
-          "inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-1.5 rounded-brand border",
+          "inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-1.5 rounded-none border",
           "text-label text-xs tracking-[0.12em] transition-colors duration-200 sm:px-2.5",
           styles.menuTrigger,
           isPending && "pointer-events-none opacity-60"
@@ -207,7 +207,7 @@ const MenuLocaleSwitch: FC<
           role="menu"
           aria-label="Idiomas disponibles"
           className={cx(
-            "absolute right-0 z-overlay mt-1 min-w-[10.5rem] overflow-hidden rounded-brand border py-1",
+            "absolute right-0 z-overlay mt-1 min-w-[10.5rem] overflow-hidden rounded-none border py-1",
             styles.menuPanel
           )}>
           {locales.map(code => {

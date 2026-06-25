@@ -1,6 +1,33 @@
 [
   {
-    "date": "2026-05-25",
+    "date": "2026-06-23",
+    "macrostructure": "Index-First",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Blog /blog — Hallmark redesign v2, HomeSectionIntro masthead, square filters, typographic index list"
+  },
+  {
+    "date": "2026-06-23",
+    "macrostructure": "Catalogue",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Menu /menu — Hallmark redesign v2, alternating bands, square nav, HomeSectionIntro masthead"
+  },
+  {
+    "date": "2026-06-23",
+    "macrostructure": "Index-First (section)",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "site Header (unchanged)",
+    "footer": "site Footer (unchanged)",
+    "brief": "Home #community — Hallmark redesign, editorial agenda list + sticky aside"
+  },
+  {
+    "date": "2026-06-23",
     "macrostructure": "Narrative Workflow",
     "theme": "Atzomx brand (preserved)",
     "enrichment": "none",

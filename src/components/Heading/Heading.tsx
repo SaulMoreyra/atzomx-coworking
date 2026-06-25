@@ -38,7 +38,7 @@ const Heading: FC<HeadingProps> = ({
         <p className="text-label font-normal">{nonEmphasisedWords}</p>
       )}
       <div className="relative">
-        <p className="text-label font-semibold">{emphasisedWord}</p>
+        <p className="text-label font-bold">{emphasisedWord}</p>
         <div className="absolute right-0 bg-brand-main -translate-y-[4px] h-2 w-full rounded-sm" />
       </div>
     </div>

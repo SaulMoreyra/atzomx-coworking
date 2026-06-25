@@ -19,7 +19,6 @@ export {
 } from "./dividers";
 export {
   BRAND_ILLUSTRATIONS,
-  FEED_GRID_TILES,
   feedGridLayoutClasses,
   getIllustrationSrc,
   type BrandIllustrationAsset,

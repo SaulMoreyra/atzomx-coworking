@@ -14,6 +14,7 @@ interface BlogArticleProps {
 
 /* Hallmark · macrostructure: Long Document · tone: editorial · anchor hue: forest-green
  * redesign: /blog/[slug] · brand preserved · enrichment: none
+ * typographic prose · square chips · related list on brand-main band
  */
 
 const BlogArticle: FC<BlogArticleProps> = ({ post, relatedPosts = [] }) => {
@@ -35,7 +36,7 @@ const BlogArticle: FC<BlogArticleProps> = ({ post, relatedPosts = [] }) => {
       <article className="w-full bg-brand-cream pb-12 pt-8 md:pb-16 md:pt-10">
         <div className="section-container max-w-[65ch] lg:max-w-3xl">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-brand-green/50">
-            <span className="border border-brand-green/15 bg-brand-main/60 px-2 py-0.5 text-brand-green">
+            <span className="rounded-none border border-brand-green bg-brand-main/60 px-2 py-0.5 text-brand-green">
               {t(`categories.${post.category}`)}
             </span>
             <span>{formattedDate}</span>
@@ -46,14 +47,11 @@ const BlogArticle: FC<BlogArticleProps> = ({ post, relatedPosts = [] }) => {
             </span>
           </div>
 
-          <h1 className="text-display-prose mt-5 text-3xl leading-[1.05] text-brand-green md:text-4xl lg:text-[2.75rem]">
+          <h1 className="text-display-prose mt-20 text-3xl leading-[1.05] text-brand-green md:text-4xl lg:text-[2.75rem]">
             {title}
           </h1>
 
-          <div
-            className="mt-6 h-px w-full bg-brand-green/15"
-            aria-hidden="true"
-          />
+          <div className="mt-6 h-px w-full bg-brand-green" aria-hidden="true" />
 
           {leadParagraph ? (
             <p className="text-body mt-8 text-lg font-medium leading-[1.65] text-brand-green/90 md:text-xl">
@@ -61,7 +59,7 @@ const BlogArticle: FC<BlogArticleProps> = ({ post, relatedPosts = [] }) => {
             </p>
           ) : null}
 
-          <figure className="relative mx-auto mt-8 max-w-full overflow-hidden border border-brand-green/12 bg-brand-main/20">
+          <figure className="relative mx-auto mt-8 max-w-full overflow-hidden bg-brand-main/20">
             <div className="relative aspect-[3/2] w-full max-h-[420px]">
               <Image
                 src={post.coverImage}
@@ -88,19 +86,23 @@ const BlogArticle: FC<BlogArticleProps> = ({ post, relatedPosts = [] }) => {
 
       {relatedPosts.length > 0 ? (
         <section
-          className="w-full border-t border-brand-green/15 bg-brand-cream py-12 md:py-14"
+          className="w-full bg-brand-main py-12 md:py-14"
           aria-labelledby="related-posts-heading">
           <div className="section-container max-w-3xl lg:max-w-4xl">
             <h2
               id="related-posts-heading"
-              className="text-label mb-6 text-[10px] tracking-[0.2em] text-brand-green/50 md:mb-8">
+              className="text-display-prose mb-6 text-xl text-brand-green md:mb-8 md:text-2xl">
               {t("article.relatedTitle")}
             </h2>
-            <div className="border-t border-brand-green/12">
+            <ul
+              className="flex flex-col divide-y divide-brand-green"
+              role="list">
               {relatedPosts.map(related => (
-                <BlogCard key={related.id} post={related} variant="index" />
+                <li key={related.id} className="min-w-0">
+                  <BlogCard post={related} variant="index" />
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
       ) : null}

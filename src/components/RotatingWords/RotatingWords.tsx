@@ -3,29 +3,40 @@
 import cx from "classnames";
 import React, { type FC } from "react";
 import RotatingWordDisplay from "./RotatingWordDisplay";
-import { maxSegmentCount, useRotatingTypewriter } from "./useRotatingTypewriter";
+import { useRotatingTypewriter } from "./useRotatingTypewriter";
 
 interface RotatingWordsProps {
   words: string[];
   className?: string;
+  align?: "left" | "center";
+  wordClassName?: string;
 }
 
-const RotatingWords: FC<RotatingWordsProps> = ({ words, className }) => {
+const RotatingWords: FC<RotatingWordsProps> = ({
+  words,
+  className,
+  align = "center",
+  wordClassName,
+}) => {
   const { displayed, showCursor } = useRotatingTypewriter(words);
-  const lineCount = maxSegmentCount(words);
 
   return (
     <div
       className={cx(
-        "flex w-full items-center justify-center overflow-hidden text-center",
-        lineCount === 1 && "min-h-[1.2em]",
-        lineCount === 2 && "min-h-[2.6em] lg:min-h-[1.2em]",
-        lineCount >= 3 && "min-h-[4em] lg:min-h-[1.2em]",
+        "flex w-full min-h-[1.2em] overflow-hidden",
+        align === "left"
+          ? "items-start justify-start text-left"
+          : "items-center justify-center text-center",
         className
       )}
       aria-live="polite"
       aria-atomic="true">
-      <RotatingWordDisplay text={displayed} showCursor={showCursor} className={className} />
+      <RotatingWordDisplay
+        text={displayed}
+        showCursor={showCursor}
+        align={align}
+        wordClassName={wordClassName}
+      />
     </div>
   );
 };

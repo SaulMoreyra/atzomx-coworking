@@ -77,8 +77,8 @@ const MenuCatalog = ({ foods }: MenuCatalogProps) => {
 
   if (categories.length === 0) {
     return (
-      <div className="section-container max-w-3xl py-16 text-center lg:max-w-4xl">
-        <p className="text-body text-brand-green/70">
+      <div className="section-container max-w-3xl py-16 lg:max-w-4xl">
+        <p className="text-body text-sm text-brand-green/70 md:text-base">
           {t("search")}: “{filter}”
         </p>
       </div>
@@ -96,8 +96,8 @@ const MenuCatalog = ({ foods }: MenuCatalogProps) => {
       />
 
       <div className="flex flex-col pb-14 md:pb-20">
-        {categoryEntries.map(([category, items]) => (
-          <MenuCategoryBand key={category} category={category} items={items} />
+        {categoryEntries.map(([category, items], index) => (
+          <MenuCategoryBand key={category} category={category} items={items} bandIndex={index} />
         ))}
       </div>
     </>

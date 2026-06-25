@@ -14,7 +14,7 @@ export function getHeaderBarClassName({
     return cx(
       "site-header-bar-inner text-brand-green transition-[background-color,box-shadow,border-color] duration-300 motion-reduce:transition-none",
       isScrolled
-        ? "border-b border-brand-green/15 bg-brand-cream shadow-md"
+        ? "border-b border-brand-green bg-brand-cream shadow-md"
         : "border-b border-transparent bg-brand-main"
     );
   }
@@ -28,6 +28,6 @@ export function getHeaderBarClassName({
   return cx(
     "site-header-bar-inner text-brand-green transition-[background-color,box-shadow,border-color] duration-300 motion-reduce:transition-none",
     surfaceBg[surface],
-    isScrolled ? "border-b border-brand-green/15 shadow-md" : "border-b border-transparent"
+    isScrolled ? "border-b border-brand-green shadow-md" : "border-b border-transparent"
   );
 }

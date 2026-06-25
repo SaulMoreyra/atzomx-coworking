@@ -6,7 +6,6 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { businessJsonLd } from "@/lib/business-jsonld";
 import { BRAND_CONTACT } from "@/design-system";
-import { fontDisplayProse } from "@/design-system/fonts";
 import WhatsAppFab from "@/components/WhatsAppFab/WhatsAppFab";
 
 export const viewport: Viewport = {
@@ -74,7 +73,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={fontDisplayProse.variable}>
+    <html lang={locale}>
       <head>
         <link
           rel="alternate"

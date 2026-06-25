@@ -5,7 +5,8 @@ import React from "react";
 import MenuMasthead from "./MenuMasthead";
 
 /* Hallmark · macrostructure: Catalogue · tone: editorial · anchor hue: forest-green
- * nav: subpage utility bar · footer: site Footer (unchanged) · enrichment: none
+ * design-system: DESIGN.md · theme: Atzomx brand (preserved)
+ * redesign: HomeSectionIntro masthead · square nav pills · alternating bands · typographic rows
  */
 
 const MenuBanner = ({ itemCount }: { itemCount: number }) => (

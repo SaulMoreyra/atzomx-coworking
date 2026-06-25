@@ -24,19 +24,20 @@ const BrandIllustration: FC<BrandIllustrationProps> = ({
   const asset = BRAND_ILLUSTRATIONS[id];
   const src = getIllustrationSrc(id);
   const isRaster = /\.(png|jpe?g|webp)$/i.test(src);
+  const isSvg = /\.svg$/i.test(src);
 
   return (
-    <div className={cx("relative w-full", className)}>
+    <div className={cx("relative max-w-full", className)}>
       <Image
         src={src}
         alt={asset.alt}
-        width={800}
-        height={800}
+        width={asset.width}
+        height={asset.height}
         priority={priority}
         sizes={sizes}
-        unoptimized={isRaster}
+        unoptimized={isRaster || isSvg}
         decoding="sync"
-        className="w-full h-auto object-contain"
+        className="h-auto w-full object-contain"
       />
     </div>
   );

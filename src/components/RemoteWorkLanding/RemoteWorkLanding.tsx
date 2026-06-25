@@ -43,7 +43,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
   return (
     <div className="w-full bg-brand-cream text-brand-green">
       {/* Context + stats */}
-      <section className="border-t border-brand-green/10 py-14 md:py-20">
+      <section className="border-t border-brand-green py-14 md:py-20">
         <div className="section-container max-w-3xl lg:max-w-4xl">
           <HomeSectionIntro kicker={t("problem.sectionTitle")} title={t("problem.title")} />
 
@@ -54,7 +54,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
                 {t("problem.context")}
               </p>
             </div>
-            <div className="min-w-0 border-t border-brand-green/12 pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+            <div className="min-w-0 border-t border-brand-green pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
               <p className="text-label mb-3 text-[10px] tracking-[0.18em] text-brand-green/45">
                 {t("problem.solutionTitle")}
               </p>
@@ -62,7 +62,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
             </div>
           </div>
 
-          <dl className="mt-12 grid grid-cols-1 gap-6 border-y border-brand-green/12 py-8 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-brand-green/12">
+          <dl className="mt-12 grid grid-cols-1 gap-6 border-y border-brand-green py-8 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-brand-green">
             {STAT_KEYS.map(key => (
               <div key={key} className="min-w-0 sm:px-6 sm:first:pl-0 sm:last:pr-0">
                 <dt className="text-label text-[10px] tracking-[0.14em] text-brand-green/55 md:text-xs">
@@ -78,7 +78,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
             ))}
           </dl>
 
-          <div className="mt-12 border-t border-brand-green/12 pt-10 md:pt-12">
+          <div className="mt-12 border-t border-brand-green pt-10 md:pt-12">
             <HomeSectionIntro
               kicker={t("localValues.sectionTitle")}
               title={t("localValues.title")}
@@ -92,7 +92,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
       </section>
 
       {/* Narrative workflow */}
-      <section className="border-t border-brand-green/10 bg-brand-main py-14 md:py-20">
+      <section className="border-t border-brand-green bg-brand-main py-14 md:py-20">
         <div className="section-container max-w-3xl lg:max-w-4xl">
           <HomeSectionIntro
             kicker={t("workflow.sectionTitle")}
@@ -100,11 +100,11 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
             subtitle={t("workflow.subtitle")}
           />
 
-          <ol className="mt-10 border-t border-brand-green/12 md:mt-12" role="list">
+          <ol className="mt-10 border-t border-brand-green md:mt-12" role="list">
             {WORKFLOW_KEYS.map((key, index) => (
               <li
                 key={key}
-                className="grid grid-cols-1 gap-3 border-b border-brand-green/12 py-6 md:grid-cols-[3.5rem_minmax(0,1fr)] md:gap-8 md:py-8">
+                className="grid grid-cols-1 gap-3 border-b border-brand-green py-6 md:grid-cols-[3.5rem_minmax(0,1fr)] md:gap-8 md:py-8">
                 <span className="text-label text-[10px] tracking-[0.2em] text-brand-green/40 md:pt-1 md:text-xs">
                   {String(index + 1).padStart(2, "0")}
                 </span>
@@ -123,7 +123,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
       </section>
 
       {/* Highlights */}
-      <section className="border-t border-brand-green/10 py-14 md:py-20">
+      <section className="border-t border-brand-green py-14 md:py-20">
         <div className="section-container max-w-3xl lg:max-w-4xl">
           <HomeSectionIntro
             kicker={t("highlights.sectionTitle")}
@@ -131,7 +131,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
             subtitle={t("highlights.subtitle")}
           />
 
-          <ul className="mt-10 divide-y divide-brand-green/12 border-y border-brand-green/12 md:mt-12" role="list">
+          <ul className="mt-10 divide-y divide-brand-green border-y border-brand-green md:mt-12" role="list">
             {HIGHLIGHT_KEYS.map(key => (
               <li key={key} className="grid gap-2 py-5 md:grid-cols-[8rem_minmax(0,1fr)] md:gap-6 md:py-6">
                 <h3 className="text-label text-[10px] tracking-[0.14em] text-brand-green md:text-xs">
@@ -147,13 +147,13 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
       </section>
 
       {/* Amenities */}
-      <section className="border-t border-brand-green/10 py-12 md:py-14">
+      <section className="border-t border-brand-green py-12 md:py-14">
         <div className="section-container max-w-3xl lg:max-w-4xl">
           <HomeSectionIntro kicker={t("amenities.sectionTitle")} title={t("amenities.title")} />
           <ul className="mt-8 flex flex-wrap gap-x-4 gap-y-2 md:mt-10" role="list">
             {AMENITY_KEYS.map(key => (
               <li key={key}>
-                <span className="text-label inline-flex min-h-[44px] items-center border-b-2 border-brand-green/15 px-1 py-2 text-[10px] tracking-[0.14em] text-brand-green/70 md:text-xs">
+                <span className="text-label inline-flex min-h-[44px] items-center border-b-2 border-brand-green px-1 py-2 text-[10px] tracking-[0.14em] text-brand-green/70 md:text-xs">
                   {t(`amenities.${key}`)}
                 </span>
               </li>
@@ -163,7 +163,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
       </section>
 
       {/* Space preview */}
-      <section className="border-t border-brand-green/10 py-14 md:py-20">
+      <section className="border-t border-brand-green py-14 md:py-20">
         <div className="section-container max-w-3xl lg:max-w-4xl">
           <HomeSectionIntro
             kicker={t("spacePreview.sectionTitle")}
@@ -173,7 +173,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
 
           <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3 md:mt-12 md:gap-5" role="list">
             {SPACE_PREVIEW_IMAGES.map(image => (
-              <li key={image.src} className="relative aspect-[4/3] min-w-0 overflow-hidden border border-brand-green/12 bg-brand-main/20">
+              <li key={image.src} className="relative aspect-[4/3] min-w-0 overflow-hidden border border-brand-green bg-brand-main/20">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -198,7 +198,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
 
       {/* Testimonials */}
       {featuredReviews.length > 0 ? (
-        <section className="border-t border-brand-green/10 bg-brand-main py-14 md:py-20">
+        <section className="border-t border-brand-green bg-brand-main py-14 md:py-20">
           <div className="section-container mb-8 md:mb-10">
             <HomeSectionIntro kicker={t("testimonials.sectionTitle")} title={t("testimonials.title")} />
             <p className="text-label mt-4 text-[10px] tracking-[0.14em] text-brand-green/65 md:text-xs">
@@ -234,7 +234,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
       ) : null}
 
       {/* CTA */}
-      <section className="border-t border-brand-green/10 py-14 md:py-20">
+      <section className="border-t border-brand-green py-14 md:py-20">
         <div className="section-container max-w-3xl lg:max-w-4xl">
           <HomeSectionIntro title={t("cta.title")} subtitle={t("cta.description")} />
 
@@ -246,7 +246,7 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
             </WhatsAppLink>
             <Link
               href="/#plans"
-              className="text-label inline-flex min-h-[44px] items-center justify-center gap-2 rounded-brand border border-brand-green/25 bg-brand-main px-6 py-3 text-sm text-brand-green transition-colors duration-200 hover:border-brand-green focus-brand sm:w-auto">
+              className="text-label inline-flex min-h-[44px] items-center justify-center gap-2 rounded-brand border border-brand-green bg-brand-main px-6 py-3 text-sm text-brand-green transition-colors duration-200 hover:border-brand-green focus-brand sm:w-auto">
               {t("cta.plans")}
               <ArrowRight size={16} aria-hidden="true" />
             </Link>
@@ -265,12 +265,12 @@ const RemoteWorkLanding: FC<RemoteWorkLandingProps> = ({
 
       {/* Mobile sticky CTA */}
       <div
-        className="fixed inset-x-0 bottom-0 z-header border-t border-brand-green/15 bg-brand-cream/95 px-4 py-3 backdrop-blur-sm lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-header border-t border-brand-green bg-brand-cream/95 px-4 py-3 backdrop-blur-sm lg:hidden"
         style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
         <div className="mx-auto flex max-w-md gap-3">
           <Link
             href="/#plans"
-            className="text-label inline-flex min-h-[44px] flex-1 items-center justify-center rounded-brand border border-brand-green/25 bg-brand-main px-4 py-2.5 text-xs tracking-[0.1em] text-brand-green transition-colors duration-200 hover:border-brand-green focus-brand">
+            className="text-label inline-flex min-h-[44px] flex-1 items-center justify-center rounded-brand border border-brand-green bg-brand-main px-4 py-2.5 text-xs tracking-[0.1em] text-brand-green transition-colors duration-200 hover:border-brand-green focus-brand">
             {t("cta.plans")}
           </Link>
           <WhatsAppLink

@@ -80,7 +80,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               })}
           </nav>
 
-          <div className="mt-auto border-t border-brand-green/10 pt-4">
+          <div className="mt-auto border-t border-brand-green pt-4">
             {user ? (
               <p className="text-body text-sm text-brand-green/70">
                 {user.name ?? user.email}

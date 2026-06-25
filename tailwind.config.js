@@ -4,7 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 /** Official ATZOMX palette — 4 colors only */
 const OFFICIAL = {
   cream: "#fffbed",
-  main: "#d5f4c3",
+  main: "#d4e6c0",
   green: "#2f3e22",
   accent: "#d3bedb",
 };
@@ -31,13 +31,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Mabry", ...defaultTheme.fontFamily.sans],
-        druk: ["Druk", ...defaultTheme.fontFamily.sans],
-        "display-prose": [
-          "var(--font-display-prose)",
-          "Antonio",
-          ...defaultTheme.fontFamily.sans,
-        ],
+        sans: ["Anonymous Pro", ...defaultTheme.fontFamily.sans],
+        mono: ["Anonymous Pro", ...defaultTheme.fontFamily.mono],
+        logo: ["Blur", ...defaultTheme.fontFamily.sans],
       },
       letterSpacing: {
         label: "0.12em",

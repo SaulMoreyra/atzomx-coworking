@@ -36,7 +36,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, reverse = false }) => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-10% 0px" }}
-      className="w-full border-t border-brand-green/10 bg-brand-cream text-brand-green">
+      className="w-full bg-brand-cream text-brand-green">
       <div
         className={cx(
           "section-container grid grid-cols-1 items-center gap-8 py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12 lg:py-20",
@@ -48,7 +48,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, reverse = false }) => {
               <Label as="p" className="text-xs">
                 {tPlans("from")}
               </Label>
-              <span className="inline-flex items-center justify-center rounded-full border border-brand-green/15 bg-brand-main px-6 py-2 text-2xl font-semibold tabular-nums text-brand-green md:text-4xl">
+              <span className="inline-flex items-center justify-center rounded-full bg-brand-main px-6 py-2 text-2xl font-semibold tabular-nums text-brand-green md:text-4xl">
                 ${plan.startPrice}
               </span>
             </m.div>

@@ -38,8 +38,8 @@ const ReviewCard: FC<ReviewCardProps> = ({
   const showToggle = isLong && !expanded;
 
   return (
-    <article className="flex h-full flex-col items-center gap-4 border border-brand-green/10 bg-brand-cream p-6 md:p-8">
-      <div className="relative aspect-square w-16 overflow-hidden rounded-full ring-2 ring-brand-green/20 md:w-20">
+    <article className="flex h-full flex-col items-center gap-4 bg-brand-cream p-6 md:p-8">
+      <div className="relative aspect-square w-16 overflow-hidden rounded-full md:w-20">
         {image ? (
           <Image src={image} alt={name} fill className="object-cover" sizes="80px" />
         ) : (

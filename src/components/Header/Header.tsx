@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import cx from "classnames";
 import { ChevronDown, Menu, X, Coffee } from "react-feather";
@@ -114,7 +115,7 @@ const Header = () => {
             <button
               type="button"
               onClick={toggleMenu}
-              className="focus-brand flex min-h-[44px] min-w-[44px] items-center justify-center text-brand-green lg:hidden"
+              className="focus-brand flex min-h-[44px] min-w-[44px] items-center justify-center rounded-none border border-brand-green text-brand-green transition-colors duration-200 hover:bg-brand-main/50 lg:hidden"
               aria-label={isMenuOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={isMenuOpen}>
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -122,17 +123,27 @@ const Header = () => {
 
             <Link
               href="/#home"
-              className="text-display shrink-0 rounded-sm text-lg tracking-wide focus-brand xl:text-xl"
+              className="focus-brand shrink-0 rounded-sm"
               onClick={e => {
                 if (window.location.pathname === "/") {
                   e.preventDefault();
                   onClickHashItem("home");
                 }
               }}>
-              ATZOMX
+              <Image
+                src="/images/logos/logo-atzomx.svg"
+                alt="Atzomx"
+                width={100}
+                height={10}
+                priority
+                unoptimized
+                className="h-3 w-auto xl:h-3"
+              />
             </Link>
 
-            <nav className="hidden min-w-0 lg:flex" aria-label={t("navPrimary")}>
+            <nav
+              className="hidden min-w-0 lg:flex"
+              aria-label={t("navPrimary")}>
               <ul className="flex items-center gap-3 xl:gap-5">
                 {primaryHashNavItems.map(id => (
                   <li key={id}>
@@ -173,7 +184,10 @@ const Header = () => {
                     <ChevronDown
                       size={14}
                       aria-hidden="true"
-                      className={cx("transition-transform duration-200", isMoreOpen && "rotate-180")}
+                      className={cx(
+                        "transition-transform duration-200",
+                        isMoreOpen && "rotate-180"
+                      )}
                     />
                   </button>
                   {isMoreOpen ? (
@@ -182,7 +196,7 @@ const Header = () => {
                       id={`${moreMenuId}-menu`}
                       role="menu"
                       aria-labelledby={`${moreMenuId}-button`}
-                      className="absolute left-0 top-full z-header mt-1 min-w-[11rem] border border-brand-green/12 bg-brand-cream py-2 shadow-[0_10px_28px_-12px_rgba(47,62,34,0.22)]">
+                      className="absolute left-0 top-full z-header mt-1 min-w-[11rem] border border-brand-green bg-brand-cream py-2 shadow-[0_10px_28px_-12px_rgba(47,62,34,0.22)]">
                       {secondaryHashNavItems.map(id => (
                         <a
                           key={id}
@@ -206,13 +220,13 @@ const Header = () => {
           {/* Right: menu CTA + locale */}
           <div className="flex shrink-0 items-center gap-2 xl:gap-3">
             <Link href="/menu" className="hidden lg:block">
-              <Button variant="accent" size="sm">
+              <Button variant="accent" size="sm" className="!rounded-none">
                 {t("menu")}
               </Button>
             </Link>
             <Link
               href="/menu"
-              className="focus-brand flex min-h-[44px] min-w-[44px] items-center justify-center rounded-sm text-brand-green lg:hidden"
+              className="focus-brand flex min-h-[44px] min-w-[44px] items-center justify-center rounded-none border border-brand-green text-brand-green transition-colors duration-200 hover:bg-brand-main/50 lg:hidden"
               aria-label={t("menu")}>
               <Coffee size={22} />
             </Link>

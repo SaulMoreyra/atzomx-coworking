@@ -6,7 +6,7 @@
 :root {
   /* Brand surfaces (4-color palette) */
   --color-paper: oklch(98.4% 0.016 98); /* cream #fffbed — default page background */
-  --color-paper-2: oklch(92.2% 0.052 130); /* main #d5f4c3 — section bands, hero fill */
+  --color-paper-2: oklch(90.2% 0.054 128); /* main #d4e6c0 — section bands, hero fill */
   --color-paper-3: oklch(96% 0.024 98); /* cream tint between paper and main */
   --color-ink: oklch(28.5% 0.038 132); /* green #2f3e22 — body, UI, borders */
   --color-ink-2: oklch(28.5% 0.038 132 / 0.75);
@@ -20,15 +20,16 @@
 
   /* Tailwind bridge (legacy names — prefer semantic tokens above) */
   --brand-cream: #fffbed;
-  --brand-main: #d5f4c3;
+  --brand-main: #d4e6c0;
   --brand-green: #2f3e22;
   --brand-accent: #d3bedb;
 
   /* Typography */
-  --font-display: "Druk", ui-sans-serif, system-ui, sans-serif;
-  --font-display-prose: var(--font-display-prose-loaded, "Antonio"), ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Mabry", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --font-logo: "Blur", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display-prose: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-body: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-mono: "Anonymous Pro", ui-monospace, "SF Mono", Menlo, monospace;
 
   --tracking-label: 0.12em;
   --tracking-kicker: 0.22em;

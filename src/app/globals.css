@@ -3,17 +3,25 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Mabry";
-  src: url("/fonts/Mabry.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Anonymous Pro";
+  src: url("/fonts/AnonymousPro-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Druk";
-  src: url("/fonts/Druk-Medium.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Anonymous Pro";
+  src: url("/fonts/AnonymousPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blur";
+  src: url("/fonts/Blur-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -33,7 +41,7 @@
   }
 
   body {
-    @apply bg-brand-cream text-brand-green antialiased;
+    @apply bg-brand-cream font-sans text-brand-green antialiased;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -49,19 +57,23 @@
 
 @layer components {
   .text-label {
-    @apply uppercase tracking-label text-sm md:text-base font-medium;
+    @apply font-mono uppercase tracking-label text-sm md:text-base font-normal;
   }
 
   .text-display {
-    @apply font-druk uppercase;
+    @apply font-sans font-bold uppercase;
   }
 
   .text-display-prose {
-    @apply font-display-prose normal-case tracking-wide;
+    @apply font-sans font-bold normal-case tracking-wide;
   }
 
   .text-body {
     @apply font-sans normal-case tracking-normal leading-relaxed;
+  }
+
+  .font-logo {
+    font-family: "Blur", ui-sans-serif, system-ui, sans-serif;
   }
 
   .focus-brand {

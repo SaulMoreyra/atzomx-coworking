@@ -36,7 +36,7 @@ const ReviewContainer: FC<ReviewContainerProps> = ({
   const showGoogleRating = source === "google" && rating != null && userRatingCount != null;
 
   return (
-    <section id="reviews" data-header-surface="accent" className="w-full border-t border-brand-green/10 bg-brand-accent py-14 text-brand-green md:py-20">
+    <section id="reviews" data-header-surface="accent" className="w-full bg-brand-accent py-14 text-brand-green md:py-20">
       <div className="section-container mb-8 md:mb-10">
         <HomeSectionIntro title={t("title")} kicker={t("sectionTitle")} />
         <p className="text-label mt-4 inline-flex text-[10px] tracking-[0.14em] text-brand-green/70 md:text-xs">

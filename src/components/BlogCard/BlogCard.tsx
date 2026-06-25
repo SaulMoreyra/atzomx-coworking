@@ -15,11 +15,14 @@ interface BlogCardProps {
 }
 
 const categoryAccent: Record<BlogCategory, string> = {
-  coworking: "bg-brand-main text-brand-green border-brand-green/20",
-  coffee: "bg-brand-accent/80 text-brand-green border-brand-green/15",
-  community: "bg-brand-cream text-brand-green border-brand-green/20",
-  oaxaca: "bg-brand-main/70 text-brand-green border-brand-green/15",
+  coworking: "bg-brand-main text-brand-green border-brand-green",
+  coffee: "bg-brand-accent/80 text-brand-green border-brand-green",
+  community: "bg-brand-cream text-brand-green border-brand-green",
+  oaxaca: "bg-brand-main/70 text-brand-green border-brand-green",
 };
+
+const categoryChipClass = (category: BlogCategory) =>
+  cx("rounded-none border px-2 py-0.5", categoryAccent[category]);
 
 const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) => {
   const t = useTranslations("blog");
@@ -34,14 +37,14 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
   const title = t(`posts.${post.id}.title`);
   const excerpt = t(`posts.${post.id}.excerpt`);
   const categoryLabel = t(`categories.${post.category}`);
-  const categoryClass = categoryAccent[post.category];
+  const categoryClass = categoryChipClass(post.category);
 
   if (variant === "lead") {
     return (
       <article className={cx("group", className)}>
         <Link href={`/blog/${post.slug}`} className="focus-brand block">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-brand-green/55">
-            <span className={cx("border px-2 py-0.5", categoryClass)}>{categoryLabel}</span>
+            <span className={categoryClass}>{categoryLabel}</span>
             <span>{formattedDate}</span>
             <span aria-hidden="true">·</span>
             <span className="inline-flex items-center gap-1">
@@ -62,7 +65,7 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
         </Link>
         <Link
           href={`/blog/${post.slug}`}
-          className="focus-brand relative mt-8 block aspect-[16/9] max-w-2xl overflow-hidden border border-brand-green/12 bg-brand-main/30 md:mt-10">
+          className="focus-brand relative mt-8 block aspect-[16/9] max-w-2xl overflow-hidden bg-brand-main/30 md:mt-10">
           <Image
             src={post.coverImage}
             alt={title}
@@ -78,11 +81,7 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
 
   if (variant === "index") {
     return (
-      <article
-        className={cx(
-          "group border-b border-brand-green/12 py-5 transition-colors duration-200 last:border-b-0 hover:bg-brand-main/25 md:py-6",
-          className
-        )}>
+      <article className={cx("group py-5 md:py-6", className)}>
         <Link
           href={`/blog/${post.slug}`}
           className="focus-brand grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_auto] md:items-start md:gap-6">
@@ -90,7 +89,7 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-brand-green/50">
               <span>{formattedDate}</span>
               <span aria-hidden="true">·</span>
-              <span className={cx("border px-1.5 py-px", categoryClass)}>{categoryLabel}</span>
+              <span className={cx("border px-1.5 py-px rounded-none", categoryAccent[post.category])}>{categoryLabel}</span>
             </div>
             <h3 className="text-label mt-2 text-base normal-case leading-snug tracking-wide text-brand-green transition-colors duration-200 group-hover:text-brand-green/75 md:text-lg">
               {title}
@@ -115,7 +114,7 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
 
   const metaRow = (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.16em] text-brand-green/55">
-      <span className={cx("border px-2 py-0.5", categoryClass)}>{categoryLabel}</span>
+      <span className={categoryClass}>{categoryLabel}</span>
       <span>{formattedDate}</span>
       <span aria-hidden="true">·</span>
       <span className="inline-flex items-center gap-1">
@@ -129,7 +128,7 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
     return (
       <article
         className={cx(
-          "group relative overflow-hidden border border-brand-green/12 bg-brand-green shadow-[0_16px_40px_-20px_rgba(47,62,34,0.35)] transition-shadow duration-300 hover:shadow-[0_20px_48px_-18px_rgba(47,62,34,0.4)]",
+          "group relative overflow-hidden border border-brand-green bg-brand-green shadow-[0_16px_40px_-20px_rgba(47,62,34,0.35)] transition-shadow duration-300 hover:shadow-[0_20px_48px_-18px_rgba(47,62,34,0.4)]",
           className
         )}>
         <Link href={`/blog/${post.slug}`} className="focus-brand relative block aspect-[4/5] sm:aspect-[16/9] md:aspect-[21/9]">
@@ -175,8 +174,8 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
     return (
       <article
         className={cx(
-          "group flex h-full flex-col overflow-hidden border border-brand-green/10 bg-brand-cream transition-all duration-200 sm:flex-row",
-          "hover:border-brand-green/22 hover:shadow-[0_12px_32px_-16px_rgba(47,62,34,0.2)]",
+          "group flex h-full flex-col overflow-hidden border border-brand-green bg-brand-cream transition-all duration-200 sm:flex-row",
+          "hover:border-brand-green hover:shadow-[0_12px_32px_-16px_rgba(47,62,34,0.2)]",
           className
         )}>
         <Link
@@ -214,8 +213,8 @@ const BlogCard: FC<BlogCardProps> = ({ post, variant = "default", className }) =
   return (
     <article
       className={cx(
-        "group flex h-full flex-col overflow-hidden border border-brand-green/10 bg-brand-cream transition-all duration-200",
-        "hover:border-brand-green/22 hover:shadow-[0_12px_32px_-16px_rgba(47,62,34,0.2)]",
+        "group flex h-full flex-col overflow-hidden border border-brand-green bg-brand-cream transition-all duration-200",
+        "hover:border-brand-green hover:shadow-[0_12px_32px_-16px_rgba(47,62,34,0.2)]",
         className
       )}>
       <Link
