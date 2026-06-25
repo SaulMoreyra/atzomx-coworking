@@ -1,0 +1,194 @@
+/* Hallmark · macrostructure: Workbench · tone: utilitarian · anchor hue: forest-green
+ * admin scope · design.md tokens · genre: editorial-utilitarian hybrid
+ * states: default · hover · focus · active · disabled · loading · error · success
+ */
+
+.admin-shell {
+  --admin-sidebar-w: 15rem;
+  min-height: 100dvh;
+  background: var(--color-paper, #fffbed);
+  color: var(--color-ink, #2f3e22);
+}
+
+.admin-sidebar {
+  width: var(--admin-sidebar-w);
+  border-right: 1px solid color-mix(in srgb, var(--color-ink, #2f3e22) 12%, transparent);
+  background: var(--color-paper, #fffbed);
+}
+
+.admin-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.admin-card {
+  border: 1px solid color-mix(in srgb, var(--color-ink, #2f3e22) 12%, transparent);
+  background: var(--color-paper, #fffbed);
+}
+
+.admin-input {
+  min-height: 2.75rem;
+  width: 100%;
+  border: 1px solid color-mix(in srgb, var(--color-ink, #2f3e22) 20%, transparent);
+  background: var(--color-paper, #fffbed);
+  padding: 0.625rem 0.875rem;
+  font-size: 1rem;
+  color: var(--color-ink, #2f3e22);
+  transition: border-color 150ms ease-out, box-shadow 150ms ease-out;
+}
+
+.admin-input:focus-visible {
+  outline: 2px solid var(--color-ink, #2f3e22);
+  outline-offset: 2px;
+  border-color: var(--color-ink, #2f3e22);
+}
+
+.admin-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-btn {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-ink, #2f3e22);
+  padding: 0.625rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background-color 150ms ease-out, color 150ms ease-out, opacity 150ms ease-out;
+}
+
+.admin-btn:focus-visible {
+  outline: 2px solid var(--color-ink, #2f3e22);
+  outline-offset: 2px;
+}
+
+.admin-btn:disabled,
+.admin-btn[data-state="loading"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.admin-btn-primary {
+  background: var(--color-ink, #2f3e22);
+  color: var(--color-paper, #fffbed);
+}
+
+.admin-btn-primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-ink, #2f3e22) 88%, white);
+}
+
+.admin-btn-secondary {
+  background: transparent;
+  color: var(--color-ink, #2f3e22);
+}
+
+.admin-btn-secondary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-ink, #2f3e22) 6%, transparent);
+}
+
+.admin-btn-danger {
+  border-color: #9b2c2c;
+  color: #9b2c2c;
+  background: transparent;
+}
+
+.admin-btn-danger:hover:not(:disabled) {
+  background: color-mix(in srgb, #9b2c2c 8%, transparent);
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 40rem;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink, #2f3e22) 10%, transparent);
+  padding: 0.875rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.admin-table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-ink, #2f3e22) 65%, transparent);
+}
+
+.admin-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-ink, #2f3e22) 18%, transparent);
+  padding: 0.125rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-badge-active {
+  border-color: color-mix(in srgb, var(--color-ink, #2f3e22) 35%, transparent);
+  background: color-mix(in srgb, var(--color-paper-2, #d4e6c0) 45%, transparent);
+}
+
+.admin-badge-inactive {
+  opacity: 0.65;
+}
+
+.admin-alert {
+  border: 1px solid color-mix(in srgb, var(--color-ink, #2f3e22) 15%, transparent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+}
+
+.admin-alert-error {
+  border-color: #9b2c2c;
+  background: color-mix(in srgb, #9b2c2c 8%, transparent);
+  color: #7f1d1d;
+}
+
+.admin-alert-success {
+  border-color: var(--color-ink, #2f3e22);
+  background: color-mix(in srgb, var(--color-paper-2, #d4e6c0) 35%, transparent);
+}
+
+.admin-i18n-panel {
+  border: 1px dashed color-mix(in srgb, var(--color-ink, #2f3e22) 25%, transparent);
+  background: color-mix(in srgb, var(--color-paper-2, #d4e6c0) 18%, transparent);
+}
+
+@media (max-width: 767px) {
+  .admin-shell {
+    --admin-sidebar-w: 100%;
+  }
+
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-ink, #2f3e22) 12%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-btn,
+  .admin-input {
+    transition: none;
+  }
+}

@@ -1,13 +1,35 @@
 {
   "header": {
     "about": "About",
+    "gallery": "Gallery",
     "plans": "Plans",
+    "faq": "FAQ",
     "contact": "Contact",
     "reviews": "Reviews",
-    "menu": "Menu"
+    "blog": "Blog",
+    "remoteWork": "Remote work",
+    "menu": "Menu",
+    "more": "More",
+    "navPrimary": "Explore",
+    "navMobile": "Navigation menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "presentation": {
-    "plans": "See Plans"
+    "taglineLine1": "COMUNIDAD & CAFÉ",
+    "taglineLine2": "COWORKING",
+    "scheduleLabel": "HOURS",
+    "scheduleHours": "Mon–Fri 9:00 am–6:00 pm · Sat 10:00 am–8:00 pm",
+    "plans": "See Plans",
+    "whatsapp": "WhatsApp"
+  },
+  "hours": {
+    "weekdaysLabel": "Monday to Friday",
+    "weekdaysHours": "9:00 am — 6:00 pm",
+    "saturdayLabel": "Saturday",
+    "saturdayHours": "10:00 am — 8:00 pm",
+    "sundayLabel": "Sunday",
+    "sundayHours": "Check hours via WhatsApp"
   },
   "about": {
     "title": "Specially Designed for",
@@ -20,7 +42,26 @@
       "developers": "Developers"
     }
   },
+  "gallery": {
+    "sectionTitle": "Gallery",
+    "title": "Explore the space",
+    "subtitle": "Rooftop, desks, meeting room, and coffee bar in downtown Oaxaca.",
+    "openPhoto": "Enlarge photo: {label}",
+    "closePhoto": "Close photo",
+    "tiles": {
+      "terrace": { "label": "Rooftop", "alt": "Atzomx rooftop terrace in downtown Oaxaca" },
+      "desks": { "label": "Desks", "alt": "Shared desks in the coworking area" },
+      "meeting-room": { "label": "Meeting room", "alt": "Meeting room with Smart TV at Atzomx" },
+      "coffee-bar": { "label": "Coffee bar", "alt": "Specialty coffee bar on the ground floor" },
+      "monitor-desk": { "label": "Monitor desk", "alt": "Workstation with an extra monitor" },
+      "facade": { "label": "Facade", "alt": "Atzomx entrance on Los Libres, downtown Oaxaca" },
+      "community": { "label": "Community", "alt": "Community atmosphere at Atzomx" },
+      "latte-art": { "label": "Latte art", "alt": "Latte art prepared at the Atzomx bar" }
+    }
+  },
   "benefits": {
+    "sectionTitle": "What's included",
+    "sectionSubtitle": "Everything you need to work comfortably in downtown Oaxaca.",
     "wifi": {
       "title": "Speed WiFi",
       "description": "1000 Mbps internet"
@@ -33,12 +74,17 @@
       "title": "Amazing Coffee",
       "description": "Specialty coffee, always fresh."
     },
+    "chairs": {
+      "title": "Ergonomic Chairs",
+      "description": "Real comfort for long work sessions"
+    },
     "feedback": {
       "title": "Share Feedback",
-      "description": "We’d love to hear from you!"
+      "description": "We'd love to hear from you!"
     }
   },
   "plans": {
+    "sectionTitle": "Plans",
     "from": "From",
     "book": "Book Now",
     "defaultAsk": "Hey there! I want to book a plan at Atzomx.",
@@ -104,11 +150,168 @@
       }
     }
   },
+  "pricingTable": {
+    "sectionTitle": "Rates",
+    "title": "Pricing by plan",
+    "subtitle": "Prices in MXN. Day, week, and month passes available — message us for current rates.",
+    "columns": {
+      "plan": "Plan",
+      "hour": "Hour",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "action": "Book"
+    },
+    "contact": "Ask us",
+    "book": "Book",
+    "footnote": "Day, week, and month rates may vary by season. Message us on WhatsApp for an exact quote and promotions.",
+    "freePlan": {
+      "title": "Free Plan — Café",
+      "description": "Work downstairs and pay only for what you consume. Stable WiFi included.",
+      "cta": "Ask about free plan"
+    }
+  },
+  "faq": {
+    "sectionTitle": "FAQ",
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know before booking your spot in downtown Oaxaca.",
+    "moreQuestions": "Have another question?",
+    "whatsappCta": "Message us on WhatsApp",
+    "items": {
+      "wifi": {
+        "question": "How fast is the internet?",
+        "answer": "We have 1000 Mbps fiber optic in the upstairs coworking area — enough for video calls, heavy uploads, and demanding remote work."
+      },
+      "reservation": {
+        "question": "Do I need to book in advance?",
+        "answer": "Not always required, but we recommend booking via WhatsApp during peak season (Guelaguetza, Day of the Dead, December) or if you need a desk with monitor or the meeting room."
+      },
+      "hours": {
+        "question": "What are Atzomx opening hours?",
+        "answer": "Monday to Friday 9:00 am – 6:00 pm. Saturday 10:00 am – 8:00 pm. Sunday: check current hours on WhatsApp before visiting."
+      },
+      "day-pass": {
+        "question": "Do you offer day, week, or month passes?",
+        "answer": "Yes. In addition to hourly rates, we offer day, week, and month passes for coworking plans. Message us on WhatsApp with the plan you're interested in for current pricing."
+      },
+      "meeting-room": {
+        "question": "How do I book the meeting room?",
+        "answer": "The room fits 2–6 people and includes a 55\" Smart TV, whiteboard, WiFi, and coffee. Book via WhatsApp with date, time, and headcount. From $259 MXN per hour."
+      },
+      "cafe-vs-coworking": {
+        "question": "What's the difference between the café and coworking?",
+        "answer": "Downstairs (café): work for free while paying only for food and drinks. Upstairs: dedicated coworking with ergonomic desks, A/C, unlimited coffee, and 1000 Mbps fiber — requires a coworking plan."
+      },
+      "payment": {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept cash, credit cards, and debit cards (Visa, Mastercard, American Express)."
+      },
+      "parking": {
+        "question": "Is there parking nearby?",
+        "answer": "We're at Los Libres 800-B in downtown Oaxaca, walking distance from the Zócalo. Street parking and private lots are available nearby; many visitors walk or take a taxi/DiDi."
+      }
+    }
+  },
+  "whatsappFab": {
+    "label": "Book via WhatsApp",
+    "ariaLabel": "Open WhatsApp to book at Atzomx"
+  },
+  "planComparison": {
+    "sectionTitle": "Compare",
+    "title": "Pick your plan",
+    "subtitle": "Free café vs. Standard vs. Individual vs. Monitor — side by side.",
+    "featureColumn": "Includes",
+    "wifiRow": "WiFi",
+    "hour": "hr",
+    "freePrice": "Free",
+    "included": "Included",
+    "notIncluded": "Not included"
+  },
+  "community": {
+    "sectionTitle": "Community",
+    "title": "Upcoming events",
+    "subtitle": "Meetups, talks, and workshops at Atzomx.",
+    "registerCta": "Register",
+    "eventHostPrompt": "Have an event?",
+    "eventHostCta": "Message us on WhatsApp",
+    "eventHostMessage": "Hi! I have an event",
+    "instagramCta": "See on Instagram",
+    "instagramHint": "Follow @atzomx for updates and schedules.",
+    "emptyState": "No events scheduled for this month or next. Follow @atzomx on Instagram for more dates.",
+    "events": {
+      "spec-driven-development": {
+        "date": "JUN 26",
+        "title": "Spec-Driven Development",
+        "description": "Talk on specification-driven development: from chaos to compliance."
+      },
+      "quantum-computing-intro": {
+        "date": "JUL 25",
+        "title": "A first look at quantum computing concepts",
+        "description": "An accessible introduction to the core ideas of quantum computing."
+      },
+      "programmer-to-programmer-csharp": {
+        "date": "SEP 26",
+        "title": "From programmer to programmer — C#",
+        "description": "Series to go deeper into C# with the Oaxaca dev community."
+      },
+      "tarde-de-lenguas-jul-04": {
+        "date": "JUL 4",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-ago-22": {
+        "date": "AUG 22",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-sep-12": {
+        "date": "SEP 12",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-oct-03": {
+        "date": "OCT 3",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-oct-24": {
+        "date": "OCT 24",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-nov-21": {
+        "date": "NOV 21",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      },
+      "tarde-de-lenguas-dic-12": {
+        "date": "DEC 12",
+        "title": "Tarde de lenguas",
+        "description": "Language exchange with locals and visitors. An open meetup to practice, meet people, and spend the afternoon in good company."
+      }
+    }
+  },
+  "team": {
+    "sectionTitle": "Team",
+    "title": "Built by Oaxacan devs",
+    "subtitle": "We built the space we needed to work remotely from downtown.",
+    "story1": "We're developers who live and work in Oaxaca. For years we bounced between noisy cafés and dim apartments, looking for a place where focus wasn't a luxury.",
+    "story2": "We couldn't find a space that understood Friday deploys, client calls across time zones, or power outlets that weren't three metres away. So we built one.",
+    "story3": "Atzomx came from that shared frustration: a coworking café designed by Oaxacan devs, for anyone working remotely from downtown. We still run it the way we'd want to use it — because we're users too."
+  },
   "reviews": {
+    "sectionTitle": "Reviews",
+    "badge": "Google Reviews",
     "title": "Happy Customers",
-    "footer": "Customers reviews"
+    "footer": "Customers reviews",
+    "googleRatingSummary": "{rating} · {count} reviews on Google",
+    "googleAttribution": "Reviews from Google.",
+    "viewOnGoogle": "View on Google Maps",
+    "readMore": "Read more",
+    "readLess": "Read less"
   },
   "footer": {
+    "sectionTitle": "Contact",
     "payments": "All major methods of payment accepted",
     "address": "Address",
     "location": "Location",

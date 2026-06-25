@@ -1,13 +1,35 @@
 {
   "header": {
     "about": "Nosotros",
+    "gallery": "Galería",
     "plans": "Planes",
+    "faq": "FAQ",
     "contact": "Contacto",
     "reviews": "Reseñas",
-    "menu": "Menú"
+    "blog": "Blog",
+    "remoteWork": "Trabaja remoto",
+    "menu": "Menú",
+    "more": "Más",
+    "navPrimary": "Explorar",
+    "navMobile": "Menú de navegación",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
   },
   "presentation": {
-    "plans": "Ver planes"
+    "taglineLine1": "COMUNIDAD & CAFÉ",
+    "taglineLine2": "COWORKING",
+    "scheduleLabel": "HORARIO",
+    "scheduleHours": "Lun–Vie 9:00 am–6:00 pm · Sáb 10:00 am–8:00 pm",
+    "plans": "Ver planes",
+    "whatsapp": "WhatsApp"
+  },
+  "hours": {
+    "weekdaysLabel": "Lunes a viernes",
+    "weekdaysHours": "9:00 am — 6:00 pm",
+    "saturdayLabel": "Sábado",
+    "saturdayHours": "10:00 am — 8:00 pm",
+    "sundayLabel": "Domingo",
+    "sundayHours": "Consulta horario por WhatsApp"
   },
   "about": {
     "title": "Diseñado especialmente para",
@@ -15,12 +37,55 @@
       "freelancers": "Freelancers",
       "remote-workers": "Trabajadores remotos",
       "creatives": "Creativos",
-      "digital-nomads": "Nómadas digitales",
-      "coffee-lovers": "Amantes del café",
+      "digital-nomads": "Nomadas digitales",
+      "coffee-lovers": "Amantes del cafe",
       "developers": "Developers"
     }
   },
+  "gallery": {
+    "sectionTitle": "Galería",
+    "title": "Conoce el espacio",
+    "subtitle": "Terraza, escritorios, sala de juntas y barra de café en el Centro de Oaxaca.",
+    "openPhoto": "Ampliar foto: {label}",
+    "closePhoto": "Cerrar foto",
+    "tiles": {
+      "terrace": {
+        "label": "Terraza",
+        "alt": "Terraza de Atzomx con vista al centro de Oaxaca"
+      },
+      "desks": {
+        "label": "Escritorios",
+        "alt": "Mesas compartidas en el area de coworking"
+      },
+      "meeting-room": {
+        "label": "Sala de juntas",
+        "alt": "Sala de reuniones con Smart TV en Atzomx"
+      },
+      "coffee-bar": {
+        "label": "Barra de cafe",
+        "alt": "Barra de cafe de especialidad en planta baja"
+      },
+      "monitor-desk": {
+        "label": "Escritorio con monitor",
+        "alt": "Puesto de trabajo con monitor adicional"
+      },
+      "facade": {
+        "label": "Fachada",
+        "alt": "Entrada de Atzomx en Los Libres, Centro de Oaxaca"
+      },
+      "community": {
+        "label": "Comunidad",
+        "alt": "Ambiente de comunidad y convivencia en Atzomx"
+      },
+      "latte-art": {
+        "label": "Latte art",
+        "alt": "Latte art preparado en la barra de Atzomx"
+      }
+    }
+  },
   "benefits": {
+    "sectionTitle": "Lo que incluye",
+    "sectionSubtitle": "Todo lo que necesitas para trabajar cómodo en el centro de Oaxaca.",
     "wifi": {
       "title": "WiFi de alta velocidad",
       "description": "Internet de 1000 Mbps"
@@ -33,12 +98,17 @@
       "title": "Café increíble",
       "description": "Café de especialidad, siempre fresco"
     },
+    "chairs": {
+      "title": "Sillas ergonómicas",
+      "description": "Comodidad real para jornadas largas de trabajo"
+    },
     "feedback": {
       "title": "Comparte tu opinión",
       "description": "¡Nos encantaría saber tu experiencia!"
     }
   },
   "plans": {
+    "sectionTitle": "Planes",
     "from": "Desde",
     "book": "Reservar ahora",
     "defaultAsk": "¡Hola! Quiero reservar un plan en Atzomx.",
@@ -79,7 +149,7 @@
         "book": "¡Hola! Quiero reservar un plan gratis en Atzomx."
       },
       "standard": {
-        "name": "Plan Estándar",
+        "name": "Plan Estandar",
         "description": "Comparte una mesa en el área de co-working",
         "area": "Co-working",
         "book": "¡Hola! Quiero reservar un plan estándar en Atzomx."
@@ -104,11 +174,168 @@
       }
     }
   },
+  "pricingTable": {
+    "sectionTitle": "Tarifas",
+    "title": "Precios por plan",
+    "subtitle": "Tarifas en MXN. Pase de día, semana y mes disponibles — escríbenos para precios actuales.",
+    "columns": {
+      "plan": "Plan",
+      "hour": "Hora",
+      "day": "Día",
+      "week": "Semana",
+      "month": "Mes",
+      "action": "Reservar"
+    },
+    "contact": "Consultar",
+    "book": "Reservar",
+    "footnote": "Los precios por día, semana y mes pueden variar según temporada. Escríbenos por WhatsApp para cotización exacta y promociones.",
+    "freePlan": {
+      "title": "Plan Gratis — Cafetería",
+      "description": "Trabaja en planta baja pagando solo lo que consumes. WiFi estable incluido.",
+      "cta": "Preguntar por plan gratis"
+    }
+  },
+  "faq": {
+    "sectionTitle": "FAQ",
+    "title": "Preguntas frecuentes",
+    "subtitle": "Lo esencial antes de reservar tu espacio en el Centro de Oaxaca.",
+    "moreQuestions": "¿Tienes otra duda?",
+    "whatsappCta": "Escríbenos por WhatsApp",
+    "items": {
+      "wifi": {
+        "question": "¿Qué velocidad de internet tienen?",
+        "answer": "Contamos con fibra óptica de 1000 Mbps en el área de coworking (piso superior). Es suficiente para videollamadas, subida de archivos pesados y trabajo remoto exigente."
+      },
+      "reservation": {
+        "question": "¿Necesito reservar con anticipación?",
+        "answer": "No siempre es obligatorio, pero recomendamos reservar por WhatsApp en temporada alta (Guelaguetza, Día de Muertos, diciembre) o si necesitas escritorio con monitor o sala de juntas."
+      },
+      "hours": {
+        "question": "¿Cuál es el horario de Atzomx?",
+        "answer": "Lunes a viernes de 9:00 am a 6:00 pm. Sábados de 10:00 am a 8:00 pm. Domingo: consulta el horario actual por WhatsApp antes de visitarnos."
+      },
+      "day-pass": {
+        "question": "¿Ofrecen pase por día, semana o mes?",
+        "answer": "Sí. Además de la tarifa por hora, tenemos tarifas por día, semana y mes en los planes de coworking. Escríbenos por WhatsApp con el plan que te interesa y te compartimos los precios vigentes."
+      },
+      "meeting-room": {
+        "question": "¿Cómo reservo la sala de juntas?",
+        "answer": "La sala es para equipos de 2 a 6 personas, incluye Smart TV de 55\", pizarrón, WiFi y café. Resérvala por WhatsApp indicando fecha, hora y número de personas. Tarifa desde $259 MXN por hora."
+      },
+      "cafe-vs-coworking": {
+        "question": "¿Cuál es la diferencia entre la cafetería y el coworking?",
+        "answer": "En planta baja (cafetería) puedes trabajar gratis pagando solo lo que consumes en comida y bebida. En el piso superior está el coworking con mesas ergonómicas, A/C, café ilimitado y fibra de 1000 Mbps — requiere plan de coworking."
+      },
+      "payment": {
+        "question": "¿Qué formas de pago aceptan?",
+        "answer": "Aceptamos efectivo, tarjeta de crédito y débito (Visa, Mastercard, American Express)."
+      },
+      "parking": {
+        "question": "¿Hay estacionamiento cerca?",
+        "answer": "Estamos en Los Libres 800-B, Centro Histórico — zona caminable cerca del Zócalo. Hay estacionamiento en calle y estacionamientos privados en los alrededores; muchos clientes llegan caminando o en taxi/DiDi."
+      }
+    }
+  },
+  "whatsappFab": {
+    "label": "Reservar por WhatsApp",
+    "ariaLabel": "Abrir WhatsApp para reservar en Atzomx"
+  },
+  "planComparison": {
+    "sectionTitle": "Comparativa",
+    "title": "Elige tu plan",
+    "subtitle": "Free cafe vs. Standard vs. Individual vs. Monitor — lado a lado.",
+    "featureColumn": "Incluye",
+    "wifiRow": "WiFi",
+    "hour": "hora",
+    "freePrice": "Gratis",
+    "included": "Incluido",
+    "notIncluded": "No incluido"
+  },
+  "community": {
+    "sectionTitle": "Comunidad",
+    "title": "Próximos eventos",
+    "subtitle": "Encuentros, charlas y talleres en Atzomx.",
+    "registerCta": "Registrarse",
+    "eventHostPrompt": "¿Tienes un evento?",
+    "eventHostCta": "Comunícate por WhatsApp",
+    "eventHostMessage": "¡Hola! Tengo un evento",
+    "instagramCta": "Ver en Instagram",
+    "instagramHint": "Sigue @atzomx para horarios y novedades.",
+    "emptyState": "No hay eventos programados para este mes ni el siguiente. Sigue @atzomx en Instagram para más fechas.",
+    "events": {
+      "spec-driven-development": {
+        "date": "26 JUN",
+        "title": "Spec-Driven Development",
+        "description": "Charla sobre desarrollo guiado por especificaciones: del caos a la conformidad."
+      },
+      "quantum-computing-intro": {
+        "date": "25 JUL",
+        "title": "Una primera aproximación a los conceptos de computación cuántica",
+        "description": "Introducción accesible a las ideas clave de la computación cuántica."
+      },
+      "programmer-to-programmer-csharp": {
+        "date": "26 SEP",
+        "title": "De programador a programador — C#",
+        "description": "Serie para profundizar en C# con la comunidad dev de Oaxaca."
+      },
+      "tarde-de-lenguas-jul-04": {
+        "date": "4 JUL",
+        "title": "Tarde de lenguas",
+        "description": "Intercambio de idiomas con locales y extranjeros. Un encuentro abierto para practicar, conocer gente y pasar la tarde en buena compañía."
+      },
+      "tarde-de-lenguas-ago-22": {
+        "date": "22 AGO",
+        "title": "Tarde de lenguas",
+        "description": "Intercambio de idiomas con locales y extranjeros. Un encuentro abierto para practicar, conocer gente y pasar la tarde en buena compañía."
+      },
+      "tarde-de-lenguas-sep-12": {
+        "date": "12 SEP",
+        "title": "Tarde de lenguas",
+        "description": "Intercambio de idiomas con locales y extranjeros. Un encuentro abierto para practicar, conocer gente y pasar la tarde en buena compañía."
+      },
+      "tarde-de-lenguas-oct-03": {
+        "date": "3 OCT",
+        "title": "Tarde de lenguas",
+        "description": "Intercambio de idiomas con locales y extranjeros. Un encuentro abierto para practicar, conocer gente y pasar la tarde en buena compañía."
+      },
+      "tarde-de-lenguas-oct-24": {
+        "date": "24 OCT",
+        "title": "Tarde de lenguas",
+        "description": "Intercambio de idiomas con locales y extranjeros. Un encuentro abierto para practicar, conocer gente y pasar la tarde en buena compañía."
+      },
+      "tarde-de-lenguas-nov-21": {
+        "date": "21 NOV",
+        "title": "Tarde de lenguas",
+        "description": "Intercambio de idiomas con locales y extranjeros. Un encuentro abierto para practicar, conocer gente y pasar la tarde en buena compañía."
+      },
+      "tarde-de-lenguas-dic-12": {
+        "date": "12 DIC",
+        "title": "Tarde de lenguas",
+        "description": "Intercambio de idiomas con locales y extranjeros. Un encuentro abierto para practicar, conocer gente y pasar la tarde en buena compañía."
+      }
+    }
+  },
+  "team": {
+    "sectionTitle": "Equipo",
+    "title": "Hecho por devs oaxaqueños",
+    "subtitle": "Construimos el espacio que nos faltaba para trabajar en remoto desde el Centro.",
+    "story1": "Somos desarrolladores que vivimos y trabajamos en Oaxaca. Durante años alternamos entre cafés ruidosos y departamentos sin luz natural, buscando un lugar donde concentrarse no fuera un lujo.",
+    "story2": "No encontramos un espacio que entendiera lo que significa un viernes con deploy, una videollamada con cliente en otra zona horaria o una toma de corriente que no quede a tres metros. Así que lo construimos nosotros.",
+    "story3": "Atzomx nació de esa frustración compartida: un coworking y café pensado por devs oaxaqueños, para quien trabaja en remoto desde el Centro. Hoy lo seguimos cuidando como usuarios — porque el espacio también es nuestro."
+  },
   "reviews": {
+    "sectionTitle": "Reseñas",
+    "badge": "Google Reviews",
     "title": "Clientes satisfechos",
-    "footer": "Opiniones de clientes"
+    "footer": "Opiniones de clientes",
+    "googleRatingSummary": "{rating} · {count} reseñas en Google",
+    "googleAttribution": "Reseñas de Google.",
+    "viewOnGoogle": "Ver en Google Maps",
+    "readMore": "Leer mas",
+    "readLess": "Leer menos"
   },
   "footer": {
+    "sectionTitle": "Contacto",
     "payments": "Aceptamos todos los métodos de pago principales",
     "address": "Dirección",
     "location": "Ubicación",

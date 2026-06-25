@@ -3,19 +3,128 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Mabry";
-  src: url("/fonts/Mabry.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Anonymous Pro";
+  src: url("/fonts/AnonymousPro-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Druk";
-  src: url("/fonts/Druk-Medium.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Anonymous Pro";
+  src: url("/fonts/AnonymousPro-Bold.ttf") format("truetype");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: "Blur";
+  src: url("/fonts/Blur-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  /*
+   * iOS Safari: fixed html + scrolling body prevents rubber-band overscroll
+   * and avoids exposing the default white canvas behind the page.
+   */
+  html {
+    @apply bg-brand-cream;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  body {
+    @apply bg-brand-cream font-sans text-brand-green antialiased;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  ::selection {
+    @apply bg-brand-accent text-brand-green;
+  }
+}
+
+@layer components {
+  .text-label {
+    @apply font-mono uppercase tracking-label text-sm md:text-base font-normal;
+  }
+
+  .text-display {
+    @apply font-sans font-bold uppercase;
+  }
+
+  .text-display-prose {
+    @apply font-sans font-bold normal-case tracking-wide;
+  }
+
+  .text-body {
+    @apply font-sans normal-case tracking-normal leading-relaxed;
+  }
+
+  .font-logo {
+    font-family: "Blur", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .focus-brand {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream;
+  }
+
+  .text-schedule {
+    @apply font-mono text-sm md:text-base tracking-[0.15em] uppercase;
+  }
+
+  .section-container {
+    @apply w-full max-w-7xl mx-auto px-6 md:px-12 xl:px-20;
+  }
+
+  .site-header-bar {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  /* Fixed shell — above Framer Motion / transformed siblings on mobile */
+  .site-header-shell {
+    @apply fixed top-0 left-0 right-0 z-header site-header-bar;
+  }
+
+  .site-header-bar-inner {
+    @apply relative z-header-bar;
+  }
+
+  .site-main {
+    @apply relative z-content;
+  }
+
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .scroll-snap-x::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-snap-x {
+      scroll-behavior: auto;
+    }
+  }
 }
 
 @layer utilities {
@@ -23,53 +132,14 @@
     transition-property: transform;
     transition-duration: 1000ms;
   }
+
   .transition-zoom:hover {
-    transform: scale(1.2);
+    transform: scale(1.08);
   }
-}
 
-@keyframes cursor {
-  50% {
-    border-right-color: transparent;
+  @media (prefers-reduced-motion: reduce) {
+    .transition-zoom:hover {
+      transform: none;
+    }
   }
-}
-
-@keyframes typing {
-  0% {
-    width: 0%;
-  }
-  80%,
-  100% {
-    width: 101%;
-  }
-}
-
-@keyframes slide {
-  100% {
-    transform: translateY(-500%);
-  }
-}
-
-.list-slide-up {
-  overflow: hidden;
-  list-style: none;
-  white-space: nowrap;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
-
-.list-slide-up > li {
-  display: inline-block;
-  animation: slide calc(5 * 3 * 2s) steps(5) infinite alternate;
-}
-
-.list-slide-up li span {
-  text-wrap: nowrap;
-  overflow: hidden;
-  border-right: 8px solid #6f8d81;
-  display: inline-block;
-  animation:
-    cursor 0.5s step-end infinite,
-    typing 3s steps(16) infinite alternate;
 }

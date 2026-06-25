@@ -1,15 +1,15 @@
 import React from "react";
-import MenuBanner from "@/components/MenuBanner/MenuBanner";
+import Footer from "@/components/Footer/Footer";
 
-export default function RootLayout({
+export default function MenuLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <>
-      <MenuBanner />
       {children}
+      <Footer />
     </>
   );
 }

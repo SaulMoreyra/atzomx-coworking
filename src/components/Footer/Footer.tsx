@@ -1,111 +1,119 @@
 "use client";
+
 import React from "react";
 import { useTranslations } from "next-intl";
-import { Facebook, Instagram, Phone, PhoneCall } from "react-feather";
-
+import { Facebook, Instagram, Mail, Phone, PhoneCall } from "react-feather";
 import { Mastercard, Visa, Amex } from "react-payment-logos/dist/flat";
-
-const ADDRESS =
-  "C. de Los Libres 800-letra B, RUTA INDEPENDENCIA, Centro, 68000 Oaxaca de Juárez, Oax.";
+import Label from "../ui/Label/Label";
+import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
+import { BRAND_CONTACT } from "@/design-system";
+import { trackWhatsAppConversion } from "@/lib/analytics";
 
 const SOCIAL_NETWORKS = [
-  {
-    icon: Facebook,
-    name: "Facebook",
-    url: "https://www.facebook.com/profile.php?id=61569786946519",
-  },
-  {
-    icon: Instagram,
-    name: "Instagram",
-    url: "https://www.instagram.com/atzomx/",
-  },
-  {
-    icon: Phone,
-    name: "Whatsapp",
-    url: "https://wa.me/5219515155328",
-  },
-  {
-    icon: PhoneCall,
-    name: "+52 951 515 5328",
-    url: "tel:5219515155328",
-  },
+  { icon: Instagram, name: BRAND_CONTACT.instagramHandle, url: BRAND_CONTACT.instagram },
+  { icon: Facebook, name: "Facebook", url: BRAND_CONTACT.facebook },
+  { icon: Phone, name: "WhatsApp", url: BRAND_CONTACT.whatsapp },
+  { icon: PhoneCall, name: BRAND_CONTACT.phone, url: BRAND_CONTACT.phoneHref },
+  { icon: Mail, name: BRAND_CONTACT.email, url: BRAND_CONTACT.emailHref },
 ];
 
 const Footer = () => {
   const t = useTranslations("home.footer");
+  const tHours = useTranslations("home.hours");
+
   return (
-    <section id="contact">
-      <div className="mt-5 px-5 text-center w-full md:px-64">
-        {t("payments")}
+    <footer id="contact" data-header-surface="cream" className="w-full bg-brand-cream text-brand-green">
+      <OrganicDivider fill="cream" variant="star" />
+
+      <div className="w-full">
+        <div className="section-container py-8 pb-6 text-center">
+          <Label as="h2" className="mb-4 text-sm tracking-[0.25em]">
+            {t("sectionTitle")}
+          </Label>
+          <p className="text-body text-sm text-brand-green/70">{t("payments")}</p>
+          <div className="mt-3 flex items-center justify-center">
+            <Visa id="visa" style={{ margin: 8, width: 44 }} />
+            <Mastercard id="mastercard" style={{ margin: 8, width: 44 }} />
+            <Amex id="amex" style={{ margin: 8, width: 44 }} />
+          </div>
+        </div>
       </div>
-      <div className="flex justify-center pb-5 items-center">
-        <Visa
-          id="visa"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Mastercard
-          id="mastercard"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Amex
-          id="amex"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        {/*
-        <PaypalTransparent
-          id="paypal"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Applepay
-          id="appleplay"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        />
-        <Googlepay
-          id="googleplay"
-          style={{ margin: 10, width: 50 }}
-          className="payment-icon"
-        /> */}
-      </div>
-      <div className="bg-theme-black flex flex-col gap-10 text-white m-5 rounded-md md:px-20 px-10 py-10">
-        <div className="flex flex-col gap-5 md:flex-row justify-around">
-          <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h3 className="text-xl font-bold">{t("social_networks")}</h3>
-            {SOCIAL_NETWORKS.map(network => (
-              <span className="flex items-center gap-2" key={network.name}>
-                <network.icon size={24} className="min-w-[24px]" />
-                <a href={network.url} target="_blank" rel="noopener noreferrer">
-                  {network.name}
+
+      <div className="w-full">
+        <div className="section-container flex flex-col gap-8 py-10 md:py-12">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+            <div className="flex flex-col gap-4">
+              <Label as="h3" className="text-xs tracking-[0.2em]">
+                {t("social_networks")}
+              </Label>
+              {SOCIAL_NETWORKS.map(network => (
+                <a
+                  key={network.name}
+                  href={network.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (network.name === "WhatsApp") trackWhatsAppConversion();
+                  }}
+                  className="focus-brand text-body flex items-center gap-3 rounded-sm text-sm text-brand-green/80 transition-colors duration-200 hover:text-brand-green">
+                  <network.icon size={18} className="min-w-[18px]" aria-hidden="true" />
+                  <span>{network.name}</span>
                 </a>
-              </span>
-            ))}
-          </div>
-          <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h3 className="text-xl font-bold">{t("address")}</h3>
-            <p className="max-w-[80%]">{ADDRESS}</p>
-          </div>
+              ))}
+            </div>
 
-          <div className="flex flex-col gap-2 w-full md:w-1/3">
-            <h3 className="text-xl font-bold">{t("location")}</h3>
-            <iframe
-              title="atzomx-location"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d476.7599133940934!2d-96.7181858!3d17.068773!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c723cfaf60de6b%3A0xd4660acd5a3a65bf!2sAtzomx%20Coworking!5e0!3m2!1ses-419!2smx!4v1740720931272!5m2!1ses-419!2smx"
-              width="100%"
-              height="205"
-              allowFullScreen={true}
-              loading="lazy"></iframe>
-          </div>
-        </div>
+            <div className="flex flex-col gap-4">
+              <Label as="h3" className="text-xs tracking-[0.2em]">
+                {t("address")}
+              </Label>
+              <p className="text-body max-w-xs text-sm leading-relaxed text-brand-green/80">
+                {BRAND_CONTACT.address}
+              </p>
+              <a
+                href={BRAND_CONTACT.website}
+                className="text-label text-xs text-brand-green/70 underline-offset-2 transition-colors duration-200 hover:text-brand-green hover:underline">
+                atzomx.com.mx
+              </a>
+              <div className="text-schedule mt-2 space-y-1 text-xs text-brand-green/60">
+                <p>
+                  <span className="text-brand-green/75">{tHours("weekdaysLabel")}: </span>
+                  {tHours("weekdaysHours")}
+                </p>
+                <p>
+                  <span className="text-brand-green/75">{tHours("saturdayLabel")}: </span>
+                  {tHours("saturdayHours")}
+                </p>
+                <p>
+                  <span className="text-brand-green/75">{tHours("sundayLabel")}: </span>
+                  {tHours("sundayHours")}
+                </p>
+              </div>
+            </div>
 
-        <div className="flex justify-between">
-          <p>© 2026 ATZOMX</p>
+            <div className="flex flex-col gap-4">
+              <Label as="h3" className="text-xs tracking-[0.2em]">
+                {t("location")}
+              </Label>
+              <iframe
+                title="atzomx-location"
+                src={BRAND_CONTACT.mapsEmbed}
+                width="100%"
+                height="200"
+                allowFullScreen={true}
+                loading="lazy"
+                className="border border-brand-green grayscale-[20%] contrast-[1.05]"
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+
+      <div className="w-full">
+        <div className="section-container py-6 text-center md:text-left">
+          <p className="text-label text-[10px] tracking-[0.25em] text-brand-green/45">© 2026 ATZOMX</p>
+        </div>
+      </div>
+    </footer>
   );
 };
 

@@ -1,19 +1,35 @@
+import MenuBanner from "@/components/MenuBanner/MenuBanner";
+import MenuCatalog from "@/components/MenuCatalog/MenuCatalog";
+import { getPublicMenu } from "@/lib/products/public-products";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
 import React from "react";
 
-import MenuInformation from "@/components/MenuInformation/MenuInformation";
-import MenuList from "@/components/MenuList/MenuList";
-import MenuListMobile from "@/components/MenuListMobile/MenuListMobile";
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("menu.metadata");
 
-export default async function Home() {
+  return {
+    title: t("title"),
+    description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      images: [{ url: "/images/og/menu-og.webp", alt: "Atzomx Menu" }],
+      type: "website",
+    },
+    alternates: {
+      canonical: "https://atzomx.com.mx/menu",
+    },
+  };
+}
+
+export default async function MenuPage() {
+  const foods = await getPublicMenu();
+
   return (
-    <>
-      <h1 className="sr-only">Menú de Atzomx Café — Centro de Oaxaca</h1>
-      <div className="w-full px-10 gap-5 max-w-7xl pt-9 mx-auto flex flex-col md:flex-row">
-        <MenuList />
-        <MenuInformation className="hidden lg:block" />
-      </div>
-      <MenuListMobile />
-      <MenuInformation className="block lg:hidden min-w-[100%] mb-0 p-5 md:px-10" />
-    </>
+    <div className="site-main flex min-h-screen flex-1 flex-col bg-brand-cream">
+      <MenuBanner itemCount={foods.length} />
+      <MenuCatalog foods={foods} />
+    </div>
   );
 }

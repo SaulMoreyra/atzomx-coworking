@@ -1,28 +1,35 @@
 import React from "react";
-import { type ReviewType } from "@/common/types/planTypes";
 import About from "@/components/About/About";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import PlansCarousel from "@/components/PlansCarousel/PlansCarousel";
 import Presentation from "@/components/Presentation/Presentation";
+import SpaceGallery from "@/components/SpaceGallery/SpaceGallery";
 import ReviewContainer from "@/components/ReviewContainer/ReviewContainer";
-import { ALL_PLANS, ALL_REVIEWS } from "@/mocks/products";
+import CommunitySection from "@/components/CommunitySection/CommunitySection";
+import TeamSection from "@/components/TeamSection/TeamSection";
+import BlogSection from "@/components/BlogSection/BlogSection";
+import FaqSection from "@/components/FaqSection/FaqSection";
+import { getPublicPlans } from "@/lib/products/public-products";
+import { getReviews } from "@/services/reviews/getReviews";
 
 export default async function Home() {
-  const testimonials: ReviewType[] = [...ALL_REVIEWS];
+  const [reviewsData, plans] = await Promise.all([getReviews(), getPublicPlans()]);
 
   return (
     <>
       <Header />
-      <div className="min-h-screen">
-        <PageWrapper>
-          <Presentation />
-          <About />
-          <PlansCarousel plans={ALL_PLANS} />
-          <ReviewContainer reviews={testimonials} />
-        </PageWrapper>
-      </div>
+      <main className="site-main min-h-screen flex flex-col pt-site-header">
+        <Presentation />
+        <About />
+        <SpaceGallery />
+        <PlansCarousel plans={plans} />
+        <FaqSection />
+        <BlogSection />
+        <CommunitySection />
+        <TeamSection />
+        <ReviewContainer {...reviewsData} />
+      </main>
       <Footer />
     </>
   );

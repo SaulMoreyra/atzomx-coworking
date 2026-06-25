@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-06-23",
+    "macrostructure": "Index-First",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Blog /blog — Hallmark redesign v2, HomeSectionIntro masthead, square filters, typographic index list"
+  },
+  {
+    "date": "2026-06-23",
+    "macrostructure": "Catalogue",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Menu /menu — Hallmark redesign v2, alternating bands, square nav, HomeSectionIntro masthead"
+  },
+  {
+    "date": "2026-06-23",
+    "macrostructure": "Index-First (section)",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "site Header (unchanged)",
+    "footer": "site Footer (unchanged)",
+    "brief": "Home #community — Hallmark redesign, editorial agenda list + sticky aside"
+  },
+  {
+    "date": "2026-06-23",
+    "macrostructure": "Narrative Workflow",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Remote work /remote-work — Hallmark redesign, workflow timeline + editorial lists"
+  },
+  {
+    "date": "2026-05-25",
+    "macrostructure": "Split Studio",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "site Header (unchanged)",
+    "footer": "site Footer (unchanged)",
+    "brief": "Home / — Hallmark audit + redesign, Presentation preserved"
+  },
+  {
+    "date": "2026-05-25",
+    "macrostructure": "Catalogue",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Menu /menu — Hallmark redesign, catalogue inventory bands"
+  },
+  {
+    "date": "2026-05-28",
+    "macrostructure": "Long Document",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Blog article /blog/[slug] — Hallmark redesign, long-form editorial prose"
+  },
+  {
+    "date": "2026-05-28",
+    "macrostructure": "Index-First",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Blog index /blog — Hallmark redesign, editorial index list"
+  }
+]

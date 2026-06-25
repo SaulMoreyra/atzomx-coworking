@@ -1,37 +1,19 @@
 "use client";
+
+import BlogUtilityHeader from "@/components/BlogBanner/BlogUtilityHeader";
 import React from "react";
-import { useScrollUp } from "@/hooks/useScrollUp";
-import cx from "classnames";
-import Image from "next/image";
-import MenuHeader from "../MenuHeader/MenuHeader";
+import MenuMasthead from "./MenuMasthead";
 
-const MenuBanner = () => {
-  const isScrollUp = useScrollUp({ distance: 100 });
+/* Hallmark · macrostructure: Catalogue · tone: editorial · anchor hue: forest-green
+ * design-system: DESIGN.md · theme: Atzomx brand (preserved)
+ * redesign: HomeSectionIntro masthead · square nav pills · alternating bands · typographic rows
+ */
 
-  return (
-    <>
-      <MenuHeader
-        className={cx(
-          "fixed min-h-[100px] top-0 z-20 w-full transition-opacity duration-300",
-          { "opacity-0": !isScrollUp, "opacity-100 md:shadow-md": isScrollUp }
-        )}
-      />
-      <div className="flex flex-col">
-        <MenuHeader />
-        <div className="flex flex-col items-center justify-center relative">
-          <div className="absolute h-[168px] bg-primary-main w-full top-0 -mt-[1px]" />
-          <div className="relative top-1 w-full max-h-[336px] max-w-[520px] md:rounded-md overflow-hidden aspect-square">
-            <Image
-              src="/images/coworking/atzomx.webp"
-              alt="header"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+const MenuBanner = ({ itemCount }: { itemCount: number }) => (
+  <>
+    <BlogUtilityHeader />
+    <MenuMasthead itemCount={itemCount} />
+  </>
+);
 
 export default MenuBanner;

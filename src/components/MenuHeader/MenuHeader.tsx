@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import cx from "classnames";
@@ -13,31 +14,20 @@ const MenuHeader = ({ className }: MenuHeaderProps) => {
   const locale = useLocale() as Locale;
 
   return (
-    <header
-      className={cx(
-        "bg-primary-main min-h-[132px] flex items-center",
-        className
-      )}>
-      <div className="flex flex-1 w-full max-w-7xl px-10 mx-auto">
-        <div className="flex flex-1 justify-start">
-          <Image
-            src="/images/logos/logo-symbol.svg"
-            alt="logo"
-            width={60}
-            height={60}
-          />
-        </div>
-        <div className="flex flex-1 justify-center">
-          <div className="flex items-center gap-2">
+    <header className={cx("site-header-shell site-header-bar w-full", className)}>
+      <div className="site-header-bar-inner flex items-center bg-brand-main text-brand-green max-md:border-b-0 md:border-b md:border-brand-green">
+        <div className="section-container flex h-[4.5rem] w-full items-center justify-between">
+          <Link href="/" className="focus-brand shrink-0 rounded-sm" aria-label="Inicio">
             <Image
-              src="/images/logos/logo-letters.svg"
-              alt="logo"
-              width={250}
-              height={60}
+              src="/images/logos/logo-atzomx.svg"
+              alt="Atzomx"
+              width={237}
+              height={49}
+              priority
+              unoptimized
+              className="h-6 w-auto sm:h-7"
             />
-          </div>
-        </div>
-        <div className="flex flex-1 justify-end">
+          </Link>
           <LocaleSwitch locale={locale} />
         </div>
       </div>

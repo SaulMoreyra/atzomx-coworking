@@ -1,53 +1,24 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import React, { type FC } from "react";
-import { MessageSquare, Calendar, Zap, Coffee } from "react-feather";
+import React from "react";
 
-interface BenefitProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-const Benefit: FC<BenefitProps> = ({ icon, title, description }) => {
-  return (
-    <div className="flex gap-5">
-      {icon}
-      <div>
-        <h3 className="text-xl md:text-2xl text-nowrap">{title}</h3>
-        <p className="text-gray-400 text-lg md:text-xl">{description}</p>
-      </div>
-    </div>
-  );
-};
+const BENEFIT_KEYS = ["wifi", "plans", "coffee", "chairs", "feedback"] as const;
 
 const ServiceBenefits = () => {
   const t = useTranslations("home.benefits");
+
   return (
-    <div className="flex justify-center items-center md:px-10 py-5">
-      <div className="flex flex-col justify-between gap-10 md:flex-row md:gap-20">
-        <Benefit
-          icon={<Zap size={40} className="min-w-[40px]" />}
-          title={t("wifi.title")}
-          description={t("wifi.description")}
-        />
-        <Benefit
-          icon={<Calendar size={40} className="min-w-[40px]" />}
-          title={t("plans.title")}
-          description={t("plans.description")}
-        />
-        <Benefit
-          icon={<Coffee size={40} className="min-w-[40px]" />}
-          title={t("coffee.title")}
-          description={t("coffee.description")}
-        />
-        <Benefit
-          icon={<MessageSquare size={40} className="min-w-[40px]" />}
-          title={t("feedback.title")}
-          description={t("feedback.description")}
-        />
-      </div>
+    <div className="min-w-0 w-full">
+      <p className="text-label mb-4 text-[10px] tracking-[0.2em] text-brand-green/45 md:text-xs">{t("sectionTitle")}</p>
+      <ul className="divide-y divide-brand-green border-y border-brand-green" role="list">
+        {BENEFIT_KEYS.map(key => (
+          <li key={key} className="grid gap-2 py-5 md:grid-cols-[6.5rem_minmax(0,1fr)] md:gap-6 md:py-6">
+            <h3 className="text-label text-[10px] tracking-[0.14em] text-brand-green md:text-xs">{t(`${key}.title`)}</h3>
+            <p className="text-body text-sm leading-relaxed text-brand-green/75 md:text-base">{t(`${key}.description`)}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

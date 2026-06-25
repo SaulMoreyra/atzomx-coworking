@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "title": "Blog | Atzomx — Coworking & Kaffee in Oaxaca",
+    "description": "Remote-Work-Guides, Spezialitätenkaffee und Community-Geschichten aus dem Zentrum von Oaxaca."
+  },
+  "banner": {
+    "title": "Blog",
+    "tagline": "Geschichten über Coworking, Kaffee und Community in Oaxaca",
+    "backHome": "Start",
+    "articlesCount": "{count} veröffentlichte Geschichten"
+  },
+  "index": {
+    "intro": "Guides, Notizen und Gedanken aus dem Zentrum — {count} Artikel in deinem Tempo.",
+    "featuredLabel": "Empfohlen",
+    "filterAll": "Alle",
+    "filterLabel": "Nach Thema stöbern",
+    "emptyState": "Noch keine Artikel in dieser Kategorie."
+  },
+  "article": {
+    "sectionTitle": "WEITERLESEN",
+    "relatedTitle": "Mehr vom Blog"
+  },
+  "section": {
+    "sectionTitle": "Blog",
+    "title": "Geschichten aus dem Zentrum von Oaxaca",
+    "subtitle": "Coworking, Spezialitätenkaffee und das Leben rund um Los Libres 800-B.",
+    "viewAll": "Alle Beiträge ansehen"
+  },
+  "readMore": "Artikel lesen",
+  "backToBlog": "Zurück zum Blog",
+  "readingTime": "{minutes} Min. Lesezeit",
+  "publishedOn": "Veröffentlicht am {date}",
+  "categories": {
+    "coworking": "Coworking",
+    "coffee": "Kaffee",
+    "community": "Community",
+    "oaxaca": "Oaxaca"
+  },
+  "posts": {
+    "welcome-atzomx": {
+      "title": "Willkommen bei Atzomx: Coworking mit Kaffee-Seele",
+      "excerpt": "Wir sind oaxacanische Softwareentwickler, die einen gemütlichen Ort zum Arbeiten suchten — und am Ende den Space gebaut haben, der uns in der Innenstadt gefehlt hat.",
+      "paragraphs": [
+        "Atzomx begann nicht als Businessplan an einer Whiteboard-Wand. Es begann mit einem sehr konkreten Bedürfnis: Wir sind oaxacanische Softwareentwickler und arbeiten wie viele in unserer Generation remote — mit Kunden in anderen Städten und Ländern. Was wir in Oaxaca nicht fanden, war ein Ort, an dem wir wirklich jeden Tag arbeiten wollten.",
+        "Wir probierten Cafés — Lärm, instabiles Internet und die Blicke, wenn man fünf Stunden mit einer Tasse sitzt. Wir probierten geteilte Büros — okay, funktional, aber kalt: weiße Wände, unangenehme Stille, dieses Gefühl, in einem langweiligen Büro zu sitzen, in das man nicht zurückkehren möchte. Kein Ort verband, was wir zum ernsthaften Arbeiten brauchten, mit dem, was wir für den Alltag wollten: Komfort, guter Kaffee und Menschen für ein Gespräch.",
+        "So entstand die Idee für Atzomx: ein Space von Leuten, die verstehen, was es heißt, vom WiFi abhängig zu sein, um 9:00 Uhr in Calls zu sein und an einem beliebigen Dienstag einen extra Monitor zu brauchen — aber der sich nicht wie Pflicht anfühlt. Wir wollten einen gemütlichen, lebendigen Ort, näher an einem Treffen mit Freunden als an einem Corporate-Meetingraum. Einen Ort, an dem man Zeit verbringen kann: morgens den Laptop aufklappen, später für einen Latte runterkommen, abends auf der Terrasse bleiben, ohne dass jemand dich zum Gehen drängt.",
+        "Deshalb blieb Kaffee kein dekoratives Detail. Für uns ist das Bar-Ritual — Getränk bestellen, frisch extrahierten Espresso riechen, fünf Minuten nehmen, bevor man zurück zum Code geht — Teil der Arbeit, keine gestohlene Pause. Coworking mit Specialty Coffee zu verbinden war der natürliche Weg, die Atmosphäre zu schaffen, die wir suchten: produktiv, wenn nötig, entspannt, wenn man es zulässt.",
+        "Den Standort fanden wir in der C. de Los Libres 800-B, im historischen Zentrum von Oaxaca de Juárez, wenige Gehminuten vom Zócalo. Von hier aus kannst du eine Tlayuda essen, Märkte besuchen, an einer Videokonferenz teilnehmen und den Tag im Erdgeschoss beenden — ohne die Straße zu wechseln.",
+        "Wir gestalteten den Space bewusst auf zwei Ebenen. Unten das Café: Espresso, Chemex, Sandwiches, Bowls und eine Atmosphäre, in der du auch mit stabilem WLAN arbeiten kannst und nur zahlst, was du konsumierst. Oben das Coworking: große Tische, ergonomische Stühle, Klimaanlage, Steckdosen an jedem Platz und Infrastruktur, die wir als Entwickler selbst verlangt hätten — 1000 Mbps Glasfaser für Videocalls, Deployments und große Uploads ohne die Angst, dass mitten im Sprint die Verbindung abbricht.",
+        "Die Tarife sind flexibel und beginnen bei 59 MXN pro Stunde für den geteilten Bereich. Enthalten sind unbegrenzt Kaffee, Tee und Wasser, Zugang zur Dachterrasse und 5 % Rabatt auf die Café-Karte. Es gibt auch Einzelplätze, ein Paket mit externem Monitor und einen Meetingraum für Teams bis zu sechs Personen mit 55-Zoll-Smart-TV und Whiteboard — weil wir wissen, wie schwer es ist, einen anständigen Raum für eine Kunden-Demo zu finden.",
+        "Mit der Zeit wurde Atzomx mehr als unser Arbeitsrefugium. Freelancer, Designer, Berater, Digital Nomads und lokale Gründer kamen dazu. Was wir für uns gebaut haben, wurde zum Treffpunkt für alle in Oaxaca, die dasselbe suchen wie wir: einen Ort zum Fokussieren, ohne sich in einem langweiligen Büro gefangen zu fühlen.",
+        "Was Besucher sagen, bestätigt es: ruhige, saubere Atmosphäre, freundliches Personal, bequeme Stühle und „das beste Coworking im Zentrum“. Mit über 75 Bewertungen und 4,9 Sternen auf Google sind wir stolz, dass andere fühlen, was wir von Anfang an suchten.",
+        "Ob du aus Oaxaca kommst oder nur durchreist — komm an die Bar und stell dich vor. Atzomx existiert, weil zwei lokale Entwickler einen besseren Ort zum Arbeiten wollten — und beschlossen haben, ihn selbst zu bauen. Wir hoffen, du bleibst nicht nur wegen des WLANs, sondern weil es sich hier wirklich gut anfühlt, Zeit zu verbringen."
+      ]
+    },
+    "specialty-coffee-oaxaca": {
+      "title": "Specialty Coffee in Oaxaca: mehr als eine Ergänzung",
+      "excerpt": "Pluma Hidalgo, Sierra Madre del Sur und Barista-Handwerk: warum oaxacanischer Kaffee denselben Respekt verdient wie deine Deadline.",
+      "paragraphs": [
+        "In vielen Coworkings ist Kaffee ein vergessener Automat in der Ecke. Bei Atzomx ist es das Gegenteil: Specialty Coffee steht im Mittelpunkt — an der Bar im Erdgeschoss und in den unbegrenzten Tassen der Coworking-Tarife.",
+        "Oaxaca hat Jahrhunderte Geschichte im mexikanischen Kaffee. Die ersten Kaffeepflanzen kamen im 17. Jahrhundert ins Land, und die Region entwickelte einzigartige Sorten und Mikroklimata. Heute ist der Bundesstaat nationale Referenz für Qualität und Herkunftsvielfalt.",
+        "Das Herz dieser Tradition liegt in der Sierra Madre del Sur, wo der Ort Pluma Hidalgo einer der bekanntesten Sorten Mexikos seinen Namen gibt: Pluma Hidalgo, eine Abkömmling des ursprünglichen Typica. Der Name erinnert an die federförmigen Wolken über den Bergen bei Tagesanbruch.",
+        "Diese Region hat eine geschützte Herkunftsbezeichnung — die Pluma-Region umfasst Dutzende oaxacanischer Gemeinden, in denen Coffea arabica zwischen 1.300 und über 1.900 Metern Höhe wächst. Vulkanischer Boden, Küstenbrise und Schattenanbau ergeben ausgewogene Bohnen mit Noten von Kakao, Zitrus, warmen Gewürzen und einem blumigen Abgang, den internationale Cupper auszeichnen.",
+        "Lokale Produzenten arbeiten oft kleine Parzellen — viele Farmen messen zwischen einem und neun Hektar — mit handwerklichen Methoden über Generationen: selektive Ernte, Entpulpen, kontrollierte Fermentation und Sonnentrocknung auf Patios. Diese Sorgfalt schmeckt man in der Tasse.",
+        "Bei Atzomx bereiten wir jedes Getränk mit dem Anspruch vor, diese Herkunft zu respektieren. Unsere Karte umfasst Espresso und Milchgetränke — vom kräftigen Shot bis Latte Art — sowie Filtermethoden wie Chemex, ideal um die Komplexität eines oaxacanischen Single Origins ohne Eile zu erleben.",
+        "Der Unterschied zwischen Commodity-Kaffee und Specialty ist kein Snobismus: Es geht um Rückverfolgbarkeit, Röstfrische und kontrollierte Extraktion. Ein gut gezogener Espresso hat gleichmäßige Crema, Balance zwischen Säure und Süße und einen Körper, der stundenlange Deep Work begleitet — nicht unterbricht.",
+        "Für alle, die oben arbeiten, ist unbegrenzter Kaffee kein Gimmick: Er ist Ritual-Treibstoff. Die Bar-Pause — zwei Minuten an der Maschine, das Aroma frisch extrahierten Espressos, ein kurzer Austausch mit dem Barista — markiert den Übergang zwischen Fokus-Blöcken und gehört zu den Momenten, die man vermisst, wenn man die Stadt verlässt.",
+        "Wir servieren auch kalte Optionen, Smoothies, Tees und eine Speisekarte für volle Arbeitstage: Bowls, Sandwiches und Salate, die die Bar ergänzen, ohne das Gebäude verlassen zu müssen.",
+        "Wenn du Oaxaca besuchst und dich für Third-Wave-Kaffee interessierst, frag an der Bar, welche Herkunft wir diese Woche führen, probiere einen Pour-over, wenn du Zeit hast, und vergleiche, wie sich das Profil zwischen Methoden verändert. So versteht man, warum oaxacanischer Kaffee international mithält — und warum wir ihn bei Atzomx nicht als Beiwerk, sondern als wesentlichen Teil des Tages behandeln."
+      ]
+    },
+    "remote-work-oaxaca": {
+      "title": "Remote arbeiten in Oaxaca: praktischer Leitfaden",
+      "excerpt": "Zeitzone UTC-6, schwankendes Internet in Wohnungen aber Glasfaser im Coworking, und ein historisches Zentrum, in dem man zur Arbeit läuft.",
+      "paragraphs": [
+        "Oaxaca de Juárez hat sich zu einem der beliebtesten Ziele für Digital Nomads in Mexiko entwickelt. Es konkurriert nicht mit Mexiko-Stadt in der Größe, bietet aber etwas, das viele mehr schätzen: Lebensqualität, Weltklasse-Gastronomie, erschwingliche Kosten und eine lebendige Kultur, die zu längeren Aufenthalten einlädt.",
+        "Die Zeitzone ist UTC-6 — dieselbe wie Mexiko-Stadt und US Central Standard Time. Mit Kunden an der US-Ostküste fallen deine Morgen mit deren Mittag zusammen; mit Teams in Kalifornien musst du früh starten oder den Nachmittag leicht verlängern. Für die meisten Freelancer mit nordamerikanischen Kunden ist das ein natürlicher Vorteil.",
+        "Die Lebenshaltungskosten erlauben einen komfortablen Stil ohne Großstadt-Budget. Eine Wohnung in Centro, Jalatlaco oder Reforma kostet je nach Größe und Saison 400–1.000 USD monatlich; Essen auf Märkten kostet einen Bruchteil der CDMX-Preise; regelmäßiges Coworking liegt bei etwa 80–150 USD pro Monat. Viele Nomads leben gut mit 1.400–2.200 USD monatlich.",
+        "Internet verdient Ehrlichkeit: In Wohnungen schwankt die Geschwindigkeit zwischen 30 und 60 Mbps — für die meisten Aufgaben ausreichend, aber nicht immer zuverlässig für ein kritisches CEO-Videomeeting. Deshalb sind Coworkings mit dedizierter Glasfaser — wie Atzomx' 1000 Mbps — das Sicherheitsnetz für ernsthaftes Remote Work.",
+        "Unsere empfohlene Strategie: Nutze deine Wohnung für asynchrone Arbeit — Schreiben, Design, Code — und reserviere Coworking für Calls, Deadline-Lieferungen und Tage mit maximalem Fokus. So hängst du nicht von einem einzigen Ausfallpunkt ab.",
+        "Oaxaca ist fußläufig erkundbar. Im historischen Zentrum zu wohnen bedeutet, den Alltag zu Fuß zu lösen: Markt, Café, Coworking, Abendessen. Atzomx an Los Libres 800-B liegt in dieser Sphäre, Minuten vom Zócalo entfernt, ohne den Dauerlärm des Hauptplatzes.",
+        "Die Saison zählt. Von November bis April herrscht trockenes, mildes Wetter — ideal für lange Sessions mit offenen Fenstern. Von Mai bis Oktober kommt Regen: Er kühlt Nachmittage, aber plane Plan B für Internet, wenn du von zu Hause arbeitest. Februar bis April ist oft der Sweet Spot: gutes Wetter, dünnere Nach-Feiertags-Menschenmassen und aktive Nomad-Community.",
+        "Zu Visa: Die meisten Besucher erhalten bis zu 180 Tage Aufenthalt als Tourist. Für längere Aufenthalte gibt es temporäre Aufenthaltsoptionen mit wirtschaftlichen Nachweisen — lohnt sich vor der Planung eines ganzen Jahres mit einem Migrationsberater zu klären.",
+        "Ein produktiver Typ-Tag: Frühstück auf dem Markt, Coworking 9:00–13:00 Uhr Deep Work, Mittagessen unten bei Atzomx, zweite Session bis 17:00 Uhr, Abendspaziergang durch Jalatlaco oder Mezcal-Verkostung am Wochenende. Der Schlüssel ist nicht, jede Stunde zu optimieren — sondern einen festen Anker zu haben, an den du täglich zurückkehrst.",
+        "Buche per WhatsApp in der Hochsaison (Guelaguetza, Día de Muertos, Weihnachten). Bring Kopfhörer mit Mikro mit, finde die ruhigste Zone für Calls und nutze die Dachterrasse für bildschirmfreie Pausen. Oaxaca belohnt Disziplin plus Neugier — und ein gutes Coworking macht den ersten Teil deutlich leichter."
+      ]
+    },
+    "community-coworking": {
+      "title": "Community im Coworking: Verbindungen jenseits des WLANs",
+      "excerpt": "Forschung zeigt: Coworking reduziert Isolation und erweitert berufliche Netzwerke. Bei Atzomx passiert das an der Bar, auf der Terrasse und im Meetingraum.",
+      "paragraphs": [
+        "Remote Work bringt Freiheit, aber auch einen stillen Preis: Isolation. Studien der Organisationspsychologie dokumentieren, dass Coworking-Spaces soziale Unterstützung für unabhängige Professionals bieten — nicht nur einen Schreibtisch, sondern Interaktionen, die die vermisste „Büro-Kaffeepause“ ersetzen.",
+        "Eine von Harvard Business Review zitierte Umfrage fand: 87 % der Coworking-Nutzer sozialisieren mit anderen Mitgliedern, 82 % erweiterten ihr berufliches Netzwerk und 64 % sehen darin echte Arbeits-Empfehlungen. Kein erzwungenes Networking — Gespräche, die natürlich entstehen.",
+        "Bei Atzomx sieht man diese Dynamik täglich. An der Bar im Erdgeschoss treffen sich Grafikdesigner, Softwareentwickler, Marketingberater, Übersetzer, lokale Gründer und Digital Nomads aus Deutschland, den USA oder Argentinien. Die Mischung — lokal und international, kreativ und technisch — macht jede Woche interessant.",
+        "Kooperationen starten selten mit einem Pitch im Meetingraum. Sie entstehen, wenn jemand fragt, was du baust, wenn du einen Tisch auf der Terrasse teilst, oder wenn der Barista zwei Leute verbindet, die zwei Tage hintereinander dasselbe bestellen. Organisches Networking, kein Visitenkarten-Event.",
+        "Für Freelancer bedeutet das Konkretes: ein Designer findet einen Entwickler für seine Landing Page, ein Berater bekommt eine Empfehlung von einem CDMX-Kunden, ein Nomad findet Mitbewohner für den nächsten Monat. Die Literatur spricht vom „Netzwerk als Mittel, nicht als Ziel“ — das Netz allein garantiert keine Ergebnisse, öffnet aber Zugang zu Ideen, Benchmarks und Chancen, die zu Hause nicht auftauchen.",
+        "Community reduziert auch die emotionale Reibung selbstständiger Arbeit. Menschen um sich — auch ohne mit allen zu sprechen — schafft ambient accountability: Der Morgen startet leichter, wenn andere um 9:00 Uhr Laptops öffnen. Gut gestaltete Spaces ermöglichen informelle Begegnungen ohne Extroversion zu erzwingen.",
+        "In Oaxaca, wo die Nomad-Szene jede Saison wächst, ist Atzomx ein stabiler Treffpunkt. Anders als in Cafés, wo WLAN ausfallen oder Lärm Calls stören kann, erlaubt die professionelle Infrastruktur hier soziale Entspannung ohne Produktivitätsverlust.",
+        "Wir organisieren den Space so, dass Konzentrationszonen — oben, klimatisiert, mit großen Tischen — neben Pausen an Bar und Terrasse existieren. Der Meetingraum bündelt kleine Teams, die manchmal Kontakte mit anderen Gruppen im Stockwerk tauschen.",
+        "Wenn du neu in der Stadt bist, ist Vorstellen an der Bar der einfachste und effektivste Schritt. Frag, welche Kaffeeherkunft gerade serviert wird, erzähl, woher du kommst und woran du arbeitest. Oaxaca ist berühmt für Gastfreundschaft — bei Atzomx verbindet sich diese Wärme mit einem ernsthaften Arbeitsumfeld.",
+        "Ein gutes Coworking misst man nicht nur in Megabit. Es misst sich an Gesprächen an der Espressomaschine, die in gemeinsame Projekte münden — oder einfach daran, dass man sich nicht allein fühlt. Das kultivieren wir täglich an Los Libres 800-B."
+      ]
+    }
+  }
+}

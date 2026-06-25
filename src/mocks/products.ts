@@ -1,37 +1,8 @@
-import { type ImageType } from "@/common/types/categoryTypes";
 import {
   CategoryPlan,
   type PlanType,
   type ReviewType,
 } from "@/common/types/planTypes";
-
-export const ALL_IMAGES: ImageType[] = [
-  {
-    id: 1,
-    name: "Sala de juntas en Atzomx Coworking, con TV 55 pulgadas y pizarrón, para 2 a 6 personas en el Centro de Oaxaca",
-    image: "/images/coworking/meeting-room.webp",
-  },
-  {
-    id: 2,
-    name: "Latte art preparado con café de especialidad en Atzomx Café, Centro Histórico de Oaxaca",
-    image: "/images/coworking/art-latte.webp",
-  },
-  {
-    id: 3,
-    name: "Fachada de Atzomx Café y Coworking en C. de Los Libres 800-B, Centro de Oaxaca",
-    image: "/images/coworking/atzomx.webp",
-  },
-  {
-    id: 4,
-    name: "Sándwich Ibérico con ensalada de la casa, parte del menú de Atzomx",
-    image: "/images/coworking/lunch.webp",
-  },
-  {
-    id: 5,
-    name: "Escritorio individual con monitor adicional en el coworking de Atzomx Oaxaca",
-    image: "/images/coworking/monitor.webp",
-  },
-];
 
 export const ALL_REVIEWS: ReviewType[] = [
   {

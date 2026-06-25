@@ -1,59 +1,73 @@
 # Atzomx Coworking & Café
 
-Marketing/landing site for [Atzomx Coworking & Café](https://atzomx.com.mx/) in Oaxaca, Mexico. Static Next.js App Router site with two routes: `/` (landing) and `/menu`.
+Marketing site and admin panel for [Atzomx Coworking & Café](https://atzomx.com.mx/) in Oaxaca, Mexico.
 
 ## Stack
 
 - Next.js 15 (App Router) + TypeScript
-- Tailwind CSS (custom theme tokens in `tailwind.config.js`)
-- `next-intl` for i18n (`es` default, `en`) — locale is cookie-driven, no `[locale]` route segment
-- `framer-motion` + `gsap` (with `ScrollTrigger`) for animations
-- `next-sitemap` for sitemap/robots generation at build time
-- Google Tag Manager + Google Analytics wired in `src/app/layout.tsx`
-
-There is no backend, database, or authentication. All content (plans, reviews, menu items) is static mock data under `src/mocks/`.
+- Tailwind CSS + locked design system (`DESIGN.md`, `tokens.css`)
+- `next-intl` for i18n (`es`, `en`, `fr`, `de`) — locale is cookie-driven
+- **PostgreSQL + Prisma** — product prices and metadata
+- **JWT + refresh token** — admin authentication
+- Copy for product names/descriptions stays in `messages/{locale}/*.json` (keyed by slug)
 
 ## Getting started
 
-Package manager is **yarn** (a `yarn.lock` is committed).
-
 ```bash
 yarn install
-yarn dev          # http://localhost:3000
+cp .env.example .env   # set JWT secrets + DATABASE_URL
+docker compose up -d
+yarn db:push           # or yarn db:migrate
+yarn db:seed           # imports mocks + creates admin user
+yarn dev               # http://localhost:3000
 ```
+
+Admin panel: [http://localhost:3000/admin/login](http://localhost:3000/admin/login)
+
+Default seed credentials (override in `.env`):
+
+- Email: `admin@atzomx.com.mx`
+- Password: value of `ADMIN_SEED_PASSWORD` (default `ChangeMe123!`)
 
 ## Scripts
 
-| Script         | What it does                                                            |
-| -------------- | ----------------------------------------------------------------------- |
-| `yarn dev`     | Next.js dev server                                                      |
-| `yarn build`   | Production build (runs `next-sitemap` automatically via `postbuild`)    |
-| `yarn start`   | Serve the production build                                              |
-| `yarn lint`    | `next lint`                                                             |
-| `yarn format`  | Typecheck (`tsc --noEmit`) **and** `prettier --check src` — use as CI gate |
+| Script | What it does |
+| --- | --- |
+| `yarn dev` | Next.js dev server |
+| `yarn build` | Production build |
+| `yarn db:push` | Push Prisma schema to PostgreSQL |
+| `yarn db:migrate` | Create/apply migrations |
+| `yarn db:seed` | Seed categories, products, admin user |
+| `yarn db:studio` | Prisma Studio |
 
-There is no test runner configured.
+## API
+
+| Route | Auth | Description |
+| --- | --- | --- |
+| `POST /api/v1/auth/login` | — | Login + refresh cookie |
+| `POST /api/v1/auth/refresh` | cookie | New access token |
+| `POST /api/v1/auth/logout` | cookie | Revoke session |
+| `GET /api/v1/auth/me` | Bearer | Current user |
+| `GET /api/v1/public/menu` | — | Menu products (prices only) |
+| `GET /api/v1/public/plans` | — | Plan products (prices only) |
+| `GET/POST /api/v1/products` | Bearer | Admin CRUD |
+| `GET/POST /api/v1/categories` | Bearer | Categories |
+| `GET/POST /api/v1/users` | Bearer (ADMIN) | User management |
+
+Public pages merge API prices with `next-intl` copy from JSON files.
+
+If `DATABASE_URL` is unset (e.g. CI), the site falls back to static mocks for prices.
 
 ## Project layout
 
 ```
-src/
-  app/             # App Router routes (`/`, `/menu`) + root layout
-  components/      # One component per folder (PascalCase)
-  common/types/    # Shared TS types
-  mocks/           # Static content: plans, reviews, menu items
-  i18n/            # next-intl config + request handler
-  services/        # Server actions (currently just locale cookie)
-  hooks/
-messages/{en,es}/  # Translation namespaces (home, menu)
-public/            # Static assets (images, fonts, favicon, sitemap output)
+prisma/              # Schema, seed, migrations
+src/app/admin/       # Admin UI (/admin/*)
+src/app/api/v1/      # REST API
+src/lib/auth/        # JWT, cookies, rate limit
+src/lib/products/    # Public menu/plans fetch + fallback
+src/mocks/           # Fallback static data + seed source
+messages/{locale}/   # i18n copy (product names/descriptions)
 ```
 
 Path alias: `@/*` → `./src/*`.
-
-## Legacy / unused
-
-The following are present in the repo but **not used** by the current source — leave them alone unless you're intentionally cleaning up:
-
-- `package.json` deps: `@prisma/client`, `@stripe/stripe-js`, `jsonwebtoken` (and their `@types/*`).
-- `.gitmodules` declares submodules at `src/lib/common` and `src/lib/authkitty` (from `clewup/*`). The directories are not present in the working tree and nothing imports from them.

@@ -35,7 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# claude code (project memory + skills, not committed)
+# claude code (project memory, not committed)
 CLAUDE.md
-.claude/skills/
 .claude/plans/

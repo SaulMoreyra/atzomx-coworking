@@ -14,10 +14,12 @@ export interface PlanType {
 }
 
 export interface ReviewType {
+  id?: string;
   client: {
     name: string;
     image: string;
   };
   rating: number;
   review: string;
+  source?: "google" | "static";
 }

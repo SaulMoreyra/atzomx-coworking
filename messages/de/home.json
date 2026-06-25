@@ -1,0 +1,320 @@
+{
+  "header": {
+    "about": "Über uns",
+    "gallery": "Galerie",
+    "plans": "Tarife",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "reviews": "Bewertungen",
+    "blog": "Blog",
+    "remoteWork": "Remote work",
+    "menu": "Menü",
+    "more": "Mehr",
+    "navPrimary": "Entdecken",
+    "navMobile": "Navigationsmenü",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "presentation": {
+    "taglineLine1": "COMMUNITY & CAFÉ",
+    "taglineLine2": "COWORKING",
+    "scheduleLabel": "ÖFFNUNGSZEITEN",
+    "scheduleHours": "Mo–Fr 9:00–18:00 Uhr · Sa 10:00–20:00 Uhr",
+    "plans": "Tarife ansehen",
+    "whatsapp": "WhatsApp"
+  },
+  "hours": {
+    "weekdaysLabel": "Montag bis Freitag",
+    "weekdaysHours": "9:00 — 18:00 Uhr",
+    "saturdayLabel": "Samstag",
+    "saturdayHours": "10:00 — 20:00 Uhr",
+    "sundayLabel": "Sonntag",
+    "sundayHours": "Öffnungszeiten per WhatsApp"
+  },
+  "about": {
+    "title": "Speziell entwickelt für",
+    "public": {
+      "freelancers": "Freelancer",
+      "remote-workers": "Remote-Mitarbeiter",
+      "creatives": "Kreative",
+      "digital-nomads": "Digitale Nomaden",
+      "coffee-lovers": "Kaffeeliebhaber",
+      "developers": "Entwickler"
+    }
+  },
+  "gallery": {
+    "sectionTitle": "Galerie",
+    "title": "Entdecke den Space",
+    "subtitle": "Dachterrasse, Schreibtische, Besprechungsraum und Kaffeetheke im Zentrum von Oaxaca.",
+    "openPhoto": "Foto vergrößern: {label}",
+    "closePhoto": "Foto schließen",
+    "tiles": {
+      "terrace": { "label": "Dachterrasse", "alt": "Dachterrasse von Atzomx im Zentrum von Oaxaca" },
+      "desks": { "label": "Schreibtische", "alt": "Gemeinsame Tische im Coworking-Bereich" },
+      "meeting-room": { "label": "Besprechungsraum", "alt": "Besprechungsraum mit Smart TV bei Atzomx" },
+      "coffee-bar": { "label": "Kaffeetheke", "alt": "Spezialitätenkaffee-Bar im Erdgeschoss" },
+      "monitor-desk": { "label": "Monitor-Arbeitsplatz", "alt": "Arbeitsplatz mit zusätzlichem Monitor" },
+      "facade": { "label": "Fassade", "alt": "Eingang von Atzomx an Los Libres, Zentrum Oaxaca" },
+      "community": { "label": "Community", "alt": "Community-Atmosphäre bei Atzomx" },
+      "latte-art": { "label": "Latte art", "alt": "Latte art an der Atzomx-Bar zubereitet" }
+    }
+  },
+  "benefits": {
+    "sectionTitle": "Das ist dabei",
+    "sectionSubtitle": "Alles, was du brauchst, um komfortabel im Zentrum von Oaxaca zu arbeiten.",
+    "wifi": {
+      "title": "Highspeed-WLAN",
+      "description": "1000 Mbps Internet"
+    },
+    "plans": {
+      "title": "Flexible Tarife",
+      "description": "Stündlich, täglich, wöchentlich oder monatlich"
+    },
+    "coffee": {
+      "title": "Hervorragender Kaffee",
+      "description": "Spezialitätenkaffee, immer frisch"
+    },
+    "chairs": {
+      "title": "Ergonomische Stühle",
+      "description": "Echter Komfort für lange Arbeitstage"
+    },
+    "feedback": {
+      "title": "Feedback teilen",
+      "description": "Wir freuen uns über deine Erfahrung!"
+    }
+  },
+  "plans": {
+    "sectionTitle": "Tarife",
+    "from": "Ab",
+    "book": "Jetzt buchen",
+    "defaultAsk": "Hallo! Ich möchte einen Tarif bei Atzomx buchen.",
+    "features": {
+      "cafeteria": {
+        "pay-what-you-consume": "Zahlen Sie nur, was Sie konsumieren",
+        "stable-internet": "Stabiles Internet",
+        "ergonomic-chairs": "Ergonomische Stühle",
+        "discount-on-cafeteria-menu": "5 % Rabatt auf das Café-Menü",
+        "unlimited-coffee-tea-and-water": "Unbegrenzt Kaffee, Tee und Wasser",
+        "high-speed-internet": "Highspeed-Internet",
+        "roof-top-access": "Zugang zur Dachterrasse"
+      },
+      "co-working": {
+        "ergonomic-chairs": "Ergonomische Stühle",
+        "unlimited-coffee-tea-and-water": "Unbegrenzt Kaffee, Tee und Wasser",
+        "high-speed-internet": "Highspeed-Internet",
+        "roof-top-access": "Zugang zur Dachterrasse",
+        "discount-on-cafeteria-menu": "5 % Rabatt auf das Café-Menü",
+        "individual-desk": "Einzelner Schreibtisch",
+        "extra-monitor": "Zusätzlicher Monitor"
+      },
+      "meeting-room": {
+        "smart-tv": "55-Zoll Smart TV",
+        "whiteboard": "Whiteboard",
+        "space-for-up-to-6-people": "Platz für bis zu 6 Personen",
+        "unlimited-coffee-tea-and-water": "Unbegrenzt Kaffee, Tee und Wasser",
+        "high-speed-internet": "Highspeed-Internet",
+        "roof-top-access": "Zugang zur Dachterrasse",
+        "discount-on-cafeteria-menu": "5 % Rabatt auf das Café-Menü"
+      }
+    },
+    "plans": {
+      "free": {
+        "name": "Gratis-Tarif",
+        "description": "Jederzeit zugänglich",
+        "area": "Cafeteria",
+        "book": "Hallo! Ich möchte den Gratis-Tarif bei Atzomx buchen."
+      },
+      "standard": {
+        "name": "Standard-Tarif",
+        "description": "Teilen Sie einen Tisch im Coworking-Bereich",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte den Standard-Tarif bei Atzomx buchen."
+      },
+      "individual": {
+        "name": "Einzel-Tarif",
+        "description": "Für alle, die einen privaten Arbeitsplatz brauchen",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte den Einzel-Tarif bei Atzomx buchen."
+      },
+      "monitor": {
+        "name": "Monitor-Tarif",
+        "description": "Für alle, die einen zusätzlichen Monitor brauchen",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte den Monitor-Tarif bei Atzomx buchen."
+      },
+      "meeting-room": {
+        "name": "Besprechungsraum",
+        "description": "Für Teams von 2 bis 6 Personen",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte einen Besprechungsraum bei Atzomx buchen."
+      }
+    }
+  },
+  "pricingTable": {
+    "sectionTitle": "Preise",
+    "title": "Preise nach Tarif",
+    "subtitle": "Preise in MXN. Tages-, Wochen- und Monatspässe verfügbar — schreib uns für aktuelle Tarife.",
+    "columns": {
+      "plan": "Tarif",
+      "hour": "Stunde",
+      "day": "Tag",
+      "week": "Woche",
+      "month": "Monat",
+      "action": "Buchen"
+    },
+    "contact": "Anfragen",
+    "book": "Buchen",
+    "footnote": "Tages-, Wochen- und Monatspreise können saisonal variieren. Schreib uns auf WhatsApp für ein genaues Angebot.",
+    "freePlan": {
+      "title": "Gratis-Tarif — Café",
+      "description": "Arbeite unten und zahle nur, was du konsumierst. Stabiles WLAN inklusive.",
+      "cta": "Gratis-Tarif anfragen"
+    }
+  },
+  "faq": {
+    "sectionTitle": "FAQ",
+    "title": "Häufige Fragen",
+    "subtitle": "Das Wichtigste, bevor du deinen Platz im Zentrum von Oaxaca buchst.",
+    "moreQuestions": "Noch eine Frage?",
+    "whatsappCta": "Schreib uns auf WhatsApp",
+    "items": {
+      "wifi": {
+        "question": "Wie schnell ist das Internet?",
+        "answer": "1000 Mbps Glasfaser im Coworking-Bereich oben — ausreichend für Videocalls, große Uploads und anspruchsvolles Remote Work."
+      },
+      "reservation": {
+        "question": "Muss ich im Voraus reservieren?",
+        "answer": "Nicht immer nötig, aber wir empfehlen eine WhatsApp-Reservierung in der Hochsaison (Guelaguetza, Día de Muertos, Dezember) oder wenn du Schreibtisch mit Monitor oder Meetingraum brauchst."
+      },
+      "hours": {
+        "question": "Was sind die Öffnungszeiten von Atzomx?",
+        "answer": "Montag bis Freitag 9:00–18:00 Uhr. Samstag 10:00–20:00 Uhr. Sonntag: aktuelle Zeiten vorher per WhatsApp erfragen."
+      },
+      "day-pass": {
+        "question": "Gibt es Tages-, Wochen- oder Monatspässe?",
+        "answer": "Ja. Neben Stundentarifen bieten wir Tages-, Wochen- und Monatspässe für Coworking-Tarife. Schreib uns auf WhatsApp mit dem gewünschten Tarif für aktuelle Preise."
+      },
+      "meeting-room": {
+        "question": "Wie buche ich den Meetingraum?",
+        "answer": "Der Raum ist für 2–6 Personen mit 55\" Smart TV, Whiteboard, WLAN und Kaffee. Buchung per WhatsApp mit Datum, Uhrzeit und Personenzahl. Ab 259 MXN pro Stunde."
+      },
+      "cafe-vs-coworking": {
+        "question": "Was ist der Unterschied zwischen Café und Coworking?",
+        "answer": "Unten (Café): gratis arbeiten und nur für Essen/Getränke zahlen. Oben: Coworking mit ergonomischen Tischen, Klimaanlage, unbegrenzt Kaffee und 1000 Mbps Glasfaser — Coworking-Tarif erforderlich."
+      },
+      "payment": {
+        "question": "Welche Zahlungsmethoden akzeptiert ihr?",
+        "answer": "Bar, Kredit- und Debitkarten (Visa, Mastercard, American Express)."
+      },
+      "parking": {
+        "question": "Gibt es Parkplätze in der Nähe?",
+        "answer": "Wir sind in Los Libres 800-B im historischen Zentrum, wenige Gehminuten vom Zócalo. Straßenparkplätze und private Parkhäuser in der Nähe; viele Gäste kommen zu Fuß oder mit Taxi/DiDi."
+      }
+    }
+  },
+  "whatsappFab": {
+    "label": "Per WhatsApp buchen",
+    "ariaLabel": "WhatsApp öffnen, um bei Atzomx zu buchen"
+  },
+  "planComparison": {
+    "sectionTitle": "Vergleich",
+    "title": "Wähle deinen Tarif",
+    "subtitle": "Gratis-Café vs. Standard vs. Einzel vs. Monitor — im Direktvergleich.",
+    "featureColumn": "Enthalten",
+    "wifiRow": "WLAN",
+    "hour": "Std",
+    "freePrice": "Gratis",
+    "included": "Enthalten",
+    "notIncluded": "Nicht enthalten"
+  },
+  "community": {
+    "sectionTitle": "Community",
+    "title": "Nächste Events",
+    "subtitle": "Treffen, Vorträge und Workshops bei Atzomx.",
+    "registerCta": "Anmelden",
+    "eventHostPrompt": "Hast du ein Event?",
+    "eventHostCta": "Schreib uns auf WhatsApp",
+    "eventHostMessage": "Hallo! Ich habe ein Event",
+    "instagramCta": "Auf Instagram ansehen",
+    "instagramHint": "Folge @atzomx für Updates und Öffnungszeiten.",
+    "emptyState": "Keine Events für diesen oder den nächsten Monat. Folge @atzomx auf Instagram für weitere Termine.",
+    "events": {
+      "spec-driven-development": {
+        "date": "26. JUN",
+        "title": "Spec-Driven Development",
+        "description": "Vortrag über spezifikationsgetriebene Entwicklung: vom Chaos zur Konformität."
+      },
+      "quantum-computing-intro": {
+        "date": "25. JUL",
+        "title": "Erste Einblicke in Quantencomputing",
+        "description": "Zugängliche Einführung in die Grundideen des Quantencomputings."
+      },
+      "programmer-to-programmer-csharp": {
+        "date": "26. SEP",
+        "title": "Von Entwickler zu Entwickler — C#",
+        "description": "Serie zum Vertiefen von C# mit der Dev-Community in Oaxaca."
+      },
+      "tarde-de-lenguas-jul-04": {
+        "date": "4. JUL",
+        "title": "Tarde de lenguas",
+        "description": "Sprachaustausch mit Einheimischen und Besucher:innen. Ein offenes Treffen zum Üben, Kennenlernen und für einen guten Nachmittag."
+      },
+      "tarde-de-lenguas-ago-22": {
+        "date": "22. AUG",
+        "title": "Tarde de lenguas",
+        "description": "Sprachaustausch mit Einheimischen und Besucher:innen. Ein offenes Treffen zum Üben, Kennenlernen und für einen guten Nachmittag."
+      },
+      "tarde-de-lenguas-sep-12": {
+        "date": "12. SEP",
+        "title": "Tarde de lenguas",
+        "description": "Sprachaustausch mit Einheimischen und Besucher:innen. Ein offenes Treffen zum Üben, Kennenlernen und für einen guten Nachmittag."
+      },
+      "tarde-de-lenguas-oct-03": {
+        "date": "3. OKT",
+        "title": "Tarde de lenguas",
+        "description": "Sprachaustausch mit Einheimischen und Besucher:innen. Ein offenes Treffen zum Üben, Kennenlernen und für einen guten Nachmittag."
+      },
+      "tarde-de-lenguas-oct-24": {
+        "date": "24. OKT",
+        "title": "Tarde de lenguas",
+        "description": "Sprachaustausch mit Einheimischen und Besucher:innen. Ein offenes Treffen zum Üben, Kennenlernen und für einen guten Nachmittag."
+      },
+      "tarde-de-lenguas-nov-21": {
+        "date": "21. NOV",
+        "title": "Tarde de lenguas",
+        "description": "Sprachaustausch mit Einheimischen und Besucher:innen. Ein offenes Treffen zum Üben, Kennenlernen und für einen guten Nachmittag."
+      },
+      "tarde-de-lenguas-dic-12": {
+        "date": "12. DEZ",
+        "title": "Tarde de lenguas",
+        "description": "Sprachaustausch mit Einheimischen und Besucher:innen. Ein offenes Treffen zum Üben, Kennenlernen und für einen guten Nachmittag."
+      }
+    }
+  },
+  "team": {
+    "sectionTitle": "Team",
+    "title": "Von Oaxaca-Devs gebaut",
+    "subtitle": "Wir haben den Space gebaut, den wir für Remote Work im Zentrum brauchten.",
+    "story1": "Wir sind Entwickler, die in Oaxaca leben und arbeiten. Jahre lang wechselten wir zwischen lauten Cafés und dunklen Wohnungen — auf der Suche nach einem Ort, an dem Fokus kein Luxus ist.",
+    "story2": "Wir fanden keinen Space, der Freitags-Deploys, Videocalls über Zeitzonen hinweg oder Steckdosen in erreichbarer Nähe versteht. Also haben wir einen gebaut.",
+    "story3": "Atzomx entstand aus dieser gemeinsamen Frustration: ein Coworking-Café von Oaxaca-Devs für alle, die remote aus dem Zentrum arbeiten. Wir betreiben ihn noch immer wie Nutzer — weil der Space auch unserer ist."
+  },
+  "reviews": {
+    "sectionTitle": "Bewertungen",
+    "badge": "Google Reviews",
+    "title": "Zufriedene Gäste",
+    "footer": "Kundenbewertungen",
+    "googleRatingSummary": "{rating} · {count} Bewertungen auf Google",
+    "googleAttribution": "Bewertungen von Google.",
+    "viewOnGoogle": "Auf Google Maps ansehen",
+    "readMore": "Mehr lesen",
+    "readLess": "Weniger lesen"
+  },
+  "footer": {
+    "sectionTitle": "Kontakt",
+    "payments": "Alle gängigen Zahlungsmethoden werden akzeptiert",
+    "address": "Adresse",
+    "location": "Standort",
+    "social_networks": "Soziale Netzwerke"
+  }
+}
