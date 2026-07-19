@@ -130,11 +130,11 @@ const BlogArticle: FC<BlogArticleProps> = ({ post, relatedPosts = [] }) => {
 
   const title = t(`posts.${post.id}.title`);
   const rawBlocks = t.raw(`posts.${post.id}.blocks`);
-  const hasBlocks = Array.isArray(rawBlocks) && rawBlocks.every(isBlogContentBlock);
+  const blocks = Array.isArray(rawBlocks) && rawBlocks.every(isBlogContentBlock) ? rawBlocks : null;
 
-  const paragraphs = hasBlocks ? [] : ((t.raw(`posts.${post.id}.paragraphs`) as string[]) ?? []);
+  const paragraphs = blocks ? [] : ((t.raw(`posts.${post.id}.paragraphs`) as string[]) ?? []);
   const [leadParagraph, ...bodyParagraphs] = paragraphs;
-  const [leadBlock, ...bodyBlocks] = hasBlocks ? (rawBlocks as BlogContentBlock[]) : [];
+  const [leadBlock, ...bodyBlocks] = blocks ?? [];
 
   const leadText =
     leadBlock?.type === "paragraph" ? leadBlock.text : leadParagraph;
@@ -180,7 +180,7 @@ const BlogArticle: FC<BlogArticleProps> = ({ post, relatedPosts = [] }) => {
             </div>
           </figure>
 
-          {hasBlocks ? (
+          {blocks ? (
             <BlogArticleBody blocks={bodyBlocks} />
           ) : (
             <div className="mt-10 space-y-6">

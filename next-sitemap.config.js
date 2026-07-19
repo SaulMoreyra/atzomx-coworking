@@ -1,5 +1,15 @@
 /** @type {import('next-sitemap').IConfig} */
 
+const fs = require("fs");
+const path = require("path");
+
+/** Keep sitemap blog URLs in sync with `src/mocks/blog/index.ts`. */
+function getBlogSlugs() {
+  const mockPath = path.join(__dirname, "src/mocks/blog/index.ts");
+  const source = fs.readFileSync(mockPath, "utf8");
+  return [...source.matchAll(/^\s*slug:\s*"([^"]+)"/gm)].map(match => match[1]);
+}
+
 module.exports = {
   siteUrl: "https://atzomx.com.mx/",
   generateRobotsTxt: true,
@@ -23,14 +33,7 @@ module.exports = {
       `# Atzomx — https://atzomx.com.mx\n# LLM index: https://atzomx.com.mx/llms.txt\n# Full AI profile: https://atzomx.com.mx/llms-full.txt\n\n${robotsTxt}`,
   },
   additionalPaths: async () => {
-    const blogSlugs = [
-      "welcome-atzomx",
-      "specialty-coffee-oaxaca",
-      "remote-work-oaxaca",
-      "community-coworking",
-    ];
-
-    const blogPaths = blogSlugs.map(slug => ({
+    const blogPaths = getBlogSlugs().map(slug => ({
       loc: `/blog/${slug}`,
       priority: 0.6,
       lastmod: new Date().toISOString(),
@@ -60,5 +63,5 @@ module.exports = {
       ...blogPaths,
     ];
   },
-  exclude: ["/404", "/500"],
+  exclude: ["/404", "/500", "/admin", "/admin/*", "/api/*"],
 };

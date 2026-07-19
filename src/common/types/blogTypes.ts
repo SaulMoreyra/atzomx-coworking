@@ -6,6 +6,8 @@ export interface BlogPost {
   category: BlogCategory;
   publishedAt: string;
   coverImage: string;
+  /** Social share preview (WhatsApp / Facebook / Twitter). Falls back to coverImage. */
+  imageShare?: string;
   readingMinutes: number;
   featured?: boolean;
 }

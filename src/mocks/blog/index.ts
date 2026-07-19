@@ -8,6 +8,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     publishedAt: "2026-07-18",
     coverImage:
       "https://images.squarespace-cdn.com/content/v1/649cb0b4a4490d6c17bef429/5925bd0a-2096-4e62-a9c4-d155b1af3472/JHO08892.jpg",
+    imageShare: "/images/bloq/atzomx-marmota.webp",
     readingMinutes: 12,
     featured: true,
   },
