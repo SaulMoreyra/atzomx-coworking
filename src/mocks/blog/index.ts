@@ -2,6 +2,16 @@ import { type BlogPost } from "@/common/types/blogTypes";
 
 export const ALL_BLOG_POSTS: BlogPost[] = [
   {
+    id: "guelaguetza-survival-2026",
+    slug: "guia-supervivencia-guelaguetza-2026",
+    category: "oaxaca",
+    publishedAt: "2026-07-18",
+    coverImage:
+      "https://images.squarespace-cdn.com/content/v1/649cb0b4a4490d6c17bef429/5925bd0a-2096-4e62-a9c4-d155b1af3472/JHO08892.jpg",
+    readingMinutes: 12,
+    featured: true,
+  },
+  {
     id: "welcome-atzomx",
     slug: "welcome-atzomx",
     category: "coworking",
