@@ -37,6 +37,142 @@
     "oaxaca": "Oaxaca"
   },
   "posts": {
+    "guelaguetza-survival-2026": {
+      "title": "Guide de survie Guelaguetza 2026 : conseils d'un local pour vivre la fête sans y laisser sa peau",
+      "excerpt": "Secrets locaux, agenda et conseils sincères pour vivre la Guelaguetza 2026 au-delà de la surface touristique.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Si tu lis ceci, tu as probablement déjà tes billets pour l'Auditorio Guelaguetza — ou tu es sur le point d'atterrir à l'aéroport de Xoxocotlán. En tant qu'Oaxaquène, bienvenue dans la période la plus bruyante, colorée, chaotique et belle de l'année : **juillet à Oaxaca**."
+        },
+        {
+          "type": "paragraph",
+          "text": "L'air sent le poleo, le mole noir, le copal et le mezcal. Mais soyons honnêtes : avec des milliers de visiteurs qui inondent le centre historique, la ville peut devenir un labyrinthe écrasant si tu ne suis que les guides touristiques classiques."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour ne pas rester à la surface de la « plus grande fête ethnique des Amériques », voici la bible locale — secrets, conseils cachés et vérités que seuls les locaux connaissent pour profiter de la **Guelaguetza 2026**."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. Le vrai sens : ce n'est pas un « show », c'est du tequio et de la réciprocité"
+        },
+        {
+          "type": "paragraph",
+          "text": "Avant de monter la colline, il faut comprendre ce que tu regardes. Pour le tourisme, la Guelaguetza est un spectacle folklorique de deux heures. Pour nous, **Guelaguetza est un mot zapotèque qui signifie « donner, partager ou coopérer »**."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est un système de vie que nous pratiquons toute l'année. Quand quelqu'un se marie dans un village, la communauté apporte des poules, des caisses de bière ou du maïs — c'est faire *guelaguetza*. Quand ce sera le tour d'une autre famille, elle recevra la même chose."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce que tu vois sur scène au Cerro del Fortín, c'est l'extrapolation de ce système : les délégations des huit régions voyagent des heures (parfois des jours) pour offrir leurs danses et, à la fin, **lancent les produits de leur terre dans le public** — ananas de Tuxtepec, chapeaux de la Mixteca, pain au jaune d'œuf des Vallées. Si un produit tombe dans tes mains, ce n'est pas un souvenir gratuit ; c'est un morceau de leur effort collectif. Reçois-le avec respect."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. Agenda incontournable 2026 (et comment y survivre)"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les dates clés des **Lunes del Cerro** cette année sont les **20 et 27 juillet**. La fête, elle, se joue en bas, dans les rues, tous les jours qui précèdent."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Convites et défilés des délégations"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les samedis **18 et 25 juillet** à 18 h ont lieu les grands défilés. Les chinas oaxaqueñas avec leurs paniers de fleurs pyrotechniques ouvrent la marche des délégations."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Conseil de local :** Le corridor touristique (Alcalá) est tellement saturé qu'il est impossible de marcher ou de voir quoi que ce soit. Au lieu de t'y entasser, cherche une place près de la Cruz de Piedra (où ça commence) ou descends vers l'Av. Independencia. Arrive au moins une heure et demie à l'avance et porte des chaussures confortables ; tu vas rester debout."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Le retour du Bani Stui Gulal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette année, le spectacle nocturne **Bani Stui Gulal** (« Répétition de l'antiquité ») a lieu le vendredi 24 juillet. Il raconte l'histoire de la Guelaguetza de l'époque préhispanique à aujourd'hui. Si l'histoire profonde d'Oaxaca t'intéresse, cet événement a une valeur culturelle énorme — bien plus intime que les Lunes del Cerro eux-mêmes."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Foire du Mezcal 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "Du 17 au 28 juillet au Centro Cultural y de Convenciones (CCCO). Plus de 400 exposants."
+        },
+        {
+          "type": "image",
+          "src": "https://asimetrias.com.mx/wp-content/uploads/WhatsApp-Image-2026-07-17-at-12.27.17-PM.jpeg",
+          "alt": "Foire du Mezcal au Centre culturel et de congrès d'Oaxaca"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Conseil de local :** Ne te précipite pas vers les marques aux stands les plus grands et néon — ces mezcals se trouvent déjà dans n'importe quel Duty Free. Marche vers les allées du fond, où sont les maîtres mezcaleros de petits palenques de Santiago Matatlán ou San Catarina Minas. Demande les mezcals sauvages (*Tobalá*, *Tepeztate* ou *Cuishe*) et parle avec le producteur. C'est là que se trouve la vraie magie."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. Les « Guelaguetzas alternatives » : le secret le mieux gardé"
+        },
+        {
+          "type": "paragraph",
+          "text": "Si tu n'as pas eu de billets pour les sections A ou B de l'Auditorio Guelaguetza (les payantes), ou si tu veux simplement fuir la gentrification du Cerro del Fortín, les sections C et D sont gratuites — mais les files commencent dès 3 h du matin."
+        },
+        {
+          "type": "paragraph",
+          "text": "La vraie alternative ? **Va dans les municipalités environnantes.** Les répliques communautaires sont incroyablement authentiques, gratuites (ou très bon marché), et la nourriture est mille fois meilleure."
+        },
+        {
+          "type": "list",
+          "items": [
+            "**La Fiesta Grande del Cerrito à Villa de Zaachila :** Le second Lunes del Cerro. La scène est un vrai site archéologique. Voir la Danza de la Pluma sur cette terre avec les vallées en fond, c'est presque religieux. Et le marché de Zaachila pour la carne asada n'a pas de rival.",
+            "**Reyes Etla (Foire du Fromage et du Quesillo) :** Ils organisent leur propre Guelaguetza dans une ambiance familiale. Tu peux manger du vrai quesillo — celui qui s'effiloche finement et brille de sa graisse naturelle, pas le plastique du supermarché — tout en regardant les danses.",
+            "**San Antonino Castillo Velasco :** Célèbre pour ses broderies « hazme si puedes ». Leur Guelaguetza de village inclut la remise traditionnelle de nourriture et de fruits d'une façon beaucoup plus proche du public."
+          ]
+        },
+        {
+          "type": "image",
+          "src": "https://www.oaxaca.gob.mx/comunicacion/wp-content/uploads/sites/28/2019/10/Cosijoeza-2.jpg",
+          "alt": "Célébration communautaire de la Guelaguetza à Villa de Zaachila"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. Guide rapide pour ne pas passer pour un touriste perdu"
+        },
+        {
+          "type": "list",
+          "items": [
+            "**Tlayuda ou clayuda ?** C'est **TLAYUDA** — avec un « T ». Et s'il te plaît, ne la commande pas « sans asiento ». L'*asiento* (saindoux de porc concentré) donne le goût. Si tu es végétarien, dis-le avant ; si tu manges de la viande, laisse-toi porter.",
+            "**Le dilemme du piquant :** Si un Oaxaquène te dit « ça ne pique pas, c'est juste de la tomate », **il ment**. Goûte d'abord avec le bout d'une cuillère. Le chile de agua et le chile pasilla oaxaqueño ne pardonnent pas.",
+            "**Vêtements traditionnels :** Tu verras de beaux huipiles dans les rues. Si tu en achètes un, fais-le directement auprès des artisans sur les marchés (20 de Noviembre ou Benito Juárez) ou aux foires artisanales des communautés. **Ne marchande pas.** Derrière chaque broderie, il y a des mois de conception, d'histoire familiale et de techniques ancestrales.",
+            "**Eau de poleo :** Si tu abuses des « petites dégustations » à la Foire du Mezcal, le lendemain cherche au marché un verre d'agua de poleo ou un caldo de gato. C'est le remède sacré de nos grands-parents contre la gueule de bois."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Oaxaca va te faire tomber amoureux — mais souviens-toi que nous sommes un État à l'identité profonde et à la résistance culturelle. Profite de la Guelaguetza 2026 les yeux ouverts, l'oreille attentive aux fanfares, et le cœur prêt à recevoir. Profite de notre plus grande fête !"
+        },
+        {
+          "type": "paragraph",
+          "text": "Et si tu es dans le coin à ces dates, passe faire un tour à **Atzomx** — coworking et café au C. de Los Libres 800-B, centre historique. Une pause loin de la foule, un bon café et un WiFi stable pour récupérer entre deux défilés. On t'attend."
+        }
+      ]
+    },
     "welcome-atzomx": {
       "title": "Bienvenue chez Atzomx : coworking à l'âme café",
       "excerpt": "Nous sommes des développeurs logiciels oaxaquèens qui cherchaient un endroit confortable pour travailler — et avons fini par construire l'espace qui nous manquait au centre-ville.",
