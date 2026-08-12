@@ -29,6 +29,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, reverse = false }) => {
   const tPlans = useTranslations("home.plans");
 
   const bookText = t.has("book") ? t("book") : tPlans("defaultAsk");
+  const ctaText = t.has("cta") ? t("cta") : tPlans("book");
 
   return (
     <m.article
@@ -65,7 +66,7 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, reverse = false }) => {
             <WhatsAppLink
               message={bookText}
               className="inline-flex min-h-[44px] items-center justify-center rounded-brand border border-brand-green bg-brand-green px-6 py-3 text-base text-label text-brand-on-green transition-colors duration-200 hover:border-brand-green/90 hover:bg-brand-green/90 focus-brand">
-              {tPlans("book")}
+              {ctaText}
             </WhatsAppLink>
           </m.div>
         </div>

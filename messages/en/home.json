@@ -122,7 +122,8 @@
         "name": "Free Plan",
         "description": "Always accessible",
         "area": "Cafeteria",
-        "book": "Hey there! I want to book a free plan at Atzomx."
+        "book": "Hey there! I'd like to come work at the Atzomx café. Is there space available?",
+        "cta": "Ask about free plan"
       },
       "standard": {
         "name": "Standard Plan",
