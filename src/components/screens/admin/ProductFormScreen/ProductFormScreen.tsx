@@ -10,10 +10,15 @@ import AdminField from "@/components/admin/AdminField";
 import I18nKeysPanel from "@/components/admin/I18nKeysPanel";
 import { adminFetch } from "@/lib/api/client";
 import type { SerializedCategory, SerializedProduct } from "@/lib/api/admin-types";
+import { PLAN_PRICE_PERIODS } from "@/common/types/planTypes";
 import {
   createProductFormSchema,
   type ProductFormValues,
 } from "@/lib/forms/admin/schemas";
+
+function buildPlanPeriodVariants() {
+  return PLAN_PRICE_PERIODS.map(period => ({ slug: period, price: "0" }));
+}
 
 function buildDefaultValues(type: "MENU" | "PLAN"): ProductFormValues {
   return {
@@ -25,7 +30,8 @@ function buildDefaultValues(type: "MENU" | "PLAN"): ProductFormValues {
     sortOrder: "0",
     categoryId: "",
     planArea: "co_working",
-    variants: [{ slug: "hot", price: "0" }],
+    variants:
+      type === "PLAN" ? buildPlanPeriodVariants() : [{ slug: "hot", price: "0" }],
     featureKeysText: "",
   };
 }
@@ -101,7 +107,9 @@ export default function ProductFormScreen({ productId }: ProductFormScreenProps)
                 slug: variant.slug,
                 price: String(variant.price),
               }))
-            : [{ slug: "default", price: String(product.basePrice) }],
+            : product.type === "PLAN"
+              ? buildPlanPeriodVariants()
+              : [{ slug: "default", price: String(product.basePrice) }],
           featureKeysText: product.featureKeys.join("\n"),
         });
       })
@@ -127,16 +135,13 @@ export default function ProductFormScreen({ productId }: ProductFormScreenProps)
       sortOrder: Number(values.sortOrder),
       categoryId: values.type === "MENU" ? values.categoryId || null : null,
       planArea: values.type === "PLAN" ? values.planArea : null,
-      variants:
-        values.type === "MENU"
-          ? values.variants
-              .filter(variant => variant.slug.trim())
-              .map((variant, index) => ({
-                slug: variant.slug.trim(),
-                price: Number(variant.price),
-                sortOrder: index,
-              }))
-          : undefined,
+      variants: values.variants
+        .filter(variant => variant.slug.trim())
+        .map((variant, index) => ({
+          slug: variant.slug.trim(),
+          price: Number(variant.price),
+          sortOrder: index,
+        })),
       features:
         values.type === "PLAN"
           ? values.featureKeysText
@@ -280,43 +285,50 @@ export default function ProductFormScreen({ productId }: ProductFormScreenProps)
             </AdminField>
           )}
 
-          {type === "MENU" ? (
-            <fieldset className="space-y-3">
-              <legend className="text-label text-xs tracking-[0.12em]">{t("variants")}</legend>
-              {fields.map((field, index) => (
-                <div key={field.id} className="grid gap-2 md:grid-cols-[1fr_8rem_auto]">
-                  <input
-                    className="admin-input font-mono text-sm"
-                    placeholder={t("variantSlugPlaceholder")}
-                    {...register(`variants.${index}.slug`)}
-                  />
-                  <input
-                    type="number"
-                    min="0"
-                    step="0.01"
-                    className="admin-input tabular-nums"
-                    {...register(`variants.${index}.price`)}
-                  />
-                  <button
-                    type="button"
-                    className="admin-btn admin-btn-secondary"
-                    onClick={() => {
-                      remove(index);
-                    }}>
-                    {t("removeVariant")}
-                  </button>
-                </div>
-              ))}
-              <button
-                type="button"
-                className="admin-btn admin-btn-secondary"
-                onClick={() => {
-                  append({ slug: "", price: "0" });
-                }}>
-                {t("addVariant")}
-              </button>
-            </fieldset>
-          ) : (
+          <fieldset className="space-y-3">
+            <legend className="text-label text-xs tracking-[0.12em]">
+              {type === "PLAN" ? t("planVariants") : t("variants")}
+            </legend>
+            {type === "PLAN" ? (
+              <p className="text-body text-xs text-brand-green/60">{t("planVariantsHint")}</p>
+            ) : null}
+            {fields.map((field, index) => (
+              <div key={field.id} className="grid gap-2 md:grid-cols-[1fr_8rem_auto]">
+                <input
+                  className="admin-input font-mono text-sm"
+                  placeholder={
+                    type === "PLAN" ? t("planVariantSlugPlaceholder") : t("variantSlugPlaceholder")
+                  }
+                  {...register(`variants.${index}.slug`)}
+                />
+                <input
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  className="admin-input tabular-nums"
+                  {...register(`variants.${index}.price`)}
+                />
+                <button
+                  type="button"
+                  className="admin-btn admin-btn-secondary"
+                  onClick={() => {
+                    remove(index);
+                  }}>
+                  {t("removeVariant")}
+                </button>
+              </div>
+            ))}
+            <button
+              type="button"
+              className="admin-btn admin-btn-secondary"
+              onClick={() => {
+                append({ slug: "", price: "0" });
+              }}>
+              {t("addVariant")}
+            </button>
+          </fieldset>
+
+          {type === "PLAN" ? (
             <AdminField label={t("featureKeys")} htmlFor="features">
               <textarea
                 id="features"
@@ -325,7 +337,7 @@ export default function ProductFormScreen({ productId }: ProductFormScreenProps)
                 {...register("featureKeysText")}
               />
             </AdminField>
-          )}
+          ) : null}
 
           <label className="flex min-h-11 items-center gap-3">
             <input

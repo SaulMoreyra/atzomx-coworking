@@ -2,7 +2,11 @@ import { ProductType } from "@prisma/client";
 import { prisma, isDatabaseConfigured } from "@/lib/prisma";
 import { serializeProduct, decimalToNumber, mapPlanAreaToLegacy } from "@/lib/api/serializers";
 import type { FoodType } from "@/common/types/menuTypes";
-import type { PlanType } from "@/common/types/planTypes";
+import {
+  PLAN_PRICE_PERIODS,
+  type PlanPrices,
+  type PlanType,
+} from "@/common/types/planTypes";
 import { ALL_FOODS } from "@/mocks/menu";
 import { ALL_PLANS } from "@/mocks/products";
 
@@ -11,6 +15,22 @@ const productInclude = {
   variants: { orderBy: { sortOrder: "asc" as const } },
   features: { orderBy: { sortOrder: "asc" as const } },
 };
+
+function mapPlanPrices(
+  variants: Array<{ slug: string; price: unknown }>
+): PlanPrices | undefined {
+  const prices: PlanPrices = {};
+
+  for (const variant of variants) {
+    const period = PLAN_PRICE_PERIODS.find(item => item === variant.slug);
+    if (!period) continue;
+
+    const price = decimalToNumber(variant.price);
+    if (price > 0) prices[period] = price;
+  }
+
+  return Object.keys(prices).length > 0 ? prices : undefined;
+}
 
 export async function fetchMenuProductsFromDb(): Promise<FoodType[] | null> {
   if (!isDatabaseConfigured()) return null;
@@ -57,6 +77,7 @@ export async function fetchPlanProductsFromDb(): Promise<PlanType[] | null> {
       area: (mapPlanAreaToLegacy(product.planArea) ??
         "co-working") as PlanType["area"],
       features: product.features.map(f => f.featureKey),
+      prices: mapPlanPrices(product.variants),
     }));
   } catch {
     return null;
