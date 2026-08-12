@@ -122,7 +122,8 @@
         "name": "Gratis-Tarif",
         "description": "Jederzeit zugänglich",
         "area": "Cafeteria",
-        "book": "Hallo! Ich möchte den Gratis-Tarif bei Atzomx buchen."
+        "book": "Hallo! Ich würde gerne im Café von Atzomx arbeiten. Gibt es einen freien Platz?",
+        "cta": "Gratis-Tarif anfragen"
       },
       "standard": {
         "name": "Standard-Tarif",

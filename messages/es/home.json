@@ -146,7 +146,8 @@
         "name": "Plan Gratis",
         "description": "Siempre accesible",
         "area": "Cafetería",
-        "book": "¡Hola! Quiero reservar un plan gratis en Atzomx."
+        "book": "¡Hola! Quiero pasar a trabajar en la cafetería de Atzomx. ¿Hay lugar disponible?",
+        "cta": "Preguntar por plan gratis"
       },
       "standard": {
         "name": "Plan Estandar",

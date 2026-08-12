@@ -122,7 +122,8 @@
         "name": "Forfait Gratuit",
         "description": "Toujours accessible",
         "area": "Cafétéria",
-        "book": "Bonjour ! Je souhaite réserver le forfait gratuit chez Atzomx."
+        "book": "Bonjour ! Je souhaite venir travailler au café d'Atzomx. Y a-t-il de la place ?",
+        "cta": "Demander le forfait gratuit"
       },
       "standard": {
         "name": "Forfait Standard",
