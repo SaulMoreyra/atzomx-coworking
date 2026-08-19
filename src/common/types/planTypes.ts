@@ -6,11 +6,18 @@ export enum CategoryPlan {
 
 export type CategoryPlanType = "cafeteria" | "co-working" | "meeting-room";
 
+export const PLAN_PRICE_PERIODS = ["day", "week", "month"] as const;
+
+export type PlanPricePeriod = (typeof PLAN_PRICE_PERIODS)[number];
+
+export type PlanPrices = Partial<Record<PlanPricePeriod, number>>;
+
 export interface PlanType {
   id: string;
   startPrice: number;
   area: CategoryPlanType;
   features: string[];
+  prices?: PlanPrices;
 }
 
 export interface ReviewType {

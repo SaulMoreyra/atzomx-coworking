@@ -1,6 +1,6 @@
 # Atzomx Café y Coworking — Full profile for AI assistants
 
-Last updated: 2026-05-25
+Last updated: 2026-08-12
 Website: https://atzomx.com.mx
 Canonical name: Atzomx Café y Coworking
 
@@ -29,17 +29,27 @@ Atzomx is a coworking space and specialty café located in the historic center (
 - Instagram: https://www.instagram.com/atzomx/ (@atzomx)
 - Facebook: https://www.facebook.com/profile.php?id=61569786946519
 
-## Coworking plans & pricing (MXN, starting prices)
+## Coworking plans & pricing (MXN)
 
-| Plan | From | Area | Highlights |
-|------|------|------|------------|
-| Free / Café | $0 | Ground-floor café | Pay only for food & drinks; stable WiFi |
-| Standard | $59/hour | Upstairs coworking | Shared desk, 1000 Mbps WiFi, unlimited coffee/tea/water, ergonomic chairs, terrace, 5% café discount |
-| Individual | $79/hour | Upstairs coworking | Private desk + all Standard amenities |
-| Monitor | $89/hour | Upstairs coworking | Private desk + external monitor + all Individual amenities |
-| Meeting room | $259/hour | Upstairs | Up to 6 people, 55" Smart TV, whiteboard, WiFi, coffee included |
+"Ask" = no published rate for that period; quoted via WhatsApp.
 
-Daily, weekly, and monthly rates available — contact via WhatsApp for current pricing.
+| Plan | Hour | Day | Week | Month | Area |
+|------|------|-----|------|-------|------|
+| Free / Café | $0 | $0 | $0 | $0 | Ground-floor café |
+| Standard | $59 | $239 | $899 | $2,499 | Upstairs coworking |
+| Individual | $79 | $269 | $1,199 | Ask | Upstairs coworking |
+| Monitor | $89 | $279 | $1,349 | Ask | Upstairs coworking |
+| Meeting room | $259 | $1,459 | Ask | Ask | Upstairs |
+
+Plan highlights:
+
+- Free / Café: pay only for food & drinks; stable WiFi; ground-floor café seating
+- Standard: shared desk, 1000 Mbps WiFi, unlimited coffee/tea/water, ergonomic chairs, terrace access, 5% café discount
+- Individual: private desk + all Standard amenities
+- Monitor: private desk + external monitor + all Individual amenities
+- Meeting room: up to 6 people, 55" Smart TV, whiteboard, WiFi, coffee included
+
+Rates may vary by season. For periods marked "Ask", and for group or long-stay quotes, contact WhatsApp.
 
 ## Amenities
 

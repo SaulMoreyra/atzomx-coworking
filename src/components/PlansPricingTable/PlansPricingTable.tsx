@@ -18,6 +18,8 @@ const PRICING_PLAN_IDS = ["standard", "individual", "monitor", "meeting-room"] a
 
 const PERIOD_KEYS = ["hour", "day", "week", "month"] as const;
 
+const priceFormatter = new Intl.NumberFormat("es-MX", { maximumFractionDigits: 2 });
+
 interface PricingRowProps {
   plan: PlanType;
   planName: string;
@@ -37,12 +39,16 @@ const PricingRow: FC<PricingRowProps> = ({
   variant = "row",
   rowIndex = 0,
 }) => {
-  const periods = PERIOD_KEYS.map(key => ({
-    key,
-    label: t(`columns.${key}`),
-    value: key === "hour" ? formatPrice(plan.startPrice) : t("contact"),
-    isPrimary: key === "hour",
-  }));
+  const periods = PERIOD_KEYS.map(key => {
+    const price = key === "hour" ? plan.startPrice : plan.prices?.[key];
+
+    return {
+      key,
+      label: t(`columns.${key}`),
+      value: typeof price === "number" ? formatPrice(price) : t("contact"),
+      isPrimary: key === "hour",
+    };
+  });
 
   if (variant === "card") {
     return (
@@ -110,12 +116,12 @@ const PricingRow: FC<PricingRowProps> = ({
 const PlansPricingTable: FC<PlansPricingTableProps> = ({ plans }) => {
   const t = useTranslations("home.pricingTable");
   const tPlans = useTranslations("home.plans");
-
   const pricingPlans = plans.filter(plan =>
     PRICING_PLAN_IDS.includes(plan.id as (typeof PRICING_PLAN_IDS)[number])
   );
 
-  const formatPrice = (value: number) => (value === 0 ? "$0" : `$${value}`);
+  const formatPrice = (value: number) =>
+    value === 0 ? "$0" : `$${priceFormatter.format(value)}`;
 
   return (
     <>

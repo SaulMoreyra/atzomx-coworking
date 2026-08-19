@@ -6,6 +6,7 @@ import {
 } from "@prisma/client";
 import { ALL_FOODS } from "../src/mocks/menu";
 import { ALL_PLANS } from "../src/mocks/products";
+import { PLAN_PRICE_PERIODS } from "../src/common/types/planTypes";
 import { hashPassword } from "../src/lib/auth/password";
 import { mapLegacyPlanArea } from "../src/lib/api/serializers";
 
@@ -133,6 +134,22 @@ async function main() {
         sortOrder: featureIndex,
       })),
     });
+
+    await prisma.productVariant.deleteMany({ where: { productId: product.id } });
+
+    const planVariants = PLAN_PRICE_PERIODS.map((period, periodIndex) => ({
+      productId: product.id,
+      slug: period,
+      price: plan.prices?.[period],
+      sortOrder: periodIndex,
+    })).filter(
+      (variant): variant is typeof variant & { price: number } =>
+        typeof variant.price === "number"
+    );
+
+    if (planVariants.length > 0) {
+      await prisma.productVariant.createMany({ data: planVariants });
+    }
   }
 
   console.log(`Seed complete. Admin: ${adminEmail}`);
