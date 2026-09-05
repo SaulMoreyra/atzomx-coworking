@@ -2,6 +2,16 @@ import { type BlogPost } from "@/common/types/blogTypes";
 
 export const ALL_BLOG_POSTS: BlogPost[] = [
   {
+    id: "dia-muertos-oaxaca-2026",
+    slug: "dia-de-muertos-en-oaxaca-2026",
+    category: "oaxaca",
+    publishedAt: "2026-09-04",
+    coverImage:
+      "https://images.unsplash.com/photo-1680573095538-b41f50e04412?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    readingMinutes: 17,
+    featured: true,
+  },
+  {
     id: "guelaguetza-survival-2026",
     slug: "guia-supervivencia-guelaguetza-2026",
     category: "oaxaca",
