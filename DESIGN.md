@@ -86,7 +86,7 @@ Reuse these; do not reintroduce centered `HighlightShape` + `Label` + `Heading` 
 | Context | Chrome |
 | --- | --- |
 | **Home** | `Header` — adaptive surface via `data-header-surface` |
-| **Subpages** (`/menu`, `/blog`, `/blog/[slug]`, `/remote-work`) | `BlogUtilityHeader` (green utility bar) + cream masthead |
+| **Subpages** (`/menu`, `/blog`, `/blog/[slug]`, `/remote-work`, `/alrededor`) | `BlogUtilityHeader` (green utility bar) + cream masthead |
 | **Footer** | Shared `Footer` in route `layout.tsx` |
 
 Subpage layout pattern: `layout.tsx` → `{children}` + `Footer`; banner/masthead live in `page.tsx`.
@@ -126,6 +126,7 @@ Macrostructure may vary; **tokens and components above may not.**
 | `/blog` | Index-First | Utility bar + masthead + editorial index list |
 | `/blog/[slug]` | Long Document | Utility bar + article prose + related index |
 | `/remote-work` | Narrative Workflow | Utility bar + masthead + numbered workflow timeline |
+| `/alrededor` | Neighborhood Guide | Utility bar + masthead + filters + list/map + nomad timeline |
 
 New marketing pages: pick a **new** macrostructure not used on the target route; stay inside this colour and type system.
 

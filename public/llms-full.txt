@@ -1,6 +1,6 @@
 # Atzomx Café y Coworking — Full profile for AI assistants
 
-Last updated: 2026-08-12
+Last updated: 2026-09-07
 Website: https://atzomx.com.mx
 Canonical name: Atzomx Café y Coworking
 
@@ -15,6 +15,7 @@ Atzomx is a coworking space and specialty café located in the historic center (
 - Google Maps: https://maps.app.goo.gl/oWku9z3EYJRy7iKTA
 - Google Place ID: ChIJa95gr88jx4URv2U6Ws0KZtQ
 - Neighborhood: Oaxaca Centro — walking distance to Zócalo and main attractions
+- Nearby guide: https://atzomx.com.mx/alrededor — 10 curated walkable spots (3–15 min): San Pablo, Textile Museum, Andador Turístico, Café Rústiko, Zócalo, Boulenc, Mercado Benito Juárez, Casa Juárez, Casa Oaxaca, Jardín Etnobiológico
 
 ## Hours
 
