@@ -30,6 +30,8 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, reverse = false }) => {
 
   const bookText = t.has("book") ? t("book") : tPlans("defaultAsk");
   const ctaText = t.has("cta") ? t("cta") : tPlans("book");
+  const notesRaw = t.has("notes") ? t.raw("notes") : [];
+  const notes = Array.isArray(notesRaw) ? (notesRaw as string[]) : [];
 
   return (
     <m.article
@@ -60,6 +62,13 @@ const PlanBanner: FC<PlanBannerProps> = ({ plan, reverse = false }) => {
               {t("name")}
             </h3>
             <p className="text-body max-w-md text-lg text-brand-green/80 md:text-xl">{t("description")}</p>
+            {notes.length > 0 && (
+              <ul className="text-body mt-1 max-w-md list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-brand-green/65 md:text-base">
+                {notes.map(note => (
+                  <li key={note}>{note}</li>
+                ))}
+              </ul>
+            )}
           </m.div>
 
           <m.div variants={fadeUp}>

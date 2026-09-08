@@ -115,6 +115,13 @@
         "high-speed-internet": "Internet haut débit",
         "roof-top-access": "Accès à la terrasse",
         "discount-on-cafeteria-menu": "5 % de réduction sur le menu du café"
+      },
+      "lockers": {
+        "leave-your-gear": "Laissez laptop et sac sur place",
+        "key-assigned": "Clé attribuée, rien qu'à vous",
+        "flexible-rental": "Location au jour, à la semaine ou au mois",
+        "fits-laptop-bag": "Place pour laptop, chargeur et sac",
+        "complements-coworking-plan": "Complète votre forfait coworking"
       }
     },
     "plans": {
@@ -148,6 +155,18 @@
         "description": "Pour les équipes de 2 à 6 personnes",
         "area": "Coworking",
         "book": "Bonjour ! Je souhaite réserver une salle de réunion chez Atzomx."
+      },
+      "lockers": {
+        "name": "Service de casiers",
+        "description": "Option pour les membres coworking. Rangez vos affaires avec une clé attribuée.",
+        "area": "Coworking",
+        "book": "Bonjour ! Je souhaite louer un casier chez Atzomx (j'ai / je veux un forfait coworking).",
+        "notes": [
+          "Voyagez léger : laissez votre matériel et revenez le lendemain sans tout porter.",
+          "Votre casier avec clé, à l'étage coworking, à deux pas de votre bureau.",
+          "Idéal pour un laptop, un chargeur, un casque et une veste.",
+          "Location souple : jour, semaine ou mois, selon vos besoins."
+        ]
       }
     }
   },

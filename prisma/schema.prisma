@@ -21,6 +21,7 @@ enum PlanArea {
   cafeteria
   co_working
   meeting_room
+  lockers
 }
 
 model User {

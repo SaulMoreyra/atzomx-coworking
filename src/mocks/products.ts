@@ -127,10 +127,19 @@ export enum MeetingRoomFeatures {
   DiscountOnCafeteriaMenu = "discount-on-cafeteria-menu",
 }
 
+export enum LockersPlanFeatures {
+  LeaveYourGear = "leave-your-gear",
+  KeyAssigned = "key-assigned",
+  FlexibleRental = "flexible-rental",
+  FitsLaptopBag = "fits-laptop-bag",
+  ComplementsCoworkingPlan = "complements-coworking-plan",
+}
+
 export const FeaturesByCategory = {
   [CategoryPlan.CAFETERIA]: CafeteriaPlanFeatures,
   [CategoryPlan.COWORKING]: CoworkingPlanFeatures,
   [CategoryPlan.MEETING_ROOM]: MeetingRoomFeatures,
+  [CategoryPlan.LOCKERS]: LockersPlanFeatures,
 };
 
 export const ALL_FEATURES = Object.values(CoworkingPlanFeatures);
@@ -193,5 +202,18 @@ export const ALL_PLANS: PlanType[] = [
     prices: { day: 1459 },
     features: Object.values(MeetingRoomFeatures),
     area: CategoryPlan.MEETING_ROOM,
+  },
+  {
+    id: "lockers",
+    startPrice: 0,
+    prices: { day: 30, week: 120, month: 250 },
+    features: [
+      LockersPlanFeatures.LeaveYourGear,
+      LockersPlanFeatures.KeyAssigned,
+      LockersPlanFeatures.FlexibleRental,
+      LockersPlanFeatures.FitsLaptopBag,
+      LockersPlanFeatures.ComplementsCoworkingPlan,
+    ],
+    area: CategoryPlan.LOCKERS,
   },
 ];

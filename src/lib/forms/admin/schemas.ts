@@ -58,7 +58,7 @@ export function createProductFormSchema(tv: ValidationTranslator) {
       active: z.boolean(),
       sortOrder: z.string(),
       categoryId: z.string(),
-      planArea: z.enum(["cafeteria", "co_working", "meeting_room"]),
+      planArea: z.enum(["cafeteria", "co_working", "meeting_room", "lockers"]),
       variants: z.array(variantFormSchema),
       featureKeysText: z.string(),
     })

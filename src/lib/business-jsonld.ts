@@ -143,6 +143,20 @@ export const businessJsonLd = {
       },
       url: `${SITE_URL}/#plans`,
     },
+    {
+      "@type": "Offer",
+      name: "Locker rental",
+      description: "Add-on locker for coworking members. Day, week, and month rentals.",
+      price: "30",
+      priceCurrency: "MXN",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "30",
+        priceCurrency: "MXN",
+        unitText: "day",
+      },
+      url: `${SITE_URL}/#plans`,
+    },
   ],
   potentialAction: {
     "@type": "ReserveAction",

@@ -14,7 +14,7 @@ interface PlansPricingTableProps {
   plans: PlanType[];
 }
 
-const PRICING_PLAN_IDS = ["standard", "individual", "monitor", "meeting-room"] as const;
+const PRICING_PLAN_IDS = ["standard", "individual", "monitor", "meeting-room", "lockers"] as const;
 
 const PERIOD_KEYS = ["hour", "day", "week", "month"] as const;
 
@@ -39,14 +39,17 @@ const PricingRow: FC<PricingRowProps> = ({
   variant = "row",
   rowIndex = 0,
 }) => {
+  const hasHourly = plan.startPrice > 0;
+  const featuredPeriod = hasHourly ? "hour" : "day";
+  const featuredPrice = hasHourly ? plan.startPrice : plan.prices?.day;
   const periods = PERIOD_KEYS.map(key => {
-    const price = key === "hour" ? plan.startPrice : plan.prices?.[key];
+    const price = key === "hour" ? (hasHourly ? plan.startPrice : undefined) : plan.prices?.[key];
 
     return {
       key,
       label: t(`columns.${key}`),
       value: typeof price === "number" ? formatPrice(price) : t("contact"),
-      isPrimary: key === "hour",
+      isPrimary: key === featuredPeriod,
     };
   });
 
@@ -56,9 +59,9 @@ const PricingRow: FC<PricingRowProps> = ({
         <div className="flex items-start justify-between gap-3">
           <h3 className="text-label text-base normal-case tracking-wide text-brand-green">{planName}</h3>
           <span className="shrink-0 rounded-full bg-brand-main px-3 py-1 text-lg font-semibold tabular-nums text-brand-green">
-            {formatPrice(plan.startPrice)}
+            {typeof featuredPrice === "number" ? formatPrice(featuredPrice) : t("contact")}
             <span className="text-label ml-1 text-[10px] font-normal uppercase tracking-wider text-brand-green/55">
-              /{t("columns.hour").toLowerCase()}
+              /{t(`columns.${featuredPeriod}`).toLowerCase()}
             </span>
           </span>
         </div>

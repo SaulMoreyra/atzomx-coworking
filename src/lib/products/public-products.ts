@@ -163,7 +163,7 @@ export interface ProductCreateInput {
   image?: string | null;
   active?: boolean;
   sortOrder?: number;
-  planArea?: "cafeteria" | "co_working" | "meeting_room" | null;
+  planArea?: "cafeteria" | "co_working" | "meeting_room" | "lockers" | null;
   variants?: Array<{ slug: string; price: number; sortOrder?: number }>;
   features?: Array<{ featureKey: string; sortOrder?: number }>;
 }
