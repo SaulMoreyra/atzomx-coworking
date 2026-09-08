@@ -19,13 +19,13 @@ export interface SpaceGalleryTile {
 
 /** Real-space gallery tiles — swap images in public/images/coworking/ */
 export const SPACE_GALLERY_TILES: SpaceGalleryTile[] = [
-  { id: "terrace", src: "/images/coworking/puff.webp", layout: "wide" },
+  { id: "terrace", src: "/images/coworking/terrace.webp", layout: "wide" },
   { id: "desks", src: "/images/coworking/standar.webp", layout: "square" },
   { id: "meeting-room", src: "/images/coworking/meeting-room.webp", layout: "tall" },
-  { id: "coffee-bar", src: "/images/coworking/coffeebar.webp", layout: "square" },
+  { id: "coffee-bar", src: "/images/coworking/barra.webp", layout: "square" },
   { id: "monitor-desk", src: "/images/coworking/monitor.webp", layout: "square" },
-  { id: "facade", src: "/images/coworking/atzomx.webp", layout: "square" },
-  { id: "community", src: "/images/coworking/lunch.webp", layout: "wide" },
+  { id: "facade", src: "/images/coworking/fachada.webp", layout: "square" },
+  { id: "community", src: "/images/coworking/comunidad.webp", layout: "wide" },
   { id: "latte-art", src: "/images/coworking/art-latte.webp", layout: "square" },
 ];
 
