@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "title": "Autour d’Atzomx | Lieux à pied dans le Centro de Oaxaca",
+    "description": "Guide de 10 lieux à pied depuis Atzomx Coworking : culture, café, cuisine locale et un jardin dans le centre historique de Oaxaca."
+  },
+  "banner": {
+    "kicker": "Depuis Los Libres 800-B",
+    "title": "Autour d’Atzomx",
+    "subtitle": "Dix arrêts à pied du coworking : culture, café et cuisine locale pour rythmer la journée.",
+    "stats": {
+      "walkable": { "value": "10", "label": "Lieux à pied" },
+      "nearest": { "value": "3 min", "label": "Au plus proche" },
+      "farthest": { "value": "15 min", "label": "Au jardin ethnobotanique" }
+    }
+  },
+  "filters": {
+    "categoryLabel": "Catégorie",
+    "distanceLabel": "Distance",
+    "all": "Tous ({count})",
+    "categories": {
+      "cafe": "Café ({count})",
+      "food": "Cuisine ({count})",
+      "park": "Parcs ({count})",
+      "culture": "Culture ({count})"
+    },
+    "categoryNames": {
+      "cafe": "Café",
+      "food": "Cuisine",
+      "park": "Parcs",
+      "culture": "Culture"
+    },
+    "distance": {
+      "all": "Tous",
+      "5": "Jusqu’à 5 min",
+      "10": "Jusqu’à 10 min"
+    },
+    "empty": "Aucun lieu ne correspond à ce filtre."
+  },
+  "list": {
+    "walkMinutes": "{minutes} min",
+    "walkMeters": "{meters} m à pied",
+    "seeOnMaps": "Voir sur Maps"
+  },
+  "map": {
+    "kicker": "Carte",
+    "title": "Atzomx dans le Centro",
+    "iframeTitle": "Carte d’Atzomx Coworking",
+    "openMaps": "Ouvrir dans Google Maps"
+  },
+  "places": {
+    "zocalo": {
+      "name": "Zócalo de Oaxaca",
+      "description": "Le cœur du centre historique. Idéal pour marcher sous les portiques, prendre un verre et commencer à explorer la ville.",
+      "hours": "Ouvert 24 h/24",
+      "highlights": ["centre historique", "architecture", "vie locale"]
+    },
+    "andador-turistico": {
+      "name": "Andador Turístico",
+      "description": "L’une des meilleures promenades depuis Atzomx. Elle relie les rues du Centro aux galeries, boutiques, restaurants et bâtiments historiques.",
+      "hours": "Ouvert 24 h/24",
+      "highlights": ["marche", "galeries", "architecture"]
+    },
+    "centro-cultural-san-pablo": {
+      "name": "Centro Cultural San Pablo",
+      "description": "Un ancien couvent devenu lieu culturel. Une pause courte au coin d’Atzomx.",
+      "hours": "Lun–Ven 10:00–20:00 ; Sam–Dim 10:00–16:00",
+      "highlights": ["architecture", "expositions", "histoire"]
+    },
+    "museo-textil": {
+      "name": "Museo Textil de Oaxaca",
+      "description": "Un musée dédié à l’art textile de Oaxaca et du Mexique. Une visite de 30 à 60 minutes avant de reprendre le travail.",
+      "hours": "Lun–Sam 11:00–20:00 ; Dim 11:00–18:00",
+      "highlights": ["textiles", "design", "culture"]
+    },
+    "jardin-etnobiologico": {
+      "name": "Jardín Etnobiológico de Oaxaca",
+      "description": "Un jardin dans l’ancien couvent de Santo Domingo, avec des plantes représentatives de Oaxaca. Pour se déconnecter après des heures d’écran.",
+      "hours": "Lun–Ven 10:00–17:00",
+      "highlights": ["nature", "plantes oaxacaines", "Santo Domingo"]
+    },
+    "casa-juarez": {
+      "name": "Museo de Sitio Casa Juárez",
+      "description": "La maison où Benito Juárez a vécu dans sa jeunesse, devenue un petit musée. S’inscrit bien dans une balade au Centro.",
+      "hours": "Mar–Dim 09:00–18:00",
+      "highlights": ["histoire", "Benito Juárez", "maison historique"]
+    },
+    "cafe-rustiko": {
+      "name": "Café Rústiko",
+      "description": "Un autre café du Centro pour poursuivre le rituel après Atzomx, ou faire une pause en chemin.",
+      "hours": "Lun–Sam 08:00–20:00",
+      "highlights": ["café", "petit-déjeuner", "local"]
+    },
+    "boulenc": {
+      "name": "Boulenc",
+      "description": "Boulangerie et restaurant très fréquentés. Petit-déjeuner, déjeuner, ou un changement de table en milieu de journée.",
+      "hours": "Lun 08:30–23:00 ; Mer–Dim 08:30–23:00",
+      "highlights": ["pain au levain", "brunch", "cuisine"]
+    },
+    "casa-oaxaca": {
+      "name": "Casa Oaxaca",
+      "description": "Pour clore la journée avec une cuisine oaxacaine après le travail ou une balade au Centro.",
+      "hours": "Lun–Sam 13:00–23:00 ; Dim 13:00–21:00",
+      "highlights": ["cuisine oaxacaine", "dîner", "gastronomie"]
+    },
+    "mercado-benito-juarez": {
+      "name": "Mercado Benito Juárez",
+      "description": "Quitter l’ordinateur et manger au marché : saveurs, étals et le rythme quotidien du Centro.",
+      "hours": "En général 07:00–21:00",
+      "highlights": ["cuisine locale", "marché", "mezcal"]
+    }
+  },
+  "routine": {
+    "kicker": "Itinéraire suggéré",
+    "title": "Une journée dans la routine du nomade",
+    "subtitle": "Quatre temps dans le Centro : café sur place, concentration, déjeuner en terrasse, puis une promenade culturelle.",
+    "steps": {
+      "coffee": {
+        "time": "08:30",
+        "title": "Café de spécialité",
+        "description": "Début au bar d’Atzomx. Pas besoin de sortir du bâtiment.",
+        "tag": "Sur place"
+      },
+      "focus": {
+        "time": "09:30",
+        "title": "Concentration à Atzomx",
+        "description": "Fibre 1000 Mbps, un bureau et le café de spécialité pour la longue session.",
+        "tag": "Deep work"
+      },
+      "lunch": {
+        "time": "14:00",
+        "title": "Déjeuner en terrasse",
+        "description": "Monter manger avec la vue. Le bureau reste en bas ; le quartier est devant.",
+        "tag": "Terrasse"
+      },
+      "walk": {
+        "time": "17:30",
+        "title": "Andador, San Pablo et textile",
+        "description": "Clore avec l’andador, le couvent au coin ou le Musée du textile à 3 minutes.",
+        "tag": "Promenade culturelle"
+      }
+    }
+  },
+  "gallery": {
+    "kicker": "L’espace",
+    "title": "Une base dans le Centro, le quartier à la porte",
+    "facadeCaption": "Façade · Los Libres 800-B",
+    "communityCaption": "Table partagée · coworking"
+  },
+  "cta": {
+    "title": "Faites de ce quartier votre bureau",
+    "description": "Réservez un jour ou un mois. Le Centro est à quelques minutes ; le bureau est ici.",
+    "whatsapp": "Réserver sur WhatsApp",
+    "whatsappMessage": "Bonjour ! Je voudrais réserver un coworking à Atzomx — le Centro et les alentours m’intéressent.",
+    "plans": "Voir les forfaits"
+  }
+}

@@ -17,6 +17,7 @@ import { getHeaderBarClassName } from "./headerSurfaceStyles";
 const primaryHashNavItems = ["plans", "gallery"] as const;
 const primaryLinkNavItems = [
   { id: "remoteWork", href: "/remote-work" },
+  { id: "alrededor", href: "/alrededor" },
   { id: "blog", href: "/blog" },
 ] as const;
 

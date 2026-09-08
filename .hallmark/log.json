@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-09-07",
+    "macrostructure": "Neighborhood Guide",
+    "theme": "Atzomx brand (preserved)",
+    "enrichment": "none",
+    "nav": "subpage utility bar",
+    "footer": "site Footer (unchanged)",
+    "brief": "Around /alrededor — curated walkable spots, category/distance filters, sticky Maps iframe, nomad routine timeline"
+  },
+  {
     "date": "2026-06-23",
     "macrostructure": "Index-First",
     "theme": "Atzomx brand (preserved)",

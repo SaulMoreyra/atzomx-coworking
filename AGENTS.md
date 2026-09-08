@@ -36,7 +36,7 @@ Path alias: `@/*` → `./src/*`.
 
 ```
 src/app/            # routes: / (page), /menu, /blog, /blog/[slug], /remote-work,
-                    # /admin/*, /api/v1/*
+                    # /alrededor, /admin/*, /api/v1/*
 src/app/admin/      # admin UI — own admin.css, separate from globals.css
 src/components/     # page/section components + ui/ primitives + screens/admin
 src/lib/api/        # API serializers + zod schemas + client
@@ -55,7 +55,7 @@ public/             # llms.txt, llms-full.txt, sitemaps, og image
 ## Architecture notes
 
 ### i18n
-- Namespaces: `home`, `menu`, `blog`, `remoteWork`, `admin` (see `src/i18n/request.ts`).
+- Namespaces: `home`, `menu`, `blog`, `remoteWork`, `alrededor`, `admin` (see `src/i18n/request.ts`).
 - Product names/descriptions live in `messages/{locale}/*.json` keyed by slug — prices come from the DB/API, not from message files.
 - When adding a locale, update `src/i18n/config.ts` (`locales`, `localeLabels`, `LOCALE_SEGMENTED_MAX`) **and** create the 5 namespace JSON files for it.
 - Keep the 4 locale files in lockstep: copy/product/UI changes touch **all** locales in the same change, not just `es`.

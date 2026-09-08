@@ -60,6 +60,11 @@ module.exports = {
         priority: 0.8,
         lastmod: new Date().toISOString(),
       },
+      {
+        loc: "/alrededor",
+        priority: 0.7,
+        lastmod: new Date().toISOString(),
+      },
       ...blogPaths,
     ];
   },
