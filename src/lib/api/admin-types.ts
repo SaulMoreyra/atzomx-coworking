@@ -22,7 +22,7 @@ export interface SerializedProduct {
   image: string | null;
   active: boolean;
   sortOrder: number;
-  planArea: "cafeteria" | "co_working" | "meeting_room" | null;
+  planArea: "cafeteria" | "co_working" | "meeting_room" | "lockers" | null;
   variants: SerializedVariant[];
   featureKeys: string[];
   createdAt: string;

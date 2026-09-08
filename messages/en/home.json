@@ -115,6 +115,13 @@
         "high-speed-internet": "High Speed Internet",
         "roof-top-access": "Roof Top Access",
         "discount-on-cafeteria-menu": "5% Discount on cafeteria menu"
+      },
+      "lockers": {
+        "leave-your-gear": "Leave your laptop and bag at the space",
+        "key-assigned": "Your own assigned key",
+        "flexible-rental": "Rent by the day, week, or month",
+        "fits-laptop-bag": "Fits a laptop, charger, and backpack",
+        "complements-coworking-plan": "Pairs with your coworking plan"
       }
     },
     "plans": {
@@ -148,6 +155,18 @@
         "description": "For the team from 2 to 6 people",
         "area": "Co-working",
         "book": "Hey there! I want to book a meeting room plan at Atzomx."
+      },
+      "lockers": {
+        "name": "Locker service",
+        "description": "Add-on for coworking members. Store your belongings with an assigned key.",
+        "area": "Co-working",
+        "book": "Hey there! I'd like to rent a locker at Atzomx (I have / I want a coworking plan).",
+        "notes": [
+          "Travel light: leave your gear and come back the next day without carrying it all.",
+          "Your locker with a key, upstairs in coworking, a step from your desk.",
+          "Ideal for a laptop, charger, headphones, and a jacket.",
+          "Flexible rental: day, week, or month — whatever you need."
+        ]
       }
     }
   },

@@ -139,6 +139,13 @@
         "high-speed-internet": "Internet de alta velocidad",
         "roof-top-access": "Acceso a la terraza",
         "discount-on-cafeteria-menu": "5% de descuento en el menú de la cafetería"
+      },
+      "lockers": {
+        "leave-your-gear": "Deja laptop y mochila en el espacio",
+        "key-assigned": "Llave asignada, solo tuya",
+        "flexible-rental": "Renta por día, semana o mes",
+        "fits-laptop-bag": "Cabe laptop, cargador y mochila",
+        "complements-coworking-plan": "Complementa tu plan de coworking"
       }
     },
     "plans": {
@@ -172,6 +179,18 @@
         "description": "Para equipos de 2 a 6 personas",
         "area": "Co-working",
         "book": "¡Hola! Quiero reservar una sala de reuniones en Atzomx."
+      },
+      "lockers": {
+        "name": "Servicio de lockers",
+        "description": "Add-on para miembros de coworking. Guarda tus pertenencias con llave asignada.",
+        "area": "Co-working",
+        "book": "¡Hola! Quiero rentar un locker en Atzomx (tengo / quiero un plan de coworking).",
+        "notes": [
+          "Llega ligero: deja tu equipo y vuelve al día siguiente sin cargar todo.",
+          "Tu locker con llave, en el piso de coworking, a un paso de tu mesa.",
+          "Ideal para laptop, cargador, audífonos y una chamarra.",
+          "Renta flexible: día, semana o mes, según lo que necesites."
+        ]
       }
     }
   },

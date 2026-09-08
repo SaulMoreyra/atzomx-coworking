@@ -115,6 +115,13 @@
         "high-speed-internet": "Highspeed-Internet",
         "roof-top-access": "Zugang zur Dachterrasse",
         "discount-on-cafeteria-menu": "5 % Rabatt auf das Café-Menü"
+      },
+      "lockers": {
+        "leave-your-gear": "Laptop und Tasche im Space lassen",
+        "key-assigned": "Eigener zugewiesener Schlüssel",
+        "flexible-rental": "Miete pro Tag, Woche oder Monat",
+        "fits-laptop-bag": "Platz für Laptop, Ladegerät und Rucksack",
+        "complements-coworking-plan": "Ergänzt deinen Coworking-Tarif"
       }
     },
     "plans": {
@@ -148,6 +155,18 @@
         "description": "Für Teams von 2 bis 6 Personen",
         "area": "Coworking",
         "book": "Hallo! Ich möchte einen Besprechungsraum bei Atzomx buchen."
+      },
+      "lockers": {
+        "name": "Schließfach-Service",
+        "description": "Zusatz für Coworking-Mitglieder. Bewahre deine Sachen mit zugewiesenem Schlüssel auf.",
+        "area": "Coworking",
+        "book": "Hallo! Ich möchte ein Schließfach bei Atzomx mieten (ich habe / möchte einen Coworking-Tarif).",
+        "notes": [
+          "Leicht anreisen: lass dein Equipment da und komm am nächsten Tag ohne alles zu schleppen.",
+          "Dein Schließfach mit Schlüssel, oben im Coworking, einen Schritt vom Schreibtisch.",
+          "Ideal für Laptop, Ladegerät, Kopfhörer und eine Jacke.",
+          "Flexible Miete: Tag, Woche oder Monat — wie du es brauchst."
+        ]
       }
     }
   },

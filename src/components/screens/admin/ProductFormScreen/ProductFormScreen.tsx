@@ -281,6 +281,7 @@ export default function ProductFormScreen({ productId }: ProductFormScreenProps)
                 <option value="cafeteria">{t("planAreaCafeteria")}</option>
                 <option value="co_working">{t("planAreaCoWorking")}</option>
                 <option value="meeting_room">{t("planAreaMeetingRoom")}</option>
+                <option value="lockers">{t("planAreaLockers")}</option>
               </select>
             </AdminField>
           )}

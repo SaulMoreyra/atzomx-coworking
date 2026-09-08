@@ -67,6 +67,8 @@ export function mapPlanAreaToLegacy(area: PlanArea | null): string | null {
       return "co-working";
     case "meeting_room":
       return "meeting-room";
+    case "lockers":
+      return "lockers";
     default:
       return null;
   }
@@ -80,6 +82,8 @@ export function mapLegacyPlanArea(area: string): PlanArea {
       return "co_working";
     case "meeting-room":
       return "meeting_room";
+    case "lockers":
+      return "lockers";
     default:
       return "co_working";
   }

@@ -2,9 +2,10 @@ export enum CategoryPlan {
   CAFETERIA = "cafeteria",
   COWORKING = "co-working",
   MEETING_ROOM = "meeting-room",
+  LOCKERS = "lockers",
 }
 
-export type CategoryPlanType = "cafeteria" | "co-working" | "meeting-room";
+export type CategoryPlanType = "cafeteria" | "co-working" | "meeting-room" | "lockers";
 
 export const PLAN_PRICE_PERIODS = ["day", "week", "month"] as const;
 
