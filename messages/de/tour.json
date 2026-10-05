@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "360°-Rundgang | Atzomx Coworking Oaxaca",
+    "description": "Entdecke Atzomx Coworking & Café vor deinem Besuch in 360°: das Café, die Terrasse, den Besprechungsraum und den Coworking-Bereich im Zentrum von Oaxaca."
+  },
+  "banner": {
+    "title": "360°-Rundgang",
+    "subtitle": "Lerne den Ort kennen, bevor du kommst. Ziehe, um dich umzusehen, und nutze die Pfeile, um von einem Bereich zum nächsten zu wechseln."
+  },
+  "viewer": {
+    "label": "Virtueller 360°-Rundgang durch Atzomx",
+    "viewerLabel": "360°-Ansicht. Ziehe oder nutze die Pfeiltasten, um dich umzusehen.",
+    "scenesLabel": "Bereiche des Rundgangs",
+    "scenesMenu": "Bereich des Rundgangs wählen",
+    "loading": "Rundgang wird geladen…",
+    "error": "Dein Browser konnte den 360°-Rundgang nicht laden. Bitte versuche es mit einem anderen Browser oder Gerät.",
+    "hint": "Ziehe, um dich umzusehen, scrolle oder ziehe mit zwei Fingern zum Zoomen und tippe auf die Pfeile im Bild, um den Bereich zu wechseln.",
+    "goTo": "Zu {scene}",
+    "scenes": {
+      "street": "Straße",
+      "entrance": "Eingang",
+      "center": "Hauptbereich",
+      "exit": "Ausgang",
+      "corner": "Ecke",
+      "bar": "Kaffeebar",
+      "goingUp": "Nach oben",
+      "stairs1": "Treppe 1",
+      "stairs2": "Treppe 2",
+      "stairs3": "Treppe 3",
+      "terrace1": "Terrasse 1",
+      "terrace2": "Terrasse 2",
+      "meetingRoom": "Besprechungsraum",
+      "coworkingEntrance": "Coworking-Eingang",
+      "coworking1": "Coworking 1",
+      "coworking2": "Coworking 2",
+      "coworking3": "Coworking 3",
+      "coworking4": "Coworking 4"
+    },
+    "controls": {
+      "play": "Automatische Drehung starten",
+      "pause": "Automatische Drehung stoppen",
+      "fullscreen": "Vollbild anzeigen",
+      "exitFullscreen": "Vollbild beenden",
+      "up": "Nach oben schauen",
+      "down": "Nach unten schauen",
+      "left": "Nach links schauen",
+      "right": "Nach rechts schauen",
+      "zoomIn": "Vergrößern",
+      "zoomOut": "Verkleinern"
+    }
+  }
+}
