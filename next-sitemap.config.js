@@ -65,6 +65,11 @@ module.exports = {
         priority: 0.7,
         lastmod: new Date().toISOString(),
       },
+      {
+        loc: "/recorrido-360",
+        priority: 0.6,
+        lastmod: new Date().toISOString(),
+      },
       ...blogPaths,
     ];
   },

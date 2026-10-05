@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Recorrido virtual 360° | Atzomx Coworking Oaxaca",
+    "description": "Recorre Atzomx Coworking & Café en 360° antes de visitarnos: la cafetería, la terraza, la sala de juntas y el área de coworking en el Centro de Oaxaca."
+  },
+  "banner": {
+    "title": "Recorrido 360°",
+    "subtitle": "Conoce el espacio antes de venir. Arrastra para mirar alrededor y usa las flechas para moverte de un área a otra."
+  },
+  "viewer": {
+    "label": "Recorrido virtual 360° de Atzomx",
+    "viewerLabel": "Visor 360°. Arrastra o usa las flechas del teclado para mirar alrededor.",
+    "scenesLabel": "Áreas del recorrido",
+    "scenesMenu": "Elegir área del recorrido",
+    "loading": "Cargando recorrido…",
+    "error": "Tu navegador no pudo cargar el recorrido 360°. Intenta con otro navegador o dispositivo.",
+    "hint": "Arrastra para mirar alrededor, usa la rueda o pellizca para acercar y toca las flechas dentro de la imagen para cambiar de área.",
+    "goTo": "Ir a {scene}",
+    "scenes": {
+      "street": "Calle",
+      "entrance": "Entrada",
+      "center": "Centro",
+      "exit": "Salida",
+      "corner": "Esquina",
+      "bar": "Barra",
+      "goingUp": "Subiendo",
+      "stairs1": "Escaleras 1",
+      "stairs2": "Escaleras 2",
+      "stairs3": "Escaleras 3",
+      "terrace1": "Terraza 1",
+      "terrace2": "Terraza 2",
+      "meetingRoom": "Sala de Juntas",
+      "coworkingEntrance": "Entrada Coworking",
+      "coworking1": "Coworking 1",
+      "coworking2": "Coworking 2",
+      "coworking3": "Coworking 3",
+      "coworking4": "Coworking 4"
+    },
+    "controls": {
+      "play": "Iniciar rotación automática",
+      "pause": "Detener rotación automática",
+      "fullscreen": "Ver en pantalla completa",
+      "exitFullscreen": "Salir de pantalla completa",
+      "up": "Mirar arriba",
+      "down": "Mirar abajo",
+      "left": "Mirar a la izquierda",
+      "right": "Mirar a la derecha",
+      "zoomIn": "Acercar",
+      "zoomOut": "Alejar"
+    }
+  }
+}

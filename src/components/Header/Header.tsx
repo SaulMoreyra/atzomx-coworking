@@ -16,6 +16,7 @@ import { getHeaderBarClassName } from "./headerSurfaceStyles";
 /** High-intent destinations — always visible on desktop */
 const primaryHashNavItems = ["plans", "gallery"] as const;
 const primaryLinkNavItems = [
+  { id: "tour", href: "/recorrido-360" },
   { id: "remoteWork", href: "/remote-work" },
   { id: "alrededor", href: "/alrededor" },
   { id: "blog", href: "/blog" },

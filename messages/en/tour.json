@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "360° Virtual Tour | Atzomx Coworking Oaxaca",
+    "description": "Explore Atzomx Coworking & Café in 360° before your visit: the café, the terrace, the meeting room and the coworking area in downtown Oaxaca."
+  },
+  "banner": {
+    "title": "360° Tour",
+    "subtitle": "Get to know the space before you come. Drag to look around and use the arrows to move from one area to another."
+  },
+  "viewer": {
+    "label": "Atzomx 360° virtual tour",
+    "viewerLabel": "360° viewer. Drag or use the arrow keys to look around.",
+    "scenesLabel": "Tour areas",
+    "scenesMenu": "Choose a tour area",
+    "loading": "Loading tour…",
+    "error": "Your browser couldn't load the 360° tour. Please try another browser or device.",
+    "hint": "Drag to look around, scroll or pinch to zoom, and tap the arrows inside the image to change areas.",
+    "goTo": "Go to {scene}",
+    "scenes": {
+      "street": "Street",
+      "entrance": "Entrance",
+      "center": "Main area",
+      "exit": "Exit",
+      "corner": "Corner",
+      "bar": "Coffee bar",
+      "goingUp": "Going up",
+      "stairs1": "Stairs 1",
+      "stairs2": "Stairs 2",
+      "stairs3": "Stairs 3",
+      "terrace1": "Terrace 1",
+      "terrace2": "Terrace 2",
+      "meetingRoom": "Meeting room",
+      "coworkingEntrance": "Coworking entrance",
+      "coworking1": "Coworking 1",
+      "coworking2": "Coworking 2",
+      "coworking3": "Coworking 3",
+      "coworking4": "Coworking 4"
+    },
+    "controls": {
+      "play": "Start auto-rotation",
+      "pause": "Stop auto-rotation",
+      "fullscreen": "View fullscreen",
+      "exitFullscreen": "Exit fullscreen",
+      "up": "Look up",
+      "down": "Look down",
+      "left": "Look left",
+      "right": "Look right",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out"
+    }
+  }
+}

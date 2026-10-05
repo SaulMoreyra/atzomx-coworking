@@ -9,9 +9,10 @@ import {
 import HomeSectionIntro from "@/components/ui/HomeSectionIntro/HomeSectionIntro";
 import cx from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import React, { useCallback, useEffect, useState } from "react";
-import { X, ZoomIn } from "react-feather";
+import { ArrowRight, X, ZoomIn } from "react-feather";
 
 const GalleryTileImage: React.FC<{
   tile: SpaceGalleryTile;
@@ -69,8 +70,14 @@ const SpaceGallery = () => {
   return (
     <>
       <section id="gallery" data-header-surface="main" className="w-full bg-brand-main py-14 text-brand-green md:py-20">
-        <div className="section-container mb-10 md:mb-12">
+        <div className="section-container mb-10 flex flex-col gap-6 md:mb-12 md:flex-row md:items-end md:justify-between">
           <HomeSectionIntro kicker={t("sectionTitle")} title={t("title")} subtitle={t("subtitle")} />
+          <Link
+            href="/recorrido-360"
+            className="text-label inline-flex min-h-[44px] shrink-0 items-center gap-2 self-start whitespace-nowrap rounded-brand border border-brand-green bg-transparent px-4 py-2 text-sm text-brand-green transition-colors duration-200 hover:bg-brand-green hover:text-brand-on-green focus-brand md:self-auto">
+            {t("viewIn360")}
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
         </div>
 
         <div className="section-container grid grid-cols-2 auto-rows-fr gap-1 sm:gap-1.5 md:gap-2 lg:grid-cols-4">
