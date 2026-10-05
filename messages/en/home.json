@@ -7,6 +7,7 @@
     "contact": "Contact",
     "reviews": "Reviews",
     "blog": "Blog",
+    "tour": "360 Tour",
     "remoteWork": "Remote work",
     "alrededor": "Around",
     "menu": "Menu",
@@ -47,6 +48,7 @@
     "sectionTitle": "Gallery",
     "title": "Explore the space",
     "subtitle": "Rooftop, desks, meeting room, and coffee bar in downtown Oaxaca.",
+    "viewIn360": "View in 360",
     "openPhoto": "Enlarge photo: {label}",
     "closePhoto": "Close photo",
     "tiles": {
