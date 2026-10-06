@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Visite virtuelle 360° | Atzomx Coworking Oaxaca",
+    "description": "Découvrez Atzomx Coworking & Café en 360° avant votre visite : le café, la terrasse, la salle de réunion et l'espace coworking dans le centre d'Oaxaca."
+  },
+  "banner": {
+    "title": "Visite 360°",
+    "subtitle": "Découvrez l'espace avant de venir. Faites glisser pour regarder autour de vous et utilisez les flèches pour passer d'un espace à l'autre."
+  },
+  "viewer": {
+    "label": "Visite virtuelle 360° d'Atzomx",
+    "viewerLabel": "Visionneuse 360°. Faites glisser ou utilisez les flèches du clavier pour regarder autour de vous.",
+    "scenesLabel": "Espaces de la visite",
+    "scenesMenu": "Choisir un espace de la visite",
+    "loading": "Chargement de la visite…",
+    "error": "Votre navigateur n'a pas pu charger la visite 360°. Essayez avec un autre navigateur ou appareil.",
+    "hint": "Faites glisser pour regarder autour de vous, utilisez la molette ou pincez pour zoomer, et touchez les flèches dans l'image pour changer d'espace.",
+    "goTo": "Aller à : {scene}",
+    "scenes": {
+      "street": "Rue",
+      "entrance": "Entrée",
+      "center": "Espace principal",
+      "exit": "Sortie",
+      "corner": "Coin",
+      "bar": "Bar à café",
+      "goingUp": "En montant",
+      "stairs1": "Escaliers 1",
+      "stairs2": "Escaliers 2",
+      "stairs3": "Escaliers 3",
+      "terrace1": "Terrasse 1",
+      "terrace2": "Terrasse 2",
+      "meetingRoom": "Salle de réunion",
+      "coworkingEntrance": "Entrée du coworking",
+      "coworking1": "Coworking 1",
+      "coworking2": "Coworking 2",
+      "coworking3": "Coworking 3",
+      "coworking4": "Coworking 4"
+    },
+    "controls": {
+      "play": "Lancer la rotation automatique",
+      "pause": "Arrêter la rotation automatique",
+      "fullscreen": "Afficher en plein écran",
+      "exitFullscreen": "Quitter le plein écran",
+      "up": "Regarder vers le haut",
+      "down": "Regarder vers le bas",
+      "left": "Regarder à gauche",
+      "right": "Regarder à droite",
+      "zoomIn": "Zoom avant",
+      "zoomOut": "Zoom arrière"
+    }
+  }
+}
