@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Facebook, Instagram, Mail, Phone, PhoneCall } from "react-feather";
@@ -7,10 +5,17 @@ import { Mastercard, Visa, Amex } from "react-payment-logos/dist/flat";
 import Label from "../ui/Label/Label";
 import OrganicDivider from "../ui/OrganicDivider/OrganicDivider";
 import { BRAND_CONTACT } from "@/design-system";
-import { trackWhatsAppConversion } from "@/lib/analytics";
+import WhatsAppLink from "../WhatsAppLink/WhatsAppLink";
+
+const SOCIAL_LINK_CLASS =
+  "focus-brand text-body flex items-center gap-3 rounded-sm text-sm text-brand-green/80 transition-colors duration-200 hover:text-brand-green";
 
 const SOCIAL_NETWORKS = [
-  { icon: Instagram, name: BRAND_CONTACT.instagramHandle, url: BRAND_CONTACT.instagram },
+  {
+    icon: Instagram,
+    name: BRAND_CONTACT.instagramHandle,
+    url: BRAND_CONTACT.instagram,
+  },
   { icon: Facebook, name: "Facebook", url: BRAND_CONTACT.facebook },
   { icon: Phone, name: "WhatsApp", url: BRAND_CONTACT.whatsapp },
   { icon: PhoneCall, name: BRAND_CONTACT.phone, url: BRAND_CONTACT.phoneHref },
@@ -22,7 +27,10 @@ const Footer = () => {
   const tHours = useTranslations("home.hours");
 
   return (
-    <footer id="contact" data-header-surface="cream" className="w-full bg-brand-cream text-brand-green">
+    <footer
+      id="contact"
+      data-header-surface="cream"
+      className="w-full bg-brand-cream text-brand-green">
       <OrganicDivider fill="cream" variant="star" />
 
       <div className="w-full">
@@ -30,7 +38,9 @@ const Footer = () => {
           <Label as="h2" className="mb-4 text-sm tracking-[0.25em]">
             {t("sectionTitle")}
           </Label>
-          <p className="text-body text-sm text-brand-green/70">{t("payments")}</p>
+          <p className="text-body text-sm text-brand-green/70">
+            {t("payments")}
+          </p>
           <div className="mt-3 flex items-center justify-center">
             <Visa id="visa" style={{ margin: 8, width: 44 }} />
             <Mastercard id="mastercard" style={{ margin: 8, width: 44 }} />
@@ -46,20 +56,35 @@ const Footer = () => {
               <Label as="h3" className="text-xs tracking-[0.2em]">
                 {t("social_networks")}
               </Label>
-              {SOCIAL_NETWORKS.map(network => (
-                <a
-                  key={network.name}
-                  href={network.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    if (network.name === "WhatsApp") trackWhatsAppConversion();
-                  }}
-                  className="focus-brand text-body flex items-center gap-3 rounded-sm text-sm text-brand-green/80 transition-colors duration-200 hover:text-brand-green">
-                  <network.icon size={18} className="min-w-[18px]" aria-hidden="true" />
-                  <span>{network.name}</span>
-                </a>
-              ))}
+              {SOCIAL_NETWORKS.map(network => {
+                const content = (
+                  <>
+                    <network.icon
+                      size={18}
+                      className="min-w-[18px]"
+                      aria-hidden="true"
+                    />
+                    <span>{network.name}</span>
+                  </>
+                );
+
+                return network.url === BRAND_CONTACT.whatsapp ? (
+                  <WhatsAppLink
+                    key={network.name}
+                    className={SOCIAL_LINK_CLASS}>
+                    {content}
+                  </WhatsAppLink>
+                ) : (
+                  <a
+                    key={network.name}
+                    href={network.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={SOCIAL_LINK_CLASS}>
+                    {content}
+                  </a>
+                );
+              })}
             </div>
 
             <div className="flex flex-col gap-4">
@@ -76,15 +101,21 @@ const Footer = () => {
               </a>
               <div className="text-schedule mt-2 space-y-1 text-xs text-brand-green/60">
                 <p>
-                  <span className="text-brand-green/75">{tHours("weekdaysLabel")}: </span>
+                  <span className="text-brand-green/75">
+                    {tHours("weekdaysLabel")}:{" "}
+                  </span>
                   {tHours("weekdaysHours")}
                 </p>
                 <p>
-                  <span className="text-brand-green/75">{tHours("saturdayLabel")}: </span>
+                  <span className="text-brand-green/75">
+                    {tHours("saturdayLabel")}:{" "}
+                  </span>
                   {tHours("saturdayHours")}
                 </p>
                 <p>
-                  <span className="text-brand-green/75">{tHours("sundayLabel")}: </span>
+                  <span className="text-brand-green/75">
+                    {tHours("sundayLabel")}:{" "}
+                  </span>
                   {tHours("sundayHours")}
                 </p>
               </div>
@@ -110,7 +141,9 @@ const Footer = () => {
 
       <div className="w-full">
         <div className="section-container py-6 text-center md:text-left">
-          <p className="text-label text-[10px] tracking-[0.25em] text-brand-green/45">© 2026 ATZOMX</p>
+          <p className="text-label text-[10px] tracking-[0.25em] text-brand-green/45">
+            © 2026 ATZOMX
+          </p>
         </div>
       </div>
     </footer>

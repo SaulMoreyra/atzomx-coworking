@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Menú | Atzomx Café — Centro de Oaxaca",
-    "description": "Café de especialidad, bowls, smoothies y más en Atzomx. Menú completo del coworking con café en el Centro de Oaxaca."
+    "description": "Café de especialidad, frappés, chilaquiles, bowls, smoothies y más en Atzomx. Menú completo del coworking con café en el Centro de Oaxaca."
   },
   "search": "Buscar",
   "banner": {
@@ -15,6 +15,12 @@
     "menu": "Menú",
     "categories": "Categorías"
   },
+  "nav": {
+    "openSearch": "Buscar en el menú",
+    "closeSearch": "Cerrar búsqueda",
+    "prev": "Categorías anteriores",
+    "next": "Más categorías"
+  },
   "information": {
     "title": "Información",
     "hours": "Horario",
@@ -27,34 +33,78 @@
     "contact": "Contacto"
   },
   "categories": {
+    "teas": "Tés & especialidades",
+    "sweet": "Con un toque dulce",
     "coffee": "Café",
-    "lunch": "Lunch",
-    "dessert": "Postres",
-    "smoothies": "Smoothies",
-    "combos": "Combos",
     "frappes": "Frappés",
-    "italian-sodas": "Sodas Italianas",
-    "extras": "Extras"
+    "signatures": "Con un toque diferente",
+    "extras": "Extras",
+    "smoothies": "Smoothies",
+    "drinks": "Otras bebidas",
+    "house": "De la casa",
+    "bowls": "Bowls",
+    "sandwiches": "Ciabattas & baguettes",
+    "more": "Algo más"
+  },
+  "categoryNotes": {
+    "coffee": "Para los puristas.",
+    "signatures": "Tu barista de confianza.",
+    "bowls": "Añade trocitos de galleta por $10 más.",
+    "sandwiches": "Incluyen ensalada de la casa o papas chips."
+  },
+  "coworkingNote": {
+    "title": "Si vienes a trabajar",
+    "text": "Este espacio es para ti. Con un consumo mínimo en la cafetería tienes 2 horas de uso en la planta baja (aplica únicamente para quienes vienen a trabajar). Pasado el tiempo, se cobrará costo de servicio de coworking. Esto nos ayuda a mantener la calidez y comodidad que mereces. ¡Gracias por tu comprensión!"
   },
   "variants": {
     "hot": "Caliente",
-    "iced": "Frío",
-    "chips": "Papas",
-    "salad": "Ensalada"
+    "iced": "Frío"
   },
   "menu": {
+    "teas": {
+      "tea": {
+        "name": "Té",
+        "description": "Té de la casa, caliente o frío"
+      },
+      "tizanas": {
+        "name": "Tizana",
+        "description": "Infusión de frutas y hierbas"
+      },
+      "chai-latte": {
+        "name": "Chai",
+        "description": "Té especiado con leche"
+      },
+      "choco-latte": {
+        "name": "Chocolate Oaxaqueño",
+        "description": "Chocolate de Oaxaca con leche"
+      },
+      "dirty-chai": {
+        "name": "Dirty Chai",
+        "description": "Chai con leche y un shot de espresso"
+      }
+    },
+    "sweet": {
+      "hazelnut-latte": {
+        "name": "Latte de Avellana",
+        "description": "Espresso con leche vaporizada y avellana"
+      },
+      "mazapan-latte": {
+        "name": "Latte de Mazapán",
+        "description": "Espresso con leche vaporizada y mazapán"
+      },
+      "caramel-latte": {
+        "name": "Caramel Latte",
+        "description": "Espresso con leche vaporizada y caramelo"
+      },
+      "vanilla-latte": {
+        "name": "Latte de Vainilla",
+        "description": "Espresso con leche vaporizada y vainilla"
+      }
+    },
     "coffee": {
       "espresso": {
         "name": "Espresso",
         "description": "Café negro fuerte"
-      },
-      "cortado": {
-        "name": "Cortado",
-        "description": "Espresso con una gota de leche vaporizada"
-      },
-      "macchiato": {
-        "name": "Macchiato",
-        "description": "Espresso con una pequeña cantidad de leche vaporizada"
       },
       "americano": {
         "name": "Americano",
@@ -68,215 +118,163 @@
         "name": "Latte",
         "description": "Espresso con leche vaporizada"
       },
-      "caramel-latte": {
-        "name": "Caramel Latte",
-        "description": "Espresso con leche vaporizada y caramelo"
+      "flat-white": {
+        "name": "Flat White",
+        "description": "Doble espresso con poca leche vaporizada"
       },
       "mocca": {
         "name": "Moca",
         "description": "Espresso con chocolate y leche vaporizada"
-      },
-      "flat-white": {
-        "name": "Flat White",
-        "description": "Espresso con leche vaporizada"
-      },
-      "espresso-berry": {
-        "name": "Espresso Berry",
-        "description": "Espresso con sabor a frutos rojos"
-      },
-      "espresso-tonic": {
-        "name": "Espresso Tonic",
-        "description": "Espresso con agua tónica"
-      },
-      "cold-brew": {
-        "name": "Café en Frío",
-        "description": "Café infusionado en frío"
-      },
-      "methods": {
-        "name": "Métodos de café de especialidad",
-        "description": "Variedad de métodos de extracción de café."
-      }
-    },
-    "lunch": {
-      "turkey-sandwich": {
-        "name": "Sándwich de Pavo",
-        "description": "Pan de masa madre, mayonesa, tomate, aguacate, lechuga italiana, queso amarillo y jamón de pavo"
-      },
-      "iberian-sandwich": {
-        "name": "Sándwich Ibérico",
-        "description": "Pan de masa madre, mayonesa, tomate, aguacate, lechuga italiana, espinaca baby, queso manchego, jamón de pavo, jamón serrano y pepperoni"
-      },
-      "serrano-sandwich": {
-        "name": "Sándwich Serrano",
-        "description": "Pan de masa madre, mayonesa, tomate, aguacate, lechuga italiana, espinaca baby, queso manchego y jamón serrano"
-      },
-      "house-salad": {
-        "name": "Ensalada de la Casa",
-        "description": "Lechuga italiana, espinaca baby, manzana, fresa, nuez, queso crema, aderezo de miel y mostaza, y arándanos"
-      },
-      "red-berry-bowl": {
-        "name": "Bowl de Frutos Rojos",
-        "description": "Yogur griego, fresas, arándanos, plátano, miel, amaranto y granola"
-      },
-      "chocolate-bowl": {
-        "name": "Bowl de Chocolate",
-        "description": "Yogur griego, fresas, arándanos, miel, amaranto, granola, cacao y chispas de chocolate"
-      }
-    },
-    "dessert": {
-      "affogato": {
-        "name": "Affogato",
-        "description": "Helado de vainilla con espresso"
-      },
-      "apple-tart": {
-        "name": "Tarta de Manzana",
-        "description": "Tarta de manzana con helado de vainilla"
-      },
-      "cheesecake": {
-        "name": "Cheesecake",
-        "description": "Cheesecake con jarabe de chocolate"
-      },
-      "daily-dessert": {
-        "name": "Postre del Día",
-        "description": "Pregunta en barra por el postre de hoy"
-      }
-    },
-    "smoothies": {
-      "tropical-smoothie": {
-        "name": "Smoothie Tropical",
-        "description": "Leche, yogur griego, miel, semillas de chía, frutas mixtas"
-      },
-      "mango-smoothie": {
-        "name": "Smoothie de Mango",
-        "description": "Leche, yogur griego, miel, semillas de chía, mango"
-      },
-      "green-smoothie": {
-        "name": "Smoothie Verde",
-        "description": "Leche, yogur griego, miel, semillas de chía, pepino, espinaca, manzana verde"
-      }
-    },
-    "combos": {
-      "el-mananero": {
-        "name": "El Mañanero",
-        "description": "Bowl de frutos rojos o chocolate, café americano o espresso"
-      },
-      "bradfitt": {
-        "name": "Bradfitt",
-        "description": "Ensalada de la casa, cualquier smoothie"
-      },
-      "freelancer": {
-        "name": "Freelancer",
-        "description": "Cualquier sándwich (excepto Serrano), café americano, espresso, capuchino o soda italiana"
       }
     },
     "frappes": {
       "coffee-frappe": {
-        "name": "Café",
+        "name": "Latte",
         "description": "Café licuado con leche"
       },
       "mocca-frappe": {
-        "name": "Mocha",
-        "description": "Café licuado con chocolate y leche"
+        "name": "Moca",
+        "description": "Café licuado con chocolate oaxaqueño y leche"
       },
       "chocolate-frappe": {
-        "name": "Chocolate",
-        "description": "Bebida de chocolate licuado"
+        "name": "Chocolate Oaxaqueño",
+        "description": "Chocolate oaxaqueño licuado con leche"
       },
       "mango-frappe": {
-        "name": "Mango",
-        "description": "Bebida de mango licuado"
-      },
-      "cherry-frappe": {
-        "name": "Cereza",
-        "description": "Bebida de cereza licuada"
+        "name": "Mangonada",
+        "description": "Frappé de mango estilo mangonada"
       },
       "strawberry-frappe": {
-        "name": "Fresa",
-        "description": "Bebida de fresa licuada"
+        "name": "Fresas con Crema",
+        "description": "Fresa licuada con crema"
       },
       "chai-frappe": {
         "name": "Chai",
-        "description": "Bebida de chai licuado"
+        "description": "Chai licuado con leche"
       },
       "oreo-frappe": {
         "name": "Oreo",
-        "description": "Bebida de Oreo licuada"
+        "description": "Frappé de galleta Oreo"
       },
       "mazapan-frappe": {
-        "name": "Mazapan",
-        "description": "Bebida de Mazapan licuada"
+        "name": "Mazapán",
+        "description": "Frappé de mazapán"
       },
       "nutella-frappe": {
         "name": "Nutella",
-        "description": "Bebida de Nutella licuada"
+        "description": "Frappé de Nutella"
       }
     },
-    "italian-sodas": {
-      "pineapple-italian-soda": {
-        "name": "Piña",
-        "description": "Refrescante soda italiana de piña"
+    "signatures": {
+      "espresso-berry": {
+        "name": "Espresso Berry",
+        "description": "Espresso con frutos rojos"
       },
-      "blue-curacao-italian-soda": {
-        "name": "Blue Curacao",
-        "description": "Refrescante soda italiana de Blue Curacao"
-      },
-      "mango-italian-soda": {
-        "name": "Mango",
-        "description": "Refrescante soda italiana de mango"
-      },
-      "passion-fruit-italian-soda": {
-        "name": "Maracuyá",
-        "description": "Refrescante soda italiana de maracuyá"
-      },
-      "green-apple-italian-soda": {
-        "name": "Manzana Verde",
-        "description": "Refrescante soda italiana de manzana verde"
-      },
-      "cherry-italian-soda": {
-        "name": "Cereza",
-        "description": "Refrescante soda italiana de cereza"
-      },
-      "strawberry-glitter-italian-soda": {
-        "name": "Fresa Glitter",
-        "description": "Refrescante soda italiana de fresa con glitter"
+      "espresso-tonic": {
+        "name": "Espresso Tonic",
+        "description": "Espresso con agua tónica"
       }
     },
     "extras": {
-      "chai-latte": {
-        "name": "Chai Latte",
-        "description": "Té especiado con leche vaporizada"
+      "lactose-free-milk": {
+        "name": "Leche deslactosada",
+        "description": "Cargo adicional a tu bebida"
       },
-      "choco-latte": {
-        "name": "Choco-Latte",
-        "description": "Latte con sabor a chocolate"
+      "plant-milk": {
+        "name": "Leche vegetal",
+        "description": "Cargo adicional a tu bebida"
       },
-      "tizanas": {
-        "name": "Tizanas",
-        "description": "Té herbal"
+      "extra-shot": {
+        "name": "Shot extra",
+        "description": "Vainilla, avellana, caramelo o leche"
+      }
+    },
+    "smoothies": {
+      "tropical-smoothie": {
+        "name": "Tropicalito",
+        "description": "Mix de frutas, leche, yogurt, miel y avena"
       },
-      "taro": {
-        "name": "Taro",
-        "description": "Bebida a base de taro con leche"
+      "mango-smoothie": {
+        "name": "Mango",
+        "description": "Mango, plátano, avena, leche, yogurt y miel"
       },
+      "chocobanana-smoothie": {
+        "name": "Chocobanana",
+        "description": "Chocolate oaxaqueño, plátano, avena, leche, yogurt y nuez"
+      },
+      "strawberry-surprise-smoothie": {
+        "name": "Fresa Sorpresa",
+        "description": "Fresa, plátano, leche, yogurt, avena y miel"
+      }
+    },
+    "drinks": {
       "italian-soda": {
         "name": "Sodas Italianas",
-        "description": "Variedad de sodas italianas,\npregunta por los sabores disponibles"
+        "description": "Pregunta por los sabores"
       },
-      "avellana-cloud": {
-        "name": "Nube de Avellana",
-        "description": "Bebida a base de avellana con leche y crema batida"
+      "boing": {
+        "name": "Boing",
+        "description": "Jugo de fruta"
       },
       "sodas": {
         "name": "Refrescos",
-        "description": "Variedad de refrescos"
+        "description": "355 ml"
       },
       "topo-chico": {
-        "name": "Topo Chico (Agua Mineral)",
-        "description": "Agua mineral"
+        "name": "Topo Chico",
+        "description": "Agua mineral, 600 ml"
+      }
+    },
+    "house": {
+      "chilaquiles": {
+        "name": "Chilaquiles Verdes",
+        "description": "¡Pss, se agotan rapidísimo! Totopos de maíz frito bañados en salsa verde, con crema, queso, aguacate y trocitos de lechuga. Elige tu proteína: pollo o huevo."
       },
-      "tea": {
-        "name": "Té",
-        "description": "Té caliente"
+      "atzomx-salad": {
+        "name": "Ensalada Atzomx",
+        "description": "Lechuga, manzana, nuez, arándanos, amaranto, queso crema y aderezo de miel y mostaza. Elige tu proteína: pollo o huevo."
+      }
+    },
+    "bowls": {
+      "red-berry-bowl": {
+        "name": "Frutos Rojos",
+        "description": "Yogurt, fresas, manzana, arándanos, avena, miel y amaranto"
+      },
+      "chocolate-bowl": {
+        "name": "Chocolate",
+        "description": "Yogurt, cocoa, mango, arándanos, chispas, jarabe de chocolate, amaranto y nuez"
+      },
+      "tropical-bowl": {
+        "name": "Tropical",
+        "description": "Yogurt, mango, manzana, arándanos, canela, amaranto y nuez"
+      }
+    },
+    "sandwiches": {
+      "creamy-sandwich": {
+        "name": "Cremoso",
+        "description": "Mezcla cremosa de huevo y aguacate, con tomate y picante"
+      },
+      "chicken-sandwich": {
+        "name": "Pollo",
+        "description": "Pechuga de pollo en mezcla cremosa de chipotle, con tomate, lechuga y aguacate"
+      }
+    },
+    "more": {
+      "chips": {
+        "name": "Papas Chips",
+        "description": "Porción de papas"
+      },
+      "nutella-affogato": {
+        "name": "Nutella Affogato",
+        "description": "Espresso sobre helado con Nutella"
+      },
+      "methods": {
+        "name": "Métodos de extracción",
+        "description": "Café de especialidad preparado en método"
+      },
+      "daily-dessert": {
+        "name": "Postre de temporada",
+        "description": "Pregunta en barra por el postre de temporada"
       }
     }
   }

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   COMPARISON_FEATURE_KEYS,
   getComparisonPlans,

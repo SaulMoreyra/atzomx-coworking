@@ -1,5 +1,3 @@
-"use client";
-
 import { type PlanType } from "@/common/types/planTypes";
 import HomeSectionIntro from "@/components/ui/HomeSectionIntro/HomeSectionIntro";
 import SectionSticker from "@/components/ui/SectionSticker/SectionSticker";

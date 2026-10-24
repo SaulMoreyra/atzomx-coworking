@@ -16,12 +16,14 @@ interface MenuCategoryBandProps {
 const MenuCategoryBand: FC<MenuCategoryBandProps> = ({ category, items, bandIndex }) => {
   const t = useTranslations("menu");
   const isAlt = bandIndex % 2 === 1;
+  const noteKey = `categoryNotes.${category}`;
+  const note = t.has(noteKey) ? t(noteKey) : null;
 
   return (
     <section
       id={categorySectionId(category)}
       className={cx(
-        "scroll-mt-[calc(4.5rem+6.5rem+env(safe-area-inset-top,0px))]",
+        "scroll-mt-[calc(4.5rem+var(--menu-nav-h,4.25rem)+env(safe-area-inset-top,0px))]",
         isAlt ? "bg-brand-main" : "bg-brand-cream"
       )}>
       <div className="section-container max-w-3xl py-10 md:py-12 lg:max-w-4xl">
@@ -32,6 +34,11 @@ const MenuCategoryBand: FC<MenuCategoryBandProps> = ({ category, items, bandInde
           <h2 className="text-display-prose min-w-0 [overflow-wrap:anywhere] text-2xl font-bold leading-tight text-brand-green md:text-3xl">
             {t(`categories.${category}`)}
           </h2>
+          {note ? (
+            <p className="text-body mt-2 text-sm leading-relaxed text-brand-green/65 md:text-base">
+              {note}
+            </p>
+          ) : null}
         </header>
 
         <ul className="flex flex-col divide-y divide-brand-green" role="list">

@@ -1,8 +1,6 @@
 /* Hallmark · macrostructure: Index-First (section) · tone: editorial · anchor hue: forest-green
  * design-system: DESIGN.md · theme: Atzomx brand (preserved)
  */
-"use client";
-
 import { COMMUNITY_EVENTS } from "@/mocks/events";
 import { filterUpcomingEventsInCurrentAndNextMonth } from "@/lib/community-events";
 import { BRAND_CONTACT } from "@/design-system";
@@ -11,15 +9,12 @@ import SectionSticker from "@/components/ui/SectionSticker/SectionSticker";
 import WhatsAppLink from "@/components/WhatsAppLink/WhatsAppLink";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import React, { useMemo } from "react";
+import React from "react";
 import { ArrowRight } from "react-feather";
 
 const CommunitySection = () => {
   const t = useTranslations("home.community");
-  const upcomingEvents = useMemo(
-    () => filterUpcomingEventsInCurrentAndNextMonth(COMMUNITY_EVENTS),
-    []
-  );
+  const upcomingEvents = filterUpcomingEventsInCurrentAndNextMonth(COMMUNITY_EVENTS);
 
   return (
     <section

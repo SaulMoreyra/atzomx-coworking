@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer/Footer";
+import IntlMessages from "@/components/IntlMessages/IntlMessages";
 import React from "react";
 
 export default function RemoteWorkLayout({
@@ -8,7 +9,7 @@ export default function RemoteWorkLayout({
 }) {
   return (
     <>
-      {children}
+      <IntlMessages>{children}</IntlMessages>
       <Footer />
     </>
   );

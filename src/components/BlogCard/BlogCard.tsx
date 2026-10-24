@@ -1,5 +1,3 @@
-"use client";
-
 import { type BlogCategory, type BlogPost } from "@/common/types/blogTypes";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";

@@ -1,5 +1,3 @@
-"use client";
-
 import { type PlanType } from "@/common/types/planTypes";
 import WhatsAppLink from "@/components/WhatsAppLink/WhatsAppLink";
 import Label from "@/components/ui/Label/Label";

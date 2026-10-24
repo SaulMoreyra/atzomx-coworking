@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "@/components/Footer/Footer";
+import IntlMessages from "@/components/IntlMessages/IntlMessages";
 
 export default function MenuLayout({
   children,
@@ -8,7 +9,7 @@ export default function MenuLayout({
 }) {
   return (
     <>
-      {children}
+      <IntlMessages>{children}</IntlMessages>
       <Footer />
     </>
   );

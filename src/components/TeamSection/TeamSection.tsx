@@ -1,5 +1,3 @@
-"use client";
-
 import HomeSectionIntro from "@/components/ui/HomeSectionIntro/HomeSectionIntro";
 import { useTranslations } from "next-intl";
 import React from "react";
