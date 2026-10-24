@@ -10,7 +10,6 @@ const namespaces = [
   "remoteWork",
   "alrededor",
   "tour",
-  "admin",
 ];
 
 type Messages = AbstractIntlMessages;

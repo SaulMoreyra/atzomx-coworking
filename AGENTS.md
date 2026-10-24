@@ -1,21 +1,15 @@
 # AGENTS.md — Atzomx Coworking & Café
 
-Marketing site + admin panel for Atzomx Coworking & Café (Oaxaca, MX). Before writing any UI or adding a page, read [`DESIGN.md`](./DESIGN.md) first and defer to it — it is the locked design system and the rule for all visual work.
+Marketing site for Atzomx Coworking & Café (Oaxaca, MX). Before writing any UI or adding a page, read [`DESIGN.md`](./DESIGN.md) first and defer to it — it is the locked design system and the rule for all visual work.
 
 ## Commands
 
 ```bash
-yarn install        # install deps (runs prisma generate on postinstall)
+yarn install        # install deps
 yarn dev            # dev server → http://localhost:3000
 yarn build          # production build (runs next-sitemap on postbuild)
 yarn lint           # eslint
 yarn format         # tsc && prettier --check src
-
-docker compose up -d   # local Postgres
-yarn db:push           # push Prisma schema (no migrations)
-yarn db:migrate        # create/apply migrations
-yarn db:seed           # seed categories/products + admin user
-yarn db:studio         # Prisma Studio
 ```
 
 - Package manager: **yarn** (there is a mix of `yarn.lock` and `package-lock.json`; use yarn).
@@ -26,9 +20,8 @@ yarn db:studio         # Prisma Studio
 - Next.js **15** (App Router) + TypeScript
 - Tailwind CSS 3 + locked design system (`DESIGN.md`, `tokens.css`, `src/design-system/tokens.ts`)
 - `next-intl` (mid `/src/i18n`) — locales `es`, `en`, `fr`, `de`; **default `es`**; cookie-driven
-- PostgreSQL + Prisma (`prisma/schema.prisma`)
-- Auth: JWT access + refresh token, httpOnly cookies
-- framer-motion (hero/plan bands only), gsap, react-hook-form + zod, Google Tag Manager (GTM) + Google Ads conversions
+- No database: menu/plan prices live in static mocks (`src/mocks`)
+- framer-motion (hero/plan bands only), gsap, Google Tag Manager (GTM) + Google Ads conversions
 
 Path alias: `@/*` → `./src/*`.
 
@@ -36,18 +29,14 @@ Path alias: `@/*` → `./src/*`.
 
 ```
 src/app/            # routes: / (page), /menu, /blog, /blog/[slug], /remote-work,
-                    # /alrededor, /admin/*, /api/v1/*
-src/app/admin/      # admin UI — own admin.css, separate from globals.css
-src/components/     # page/section components + ui/ primitives + screens/admin
-src/lib/api/        # API serializers + zod schemas + client
-src/lib/auth/       # JWT, cookies, rate-limit, require-auth
-src/lib/products/   # public menu/plans fetch + static fallback
-src/lib/            # prisma.ts, analytics.ts (GTM conversions), JSON-LD builders
-src/mocks/          # fallback static data (menu/plans/blog/events) + seed source
+                    # /alrededor
+src/components/     # page/section components + ui/ primitives
+src/lib/products/   # public menu/plans (reads mocks)
+src/lib/            # analytics.ts (GTM conversions), JSON-LD builders
+src/mocks/          # static data (menu/plans/blog/events)
 src/i18n/           # next-intl config + request
 src/services/       # locale, googlePlaces (reviews)
-messages/{locale}/  # i18n copy (home, menu, blog, remoteWork, admin)
-prisma/             # schema, seed, migrations
+messages/{locale}/  # i18n copy (home, menu, blog, remoteWork, alrededor, tour)
 docs/               # menu-images.md
 public/             # llms.txt, llms-full.txt, sitemaps, og image
 ```
@@ -55,29 +44,15 @@ public/             # llms.txt, llms-full.txt, sitemaps, og image
 ## Architecture notes
 
 ### i18n
-- Namespaces: `home`, `menu`, `blog`, `remoteWork`, `alrededor`, `admin` (see `src/i18n/request.ts`).
-- Product names/descriptions live in `messages/{locale}/*.json` keyed by slug — prices come from the DB/API, not from message files.
-- When adding a locale, update `src/i18n/config.ts` (`locales`, `localeLabels`, `LOCALE_SEGMENTED_MAX`) **and** create the 5 namespace JSON files for it.
+- Namespaces: `home`, `menu`, `blog`, `remoteWork`, `alrededor`, `tour` (see `src/i18n/request.ts`).
+- Product names/descriptions live in `messages/{locale}/*.json` keyed by slug — prices come from the mocks, not from message files.
+- When adding a locale, update `src/i18n/config.ts` (`locales`, `localeLabels`, `LOCALE_SEGMENTED_MAX`) **and** create the namespace JSON files for it.
 - Keep the 4 locale files in lockstep: copy/product/UI changes touch **all** locales in the same change, not just `es`.
 
 ### Data flow (public pages)
-- Public menu/plans are fetched through `src/lib/products/public-products.ts`, which tries the DB first and **falls back to static mocks** (`src/mocks/menu`, `src/mocks/products`) when `DATABASE_URL` is unset (`isDatabaseConfigured()` in `src/lib/prisma.ts`).
-- `prisma/seed.ts` imports the same mocks as seed source — keep DB and mock shapes in sync.
-- Prices merge with i18n copy at render. Keep this DB → mock fallback pattern; don't hardcode prices in components.
-
-### Auth / API
-- Admin APIs under `src/app/api/v1/*`; auth-gated routes use Bearer tokens (access) and httpOnly cookies (refresh).
-- Role check: `UserRole` admin vs staff (`prisma/schema.prisma`).
-- Admin login rate-limited; secrets live in `.env` (see `.env.example`).
-
-### API v1 surface
-- Auth: `POST /api/v1/auth/{login,refresh,logout}`, `GET /api/v1/auth/me`
-- Public: `GET /api/v1/public/{menu,plans,categories}`
-- Admin (Bearer): `products`, `categories`, `users` (GET/POST, with `[id]` for updates)
-
-### Admin
-- UI under `src/app/admin/*` with its own `admin.css` (don't mix with site globals).
-- Screens in `src/components/screens/admin/*Screen`; forms use `react-hook-form` + zod.
+- Public menu/plans are read through `src/lib/products/public-products.ts`, which returns the static mocks (`src/mocks/menu`, `src/mocks/products`).
+- Menu category order is `MENU_CATEGORY_ORDER` in `src/mocks/menu/index.ts`.
+- Prices merge with i18n copy at render; don't hardcode prices in components.
 
 ### SEO / analytics
 - Structured data: `src/lib/business-jsonld.ts`, `src/lib/faq-jsonld.ts`.
@@ -103,12 +78,12 @@ public/             # llms.txt, llms-full.txt, sitemaps, og image
 
 - Conventional Commits: `feat(scope): …`, `fix(scope): …`, `chore: …` — lowercase subject, existing scopes include `plans`, `footer`, `app`, `branding`, `reviews`, `git`.
 - Workflow is branch → PR → merge (default branch `main`). Check the repo for an active remote branch before opening a PR.
-- Product/plan price or copy work lands in all locales + mocks + admin seed together (see the pricing-variants commits).
+- Product/plan price or copy work lands in all locales + mocks together (see the pricing-variants commits).
 
 ## Conventions
 
 - **Comments: none unless explicitly required.** Keep code self-documenting.
 - ESLint + Prettier configs in `.eslintrc.json` / `.prettierrc`. `arrowParens: "avoid"`, `singleQuote: false`, `trailingComma: "es5"`, `endiOfLine: "auto"`.
 - TypeScript `strict` on. Path alias `@/`.
-- Don't commit `.env`; secrets/generated values live there (JWT secrets, `DATABASE_URL`, `GOOGLE_PLACES_API_KEY`, `ADMIN_SEED_PASSWORD`, GTM). `.env.example` documents them.
+- Don't commit `.env`; secrets live there (`GOOGLE_PLACES_API_KEY`, GTM). `.env.example` documents them.
 - `src/lib/common` and `src/lib/authkitty` are declared as git submodules in `.gitmodules` but are **not** currently materialized — don't import from them.

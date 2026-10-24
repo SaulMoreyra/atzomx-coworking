@@ -73,5 +73,5 @@ module.exports = {
       ...blogPaths,
     ];
   },
-  exclude: ["/404", "/500", "/admin", "/admin/*", "/api/*"],
+  exclude: ["/404", "/500"],
 };
