@@ -1,12 +1,12 @@
 import React from "react";
 import "./globals.css";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getLocale } from "next-intl/server";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import { businessJsonLd } from "@/lib/business-jsonld";
 import { BRAND_CONTACT } from "@/design-system";
 import WhatsAppFab from "@/components/WhatsAppFab/WhatsAppFab";
+import IntlMessages, { SHARED_CLIENT_MESSAGES } from "@/components/IntlMessages/IntlMessages";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -70,7 +70,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const locale = await getLocale();
-  const messages = await getMessages();
 
   return (
     <html lang={locale}>
@@ -92,10 +91,10 @@ export default async function RootLayout({
         <GoogleTagManager gtmId="GTM-NDNK3CRK" />
         <GoogleTagManager gtmId="AW-16900625108" />
         <GoogleAnalytics gaId="AW-16900625108" />
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <IntlMessages namespaces={SHARED_CLIENT_MESSAGES}>
           {children}
           <WhatsAppFab />
-        </NextIntlClientProvider>
+        </IntlMessages>
       </body>
     </html>
   );

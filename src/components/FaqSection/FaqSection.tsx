@@ -1,10 +1,8 @@
-"use client";
-
 import HomeSectionIntro from "@/components/ui/HomeSectionIntro/HomeSectionIntro";
 import SectionSticker from "@/components/ui/SectionSticker/SectionSticker";
 import WhatsAppLink from "@/components/WhatsAppLink/WhatsAppLink";
 import { useTranslations } from "next-intl";
-import React, { useMemo } from "react";
+import React from "react";
 import { buildFaqJsonLd } from "@/lib/faq-jsonld";
 import { ChevronDown } from "react-feather";
 import cx from "classnames";
@@ -29,7 +27,7 @@ const FaqSection = () => {
     answer: t(`items.${id}.answer`),
   }));
 
-  const faqJsonLd = useMemo(() => buildFaqJsonLd(items), [items]);
+  const faqJsonLd = buildFaqJsonLd(items);
 
   return (
     <>

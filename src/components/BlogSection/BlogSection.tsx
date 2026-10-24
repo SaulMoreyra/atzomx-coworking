@@ -1,5 +1,3 @@
-"use client";
-
 import { FEATURED_BLOG_POSTS } from "@/mocks/blog";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
