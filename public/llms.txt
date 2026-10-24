@@ -11,7 +11,7 @@ Site languages: Spanish (default), English, French, German. Machine-readable bus
 ## Primary pages
 
 - [Home](https://atzomx.com.mx/): Plans, amenities, Google reviews, contact, map
-- [Café menu](https://atzomx.com.mx/menu): Specialty coffee, lunch, bowls, smoothies, desserts
+- [Café menu](https://atzomx.com.mx/menu): Specialty coffee, teas, frappés, chilaquiles, bowls, smoothies, ciabattas
 - [Around Atzomx](https://atzomx.com.mx/alrededor): Walkable spots in Centro — culture, coffee, food, garden
 
 ## AI reference (full profile)

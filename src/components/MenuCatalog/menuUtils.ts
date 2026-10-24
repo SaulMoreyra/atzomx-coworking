@@ -4,14 +4,18 @@ export const MENU_DEFAULT_IMAGE = "/images/menu/default-item.png";
 
 /** Category fallbacks — replace PNGs in public/images/menu/ when real photos are ready */
 export const MENU_CATEGORY_DEFAULTS: Record<string, string> = {
+  teas: MENU_DEFAULT_IMAGE,
+  sweet: MENU_DEFAULT_IMAGE,
   coffee: MENU_DEFAULT_IMAGE,
-  lunch: "/images/menu/default-lunch.png",
-  dessert: "/images/menu/default-dessert.png",
-  smoothies: "/images/menu/default-smoothie.png",
-  combos: "/images/menu/default-combo.png",
   frappes: "/images/menu/default-frappe.png",
+  signatures: MENU_DEFAULT_IMAGE,
   extras: "/images/menu/default-extras.png",
-  "italian-sodas": "/images/menu/default-soda.png",
+  smoothies: "/images/menu/default-smoothie.png",
+  drinks: "/images/menu/default-soda.png",
+  house: "/images/menu/default-lunch.png",
+  bowls: "/images/menu/default-smoothie.png",
+  sandwiches: "/images/menu/default-lunch.png",
+  more: "/images/menu/default-dessert.png",
 };
 
 export const getMenuCategoryDefault = (category: string) =>
@@ -26,3 +30,6 @@ export const groupFoodsByCategory = (items: FoodType[]) => {
 };
 
 export const categorySectionId = (category: string) => `menu-cat-${category}`;
+
+export const getScrollBehavior = (): ScrollBehavior =>
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
